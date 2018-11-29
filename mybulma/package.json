@@ -1,0 +1,26 @@
+{
+  "name": "mybulma",
+  "version": "1.0.0",
+  "description": "Bulma CSS Framework",
+  "main": "sass/mystyles.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejuu/Chosen-Foods.git"
+  },
+  "author": "alejuu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejuu/Chosen-Foods/issues"
+  },
+  "homepage": "https://github.com/alejuu/Chosen-Foods#readme",
+  "devDependencies": {
+    "bulma": "^0.7.2",
+    "node-sass": "^4.10.0"
+  }
+}
