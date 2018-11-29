@@ -1,2 +1,46 @@
 @charset "utf-8";
-@import "../node_modules/bulma/bulma.sass";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Bitter:700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+// Set your brand colors
+$green: #00857D;
+$dark-green: #1D3C34;
+$light-green: #86C8BC;
+$orange: #FF8450;
+$red: #E35205;
+$peach: #F9E1B7;
+$grey: #CADAD9;
+$grey-light: #F0F7F6;
+$grey-lighter: #F4F5F5;
+$white: #FFFFFF;
+$light-red: #E55508;
+$yellow: #EEBC2A;
+$turquoise: #4DB089;
+$blue: #2E53A2;
+$black: #081F1E;
+
+// Update Bulma's global variables
+$family-sans-serif: "Open Sans", sans-serif;
+$primary: $green;
+$danger: $light-red;
+$success: $turquoise;
+$info: $blue;
+$link: $orange;
+$widescreen-enabled: true;
+$fullhd-enabled: true;
+
+// Update some of Bulma's component variables
+$body-background-color: $white;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
