@@ -37,6 +37,102 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
+// Extra Code
+// SVG Icons Sprite
+.cf-icon {
+  width: 32px;
+  height: 32px;
+}
+.cf-icon-account,.cf-icon-account\:regular{background-image:url('../assets/icons.svg');background-position:0 0;background-repeat:no-repeat}
+.cf-icon-cart,.cf-icon-cart\:regular{background-image:url('../assets/icons.svg');background-position:0 -32px;background-repeat:no-repeat}
+.cf-icon-green-down,.cf-icon-green-down\:regular{background-image:url('../assets/icons.svg');background-position:0 -64px;background-repeat:no-repeat}
+.cf-icon-green-search,.cf-icon-green-search\:regular{background-image:url('../assets/icons.svg');background-position:0 -96px;background-repeat:no-repeat}
+.cf-icon-green-x,.cf-icon-green-x\:regular{background-image:url('../assets/icons.svg');background-position:0 -128px;background-repeat:no-repeat}
+.cf-icon-plus,.cf-icon-plus\:regular{background-image:url('../assets/icons.svg');background-position:0 -160px;background-repeat:no-repeat}
+.cf-icon-right-arrow,.cf-icon-right-arrow\:regular{background-image:url('../assets/icons.svg');background-position:0 -192px;background-repeat:no-repeat}
+.cf-icon-staffpick,.cf-icon-staffpick\:regular{background-image:url('../assets/icons.svg');background-position:0 -224px;background-repeat:no-repeat}
+.cf-icon-white-facebook,.cf-icon-white-facebook\:regular{background-image:url('../assets/icons.svg');background-position:0 -256px;background-repeat:no-repeat}
+.cf-icon-white-instagram,.cf-icon-white-instagram\:regular{background-image:url('../assets/icons.svg');background-position:0 -288px;background-repeat:no-repeat}
+.cf-icon-white-search,.cf-icon-white-search\:regular{background-image:url('../assets/icons.svg');background-position:0 -320px;background-repeat:no-repeat}
+.cf-icon-white-twitter,.cf-icon-white-twitter\:regular{background-image:url('../assets/icons.svg');background-position:0 -352px;background-repeat:no-repeat}
+.cf-icon-white-up-small,.cf-icon-white-up-small\:regular{background-image:url('../assets/icons.svg');background-position:0 -384px;background-repeat:no-repeat}
+.cf-icon-white-x,.cf-icon-white-x\:regular{background-image:url('../assets/icons.svg');background-position:0 -416px;background-repeat:no-repeat}
+//Centered Nav
+.navbar {
+  .cf-icon-account {
+    zoom: .7;
+  }
+  .cf-icon-cart {
+    zoom: .8;
+  }
+}
+.navbar-start {
+  flex: 1;
+}
+.navbar-brand {
+  justify-content: center;
+  .navbar-item {
+    img {
+      width: initial;
+    }
+  }
+}
+.navbar-end {
+  flex: 1;
+}
+.navbar-is-mobile {
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: stretch;
+  border-top: solid 20px $green;
+  .navbar-burger {
+    margin-left: unset;
+    color: $green;
+    span {
+      height: 2px;
+      &:nth-child(3) {
+        width: 9px;
+      }
+    }
+    &.is-active {
+      span {
+        &:nth-child(3) {
+          width: 16px;
+        }
+      }
+    }
+  }
+}
+.navbar-start-mobile {
+  justify-content: flex-start;
+  margin-right: auto;
+  align-items: center;
+  display: flex;
+  flex: 1;
+}
+.navbar-brand-mobile {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  min-height: 3.25rem;
+  justify-content: center;
+  .navbar-item {
+    img {
+      width: initial;
+    }
+  }
+}
+.navbar-end-mobile {
+  justify-content: flex-end;
+  margin-left: auto;
+  align-items: center;
+  display: flex;
+  flex: 1;
+}
+
+
+
+
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
