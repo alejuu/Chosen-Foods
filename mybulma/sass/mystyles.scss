@@ -36,6 +36,9 @@ $body-background-color: $white;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+$radius-small: 1px !default
+$radius: 2px !default
+$radius-large: 3px !default
 
 // Extra Code
 // SVG Icons Sprite
@@ -57,7 +60,14 @@ $input-shadow: none;
 .cf-icon-white-twitter,.cf-icon-white-twitter\:regular{background-image:url('../assets/icons.svg');background-position:0 -352px;background-repeat:no-repeat}
 .cf-icon-white-up-small,.cf-icon-white-up-small\:regular{background-image:url('../assets/icons.svg');background-position:0 -384px;background-repeat:no-repeat}
 .cf-icon-white-x,.cf-icon-white-x\:regular{background-image:url('../assets/icons.svg');background-position:0 -416px;background-repeat:no-repeat}
-//Centered Nav
+
+// Extra Code
+//Navbar
+$navbar-dropdown-radius: 1px;;
+
+#mainMenu {
+  border-top: solid 20px $green;
+}
 .navbar {
   .cf-icon-account {
     zoom: .7;
@@ -84,7 +94,6 @@ $input-shadow: none;
   flex-grow: 1;
   flex-shrink: 0;
   align-items: stretch;
-  border-top: solid 20px $green;
   .navbar-burger {
     margin-left: unset;
     color: $green;
@@ -129,7 +138,65 @@ $input-shadow: none;
   display: flex;
   flex: 1;
 }
-
+#navMenu {
+  &.is-active {
+    background: $green;
+    .navbar-start {
+      > a {
+        &.navbar-item {
+          padding: 0.5rem 3rem;
+          font-weight: bold;
+        }
+      }
+    }
+    a {
+      &.navbar-link, &.navbar-item {
+        color: $white;
+      }
+      &.navbar-link {
+        font-weight: bold;
+        padding: 0.5rem 3rem;
+        &:hover, &.is-active {
+          background-color: $light-green;
+        }
+        &:not(.is-arrowless)::after {
+          right: 3em;
+          border-color: $white;
+        }
+      }
+      &.navbar-item {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        &:hover, &.is-active {
+          background-color: $light-green;
+        }
+      }
+    }
+    .search-item {
+      &::after {
+        background-image: url(../assets/icons.svg);
+        background-position: 0 -96px;
+        background-repeat: no-repeat;
+        border: 3px solid transparent;
+        border-radius: 2px;
+        border-right: 0;
+        border-top: 0;
+        content: " ";
+        display: block;
+        height: 2em;
+        margin-top: -0.4375em;
+        pointer-events: none;
+        position: absolute;
+        top: 40%;
+        transform-origin: center;
+        width: 3em;
+        filter: brightness(0) invert(1);
+        right: 5em;
+        zoom: 0.5;
+      }
+    }
+  }
+}
 
 
 
