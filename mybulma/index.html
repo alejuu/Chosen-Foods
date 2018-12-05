@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
+      <nav class="navbar" id="mainMenu" role="navigation" aria-label="main navigation">
         <div class="navbar-menu navbar-is-mobile is-flex-touch is-hidden-desktop is-paddingless is-shadowless">
           <div class="navbar-start-mobile">
             <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -32,6 +32,23 @@
         </div>
         <div class="navbar-menu is-shadowless" id="navMenu">
           <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Shop</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">Cooking Oils</a>
+                <a class="navbar-item">Cooking Sprays</a>
+                <a class="navbar-item">Dressings</a>
+                <a class="navbar-item">Mayos</a>
+              </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">About</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">Chosen Foods</a>
+                <a class="navbar-item">Our Avocados</a>
+              </div>
+            </div>
+            <a class="navbar-item search-item">Search</a>
           </div>
           <div class="navbar-brand is-hidden-touch">
             <a class="navbar-item is-flex" href="https://bulma.io">
