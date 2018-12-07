@@ -23,6 +23,7 @@ $black: #081F1E;
 
 // Update Bulma's global variables
 $family-sans-serif: "Open Sans", sans-serif;
+$family-title: "Bitter", sans-serif;
 $primary: $green;
 $danger: $light-red;
 $success: $turquoise;
@@ -36,9 +37,76 @@ $body-background-color: $white;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+<<<<<<< HEAD
 $radius-small: 1px !default
 $radius: 2px !default
 $radius-large: 3px !default
+=======
+$radius-small: 1px !default;
+$radius: 2px !default;
+$radius-large: 3px !default;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+
+// Extra Code
+// Colors
+.has-background-peach {
+  background-color: $peach;
+}
+
+// Extra Code
+// Typography
+.title {
+  &.is-1 {
+    font-size: 1.5rem;
+    font-family: $family-title;
+  }
+  &.is-2 {
+    font-size: 1.25rem;
+    font-family: $family-title;
+  }
+  &.is-3 {
+    font-size: .8125rem;
+    font-family: $family-title;
+  }
+  &.is-4 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &.is-5 {
+    font-size: .875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &.is-6 {
+    font-size: .75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+// Extra Code
+// Helpers
+.is-margin-center {
+  margin: 0 auto;
+}
+// .is-marginbottom-0 {
+//   margin-bottom: 0!important;
+// }
+// .is-margintop-1 {
+//   margin-top: 1rem;
+// }
+// .is-max-340 {
+//   max-width: 340px;
+// }
+>>>>>>> bulma-html
 
 // Extra Code
 // SVG Icons Sprite
@@ -62,7 +130,11 @@ $radius-large: 3px !default
 .cf-icon-white-x,.cf-icon-white-x\:regular{background-image:url('../assets/icons.svg');background-position:0 -416px;background-repeat:no-repeat}
 
 // Extra Code
+<<<<<<< HEAD
 //Navbar
+=======
+// Navbar
+>>>>>>> bulma-html
 $navbar-dropdown-radius: 1px;;
 
 #mainMenu {
@@ -198,6 +270,7 @@ $navbar-dropdown-radius: 1px;;
   }
 }
 
+<<<<<<< HEAD
 
 
 // Import only what you need from Bulma
@@ -207,3 +280,59 @@ $navbar-dropdown-radius: 1px;;
 @import "../node_modules/bulma/sass/components/_all.sass";
 @import "../node_modules/bulma/sass/layout/_all.sass";
 @import "../node_modules/bulma/sass/grid/_all.sass";
+=======
+// Extra Code
+// Hero
+.hero {
+  &.is-top-custom {
+  height: calc(100vh - 4.5rem);
+    .hero-body {
+      height: 100%;
+    }
+    .container {
+      height: calc(100vh - 10rem);
+      div {
+        &:nth-child(1) {
+          height: 65%;
+          .image {
+            height: 100%;
+            img {
+              max-height: 100%;
+              width: auto;
+            }
+          }
+        }
+        &:nth-child(2) {
+          height: 35%;
+          display: flex;
+          flex-direction: column;
+          .image {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            img {
+              max-height: 100%;
+              width: auto;
+              margin: 0 auto;
+            }
+          }
+          .title {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .icon {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+>>>>>>> bulma-html
