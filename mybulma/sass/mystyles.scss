@@ -37,6 +37,7 @@ $body-background-color: $white;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+<<<<<<< HEAD
 $radius-small: 1px !default;
 $radius: 2px !default;
 $radius-large: 3px !default;
@@ -101,6 +102,11 @@ $radius-large: 3px !default;
 // .is-max-340 {
 //   max-width: 340px;
 // }
+=======
+$radius-small: 1px !default
+$radius: 2px !default
+$radius-large: 3px !default
+>>>>>>> bulma-html
 
 // Extra Code
 // SVG Icons Sprite
@@ -124,7 +130,11 @@ $radius-large: 3px !default;
 .cf-icon-white-x,.cf-icon-white-x\:regular{background-image:url('../assets/icons.svg');background-position:0 -416px;background-repeat:no-repeat}
 
 // Extra Code
+<<<<<<< HEAD
 // Navbar
+=======
+//Navbar
+>>>>>>> bulma-html
 $navbar-dropdown-radius: 1px;;
 
 #mainMenu {
@@ -260,6 +270,7 @@ $navbar-dropdown-radius: 1px;;
   }
 }
 
+<<<<<<< HEAD
 // Extra Code
 // Hero
 .hero {
@@ -314,3 +325,14 @@ $navbar-dropdown-radius: 1px;;
     }
   }
 }
+=======
+
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+>>>>>>> bulma-html
