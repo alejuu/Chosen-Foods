@@ -50,9 +50,30 @@ $radius-large: 3px !default;
 @import "../node_modules/bulma/sass/grid/_all.sass";
 
 // Extra Code
+// Helpers
+.is-margin-center {
+  margin: 0 auto;
+}
+.is-divider {
+  border: 1px solid $green;
+}
+// .is-marginbottom-0 {
+//   margin-bottom: 0!important;
+// }
+// .is-margintop-1 {
+//   margin-top: 1rem;
+// }
+// .is-max-340 {
+//   max-width: 340px;
+// }
+
+// Extra Code
 // Colors
 .has-background-peach {
   background-color: $peach;
+}
+.has-background-light-green {
+  background-color: $light-green;
 }
 
 // Extra Code
@@ -88,19 +109,13 @@ $radius-large: 3px !default;
 }
 
 // Extra Code
-// Helpers
-.is-margin-center {
-  margin: 0 auto;
+// Buttons
+.button {
+  &.is-rounded {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }
-// .is-marginbottom-0 {
-//   margin-bottom: 0!important;
-// }
-// .is-margintop-1 {
-//   margin-top: 1rem;
-// }
-// .is-max-340 {
-//   max-width: 340px;
-// }
 
 // Extra Code
 // SVG Icons Sprite
@@ -263,14 +278,13 @@ $navbar-dropdown-radius: 1px;;
 // Extra Code
 // Hero
 .hero {
-  &.is-top-custom {
-  height: calc(100vh - 4.5rem);
+  &.is-full-custom {
     .hero-body {
       height: 100%;
     }
     .container {
-      height: calc(100vh - 10rem);
-      div {
+      height: calc(100vh - 6rem);
+      > div {
         &:nth-child(1) {
           height: 65%;
           .image {
@@ -310,6 +324,52 @@ $navbar-dropdown-radius: 1px;;
             justify-content: center;
           }
         }
+      }
+    }
+  }
+  &.is-top-custom {
+    height: calc(100vh - 4.5rem);
+    .container {
+      height: calc(100vh - 10rem);
+    }
+  }
+}
+// Extra Code
+// footer
+.footer {
+  padding: 0;
+  .content {
+    padding: 1.25rem;
+    .field {
+      .cf-icon {
+        zoom: .5;
+      }
+    }
+    .social {
+      max-width: 300px;
+    }
+    .menu-list {
+      margin: 0;
+      list-style: none;
+      a {
+        padding: 0;
+      }
+    }
+    &:nth-child(3) {
+      .columns {
+        &.is-mobile {
+          margin-bottom: 0;
+        }
+        &:nth-child(3) {
+          .column {
+            &:nth-child(1) {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+      .is-divider {
+        margin: 0 0 .75rem;
       }
     }
   }
