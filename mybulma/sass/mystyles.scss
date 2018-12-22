@@ -21,6 +21,17 @@ $turquoise: #4DB089;
 $blue: #2E53A2;
 $black: #081F1E;
 
+// Extra Colors
+$light-peach: #FEE8DA;
+$lighter-peach: #F8EED8;
+$light-yellow: #F9FFD3;
+$dark-yellow: #EAD354;
+$lighter-green: #C7E7DF;
+$dark-orange: #FF7E41;
+$light-orange: #F4A062;
+$light-turquoise: #EFF7F6;
+$light-blue: #71A6B3;
+
 // Update Bulma's global variables
 $family-sans-serif: "Open Sans", sans-serif;
 $family-title: "Bitter", sans-serif;
@@ -57,15 +68,6 @@ $radius-large: 3px !default;
 .is-divider {
   border: 1px solid $green;
 }
-// .is-marginbottom-0 {
-//   margin-bottom: 0!important;
-// }
-// .is-margintop-1 {
-//   margin-top: 1rem;
-// }
-// .is-max-340 {
-//   max-width: 340px;
-// }
 
 // Extra Code
 // Colors
@@ -75,34 +77,46 @@ $radius-large: 3px !default;
 .has-background-light-green {
   background-color: $light-green;
 }
+.has-background-light-peach {
+  background-color: $light-peach;
+}
+.has-background-light-turquoise {
+  background-color: $light-turquoise;
+}
 
 // Extra Code
 // Typography
 .title {
   &.is-1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.01875rem;
     font-family: $family-title;
   }
   &.is-2 {
-    font-size: 1.25rem;
+    font-size: 1.625rem;
+    letter-spacing: 0.01875rem;
     font-family: $family-title;
   }
   &.is-3 {
-    font-size: .8125rem;
+    font-size: 1.0625rem;
+    letter-spacing: 0.01875rem;
     font-family: $family-title;
   }
   &.is-4 {
-    font-size: 1rem;
+    font-size: 1.375rem;
+    letter-spacing: 0.1875rem;
     font-weight: 400;
     text-transform: uppercase;
   }
   &.is-5 {
-    font-size: .875rem;
+    font-size: 1.1875rem;
+    letter-spacing: 0.1875rem;
     font-weight: 700;
     text-transform: uppercase;
   }
   &.is-6 {
-    font-size: .75rem;
+    font-size: 1rem;
+    letter-spacing: 0.1875rem;
     font-weight: 600;
     text-transform: uppercase;
   }
@@ -233,8 +247,14 @@ $navbar-dropdown-radius: 1px;;
       &.navbar-link {
         font-weight: bold;
         padding: 0.5rem 3rem;
-        &:hover, &.is-active {
+        + .navbar-dropdown {
+          display: none;
+        }
+        &:hover, &.is-active, &:active {
           background-color: $light-green;
+          + .navbar-dropdown {
+            display: block!important;
+          }
         }
         &:not(.is-arrowless)::after {
           right: 3em;
@@ -270,6 +290,67 @@ $navbar-dropdown-radius: 1px;;
         filter: brightness(0) invert(1);
         right: 5em;
         zoom: 0.5;
+      }
+    }
+  }
+}
+
+//Extra Code
+// Main
+main {
+  margin-top: 1.25rem;
+}
+
+// Extra Code
+// Footer
+.footer {
+  padding: 0;
+  .content {
+    padding: 1.25rem;
+    .field {
+      .control {
+        &.has-icons-right {
+          max-width: 300px;
+          margin: 0 auto;
+          .input {
+            &::placeholder {
+              font-weight: 700;
+              color: $green;
+              font-size: .8rem
+            }
+          }
+        }
+      }
+      .cf-icon {
+        zoom: .5;
+      }
+    }
+    .social {
+      max-width: 300px;
+    }
+    .menu-list {
+      margin: 0;
+      list-style: none;
+      a {
+        padding: 0;
+      }
+    }
+    &:nth-child(4) {
+      padding-top: 0;
+      .columns {
+        &.is-mobile {
+          margin-bottom: 0;
+        }
+        &:nth-child(3) {
+          .column {
+            &:nth-child(1) {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+      .is-divider {
+        margin: 0 0 .75rem;
       }
     }
   }
@@ -333,43 +414,33 @@ $navbar-dropdown-radius: 1px;;
       height: calc(100vh - 10rem);
     }
   }
-}
-// Extra Code
-// footer
-.footer {
-  padding: 0;
-  .content {
-    padding: 1.25rem;
-    .field {
-      .cf-icon {
-        zoom: .5;
-      }
-    }
-    .social {
-      max-width: 300px;
-    }
-    .menu-list {
-      margin: 0;
-      list-style: none;
+  &.is-collection {
+    .breadcrumb {
+      padding-top: .75rem;
+      padding-left: .75rem;
       a {
-        padding: 0;
-      }
-    }
-    &:nth-child(3) {
-      .columns {
-        &.is-mobile {
-          margin-bottom: 0;
+        color: $green;
+        &:hover {
+          color: $white;
         }
-        &:nth-child(3) {
-          .column {
-            &:nth-child(1) {
-              padding-bottom: 0;
-            }
+      }
+      li {
+        &.is-active {
+          a {
+            color: $black;
+            font-weight: 700;
+          }
+        }
+        & + li {
+          &::before {
+            color: $green;
           }
         }
       }
-      .is-divider {
-        margin: 0 0 .75rem;
+    }
+    .image {
+      img {
+        max-width: 350px;
       }
     }
   }

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
   <head>
     <title>Chosen Foods</title>
     <link rel="stylesheet" href="css/mystyles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
-      <nav class="navbar" id="mainMenu" role="navigation" aria-label="main navigation">
+      <nav class="navbar is-fixed-top" id="mainMenu" role="navigation" aria-label="main navigation">
         <div class="navbar-menu navbar-is-mobile is-flex-touch is-hidden-desktop is-paddingless is-shadowless">
           <div class="navbar-start-mobile">
             <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -70,12 +71,12 @@
       <section class="hero has-background-peach is-full-custom is-top-custom">
         <div class="hero-body">
           <div class="container has-text-centered">
-            <div>
+            <div data-aos="fade-up">
               <figure class="image">
                 <img class="is-margin-center" src="assets/hero-homepage.png">
               </figure>
             </div>
-            <div>
+            <div data-aos="fade-up">
               <figure class="image">
                 <img class="is-margin-center" src="assets/meetthehero-text.png">
               </figure>
@@ -88,12 +89,12 @@
       <section class="hero is-fullheight is-full-custom">
         <div class="hero-body">
           <div class="container has-text-centered">
-            <div>
+            <div data-aos="fade-up">
               <figure class="image">
                 <img class="is-margin-center" src="assets/cookingoils-homepage.png">
               </figure>
             </div>
-            <div>
+            <div data-aos="fade-up">
               <figure class="image">
                 <img class="is-margin-center" src="assets/cookingoils-text.png">
               </figure>
@@ -107,14 +108,14 @@
     </main>
     <footer class="footer">
       <div class="content is-marginless has-text-centered has-background-peach">
-        <div class="container">
-          <h3 class="title is-1 has-text-primary">Catch our drift</h3>
+        <div data-aos="fade-up" class="container">
+          <h3 class="title is-2 has-text-primary">Catch our drift</h3>
           <p class="is-size-6 has-text-primary">
             sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
           </p>
           <div class="field">
             <p class="control has-icons-right">
-              <input class="input is-rounded" type="email" placeholder="Email">
+              <input class="input is-rounded" type="email" placeholder="Email Address">
               <span class="icon is-right">
                 <i class="cf-icon cf-icon-right-arrow"></i>
               </span>
@@ -123,8 +124,8 @@
         </div>
       </div>
       <div class="content is-marginless has-text-centered has-background-light-green">
-        <div class="container">
-          <h3 class="title is-1 has-text-white">Relationships need nourishment</h3>
+        <div data-aos="fade-up" class="container">
+          <h3 class="title is-2 has-text-white">Relationships need nourishment</h3>
           <p class="is-size-6 has-text-white">
             stay in the loop
           </p>
@@ -143,7 +144,12 @@
           </div>
         </div>
       </div>
-      <div class="content is-marginless">
+      <div class="has-background-light-green">
+        <figure data-aos="fade-up" class="image">
+          <img class="is-margin-center" src="assets/footer-homepage.png">
+        </figure>
+      </div>
+      <div class="content is-marginless has-background-light-turquoise">
         <div class="container">
           <div class="columns is-mobile">
             <div class="column">

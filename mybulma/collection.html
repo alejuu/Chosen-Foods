@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
   <head>
     <title>Chosen Foods</title>
     <link rel="stylesheet" href="css/mystyles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
-      <nav class="navbar" id="mainMenu" role="navigation" aria-label="main navigation">
+      <nav class="navbar is-fixed-top" id="mainMenu" role="navigation" aria-label="main navigation">
         <div class="navbar-menu navbar-is-mobile is-flex-touch is-hidden-desktop is-paddingless is-shadowless">
           <div class="navbar-start-mobile">
             <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -67,109 +68,133 @@
       </nav>
     </header>
     <main>
-      <!-- <section class="hero has-background-peach is-full-custom is-top-custom">
+      <section class="hero is-collection has-background-light-peach">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li><a href="#">Bulma</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Components</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+          </ul>
+        </nav>
         <div class="hero-body">
           <div class="container has-text-centered">
             <div>
               <figure class="image">
-                <img class="is-margin-center" src="assets/hero-homepage.png">
-              </figure>
-            </div>
-            <div>
-              <figure class="image">
-                <img class="is-margin-center" src="assets/meetthehero-text.png">
-              </figure>
-              <h5 class="title is-5 has-text-centered has-text-primary is-marginless">Discover More</h5>
-              <i class="icon cf-icon cf-icon-green-down is-margin-center"></i>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="hero is-fullheight is-full-custom">
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <div>
-              <figure class="image">
-                <img class="is-margin-center" src="assets/cookingoils-homepage.png">
+                <img class="is-margin-center" src="assets/cookingoils-category.png">
               </figure>
             </div>
             <div>
               <figure class="image">
                 <img class="is-margin-center" src="assets/cookingoils-text.png">
               </figure>
-              <div>
-                <a class="button is-medium is-rounded is-uppercase"><h6 class="title is-6">Shop Now</h6></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <div class="columns is-mobile">
+                <div class="column">
+                  <p class="bd-notification is-info">First nested column</p>
+                </div>
+                <div class="column">
+                  <p class="bd-notification is-info">Second nested column</p>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="columns is-mobile">
+                <div class="column">
+                  <p class="bd-notification is-info">Third nested column</p>
+                </div>
+                <div class="column">
+                  <p class="bd-notification is-info">Fourth nested column</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
     <footer class="footer">
       <div class="content is-marginless has-text-centered has-background-peach">
-        <h3 class="title is-1 has-text-primary">Catch our drift</h3>
-        <p class="is-size-6 has-text-primary">
-          sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
-        </p>
-        <div class="field">
-          <p class="control has-icons-right">
-            <input class="input is-rounded" type="email" placeholder="Email">
-            <span class="icon is-right">
-              <i class="cf-icon cf-icon-right-arrow"></i>
-            </span>
+        <div class="container">
+          <h3 class="title is-2 has-text-primary">Catch our drift</h3>
+          <p class="is-size-6 has-text-primary">
+            sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
           </p>
+          <div class="field">
+            <p class="control has-icons-right">
+              <input class="input is-rounded" type="email" placeholder="Email Address">
+              <span class="icon is-right">
+                <i class="cf-icon cf-icon-right-arrow"></i>
+              </span>
+            </p>
+          </div>
         </div>
       </div>
       <div class="content is-marginless has-text-centered has-background-light-green">
-        <h3 class="title is-1 has-text-white">Relationships need nourishment</h3>
-        <p class="is-size-6 has-text-white">
-          stay in the loop
-        </p>
-        <div class="social is-margin-center">
-          <div class="columns is-mobile">
-            <div class="column">
-              <i class="icon cf-icon cf-icon-white-instagram"></i>
-            </div>
-            <div class="column">
-              <i class="icon cf-icon cf-icon-white-twitter"></i>
-            </div>
-            <div class="column">
-              <i class="icon cf-icon cf-icon-white-facebook"></i>
+        <div class="container">
+          <h3 class="title is-2 has-text-white">Relationships need nourishment</h3>
+          <p class="is-size-6 has-text-white">
+            stay in the loop
+          </p>
+          <div class="social is-margin-center">
+            <div class="columns is-mobile">
+              <div class="column">
+                <i class="icon cf-icon cf-icon-white-instagram"></i>
+              </div>
+              <div class="column">
+                <i class="icon cf-icon cf-icon-white-twitter"></i>
+              </div>
+              <div class="column">
+                <i class="icon cf-icon cf-icon-white-facebook"></i>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="content is-marginless">
-        <div class="columns is-mobile">
-          <div class="column">
-            <aside class="menu">
-              <ul class="menu-list">
-                <li><a class="is-size-7 has-text-primary">Privacy Policy</a></li>
-                <li><a class="is-size-7 has-text-primary">Shipping Terms</a></li>
-                <li><a class="is-size-7 has-text-primary">Contact Us</a></li>
-              </ul>
-            </aside>
+      <div class="has-background-light-green">
+        <figure class="image">
+          <img class="is-margin-center" src="assets/footer-homepage.png">
+        </figure>
+      </div>
+      <div class="content is-marginless has-background-light-turquoise">
+        <div class="container">
+          <div class="columns is-mobile">
+            <div class="column">
+              <aside class="menu">
+                <ul class="menu-list">
+                  <li><a class="is-size-7 has-text-primary">Privacy Policy</a></li>
+                  <li><a class="is-size-7 has-text-primary">Shipping Terms</a></li>
+                  <li><a class="is-size-7 has-text-primary">Contact Us</a></li>
+                </ul>
+              </aside>
+            </div>
+            <div class="column">
+              <aside class="menu">
+                <ul class="menu-list">
+                  <li><a class="is-size-7 has-text-primary">Terms and Conditions</a></li>
+                  <li><a class="is-size-7 has-text-primary">Sitemap</a></li>
+                </ul>
+              </aside>
+            </div>
           </div>
-          <div class="column">
-            <aside class="menu">
-              <ul class="menu-list">
-                <li><a class="is-size-7 has-text-primary">Terms and Conditions</a></li>
-                <li><a class="is-size-7 has-text-primary">Sitemap</a></li>
-              </ul>
-            </aside>
-          </div>
-        </div>
-        <div class="is-divider"></div>
-        <div class="columns">
-          <div class="column">
-            <p class="is-size-7 has-text-primary">
-              1747 Hancock St, Ste A, San Diego, CA 92101 877.674.2244
-            </p>
-          </div>
-          <div class="column">
-            <p class="is-size-7 has-text-primary">
-              © 2018 Chosen Foods LLC. All Rights Reserved.
-            </p>
+          <div class="is-divider"></div>
+          <div class="columns">
+            <div class="column">
+              <p class="is-size-7 has-text-primary">
+                1747 Hancock St, Ste A, San Diego, CA 92101 877.674.2244
+              </p>
+            </div>
+            <div class="column">
+              <p class="is-size-7 has-text-primary">
+                © 2018 Chosen Foods LLC. All Rights Reserved.
+              </p>
+            </div>
           </div>
         </div>
       </div>
