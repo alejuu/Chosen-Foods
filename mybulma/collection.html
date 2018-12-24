@@ -3,7 +3,6 @@
   <head>
     <title>Chosen Foods</title>
     <link rel="stylesheet" href="css/mystyles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -79,42 +78,156 @@
         </nav>
         <div class="hero-body">
           <div class="container has-text-centered">
-            <div>
+            <div data-aos="fade-up">
               <figure class="image">
                 <img class="is-margin-center" src="assets/cookingoils-category.png">
               </figure>
             </div>
-            <div>
+            <div data-aos="fade-up">
               <figure class="image">
                 <img class="is-margin-center" src="assets/cookingoils-text.png">
               </figure>
             </div>
+            <div data-aos="fade-up" class="filters columns is-mobile">
+              <div class="column">
+                <div class="dropdown is-hoverable">
+                  <div class="dropdown-trigger">
+                    <button class="button is-small is-rounded is-link is-uppercase has-text-centered" aria-haspopup="true" aria-controls="dropdown-filter">
+                      <span>Filter</span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-filter" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        Overview
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Modifiers
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Grid
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Form
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Elements
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Components
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Layout
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a href="#" class="dropdown-item">
+                        More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="dropdown is-hoverable">
+                  <div class="dropdown-trigger">
+                    <button class="button is-small is-rounded is-link is-outlined is-uppercase has-text-centered " aria-haspopup="true" aria-controls="dropdown-sort">
+                      <span>Sort By</span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-sort" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        Overview
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Modifiers
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Grid
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Form
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Elements
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Components
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Layout
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a href="#" class="dropdown-item">
+                        More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section collection-grid">
         <div class="container">
           <div class="columns">
             <div class="column">
               <div class="columns is-mobile">
                 <div class="column">
-                  <p class="bd-notification is-info">First nested column</p>
+                  <figure class="image is-128x128 is-margin-center">
+                    <img src="assets/product-image.jpg">
+                  </figure>
+                  <div class="has-text-centered product-info">
+                    <h3 class="title is-3">Product Name</h3>
+                    <p class="title is-6">
+                      $19.95
+                    </p>
+                  </div>
                 </div>
                 <div class="column">
-                  <p class="bd-notification is-info">Second nested column</p>
+                  <figure class="image is-128x128 is-margin-center">
+                    <img src="assets/product-image.jpg">
+                  </figure>
+                  <div class="has-text-centered product-info">
+                    <h3 class="title is-3">Product Name</h3>
+                    <p class="title is-6">
+                      $19.95
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="column">
               <div class="columns is-mobile">
                 <div class="column">
-                  <p class="bd-notification is-info">Third nested column</p>
+                  <figure class="image is-128x128 is-margin-center">
+                    <img src="assets/product-image.jpg">
+                  </figure>
+                  <div class="has-text-centered product-info">
+                    <h3 class="title is-3">Product Name</h3>
+                    <p class="title is-6">
+                      $19.95
+                    </p>
+                  </div>
                 </div>
                 <div class="column">
-                  <p class="bd-notification is-info">Fourth nested column</p>
+                  <figure class="image is-128x128 is-margin-center">
+                    <img src="assets/product-image.jpg">
+                  </figure>
+                  <div class="has-text-centered product-info">
+                    <h3 class="title is-3">Product Name</h3>
+                    <p class="title is-6">
+                      $19.95
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="container has-text-centered">
+            <h5 class="title is-5 has-text-centered has-text-primary is-marginless">Discover More</h5>
+            <i class="icon cf-icon cf-icon-green-down is-margin-center"></i>
           </div>
         </div>
       </section>
@@ -122,11 +235,13 @@
     <footer class="footer">
       <div class="content is-marginless has-text-centered has-background-peach">
         <div class="container">
-          <h3 class="title is-2 has-text-primary">Catch our drift</h3>
-          <p class="is-size-6 has-text-primary">
-            sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
-          </p>
-          <div class="field">
+          <div data-aos="fade-up">
+            <h3 class="title is-2 has-text-primary">Catch our drift</h3>
+            <p class="is-size-6 has-text-primary">
+              sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
+            </p>
+          </div>
+          <div data-aos="fade-right" class="field">
             <p class="control has-icons-right">
               <input class="input is-rounded" type="email" placeholder="Email Address">
               <span class="icon is-right">
@@ -137,7 +252,7 @@
         </div>
       </div>
       <div class="content is-marginless has-text-centered has-background-light-green">
-        <div class="container">
+        <div data-aos="fade-up" class="container">
           <h3 class="title is-2 has-text-white">Relationships need nourishment</h3>
           <p class="is-size-6 has-text-white">
             stay in the loop
@@ -158,7 +273,7 @@
         </div>
       </div>
       <div class="has-background-light-green">
-        <figure class="image">
+        <figure data-aos="fade-up" class="image">
           <img class="is-margin-center" src="assets/footer-homepage.png">
         </figure>
       </div>
