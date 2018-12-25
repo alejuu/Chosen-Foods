@@ -366,65 +366,71 @@ main {
 // Extra Code
 // Hero
 .hero {
-  &.is-full-custom {
-    .hero-body {
-      height: 100%;
-    }
-    .container {
-      height: calc(100vh - 6rem);
-      > div {
-        &:nth-child(1) {
-          height: 65%;
-          .image {
-            height: 100%;
-            img {
-              max-height: 100%;
-              width: auto;
+  &.is-main {
+    &.is-full-custom {
+      .hero-body {
+        height: 100%;
+      }
+      .container {
+        height: calc(100vh - 6rem);
+        > div {
+          &:nth-child(1) {
+            height: 65%;
+            .image {
+              height: 100%;
+              img {
+                max-height: 100%;
+                width: auto;
+              }
             }
           }
-        }
-        &:nth-child(2) {
-          height: 35%;
-          display: flex;
-          flex-direction: column;
-          .image {
-            flex-grow: 1;
+          &:nth-child(2) {
+            height: 35%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            height: 100%;
-            img {
-              max-height: 100%;
-              width: auto;
-              margin: 0 auto;
+            .image {
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              height: 100%;
+              img {
+                max-height: 100%;
+                width: auto;
+                margin: 0 auto;
+              }
             }
-          }
-          .title {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .icon {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            .title {
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+            .icon {
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
           }
         }
       }
     }
-  }
-  &.is-top-custom {
-    height: calc(100vh - 4.5rem);
-    .container {
-      height: calc(100vh - 10rem);
+    &.is-top-custom {
+      height: calc(100vh - 4.5rem);
+      .container {
+        height: calc(100vh - 10rem);
+      }
     }
   }
+  //Hero Collection
   &.is-collection {
     .breadcrumb {
       padding-top: .75rem;
       padding-left: .75rem;
+      ul {
+        font-size: .8rem;
+      }
       a {
         color: $green;
         &:hover {
@@ -448,6 +454,62 @@ main {
     .image {
       img {
         max-width: 350px;
+      }
+    }
+  }
+  //Hero Product
+  &.is-product {
+    &.is-top-custom {
+      height: calc(100vh - 4.5rem);
+      .breadcrumb {
+        padding-top: .75rem;
+        padding-left: .75rem;
+        ul {
+          font-size: .8rem;
+        }
+      }
+      .hero-body {
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        .columns {
+          width: 100%;
+          .column {
+            &:nth-child(2) {
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
+          }
+          .image {
+            &.feature {
+              max-width: 500px;
+            }
+          }
+        }
+      }
+      @include until($tablet) {
+        .breadcrumb {
+          position: relative;
+          z-index: 1;
+        }
+        .hero-body {
+          position: relative;
+          top: -74px;
+          height: calc(100vh - 4.5rem);
+          .columns {
+            height: 100%;
+            .column {
+              &:nth-child(1) {
+                padding: 0;
+                height: 75%;
+              }
+              &:nth-child(2) {
+                height: 25%;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -477,5 +539,39 @@ main {
     line-height: 1;
     letter-spacing: 1.5px;
     width: 130px;
+  }
+}
+
+// Extra Code
+// Product
+.product-form {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 1em;
+  .control {
+    &:nth-child(1) {
+      width: 20%;
+      align-items: center;
+      justify-content: center;
+      margin: 0!important;
+      .input {
+        width: 30px;
+        border-bottom: 2px solid $green;
+        &:hover, &:active, &:focus {
+          border: hidden;
+        }
+      }
+    }
+    &:nth-child(2) {
+      width: 80%;
+    }
+  }
+  .button {
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    width: 100%;
   }
 }
