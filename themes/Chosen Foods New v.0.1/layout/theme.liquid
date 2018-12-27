@@ -3,30 +3,36 @@
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  
-  {% if template == 'index' %}
-    <title>{{ shop.name }} | {{ page_title }}</title>
-  {% elsif template == '404' %}
-    <title>Page Not Found | {{ shop.name }}</title>
-  {% else %}
-    <title>{{ page_title }} | {{ shop.name }}</title>
-  {% endif %}
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  {% if page_description %}
-    <meta name="description" content="{{ page_description }}" />
-  {% endif %}
+    {% if template == 'index' %}
+      <title>{{ shop.name }} | {{ page_title }}</title>
+    {% elsif template == '404' %}
+      <title>Page Not Found | {{ shop.name }}</title>
+    {% else %}
+      <title>{{ page_title }} | {{ shop.name }}</title>
+    {% endif %}
 
-  {{ content_for_header }}
+    {% if page_description %}
+      <meta name="description" content="{{ page_description }}" />
+    {% endif %}
 
-  <link rel="canonical" href="{{ canonical_url }}" />
-  <meta name="viewport" content="width=device-width" />
-  {{ 'style.scss' | asset_url | stylesheet_tag }}
-</head>
-<body>
-  {{ content_for_layout }}
-</body>
+    {{ content_for_header }}
+
+    <link rel="canonical" href="{{ canonical_url }}" />
+    <meta name="viewport" content="width=device-width" />
+    {{ 'styles.scss' | asset_url | stylesheet_tag }}
+  </head>
+  <body>
+    {% section 'header' %}
+    {{ content_for_layout }}
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  {{ 'theme.js' | asset_url | script_tag }}
 </html>
