@@ -21,6 +21,17 @@ $turquoise: #4DB089;
 $blue: #2E53A2;
 $black: #081F1E;
 
+// Extra Colors
+$light-peach: #FEE8DA;
+$lighter-peach: #F8EED8;
+$light-yellow: #F9FFD3;
+$dark-yellow: #EAD354;
+$lighter-green: #C7E7DF;
+$dark-orange: #FF7E41;
+$light-orange: #F4A062;
+$light-turquoise: #EFF7F6;
+$light-blue: #71A6B3;
+
 // Update Bulma's global variables
 $family-sans-serif: "Open Sans", sans-serif;
 $family-title: "Bitter", sans-serif;
@@ -29,6 +40,7 @@ $danger: $light-red;
 $success: $turquoise;
 $info: $blue;
 $link: $orange;
+$text: $black;
 $widescreen-enabled: true;
 $fullhd-enabled: true;
 
@@ -37,14 +49,19 @@ $body-background-color: $white;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
-<<<<<<< HEAD
-$radius-small: 1px !default
-$radius: 2px !default
-$radius-large: 3px !default
-=======
 $radius-small: 1px !default;
 $radius: 2px !default;
 $radius-large: 3px !default;
+
+// Update navbar
+$navbar-dropdown-radius: 1px;
+
+// Update Bulma extensions
+$accordion-content-pre-background-color: transparent !default;
+$accordion-content-pre-code-background-color: transparent !default;
+$accordion-background-color: transparent !default;
+$accordion-header-background-color: transparent !default;
+$accordion-content-border: hidden !default
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
@@ -54,98 +71,253 @@ $radius-large: 3px !default;
 @import "../node_modules/bulma/sass/layout/_all.sass";
 @import "../node_modules/bulma/sass/grid/_all.sass";
 
-// Extra Code
-// Colors
-.has-background-peach {
-  background-color: $peach;
-}
-
-// Extra Code
-// Typography
-.title {
-  &.is-1 {
-    font-size: 1.5rem;
-    font-family: $family-title;
-  }
-  &.is-2 {
-    font-size: 1.25rem;
-    font-family: $family-title;
-  }
-  &.is-3 {
-    font-size: .8125rem;
-    font-family: $family-title;
-  }
-  &.is-4 {
-    font-size: 1rem;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-  &.is-5 {
-    font-size: .875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  &.is-6 {
-    font-size: .75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-}
+//Import Extras
+@import "../node_modules/aos/src/sass/aos.scss";
+@import "../node_modules/bulma-extensions/bulma-accordion/dist/css/bulma-accordion.sass";
 
 // Extra Code
 // Helpers
 .is-margin-center {
   margin: 0 auto;
 }
-// .is-marginbottom-0 {
-//   margin-bottom: 0!important;
-// }
-// .is-margintop-1 {
-//   margin-top: 1rem;
-// }
-// .is-max-340 {
-//   max-width: 340px;
-// }
->>>>>>> bulma-html
+.is-divider {
+  border: 1px solid $green;
+}
 
 // Extra Code
-// SVG Icons Sprite
-.cf-icon {
+// Colors
+.has-background-peach {
+  background-color: $peach;
+}
+.has-background-light-green {
+  background-color: $light-green;
+}
+.has-background-light-peach {
+  background-color: $light-peach;
+}
+.has-background-light-turquoise {
+  background-color: $light-turquoise;
+}
+.has-background-orange {
+  background-color: $orange;
+}
+
+// Extra Code
+// Typography
+.title {
+  &.is-1 {
+    font-size: 2rem;
+    letter-spacing: 0.01875rem;
+    font-family: $family-title;
+  }
+  &.is-2 {
+    font-size: 1.625rem;
+    letter-spacing: 0.01875rem;
+    font-family: $family-title;
+  }
+  &.is-3 {
+    font-size: 1.0625rem;
+    letter-spacing: 0.01875rem;
+    font-family: $family-title;
+  }
+  &.is-4 {
+    font-size: 1.375rem;
+    letter-spacing: 0.1875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &.is-5 {
+    font-size: 1.1875rem;
+    letter-spacing: 0.1875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &.is-6 {
+    font-size: 1rem;
+    letter-spacing: 0.1875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+// Extra Code
+// Buttons
+.button {
+  &.is-rounded {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+// Extra Code
+// Icons Sprite
+.cf-icon-account-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -134px -10px;
+}
+.cf-icon-cart-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -98px -46px;
+}
+.cf-icon-arrow-down-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -62px -10px;
+}
+.cf-icon-search-16 {
+  width: 16px; height: 16px;
+  background: url('../assets/sprites16.png') -62px -46px;
+}
+.cf-icon-right-arrow-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -98px -10px;
+}
+.cf-icon-facebook-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -134px -46px;
+}
+.cf-icon-instagram-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -10px -93px;
+}
+.cf-icon-twitter-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -46px -93px;
+}
+.cf-icon-arrow-up-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -82px -93px;
+}
+.cf-icon-avocado-16 {
+  width: 16px;
+  height: 27px;
+  background: url('../assets/sprites16.png') -10px -46px;
+}
+.cf-icon-staff-pick-16 {
+  width: 32px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -10px -10px;
+}
+.cf-icon-account-32 {
   width: 32px;
   height: 32px;
+  background: url('../assets/sprites32.png') -197px -10px;
 }
-.cf-icon-account,.cf-icon-account\:regular{background-image:url('../assets/icons.svg');background-position:0 0;background-repeat:no-repeat}
-.cf-icon-cart,.cf-icon-cart\:regular{background-image:url('../assets/icons.svg');background-position:0 -32px;background-repeat:no-repeat}
-.cf-icon-green-down,.cf-icon-green-down\:regular{background-image:url('../assets/icons.svg');background-position:0 -64px;background-repeat:no-repeat}
-.cf-icon-green-search,.cf-icon-green-search\:regular{background-image:url('../assets/icons.svg');background-position:0 -96px;background-repeat:no-repeat}
-.cf-icon-green-x,.cf-icon-green-x\:regular{background-image:url('../assets/icons.svg');background-position:0 -128px;background-repeat:no-repeat}
-.cf-icon-plus,.cf-icon-plus\:regular{background-image:url('../assets/icons.svg');background-position:0 -160px;background-repeat:no-repeat}
-.cf-icon-right-arrow,.cf-icon-right-arrow\:regular{background-image:url('../assets/icons.svg');background-position:0 -192px;background-repeat:no-repeat}
-.cf-icon-staffpick,.cf-icon-staffpick\:regular{background-image:url('../assets/icons.svg');background-position:0 -224px;background-repeat:no-repeat}
-.cf-icon-white-facebook,.cf-icon-white-facebook\:regular{background-image:url('../assets/icons.svg');background-position:0 -256px;background-repeat:no-repeat}
-.cf-icon-white-instagram,.cf-icon-white-instagram\:regular{background-image:url('../assets/icons.svg');background-position:0 -288px;background-repeat:no-repeat}
-.cf-icon-white-search,.cf-icon-white-search\:regular{background-image:url('../assets/icons.svg');background-position:0 -320px;background-repeat:no-repeat}
-.cf-icon-white-twitter,.cf-icon-white-twitter\:regular{background-image:url('../assets/icons.svg');background-position:0 -352px;background-repeat:no-repeat}
-.cf-icon-white-up-small,.cf-icon-white-up-small\:regular{background-image:url('../assets/icons.svg');background-position:0 -384px;background-repeat:no-repeat}
-.cf-icon-white-x,.cf-icon-white-x\:regular{background-image:url('../assets/icons.svg');background-position:0 -416px;background-repeat:no-repeat}
+.cf-icon-cart-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -145px -62px;
+}
+.cf-icon-arrow-down-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -93px -10px;
+}
+.cf-icon-search-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -93px -62px;
+}
+.cf-icon-right-arrow-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -145px -10px;
+}
+.cf-icon-facebook-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -197px -62px;
+}
+.cf-icon-instagram-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -10px -135px;
+}
+.cf-icon-twitter-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -62px -135px;
+}
+.cf-icon-arrow-up-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -114px -135px;
+}
+.cf-icon-avocado-32 {
+  width: 32px;
+  height: 53px;
+  background: url('../assets/sprites32.png') -10px -62px;
+}
+.cf-icon-staff-pick-32 {
+  width: 63px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -10px -10px;
+}
 
 // Extra Code
-<<<<<<< HEAD
-//Navbar
-=======
+// Accordion
+.accordions {
+  .accordion {
+    .accordion-header {
+      padding: 1em 0;
+      border-top: 1px solid $green;
+      .title {
+        margin: auto 0;
+      }
+      .toggle {
+        background-color: transparent;
+        position: relative;
+        z-index: -1;
+        &::before {
+          color: $green;
+          font-size: 2rem;
+          line-height: 0;
+          top: inherit;
+          bottom: inherit;
+          right: 0;
+        }
+      }
+    }
+    &.is-active {
+      .toggle {
+        &::before {
+          font-size: 3rem;
+        }
+      }
+    }
+    &:last-child {
+      .accordion-header {
+        border-bottom: 1px solid $green;
+      }
+    }
+  }
+}
+
+// Extra Code
 // Navbar
->>>>>>> bulma-html
-$navbar-dropdown-radius: 1px;;
 
 #mainMenu {
   border-top: solid 20px $green;
 }
-.navbar {
-  .cf-icon-account {
-    zoom: .7;
-  }
-  .cf-icon-cart {
-    zoom: .8;
+.navbar-end, .navbar-end-mobile {
+  span {
+    &.icon {
+      width: 32px;
+      height: 32px;
+      .cf-icon-account-32 {
+        zoom: .6;
+      }
+      .cf-icon-cart-32 {
+        zoom: .8;
+      }
+    }
   }
 }
 .navbar-start {
@@ -161,6 +333,15 @@ $navbar-dropdown-radius: 1px;;
 }
 .navbar-end {
   flex: 1;
+  .navbar-item {
+    .button {
+      height: auto;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      line-height: 1;
+      letter-spacing: 1.5px;
+    }
+  }
 }
 .navbar-is-mobile {
   flex-grow: 1;
@@ -176,7 +357,9 @@ $navbar-dropdown-radius: 1px;;
       }
     }
     &.is-active {
+      background-color: $green;
       span {
+        color: $white;
         &:nth-child(3) {
           width: 16px;
         }
@@ -211,13 +394,88 @@ $navbar-dropdown-radius: 1px;;
   flex: 1;
 }
 #navMenu {
+  .search-item {
+    .control {
+      &:first-child {
+        input {
+          background-color: $light-turquoise;
+          &::placeholder {
+          }
+          &:active, &:focus, &:hover {
+            border-color: $lighter-green;
+            box-shadow: none;
+            background-color: $lighter-green;
+          }
+        }
+      }
+      .button {
+        .icon {
+          i {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+  }
   &.is-active {
     background: $green;
+    .navbar-item {
+      &.navbar-item-float {
+        position: absolute;
+        top: 0;
+        left: 52px;
+        width: calc(100% - 52px);
+        text-align: right;
+        background-color: $green;
+        .button {
+          height: auto;
+          padding-top: 1em;
+          padding-bottom: 1em;
+          line-height: 1;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
     .navbar-start {
       > a {
         &.navbar-item {
           padding: 0.5rem 3rem;
           font-weight: bold;
+        }
+      }
+      > div {
+        &.navbar-item {
+          &.is-hidden-desktop {
+            &:not(:last-child) {
+              .container {
+                padding: 1rem 0;
+                .title {
+                  margin-bottom: .5rem;
+                }
+                p {
+                  font-size: 0.875rem;
+                  max-width: 280px;
+                  margin: 0 auto .5rem;
+                }
+              }
+            }
+            &:last-child {
+              .container {
+                .container {
+                  padding: 0 1rem 1rem;
+                  .image {
+                    img {
+                      max-width: 250px;
+                      max-height: 100%;
+                    }
+                  }
+                }
+                .columns {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -228,8 +486,14 @@ $navbar-dropdown-radius: 1px;;
       &.navbar-link {
         font-weight: bold;
         padding: 0.5rem 3rem;
-        &:hover, &.is-active {
+        + .navbar-dropdown {
+          display: none;
+        }
+        &:hover, &.is-active, &:active {
           background-color: $light-green;
+          + .navbar-dropdown {
+            display: block!important;
+          }
         }
         &:not(.is-arrowless)::after {
           right: 3em;
@@ -245,94 +509,426 @@ $navbar-dropdown-radius: 1px;;
       }
     }
     .search-item {
-      &::after {
-        background-image: url(../assets/icons.svg);
-        background-position: 0 -96px;
-        background-repeat: no-repeat;
-        border: 3px solid transparent;
-        border-radius: 2px;
-        border-right: 0;
-        border-top: 0;
-        content: " ";
-        display: block;
-        height: 2em;
-        margin-top: -0.4375em;
-        pointer-events: none;
-        position: absolute;
-        top: 40%;
-        transform-origin: center;
-        width: 3em;
-        filter: brightness(0) invert(1);
-        right: 5em;
-        zoom: 0.5;
+      background-color: $light-green;
+      padding: 0.5rem 2.25rem 0.5rem 3rem;
+      .control {
+        &:first-child {
+          input {
+            background-color: transparent;
+            padding: 0;
+            border: hidden;
+            &::placeholder {
+              font-weight: 700;
+              color: $white;
+            }
+            &:active, &:focus, &:hover {
+              border: hidden;
+              box-shadow: none;
+              background-color: $lighter-green;
+              border-radius: 2px;
+              padding-left: calc(0.625em - 2px);
+              padding-right: calc(0.625em - 2px);
+            }
+          }
+        }
+        .button {
+          background-color: transparent;
+          border: hidden;
+        }
       }
     }
   }
 }
 
-<<<<<<< HEAD
 
+//Extra Code
+// Main
+main {
+  margin-top: 1.25rem;
+}
 
-// Import only what you need from Bulma
-@import "../node_modules/bulma/sass/utilities/_all.sass";
-@import "../node_modules/bulma/sass/base/_all.sass";
-@import "../node_modules/bulma/sass/elements/_all.sass";
-@import "../node_modules/bulma/sass/components/_all.sass";
-@import "../node_modules/bulma/sass/layout/_all.sass";
-@import "../node_modules/bulma/sass/grid/_all.sass";
-=======
+// Extra Code
+// Footer
+.footer {
+  padding: 0;
+  .content {
+    padding: 1.25rem;
+    .newsletter {
+      &.field {
+        padding-top: 1.25rem;
+        max-width: 350px;
+      }
+    }
+    .social {
+      max-width: 300px;
+    }
+    .menu-list {
+      margin: 0;
+      list-style: none;
+      a {
+        padding: 0;
+      }
+    }
+    &:nth-child(4) {
+      padding-top: 0;
+      .columns {
+        &.is-mobile {
+          margin-bottom: 0;
+        }
+        &:nth-child(3) {
+          .column {
+            &:nth-child(1) {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+      .is-divider {
+        margin: 0 0 .75rem;
+      }
+    }
+  }
+}
+
+// Extra Code
+// Newsletter
+.newsletter {
+  &.field {
+    .control {
+      input {
+        &::placeholder {
+          font-weight: 700;
+          color: $green;
+          font-size: .8rem
+        }
+      }
+    }
+  }
+}
+
 // Extra Code
 // Hero
 .hero {
-  &.is-top-custom {
-  height: calc(100vh - 4.5rem);
-    .hero-body {
-      height: 100%;
-    }
-    .container {
-      height: calc(100vh - 10rem);
-      div {
-        &:nth-child(1) {
-          height: 65%;
-          .image {
-            height: 100%;
-            img {
-              max-height: 100%;
-              width: auto;
+  &.is-main {
+    &.is-full-custom {
+      .hero-body {
+        height: 100%;
+      }
+      .container {
+        height: calc(100vh - 6rem);
+        > div {
+          &:nth-child(1) {
+            height: 65%;
+            .image {
+              height: 100%;
+              img {
+                max-height: 100%;
+                width: auto;
+              }
+            }
+          }
+          &:nth-child(2) {
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            .image {
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              height: 100%;
+              img {
+                max-height: 100%;
+                width: auto;
+                margin: 0 auto;
+              }
+            }
+            .title {
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+            .icon {
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
             }
           }
         }
-        &:nth-child(2) {
-          height: 35%;
-          display: flex;
-          flex-direction: column;
-          .image {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-            img {
-              max-height: 100%;
-              width: auto;
-              margin: 0 auto;
+      }
+    }
+    &.is-top-custom {
+      height: calc(100vh - 4.5rem);
+      .container {
+        height: calc(100vh - 10rem);
+        > div {
+          &:nth-child(2) {
+            .image {
+              img {
+                padding: 1rem 0;
+              }
             }
           }
-          .title {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        }
+      }
+    }
+    &:not(.is-top-custom) {
+      .container {
+        > div {
+          &:nth-child(2) {
+            .image {
+              img {
+                padding: 2rem 0;
+              }
+            }
           }
-          .icon {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        }
+        .button {
+          height: auto;
+          padding-top: 1em;
+          padding-bottom: 1em;
+          line-height: 1;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+  }
+  //Hero Collection
+  &.is-collection {
+    .breadcrumb {
+      padding-top: .75rem;
+      padding-left: .75rem;
+      ul {
+        font-size: .8rem;
+      }
+      a {
+        color: $green;
+        &:hover {
+          color: $white;
+        }
+      }
+      li {
+        &.is-active {
+          a {
+            color: $black;
+            font-weight: 700;
+          }
+        }
+        & + li {
+          &::before {
+            color: $green;
+          }
+        }
+      }
+    }
+    .hero-body {
+      position: relative;
+      z-index: 2;
+      .image {
+        img {
+          max-width: 350px;
+        }
+      }
+    }
+  }
+  //Hero Product
+  &.is-product {
+    &.is-top-custom {
+      height: calc(100vh - 4.5rem);
+      .breadcrumb {
+        padding-top: .75rem;
+        padding-left: .75rem;
+        ul {
+          font-size: .8rem;
+        }
+      }
+      .hero-body {
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        .columns {
+          width: 100%;
+          .column {
+            &:nth-child(2) {
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
+          }
+          .image {
+            &.feature {
+              max-width: 500px;
+            }
+          }
+        }
+      }
+      @include until($tablet) {
+        .breadcrumb {
+          position: relative;
+          z-index: 1;
+          a {
+            color: $white;
+            &:hover {
+              color: $green;
+            }
+          }
+          li {
+            &.is-active {
+              a {
+                color: $orange;
+                font-weight: 700;
+              }
+            }
+            & + li {
+              &::before {
+                color: $green;
+              }
+            }
+          }
+        }
+        .hero-body {
+          position: relative;
+          top: -74px;
+          height: calc(100vh - 4.5rem);
+          .columns {
+            height: 100%;
+            .column {
+              &:nth-child(1) {
+                padding: 0;
+                height: 75%;
+              }
+              &:nth-child(2) {
+                height: 25%;
+              }
+            }
           }
         }
       }
     }
   }
 }
->>>>>>> bulma-html
+
+// Extra Code
+// Collection
+.collection-grid {
+  .product {
+    padding: 0.75rem;
+    height: 100%;
+    position: relative;
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      .icon {
+        height: initial;
+        width: initial;
+      }
+    }
+    .image {
+      position: relative;
+    }
+    .product-info {
+      position: relative;
+      h3 {
+        margin-bottom: .2rem;
+      }
+    }
+    a {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+.filters {
+  margin-top: 1rem;
+  .dropdown-menu {
+    min-width: inherit;
+    max-width: 100%;
+    width: 100%;
+    .dropdown-content {
+      .dropdown-item {
+        text-align: center;
+        text-transform: uppercase;
+        padding: .25em;
+        letter-spacing: 1.5px;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .button {
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    width: 130px;
+  }
+}
+
+// Extra Code
+// Product
+.product-form {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 1em;
+  .control {
+    &:nth-child(1) {
+      width: 20%;
+      align-items: center;
+      justify-content: center;
+      margin: 0!important;
+      .input {
+        width: 30px;
+        border-bottom: 2px solid $green;
+        &:hover, &:active, &:focus {
+          border: hidden;
+        }
+      }
+    }
+    &:nth-child(2) {
+      width: 80%;
+    }
+  }
+  .button {
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    width: 100%;
+  }
+}
+.product-page {
+  .recipes {
+    .post {
+      height: 164px;
+      padding: 0 1rem;
+      position: relative;
+      background: url('../assets/recipes-placeholder.jpg') center;
+      background-size: cover;
+      .tag {
+        border-radius: 0;
+        position: absolute;
+        top: 0;
+      }
+      .title {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 1rem;
+      }
+      a {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+}

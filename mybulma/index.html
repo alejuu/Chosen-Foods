@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
   <head>
     <title>Chosen Foods</title>
     <link rel="stylesheet" href="css/mystyles.css">
@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar" id="mainMenu" role="navigation" aria-label="main navigation">
+      <nav class="navbar is-fixed-top" id="mainMenu" role="navigation" aria-label="main navigation">
         <div class="navbar-menu navbar-is-mobile is-flex-touch is-hidden-desktop is-paddingless is-shadowless">
           <div class="navbar-start-mobile">
             <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -23,14 +23,23 @@
           </div>
           <div class="navbar-end-mobile">
             <a class="navbar-item is-flex">
-              <i class="icon cf-icon cf-icon-account"></i>
+              <span class="icon">
+                <i class="cf-icon-account-32"></i>
+              </span>
             </a>
             <a class="navbar-item is-flex">
-              <i class="icon cf-icon cf-icon-cart"></i>
+              <span class="icon">
+                <i class="cf-icon-cart-32"></i>
+              </span>
             </a>
           </div>
         </div>
         <div class="navbar-menu is-shadowless" id="navMenu">
+          <div class="navbar-item navbar-item-float is-hidden-desktop">
+            <button class="button is-small is-rounded is-uppercase is-warning has-text-centered has-text-white">
+              <span>Find a Store</span>
+            </button>
+          </div>
           <div class="navbar-start">
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">Shop</a>
@@ -48,44 +57,266 @@
                 <a class="navbar-item">Our Avocados</a>
               </div>
             </div>
-            <a class="navbar-item search-item">Search</a>
+            <div class="navbar-item search-item">
+              <div class="field has-addons has-addons-centered">
+                <div class="control is-expanded">
+                  <input class="input" type="text" placeholder="Search">
+                </div>
+                <div class="control">
+                  <button type="submit" class="button is-primary">
+                    <span class="icon">
+                      <i class="cf-icon-search-16"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item is-hidden-desktop">
+              <div class="container">
+                <div>
+                  <h6 class="title is-3 has-text-white has-text-centered">Catch our drift</h6>
+                  <p class="has-text-white has-text-centered">
+                    sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
+                  </p>
+                </div>
+                <div class="newsletter field has-addons has-addons-centered">
+                  <div class="control is-expanded">
+                    <input class="input is-rounded" type="email" placeholder="Email Address">
+                  </div>
+                  <div class="control">
+                    <button type="submit" class="button is-rounded">
+                      <span class="icon">
+                        <i class="cf-icon-right-arrow-16"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item is-hidden-desktop has-background-light-green">
+              <div class="container">
+                <h6 class="title is-3 has-text-white has-text-centered">Relationships need nourishment</h6>
+                <p class="has-text-white has-text-centered">
+                  stay in the loop
+                </p>
+                <div class="social is-margin-center">
+                  <div class="columns is-mobile has-text-centered">
+                    <div class="column">
+                      <span class="icon is-medium"><i class="cf-icon-instagram-32"></i></span>
+                    </div>
+                    <div class="column">
+                      <span class="icon is-medium"><i class="cf-icon-twitter-32"></i></span>
+                    </div>
+                    <div class="column">
+                      <span class="icon is-medium"><i class="cf-icon-facebook-32"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item is-hidden-desktop">
+              <div class="container">
+                <div class="columns is-mobile">
+                  <div class="column">
+                    <aside class="menu">
+                      <ul class="menu-list">
+                        <li><a class="is-size-7 has-text-white">Privacy Policy</a></li>
+                        <li><a class="is-size-7 has-text-white">Shipping Terms</a></li>
+                        <li><a class="is-size-7 has-text-white">Contact Us</a></li>
+                      </ul>
+                    </aside>
+                  </div>
+                  <div class="column">
+                    <aside class="menu">
+                      <ul class="menu-list">
+                        <li><a class="is-size-7 has-text-white">Terms and Conditions</a></li>
+                        <li><a class="is-size-7 has-text-white">Sitemap</a></li>
+                      </ul>
+                    </aside>
+                  </div>
+                </div>
+                <div class="container">
+                  <figure data-aos="fade-up" class="image">
+                    <img class="is-margin-center" src="assets/footer-menu.png">
+                  </figure>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <p class="is-size-7 has-text-white">
+                      1747 Hancock St, Ste A, San Diego, CA 92101 877.674.2244
+                    </p>
+                  </div>
+                  <div class="column">
+                    <p class="is-size-7 has-text-white">
+                      © 2018 Chosen Foods LLC. All Rights Reserved.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="navbar-brand is-hidden-touch">
-            <a class="navbar-item is-flex" href="https://bulma.io">
-              <img src="assets/chosen-logo-small.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+            <a class="navbar-item is-flex" href="">
+              <img src="assets/chosen-logo-small.png" alt="Chosen Foods" width="112" height="28">
             </a>
           </div>
           <div class="navbar-end is-hidden-touch">
-            <a class="navbar-item is-flex">
-              <i class="icon cf-icon cf-icon-account"></i>
+            <a class="navbar-item">
+              <button class="button is-small is-rounded is-uppercase is-warning has-text-centered has-text-white">
+                <span>Find a Store</span>
+              </button>
             </a>
             <a class="navbar-item is-flex">
-              <i class="icon cf-icon cf-icon-cart"></i>
+              <span class="icon">
+                <i class="cf-icon-account-32"></i>
+              </span>
+            </a>
+            <a class="navbar-item is-flex">
+              <span class="icon">
+                <i class="cf-icon-cart-32"></i>
+              </span>
             </a>
           </div>
         </div>
       </nav>
     </header>
-    <main>
-      <section class="hero has-background-peach is-top-custom">
+    <main class="index-page">
+      <section class="hero has-background-peach is-full-custom is-top-custom is-main">
         <div class="hero-body">
           <div class="container has-text-centered">
-            <div>
+            <div data-aos="fade-up">
               <figure class="image">
                 <img class="is-margin-center" src="assets/hero-homepage.png">
               </figure>
             </div>
-            <div>
+            <div data-aos="fade-up">
               <figure class="image">
                 <img class="is-margin-center" src="assets/meetthehero-text.png">
               </figure>
-              <h5 class="title is-5 has-text-centered has-text-primary is-marginless">Discover More</h5>
-              <i class="icon cf-icon cf-icon-green-down is-margin-center"></i>
+              <a href="">
+                <h5 class="title is-5 has-text-centered has-text-primary is-marginless">Discover More</h5>
+                <span class="icon is-medium is-margin-center">
+                  <i class="cf-icon-arrow-down-32"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero is-fullheight is-full-custom is-main">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <div data-aos="fade-up">
+              <figure class="image">
+                <img class="is-margin-center" src="assets/cookingoils-homepage.png">
+              </figure>
+            </div>
+            <div data-aos="fade-up">
+              <figure class="image">
+                <img class="is-margin-center" src="assets/cookingoils-text.png">
+              </figure>
+              <div>
+                <button class="button is-small is-rounded is-link is-uppercase has-text-centered" aria-haspopup="true" aria-controls="dropdown-filter">
+                  <span>Shop Now</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="content is-marginless has-text-centered has-background-peach">
+        <div class="container">
+          <div data-aos="fade-up">
+            <h3 class="title is-2 has-text-primary">Catch our drift</h3>
+            <p class="is-size-6 has-text-primary">
+              sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
+            </p>
+          </div>
+          <div data-aos="fade-right" class="newsletter field has-addons has-addons-centered is-margin-center">
+            <div class="control is-expanded">
+              <input class="input is-rounded" type="email" placeholder="Email Address">
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-rounded">
+                <span class="icon">
+                  <i class="cf-icon-right-arrow-16"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content is-marginless has-text-centered has-background-light-green">
+        <div data-aos="fade-up" class="container">
+          <h3 class="title is-2 has-text-white">Relationships need nourishment</h3>
+          <p class="is-size-6 has-text-white">
+            stay in the loop
+          </p>
+          <div class="social is-margin-center">
+            <div class="columns is-mobile">
+              <div class="column">
+                <span class="icon is-medium">
+                  <i class="cf-icon-instagram-32"></i>
+                </span>
+              </div>
+              <div class="column">
+                <span class="icon is-medium">
+                  <i class="cf-icon-twitter-32"></i>
+                </span>
+              </div>
+              <div class="column">
+                <span class="icon is-medium">
+                  <i class="cf-icon-facebook-32"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="has-background-light-green">
+        <figure data-aos="fade-up" class="image">
+          <img class="is-margin-center" src="assets/footer-homepage.png">
+        </figure>
+      </div>
+      <div class="content is-marginless has-background-light-turquoise">
+        <div class="container">
+          <div class="columns is-mobile">
+            <div class="column">
+              <aside class="menu">
+                <ul class="menu-list">
+                  <li><a class="is-size-7 has-text-primary">Privacy Policy</a></li>
+                  <li><a class="is-size-7 has-text-primary">Shipping Terms</a></li>
+                  <li><a class="is-size-7 has-text-primary">Contact Us</a></li>
+                </ul>
+              </aside>
+            </div>
+            <div class="column">
+              <aside class="menu">
+                <ul class="menu-list">
+                  <li><a class="is-size-7 has-text-primary">Terms and Conditions</a></li>
+                  <li><a class="is-size-7 has-text-primary">Sitemap</a></li>
+                </ul>
+              </aside>
+            </div>
+          </div>
+          <div class="is-divider"></div>
+          <div class="columns">
+            <div class="column">
+              <p class="is-size-7 has-text-primary">
+                1747 Hancock St, Ste A, San Diego, CA 92101 877.674.2244
+              </p>
+            </div>
+            <div class="column">
+              <p class="is-size-7 has-text-primary">
+                © 2018 Chosen Foods LLC. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="assets/app.js"></script>
   </body>
 </html>

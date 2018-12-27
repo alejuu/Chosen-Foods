@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <title>Chosen Foods</title>
+    <link rel="stylesheet" href="css/mystyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar is-fixed-top" id="mainMenu" role="navigation" aria-label="main navigation">
+        <div class="navbar-menu navbar-is-mobile is-flex-touch is-hidden-desktop is-paddingless is-shadowless">
+          <div class="navbar-start-mobile">
+            <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="navbar-brand-mobile">
+            <a class="navbar-item is-flex" href="https://bulma.io">
+              <img src="assets/chosen-logo-small.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+            </a>
+          </div>
+          <div class="navbar-end-mobile">
+            <a class="navbar-item is-flex">
+              <span class="icon">
+                <i class="cf-icon-account-32"></i>
+              </span>
+            </a>
+            <a class="navbar-item is-flex">
+              <span class="icon">
+                <i class="cf-icon-cart-32"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="navbar-menu is-shadowless" id="navMenu">
+          <div class="navbar-item navbar-item-float is-hidden-desktop">
+            <button class="button is-small is-rounded is-uppercase is-warning has-text-centered has-text-white">
+              <span>Find a Store</span>
+            </button>
+          </div>
+          <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Shop</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">Cooking Oils</a>
+                <a class="navbar-item">Cooking Sprays</a>
+                <a class="navbar-item">Dressings</a>
+                <a class="navbar-item">Mayos</a>
+              </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">About</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">Chosen Foods</a>
+                <a class="navbar-item">Our Avocados</a>
+              </div>
+            </div>
+            <div class="navbar-item search-item">
+              <div class="field has-addons has-addons-centered">
+                <div class="control is-expanded">
+                  <input class="input" type="text" placeholder="Search">
+                </div>
+                <div class="control">
+                  <button type="submit" class="button is-primary">
+                    <span class="icon">
+                      <i class="cf-icon-search-16"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item is-hidden-desktop">
+              <div class="container">
+                <div>
+                  <h6 class="title is-3 has-text-white has-text-centered">Catch our drift</h6>
+                  <p class="has-text-white has-text-centered">
+                    sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
+                  </p>
+                </div>
+                <div class="newsletter field has-addons has-addons-centered">
+                  <div class="control is-expanded">
+                    <input class="input is-rounded" type="email" placeholder="Email Address">
+                  </div>
+                  <div class="control">
+                    <button type="submit" class="button is-rounded">
+                      <span class="icon">
+                        <i class="cf-icon-right-arrow-16"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item is-hidden-desktop has-background-light-green">
+              <div class="container">
+                <h6 class="title is-3 has-text-white has-text-centered">Relationships need nourishment</h6>
+                <p class="has-text-white has-text-centered">
+                  stay in the loop
+                </p>
+                <div class="social is-margin-center">
+                  <div class="columns is-mobile has-text-centered">
+                    <div class="column">
+                      <span class="icon is-medium"><i class="cf-icon-instagram-32"></i></span>
+                    </div>
+                    <div class="column">
+                      <span class="icon is-medium"><i class="cf-icon-twitter-32"></i></span>
+                    </div>
+                    <div class="column">
+                      <span class="icon is-medium"><i class="cf-icon-facebook-32"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item is-hidden-desktop">
+              <div class="container">
+                <div class="columns is-mobile">
+                  <div class="column">
+                    <aside class="menu">
+                      <ul class="menu-list">
+                        <li><a class="is-size-7 has-text-white">Privacy Policy</a></li>
+                        <li><a class="is-size-7 has-text-white">Shipping Terms</a></li>
+                        <li><a class="is-size-7 has-text-white">Contact Us</a></li>
+                      </ul>
+                    </aside>
+                  </div>
+                  <div class="column">
+                    <aside class="menu">
+                      <ul class="menu-list">
+                        <li><a class="is-size-7 has-text-white">Terms and Conditions</a></li>
+                        <li><a class="is-size-7 has-text-white">Sitemap</a></li>
+                      </ul>
+                    </aside>
+                  </div>
+                </div>
+                <div class="container">
+                  <figure data-aos="fade-up" class="image">
+                    <img class="is-margin-center" src="assets/footer-menu.png">
+                  </figure>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <p class="is-size-7 has-text-white">
+                      1747 Hancock St, Ste A, San Diego, CA 92101 877.674.2244
+                    </p>
+                  </div>
+                  <div class="column">
+                    <p class="is-size-7 has-text-white">
+                      © 2018 Chosen Foods LLC. All Rights Reserved.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-brand is-hidden-touch">
+            <a class="navbar-item is-flex" href="">
+              <img src="assets/chosen-logo-small.png" alt="Chosen Foods" width="112" height="28">
+            </a>
+          </div>
+          <div class="navbar-end is-hidden-touch">
+            <a class="navbar-item">
+              <button class="button is-small is-rounded is-uppercase is-warning has-text-centered has-text-white">
+                <span>Find a Store</span>
+              </button>
+            </a>
+            <a class="navbar-item is-flex">
+              <span class="icon">
+                <i class="cf-icon-account-32"></i>
+              </span>
+            </a>
+            <a class="navbar-item is-flex">
+              <span class="icon">
+                <i class="cf-icon-cart-32"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="product-page">
+      <section class="hero is-full-custom is-top-custom is-product">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li><a href="#">Bulma</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Components</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+          </ul>
+        </nav>
+        <div class="hero-body is-flex">
+          <div data-aos="fade-up" class="columns">
+            <div class="column">
+              <figure class="image feature is-margin-center">
+                <img class="is-margin-center" src="assets/pdp-avospray.png">
+              </figure>
+            </div>
+            <div class="column is-flex">
+              <h1 class="title is-1 has-text-centered has-text-primary is-marginless">Avocado Oil Spray</h1>
+              <p class="title is-2 has-text-centered has-text-primary is-marginless">$29.95</p>
+              <form class="product-form">
+                <div class="field is-grouped">
+                  <div class="control is-flex">
+                    <input class="input" type="text" placeholder="1">
+                  </div>
+                  <div class="control">
+                    <button class="button is-small is-rounded is-primary is-outlined is-uppercase is-fullwidth has-text-centered">
+                      <span>Add To Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h1 class="title is-1 has-text-centered has-text-primary is-marginless">Avocado Oil Spray</h1>
+              <figure class="image feature is-margin-center">
+                <img class="is-margin-center" src="assets/product-image-featured.jpg">
+              </figure>
+              <form class="product-form is-margin-center">
+                <div class="field is-grouped">
+                  <div class="control is-flex">
+                    <input class="input" type="text" placeholder="1">
+                  </div>
+                  <div class="control">
+                    <button class="button is-small is-rounded is-primary is-uppercase is-fullwidth has-text-centered">
+                      <span>Add To Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="column">
+              <div class="content">
+                <h2 class="title is-6">Description</h2>
+                <p>
+                  Chosen Foods Avocado Oil is only ever made with 100% pure hass avocados - nothing else. Drizzle over salads, meats and vegetables and you’re sure to taste the difference. You’ll also be amazed to know that our avocado oil has a smoke point of 500°F (crazy, right?), making it safe to stir-fry, bake or broil. Never again worry about your cooking oil breaking down and imparting a foul odor. This one can really take the heat!
+                </p>
+              </div>
+              <div class="content">
+                <div class="accordions">
+                  <article class="accordion">
+                    <div class="accordion-header toggle">
+                      <h2 class="title is-6">Details</h2>
+                      <button class="toggle" aria-label="toggle"></button>
+                    </div>
+                    <div class="accordion-body">
+                      <div class="accordion-content content">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="accordion">
+                    <div class="accordion-header toggle">
+                      <h2 class="title is-6">Shopping Policy</h2>
+                      <button class="toggle" aria-label="toggle"></button>
+                    </div>
+                    <div class="accordion-body">
+                      <div class="accordion-content content">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="accordion">
+                    <div class="accordion-header toggle">
+                      <h2 class="title is-6">Reviews</h2>
+                      <button class="toggle" aria-label="toggle"></button>
+                    </div>
+                    <div class="accordion-body">
+                      <div class="accordion-content content">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="content">
+                <div class="columns is-multiline recipes">
+                  <div class="column is-half">
+                    <div class="post">
+                      <span class="tag is-success">Success</span>
+                      <h3 class="title is-3 has-text-white">Recipe Name</h3>
+                      <a href=""></a>
+                    </div>
+                  </div>
+                  <div class="column is-half">
+                    <div class="post">
+                      <span class="tag is-success">Success</span>
+                      <h3 class="title is-3 has-text-white">Recipe Name</h3>
+                      <a href=""></a>
+                    </div>
+                  </div>
+                  <div class="column is-half">
+                    <div class="post">
+                      <span class="tag is-success">Success</span>
+                      <h3 class="title is-3 has-text-white">Recipe Name</h3>
+                      <a href=""></a>
+                    </div>
+                  </div>
+                  <div class="column is-half">
+                    <div class="post">
+                      <span class="tag is-success">Success</span>
+                      <h3 class="title is-3 has-text-white">Recipe Name</h3>
+                      <a href=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section collection-grid has-background-grey-lighter">
+        <h3 class="title is-2 has-text-primary has-text-centered">Similar Products</h3>
+        <div class="container">
+          <div class="columns is-flex is-multiline">
+            <div class="column is-half-mobile is-one-quarter">
+              <div class="product has-background-white">
+                <figure class="image is-128x128 is-margin-center">
+                  <img src="assets/product-image.jpg">
+                </figure>
+                <div class="has-text-centered product-info">
+                  <h3 class="title is-3">Product Name</h3>
+                  <p class="title is-6">
+                    $19.95
+                  </p>
+                </div>
+                <a href=""></a>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter">
+              <div class="product has-background-white">
+                <figure class="image is-128x128 is-margin-center">
+                  <img src="assets/product-image.jpg">
+                </figure>
+                <div class="has-text-centered product-info">
+                  <h3 class="title is-3">Product Name</h3>
+                  <p class="title is-6">
+                    $19.95
+                  </p>
+                </div>
+                <a href=""></a>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter">
+              <div class="product has-background-white">
+                <figure class="image is-128x128 is-margin-center">
+                  <img src="assets/product-image.jpg">
+                </figure>
+                <div class="has-text-centered product-info">
+                  <h3 class="title is-3">Product Name</h3>
+                  <p class="title is-6">
+                    $19.95
+                  </p>
+                </div>
+                <a href=""></a>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter">
+              <div class="product has-background-white">
+                <figure class="image is-128x128 is-margin-center">
+                  <img src="assets/product-image.jpg">
+                </figure>
+                <div class="has-text-centered product-info">
+                  <h3 class="title is-3">Product Name</h3>
+                  <p class="title is-6">
+                    $19.95
+                  </p>
+                </div>
+                <a href=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content is-marginless has-text-centered has-background-peach">
+        <div class="container">
+          <div data-aos="fade-up">
+            <h3 class="title is-2 has-text-primary">Catch our drift</h3>
+            <p class="is-size-6 has-text-primary">
+              sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
+            </p>
+          </div>
+          <div data-aos="fade-right" class="newsletter field has-addons has-addons-centered is-margin-center">
+            <div class="control is-expanded">
+              <input class="input is-rounded" type="email" placeholder="Email Address">
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-rounded">
+                <span class="icon">
+                  <i class="cf-icon-right-arrow-16"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content is-marginless has-text-centered has-background-light-green">
+        <div data-aos="fade-up" class="container">
+          <h3 class="title is-2 has-text-white">Relationships need nourishment</h3>
+          <p class="is-size-6 has-text-white">
+            stay in the loop
+          </p>
+          <div class="social is-margin-center">
+            <div class="columns is-mobile">
+              <div class="column">
+                <span class="icon is-medium">
+                  <i class="cf-icon-instagram-32"></i>
+                </span>
+              </div>
+              <div class="column">
+                <span class="icon is-medium">
+                  <i class="cf-icon-twitter-32"></i>
+                </span>
+              </div>
+              <div class="column">
+                <span class="icon is-medium">
+                  <i class="cf-icon-facebook-32"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="has-background-light-green">
+        <figure data-aos="fade-up" class="image">
+          <img class="is-margin-center" src="assets/footer-homepage.png">
+        </figure>
+      </div>
+      <div class="content is-marginless has-background-light-turquoise">
+        <div class="container">
+          <div class="columns is-mobile">
+            <div class="column">
+              <aside class="menu">
+                <ul class="menu-list">
+                  <li><a class="is-size-7 has-text-primary">Privacy Policy</a></li>
+                  <li><a class="is-size-7 has-text-primary">Shipping Terms</a></li>
+                  <li><a class="is-size-7 has-text-primary">Contact Us</a></li>
+                </ul>
+              </aside>
+            </div>
+            <div class="column">
+              <aside class="menu">
+                <ul class="menu-list">
+                  <li><a class="is-size-7 has-text-primary">Terms and Conditions</a></li>
+                  <li><a class="is-size-7 has-text-primary">Sitemap</a></li>
+                </ul>
+              </aside>
+            </div>
+          </div>
+          <div class="is-divider"></div>
+          <div class="columns">
+            <div class="column">
+              <p class="is-size-7 has-text-primary">
+                1747 Hancock St, Ste A, San Diego, CA 92101 877.674.2244
+              </p>
+            </div>
+            <div class="column">
+              <p class="is-size-7 has-text-primary">
+                © 2018 Chosen Foods LLC. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="assets/app.js"></script>
+  </body>
+</html>
