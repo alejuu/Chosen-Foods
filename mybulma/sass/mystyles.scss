@@ -40,6 +40,7 @@ $danger: $light-red;
 $success: $turquoise;
 $info: $blue;
 $link: $orange;
+$text: $black;
 $widescreen-enabled: true;
 $fullhd-enabled: true;
 
@@ -149,25 +150,116 @@ $accordion-content-border: hidden !default
 }
 
 // Extra Code
-// SVG Icons Sprite
-.cf-icon {
+// Icons Sprite
+.cf-icon-account-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -134px -10px;
+}
+.cf-icon-cart-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -98px -46px;
+}
+.cf-icon-arrow-down-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -62px -10px;
+}
+.cf-icon-search-16 {
+  width: 16px; height: 16px;
+  background: url('../assets/sprites16.png') -62px -46px;
+}
+.cf-icon-right-arrow-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -98px -10px;
+}
+.cf-icon-facebook-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -134px -46px;
+}
+.cf-icon-instagram-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -10px -93px;
+}
+.cf-icon-twitter-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -46px -93px;
+}
+.cf-icon-arrow-up-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -82px -93px;
+}
+.cf-icon-avocado-16 {
+  width: 16px;
+  height: 27px;
+  background: url('../assets/sprites16.png') -10px -46px;
+}
+.cf-icon-staff-pick-16 {
+  width: 32px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -10px -10px;
+}
+.cf-icon-account-32 {
   width: 32px;
   height: 32px;
+  background: url('../assets/sprites32.png') -197px -10px;
 }
-.cf-icon-account,.cf-icon-account\:regular{background-image:url('../assets/icons.svg');background-position:0 0;background-repeat:no-repeat}
-.cf-icon-cart,.cf-icon-cart\:regular{background-image:url('../assets/icons.svg');background-position:0 -32px;background-repeat:no-repeat}
-.cf-icon-green-down,.cf-icon-green-down\:regular{background-image:url('../assets/icons.svg');background-position:0 -64px;background-repeat:no-repeat}
-.cf-icon-green-search,.cf-icon-green-search\:regular{background-image:url('../assets/icons.svg');background-position:0 -96px;background-repeat:no-repeat}
-.cf-icon-green-x,.cf-icon-green-x\:regular{background-image:url('../assets/icons.svg');background-position:0 -128px;background-repeat:no-repeat}
-.cf-icon-plus,.cf-icon-plus\:regular{background-image:url('../assets/icons.svg');background-position:0 -160px;background-repeat:no-repeat}
-.cf-icon-right-arrow,.cf-icon-right-arrow\:regular{background-image:url('../assets/icons.svg');background-position:0 -192px;background-repeat:no-repeat}
-.cf-icon-staffpick,.cf-icon-staffpick\:regular{background-image:url('../assets/icons.svg');background-position:0 -224px;background-repeat:no-repeat}
-.cf-icon-white-facebook,.cf-icon-white-facebook\:regular{background-image:url('../assets/icons.svg');background-position:0 -256px;background-repeat:no-repeat}
-.cf-icon-white-instagram,.cf-icon-white-instagram\:regular{background-image:url('../assets/icons.svg');background-position:0 -288px;background-repeat:no-repeat}
-.cf-icon-white-search,.cf-icon-white-search\:regular{background-image:url('../assets/icons.svg');background-position:0 -320px;background-repeat:no-repeat}
-.cf-icon-white-twitter,.cf-icon-white-twitter\:regular{background-image:url('../assets/icons.svg');background-position:0 -352px;background-repeat:no-repeat}
-.cf-icon-white-up-small,.cf-icon-white-up-small\:regular{background-image:url('../assets/icons.svg');background-position:0 -384px;background-repeat:no-repeat}
-.cf-icon-white-x,.cf-icon-white-x\:regular{background-image:url('../assets/icons.svg');background-position:0 -416px;background-repeat:no-repeat}
+.cf-icon-cart-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -145px -62px;
+}
+.cf-icon-arrow-down-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -93px -10px;
+}
+.cf-icon-search-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -93px -62px;
+}
+.cf-icon-right-arrow-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -145px -10px;
+}
+.cf-icon-facebook-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -197px -62px;
+}
+.cf-icon-instagram-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -10px -135px;
+}
+.cf-icon-twitter-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -62px -135px;
+}
+.cf-icon-arrow-up-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -114px -135px;
+}
+.cf-icon-avocado-32 {
+  width: 32px;
+  height: 53px;
+  background: url('../assets/sprites32.png') -10px -62px;
+}
+.cf-icon-staff-pick-32 {
+  width: 63px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -10px -10px;
+}
 
 // Extra Code
 // Accordion
@@ -214,12 +306,18 @@ $accordion-content-border: hidden !default
 #mainMenu {
   border-top: solid 20px $green;
 }
-.navbar {
-  .cf-icon-account {
-    zoom: .7;
-  }
-  .cf-icon-cart {
-    zoom: .8;
+.navbar-end, .navbar-end-mobile {
+  span {
+    &.icon {
+      width: 32px;
+      height: 32px;
+      .cf-icon-account-32 {
+        zoom: .6;
+      }
+      .cf-icon-cart-32 {
+        zoom: .8;
+      }
+    }
   }
 }
 .navbar-start {
@@ -235,6 +333,15 @@ $accordion-content-border: hidden !default
 }
 .navbar-end {
   flex: 1;
+  .navbar-item {
+    .button {
+      height: auto;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      line-height: 1;
+      letter-spacing: 1.5px;
+    }
+  }
 }
 .navbar-is-mobile {
   flex-grow: 1;
@@ -250,7 +357,9 @@ $accordion-content-border: hidden !default
       }
     }
     &.is-active {
+      background-color: $green;
       span {
+        color: $white;
         &:nth-child(3) {
           width: 16px;
         }
@@ -285,8 +394,48 @@ $accordion-content-border: hidden !default
   flex: 1;
 }
 #navMenu {
+  .search-item {
+    .control {
+      &:first-child {
+        input {
+          background-color: $light-turquoise;
+          &::placeholder {
+          }
+          &:active, &:focus, &:hover {
+            border-color: $lighter-green;
+            box-shadow: none;
+            background-color: $lighter-green;
+          }
+        }
+      }
+      .button {
+        .icon {
+          i {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+  }
   &.is-active {
     background: $green;
+    .navbar-item {
+      &.navbar-item-float {
+        position: absolute;
+        top: 0;
+        left: 52px;
+        width: calc(100% - 52px);
+        text-align: right;
+        background-color: $green;
+        .button {
+          height: auto;
+          padding-top: 1em;
+          padding-bottom: 1em;
+          line-height: 1;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
     .navbar-start {
       > a {
         &.navbar-item {
@@ -361,30 +510,36 @@ $accordion-content-border: hidden !default
     }
     .search-item {
       background-color: $light-green;
-      &::after {
-        background-image: url(../assets/icons.svg);
-        background-position: 0 -96px;
-        background-repeat: no-repeat;
-        border: 3px solid transparent;
-        border-radius: 2px;
-        border-right: 0;
-        border-top: 0;
-        content: " ";
-        display: block;
-        height: 2em;
-        margin-top: -0.4375em;
-        pointer-events: none;
-        position: absolute;
-        top: 40%;
-        transform-origin: center;
-        width: 3em;
-        filter: brightness(0) invert(1);
-        right: 5em;
-        zoom: 0.5;
+      padding: 0.5rem 2.25rem 0.5rem 3rem;
+      .control {
+        &:first-child {
+          input {
+            background-color: transparent;
+            padding: 0;
+            border: hidden;
+            &::placeholder {
+              font-weight: 700;
+              color: $white;
+            }
+            &:active, &:focus, &:hover {
+              border: hidden;
+              box-shadow: none;
+              background-color: $lighter-green;
+              border-radius: 2px;
+              padding-left: calc(0.625em - 2px);
+              padding-right: calc(0.625em - 2px);
+            }
+          }
+        }
+        .button {
+          background-color: transparent;
+          border: hidden;
+        }
       }
     }
   }
 }
+
 
 //Extra Code
 // Main
@@ -398,23 +553,10 @@ main {
   padding: 0;
   .content {
     padding: 1.25rem;
-    .field {
-      padding-top: 1.25rem;
-      .control {
-        &.has-icons-right {
-          max-width: 300px;
-          margin: 0 auto;
-          .input {
-            &::placeholder {
-              font-weight: 700;
-              color: $green;
-              font-size: .8rem
-            }
-          }
-        }
-      }
-      .cf-icon {
-        zoom: .5;
+    .newsletter {
+      &.field {
+        padding-top: 1.25rem;
+        max-width: 350px;
       }
     }
     .social {
@@ -443,6 +585,22 @@ main {
       }
       .is-divider {
         margin: 0 0 .75rem;
+      }
+    }
+  }
+}
+
+// Extra Code
+// Newsletter
+.newsletter {
+  &.field {
+    .control {
+      input {
+        &::placeholder {
+          font-weight: 700;
+          color: $green;
+          font-size: .8rem
+        }
       }
     }
   }
@@ -533,7 +691,6 @@ main {
           padding-bottom: 1em;
           line-height: 1;
           letter-spacing: 1.5px;
-          // width: 100%;
         }
       }
     }
@@ -568,7 +725,7 @@ main {
     }
     .hero-body {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       .image {
         img {
           max-width: 350px;
@@ -660,12 +817,20 @@ main {
     padding: 0.75rem;
     height: 100%;
     position: relative;
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      .icon {
+        height: initial;
+        width: initial;
+      }
+    }
     .image {
-      // z-index: -1;
       position: relative;
     }
     .product-info {
-      // z-index: -1;
       position: relative;
       h3 {
         margin-bottom: .2rem;
@@ -682,6 +847,20 @@ main {
 }
 .filters {
   margin-top: 1rem;
+  .dropdown-menu {
+    min-width: inherit;
+    max-width: 100%;
+    width: 100%;
+    .dropdown-content {
+      .dropdown-item {
+        text-align: center;
+        text-transform: uppercase;
+        padding: .25em;
+        letter-spacing: 1.5px;
+        font-size: 0.75rem;
+      }
+    }
+  }
   .button {
     height: auto;
     padding-top: 1em;
