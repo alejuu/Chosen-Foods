@@ -33,22 +33,7 @@
         </button>
       </div>
       <div class="navbar-start">
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">Shop</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item">Cooking Oils</a>
-            <a class="navbar-item">Cooking Sprays</a>
-            <a class="navbar-item">Dressings</a>
-            <a class="navbar-item">Mayos</a>
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">About</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item">Chosen Foods</a>
-            <a class="navbar-item">Our Avocados</a>
-          </div>
-        </div>
+        {% include 'menu-one' %}
         <div class="navbar-item search-item">
           <div class="field has-addons has-addons-centered">
             <div class="control is-expanded">
@@ -110,21 +95,10 @@
           <div class="container">
             <div class="columns is-mobile">
               <div class="column">
-                <aside class="menu">
-                  <ul class="menu-list">
-                    <li><a class="is-size-7 has-text-white">Privacy Policy</a></li>
-                    <li><a class="is-size-7 has-text-white">Shipping Terms</a></li>
-                    <li><a class="is-size-7 has-text-white">Contact Us</a></li>
-                  </ul>
-                </aside>
+                {% include 'menu-two' %}
               </div>
               <div class="column">
-                <aside class="menu">
-                  <ul class="menu-list">
-                    <li><a class="is-size-7 has-text-white">Terms and Conditions</a></li>
-                    <li><a class="is-size-7 has-text-white">Sitemap</a></li>
-                  </ul>
-                </aside>
+                {% include 'menu-three' %}
               </div>
             </div>
             <div class="container">
@@ -172,3 +146,29 @@
     </div>
   </nav>
 </header>
+
+{% schema %}
+  {
+    "name": "Menus",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "one_linklist",
+        "label": "Menu One",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "two_linklist",
+        "label": "Menu Two",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "three_linklist",
+        "label": "Menu Three",
+        "default": "main-menu"
+      }
+    ]
+  }
+{% endschema %}
