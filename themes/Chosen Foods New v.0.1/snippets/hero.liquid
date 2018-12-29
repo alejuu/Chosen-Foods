@@ -1,0 +1,30 @@
+{% if type == 'block' %}
+  {% assign image = block.settings.image %}
+  {% assign text_image = block.settings.text_image %}
+  {% assign text = block.settings.text %}
+{% else %}
+  {% assign image = section.settings.image %}
+  {% assign text_image = section.settings.text_image %}
+  {% assign text = section.settings.text %}
+{% endif %}
+<section class="hero is-fullheight is-full-custom is-main">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div data-aos="fade-up">
+        <figure class="image">
+          <img class="is-margin-center" alt="{{ image.alt | escape }}" src="{{ image | img_url: '1400x' }}">
+        </figure>
+      </div>
+      <div data-aos="fade-up">
+        <figure class="image">
+          <img class="is-margin-center" alt="{{ text_image.alt | escape }}" src="{{ text_image | img_url: '700x' }}">
+        </figure>
+        <div>
+          <button class="button is-small is-rounded is-link is-uppercase has-text-centered">
+            <span>{{ block.settings.text }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

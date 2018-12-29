@@ -8194,12 +8194,20 @@ main {
     min-width: inherit;
     max-width: 100%;
     width: 100%; }
-    .filters .dropdown-menu .dropdown-content .dropdown-item {
-      text-align: center;
-      text-transform: uppercase;
-      padding: .25em;
-      letter-spacing: 1.5px;
-      font-size: 0.75rem; }
+    .filters .dropdown-menu .dropdown-content {
+      padding-top: 0;
+      box-shadow: none; }
+      .filters .dropdown-menu .dropdown-content .dropdown-item {
+        text-align: center;
+        text-transform: uppercase;
+        padding: .25em .50em;
+        letter-spacing: 1.5px;
+        font-size: 0.70rem;
+        white-space: unset;
+        border: solid 0.1px #F0F7F6;
+        border-bottom: hidden; }
+        .filters .dropdown-menu .dropdown-content .dropdown-item:last-child {
+          border-bottom: solid 0.1px #F0F7F6; }
   .filters .button {
     height: auto;
     padding-top: 1em;
@@ -8252,3 +8260,6 @@ main {
     right: 0;
     top: 0;
     bottom: 0; }
+
+#shopify-section-header + main {
+  margin-top: 4.8rem; }

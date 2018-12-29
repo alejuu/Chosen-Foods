@@ -852,12 +852,20 @@ main {
     max-width: 100%;
     width: 100%;
     .dropdown-content {
+      padding-top: 0;
+      box-shadow: none;
       .dropdown-item {
         text-align: center;
         text-transform: uppercase;
-        padding: .25em;
+        padding: .25em .50em;
         letter-spacing: 1.5px;
-        font-size: 0.75rem;
+        font-size: 0.70rem;
+        white-space: unset;
+        border: solid .1px $grey-light;
+        border-bottom: hidden;
+        &:last-child {
+          border-bottom: solid .1px $grey-light;
+        }
       }
     }
   }
@@ -930,5 +938,14 @@ main {
         bottom: 0;
       }
     }
+  }
+}
+
+// Extra Code
+// Shopify
+// Base
+#shopify-section-header {
+  & + main {
+    margin-top: 4.8rem;
   }
 }

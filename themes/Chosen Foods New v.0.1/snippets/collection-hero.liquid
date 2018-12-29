@@ -1,0 +1,66 @@
+{% if type == 'block' %}
+  {% assign image = block.settings.image %}
+  {% assign text_image = block.settings.text_image %}
+{% else %}
+  {% assign image = section.settings.image %}
+  {% assign text_image = section.settings.text_image %}
+{% endif %}<section class="hero is-collection has-background-light-peach">
+  {% include 'breadcrumbs' %}
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div data-aos="fade-up">
+        <figure class="image">
+          <img class="is-margin-center" alt="{{ image.alt | escape }}" src="{{ image | img_url: '1400x' }}">
+        </figure>
+      </div>
+      <div data-aos="fade-up">
+        <figure class="image">
+          <img class="is-margin-center" alt="{{ text_image.alt | escape }}" src="{{ text_image | img_url: '700x' }}">
+        </figure>
+      </div>
+      <div data-aos="fade-up" class="filters columns is-mobile">
+        <div class="column">
+          <div class="dropdown is-hoverable">
+            <div class="dropdown-trigger">
+              <button class="button is-small is-rounded is-link is-uppercase has-text-centered" aria-haspopup="true" aria-controls="dropdown-filter">
+                <span>Filter</span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-filter" role="menu">
+              <div class="dropdown-content">
+                <a href="#" class="dropdown-item">
+                  Overview
+                </a>
+                <a href="#" class="dropdown-item">
+                  Modifiers
+                </a>
+                <a href="#" class="dropdown-item">
+                  Grid
+                </a>
+                <a href="#" class="dropdown-item">
+                  Form
+                </a>
+                <a href="#" class="dropdown-item">
+                  Elements
+                </a>
+                <a href="#" class="dropdown-item">
+                  Components
+                </a>
+                <a href="#" class="dropdown-item">
+                  Layout
+                </a>
+                <hr class="dropdown-divider">
+                <a href="#" class="dropdown-item">
+                  More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          {% include 'sort-by' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

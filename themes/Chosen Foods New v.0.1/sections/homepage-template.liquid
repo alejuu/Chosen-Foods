@@ -1,0 +1,63 @@
+{% if section.blocks.size > 0 %}
+  {% for block in section.blocks %}
+    {% if block.type == "top_hero" %}
+      {% include 'top-hero', type: 'block' %}
+    {% elsif block.type == "hero" %}
+      {% include 'hero', type: 'block' %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Homepage",
+  "class": "homepage",
+  "max_blocks": 20,
+  "blocks": [
+    {
+      "type": "top_hero",
+      "name": "Top Hero",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Action Text",
+          "default": "Discover More"
+        }
+      ]
+    },
+    {
+      "type": "hero",
+      "name": "Hero",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Button Text",
+          "default": "Shop Now"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

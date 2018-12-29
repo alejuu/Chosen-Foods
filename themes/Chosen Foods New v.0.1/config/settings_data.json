@@ -31,6 +31,22 @@
         "type": "footer",
         "settings": {
         }
+      },
+      "homepage-template": {
+        "type": "homepage-template",
+        "blocks": {
+          "1546044314497": {
+            "type": "top_hero",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero-homepage.png"
+            }
+          }
+        },
+        "block_order": [
+          "1546044314497"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
