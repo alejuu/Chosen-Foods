@@ -1,0 +1,28 @@
+<section class="hero is-full-custom is-top-custom is-product">
+  {% include 'breadcrumbs' %}
+  <div class="hero-body is-flex">
+    <div data-aos="fade-up" class="columns">
+      <div class="column">
+        <figure class="image feature is-margin-center">
+          <img class="is-margin-center" src="{{ 'pdp-avospray.png' | asset_url }}">
+        </figure>
+      </div>
+      <div class="column is-flex">
+        <h1 class="title is-1 has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
+        <p class="title is-2 has-text-centered has-text-primary is-marginless">{{ product.price | money }}</p>
+        <form class="product-form">
+          <div class="field is-grouped">
+            <div class="control is-flex">
+              <input class="input" type="text" placeholder="1">
+            </div>
+            <div class="control">
+              <button class="button is-small is-rounded is-primary is-outlined is-uppercase is-fullwidth has-text-centered">
+                <span>Add To Cart</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

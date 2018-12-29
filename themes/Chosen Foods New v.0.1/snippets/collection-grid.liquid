@@ -2,30 +2,30 @@
   <div class="container">
     <div class="columns is-flex is-multiline">
       {% for product in collection.products %}
-      <div class="column is-half-mobile is-one-quarter">
-        <div class="product">
-          <div class="badge">
-            {% if product.compare_at_price and product.compare_at_price != product.price %}
-              <span class="icon">
-                <i class="cf-icon-avocado-32"></i>
-              </span>
-            {% endif %}
-            <!-- <span class="icon">
-              <i class="cf-icon-staff-pick-32"></i>
-            </span> -->
+        <div class="column is-half-mobile is-one-quarter">
+          <div class="product">
+            <div class="badge">
+              {% if product.compare_at_price and product.compare_at_price != product.price %}
+                <span class="icon">
+                  <i class="cf-icon-avocado-32"></i>
+                </span>
+              {% endif %}
+              <!-- <span class="icon">
+                <i class="cf-icon-staff-pick-32"></i>
+              </span> -->
+            </div>
+            <figure class="image is-128x128 is-margin-center">
+              <img src="{{ product.featured_image.src | img_url: '1920x' }}">
+            </figure>
+            <div class="has-text-centered product-info">
+              <h3 class="title is-3">{{ product.title }}</h3>
+              <p class="title is-6">
+                {{ product.price | money }}
+              </p>
+            </div>
+            <a href="{{ product.url }}"></a>
           </div>
-          <figure class="image is-128x128 is-margin-center">
-            <img src="{{ product.featured_image.src | img_url: '1920x' }}">
-          </figure>
-          <div class="has-text-centered product-info">
-            <h3 class="title is-3">{{ product.title }}</h3>
-            <p class="title is-6">
-              {{ product.price | money }}
-            </p>
-          </div>
-          <a href="{{ product.url }}"></a>
         </div>
-      </div>
       {% endfor %}
     </div>
     <!-- <div class="container has-text-centered">

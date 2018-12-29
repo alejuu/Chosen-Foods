@@ -1,0 +1,106 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title is-1 has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
+        <figure class="image feature is-margin-center">
+          <img class="is-margin-center" src="{{ product.featured_image.src | img_url: '1920x' }}">
+        </figure>
+        <p class="title is-2 has-text-centered has-text-primary is-marginless">{{ product.price | money }}</p>
+        <form class="product-form is-margin-center">
+          <div class="field is-grouped">
+            <div class="control is-flex">
+              <input class="input" type="text" placeholder="1">
+            </div>
+            <div class="control">
+              <button class="button is-small is-rounded is-primary is-uppercase is-fullwidth has-text-centered">
+                <span>Add To Cart</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-6">Description</h2>
+          <p>{{ product.description }}</p>
+        </div>
+        <div class="content">
+          <div class="accordions">
+            <article class="accordion">
+              <div class="accordion-header toggle">
+                <h2 class="title is-6">Details</h2>
+                <button class="toggle" aria-label="toggle"></button>
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-content content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="accordion">
+              <div class="accordion-header toggle">
+                <h2 class="title is-6">Shopping Policy</h2>
+                <button class="toggle" aria-label="toggle"></button>
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-content content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="accordion">
+              <div class="accordion-header toggle">
+                <h2 class="title is-6">Reviews</h2>
+                <button class="toggle" aria-label="toggle"></button>
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-content content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="content">
+          <div class="columns is-multiline recipes">
+            <div class="column is-half">
+              <div class="post">
+                <span class="tag is-success">Success</span>
+                <h3 class="title is-3 has-text-white">Recipe Name</h3>
+                <a href=""></a>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="post">
+                <span class="tag is-success">Success</span>
+                <h3 class="title is-3 has-text-white">Recipe Name</h3>
+                <a href=""></a>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="post">
+                <span class="tag is-success">Success</span>
+                <h3 class="title is-3 has-text-white">Recipe Name</h3>
+                <a href=""></a>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="post">
+                <span class="tag is-success">Success</span>
+                <h3 class="title is-3 has-text-white">Recipe Name</h3>
+                <a href=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

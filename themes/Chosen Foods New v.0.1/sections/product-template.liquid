@@ -2,11 +2,13 @@
   {% for block in section.blocks %}
     {% if block.type == "hero" %}
       {% include 'product-hero', type: 'block' %}
+    {% elsif block.type == "product_details" %}
+      {% include 'product-details', type: 'block' %}
+    {% elsif block.type == "related" %}
+      {% include 'related-products', type: 'block' %}
     {% endif %}
   {% endfor %}
 {% endif %}
-
-<!-- {% include 'collection-grid' %} -->
 
 {% schema %}
 {
@@ -16,19 +18,15 @@
   "blocks": [
     {
       "type": "hero",
-      "name": "Hero",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image Top"
-        },
-        {
-          "type": "image_picker",
-          "id": "text_image",
-          "label": "Image Bottom"
-        }
-      ]
+      "name": "Hero"
+    },
+    {
+      "type": "product_details",
+      "name": "Product Details"
+    },
+    {
+      "type": "related",
+      "name": "Similar Products"
     }
   ]
 }
