@@ -302,7 +302,6 @@ $accordion-content-border: hidden !default
 
 // Extra Code
 // Navbar
-
 #mainMenu {
   border-top: solid 20px $green;
 }
@@ -755,6 +754,7 @@ main {
               align-items: center;
               justify-content: center;
               flex-direction: column;
+              position: relative;
             }
           }
           .image {
@@ -885,31 +885,33 @@ main {
   width: 100%;
   max-width: 350px;
   margin-top: 1em;
-  .control {
-    &:nth-child(1) {
-      width: 20%;
-      align-items: center;
-      justify-content: center;
-      margin: 0!important;
-      .input {
-        width: 30px;
-        border-bottom: 2px solid $green;
-        &:hover, &:active, &:focus {
-          border: hidden;
+  .qty-add {
+    .control {
+      &:nth-child(1) {
+        width: 20%;
+        align-items: center;
+        justify-content: center;
+        margin: 0!important;
+        .input {
+          width: 50px;
+          border-bottom: 2px solid $green;
+          &:hover, &:active, &:focus {
+            border: hidden;
+          }
         }
       }
+      &:nth-child(2) {
+        width: 80%;
+      }
     }
-    &:nth-child(2) {
-      width: 80%;
+    .button {
+      height: auto;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      line-height: 1;
+      letter-spacing: 1.5px;
+      width: 100%;
     }
-  }
-  .button {
-    height: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    line-height: 1;
-    letter-spacing: 1.5px;
-    width: 100%;
   }
 }
 .product-page {

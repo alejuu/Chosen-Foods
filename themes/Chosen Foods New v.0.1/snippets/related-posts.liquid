@@ -1,0 +1,17 @@
+{% capture product_tag %}{{ product.title }}{% endcapture %}
+
+<div class="content">
+  <div class="columns is-multiline recipes">
+    {% for article in blogs.central.articles %}
+      {% if article.tags contains product_tag %}
+        <div class="column is-half">
+          <div class="post" style="background-image: url('{{ article.image.src | img_url: '200x' }}')">
+            <span class="tag is-success">Recipes</span>
+            <h3 class="title is-3 has-text-white">{{ article.title }}</h3>
+            <a href=""></a>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

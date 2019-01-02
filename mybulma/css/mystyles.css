@@ -8135,7 +8135,8 @@ main {
       .hero.is-product.is-top-custom .hero-body .columns .column:nth-child(2) {
         align-items: center;
         justify-content: center;
-        flex-direction: column; }
+        flex-direction: column;
+        position: relative; }
       .hero.is-product.is-top-custom .hero-body .columns .image.feature {
         max-width: 500px; }
   @media screen and (max-width: 768px) {
@@ -8220,19 +8221,19 @@ main {
   width: 100%;
   max-width: 350px;
   margin-top: 1em; }
-  .product-form .control:nth-child(1) {
+  .product-form .qty-add .control:nth-child(1) {
     width: 20%;
     align-items: center;
     justify-content: center;
     margin: 0 !important; }
-    .product-form .control:nth-child(1) .input {
-      width: 30px;
+    .product-form .qty-add .control:nth-child(1) .input {
+      width: 50px;
       border-bottom: 2px solid #00857D; }
-      .product-form .control:nth-child(1) .input:hover, .product-form .control:nth-child(1) .input:active, .product-form .control:nth-child(1) .input:focus {
+      .product-form .qty-add .control:nth-child(1) .input:hover, .product-form .qty-add .control:nth-child(1) .input:active, .product-form .qty-add .control:nth-child(1) .input:focus {
         border: hidden; }
-  .product-form .control:nth-child(2) {
+  .product-form .qty-add .control:nth-child(2) {
     width: 80%; }
-  .product-form .button {
+  .product-form .qty-add .button {
     height: auto;
     padding-top: 1em;
     padding-bottom: 1em;

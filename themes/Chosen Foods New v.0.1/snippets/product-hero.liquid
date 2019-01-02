@@ -7,18 +7,37 @@
           <img class="is-margin-center" src="{{ 'pdp-avospray.png' | asset_url }}">
         </figure>
       </div>
-      <div class="column is-flex">
-        <h1 class="title is-1 has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
-        <p class="title is-2 has-text-centered has-text-primary is-marginless">{{ product.price | money }}</p>
-        <form class="product-form">
-          <div class="field is-grouped">
+      <div class="column is-flex has-background-white">
+        <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
+        <p class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless">{{ product.price | money }}</p>
+        <form class="product-form" method="post" action="/cart/add">
+          {% comment %}
+            {% unless product.has_only_one_default_variant %}
+            {% endunless %}
+          {% endcomment %}
+          {% unless product.variants.size == 1 %}
+            {% for product_option in product.options_with_values %}
+              <div class="field product-option">
+                <label class="label">{{ product_option.name }}</label>
+                <div class="control">
+                  <div class="select is-small is-outlined is-uppercase is-fullwidth">
+                    <select data-index="option{{ forloop.index }}">
+                      {% for value in product_option.values %}
+                        <option value="{{ value | escape }}" {% if product_option.selected_value == value %} selected="selected" {% endif %}>{{ value }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          {% endunless %}
+          <div class="field is-grouped qty-add">
             <div class="control is-flex">
-              <input class="input" type="text" placeholder="1">
+              <input class="input" type="number" id="quantity" name="quantity" value="1">
             </div>
             <div class="control">
-              <button class="button is-small is-rounded is-primary is-outlined is-uppercase is-fullwidth has-text-centered">
-                <span>Add To Cart</span>
-              </button>
+              <input type="hidden" id="variant-id" name="id" value="{{ product.variants.first.id }}">
+              <input class="button is-small is-rounded is-primary is-outlined is-uppercase is-fullwidth has-text-centered" type="submit" value="Add to Cart">
             </div>
           </div>
         </form>

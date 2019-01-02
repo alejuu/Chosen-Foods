@@ -20,9 +20,9 @@
           <img class="is-margin-center" alt="{{ text_image.alt | escape }}" src="{{ text_image | img_url: '700x' }}">
         </figure>
         <div>
-          <button class="button is-small is-rounded is-link is-uppercase has-text-centered">
-            <span>{{ block.settings.text }}</span>
-          </button>
+          <a href="{{ block.settings.link }}" class="button is-small is-rounded is-link is-uppercase has-text-centered">
+            <span>{{ text }}</span>
+          </a>
         </div>
       </div>
     </div>
