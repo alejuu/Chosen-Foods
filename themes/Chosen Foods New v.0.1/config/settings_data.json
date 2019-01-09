@@ -38,12 +38,68 @@
           "1546044314497": {
             "type": "top_hero",
             "settings": {
-              "image": "shopify:\/\/shop_images\/hero-homepage.png"
+              "image": "shopify:\/\/shop_images\/hero-homepage.png",
+              "text_image": "shopify:\/\/shop_images\/meetthehero-text.png",
+              "text": "Discover More"
+            }
+          },
+          "1546054929406": {
+            "type": "hero",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cookingoils-homepage.png",
+              "text_image": "shopify:\/\/shop_images\/cookingoils-text.png",
+              "text": "Shop Now",
+              "link": "shopify:\/\/collections\/avocado-oil-products"
             }
           }
         },
         "block_order": [
-          "1546044314497"
+          "1546044314497",
+          "1546054929406"
+        ],
+        "settings": {
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "blocks": {
+          "1546056439337": {
+            "type": "hero",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cookingoils-category.png",
+              "text_image": "shopify:\/\/shop_images\/cookingoils-text.png"
+            }
+          }
+        },
+        "block_order": [
+          "1546056439337"
+        ],
+        "settings": {
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "blocks": {
+          "1546066584338": {
+            "type": "hero",
+            "settings": {
+            }
+          },
+          "1546066591863": {
+            "type": "product_details",
+            "settings": {
+            }
+          },
+          "1546066594946": {
+            "type": "related",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "1546066584338",
+          "1546066591863",
+          "1546066594946"
         ],
         "settings": {
         }

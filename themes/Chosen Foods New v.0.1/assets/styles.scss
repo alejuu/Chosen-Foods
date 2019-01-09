@@ -8135,7 +8135,8 @@ main {
       .hero.is-product.is-top-custom .hero-body .columns .column:nth-child(2) {
         align-items: center;
         justify-content: center;
-        flex-direction: column; }
+        flex-direction: column;
+        position: relative; }
       .hero.is-product.is-top-custom .hero-body .columns .image.feature {
         max-width: 500px; }
   @media screen and (max-width: 768px) {
@@ -8194,12 +8195,20 @@ main {
     min-width: inherit;
     max-width: 100%;
     width: 100%; }
-    .filters .dropdown-menu .dropdown-content .dropdown-item {
-      text-align: center;
-      text-transform: uppercase;
-      padding: .25em;
-      letter-spacing: 1.5px;
-      font-size: 0.75rem; }
+    .filters .dropdown-menu .dropdown-content {
+      padding-top: 0;
+      box-shadow: none; }
+      .filters .dropdown-menu .dropdown-content .dropdown-item {
+        text-align: center;
+        text-transform: uppercase;
+        padding: .25em .50em;
+        letter-spacing: 1.5px;
+        font-size: 0.70rem;
+        white-space: unset;
+        border: solid 0.1px #F0F7F6;
+        border-bottom: hidden; }
+        .filters .dropdown-menu .dropdown-content .dropdown-item:last-child {
+          border-bottom: solid 0.1px #F0F7F6; }
   .filters .button {
     height: auto;
     padding-top: 1em;
@@ -8212,19 +8221,19 @@ main {
   width: 100%;
   max-width: 350px;
   margin-top: 1em; }
-  .product-form .control:nth-child(1) {
+  .product-form .qty-add .control:nth-child(1) {
     width: 20%;
     align-items: center;
     justify-content: center;
     margin: 0 !important; }
-    .product-form .control:nth-child(1) .input {
-      width: 30px;
+    .product-form .qty-add .control:nth-child(1) .input {
+      width: 50px;
       border-bottom: 2px solid #00857D; }
-      .product-form .control:nth-child(1) .input:hover, .product-form .control:nth-child(1) .input:active, .product-form .control:nth-child(1) .input:focus {
+      .product-form .qty-add .control:nth-child(1) .input:hover, .product-form .qty-add .control:nth-child(1) .input:active, .product-form .qty-add .control:nth-child(1) .input:focus {
         border: hidden; }
-  .product-form .control:nth-child(2) {
+  .product-form .qty-add .control:nth-child(2) {
     width: 80%; }
-  .product-form .button {
+  .product-form .qty-add .button {
     height: auto;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -8252,3 +8261,6 @@ main {
     right: 0;
     top: 0;
     bottom: 0; }
+
+#shopify-section-header + main {
+  margin-top: 4.8rem; }
