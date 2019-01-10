@@ -101,6 +101,15 @@ $accordion-content-border: hidden !default
 .has-background-orange {
   background-color: $orange;
 }
+.has-background-light-yellow {
+  background-color: $light-yellow;
+}
+.has-background-lighter-peach {
+  background-color: $lighter-peach;
+}
+.has-background-lighter-green {
+  background-color: $lighter-green;
+}
 
 // Extra Code
 // Typography
@@ -808,6 +817,26 @@ main {
       }
     }
   }
+}
+.hero-columns {
+  .hero {
+    .hero-body {
+      .container {
+        .image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  // @include until($tablet) {
+    .columns {
+      margin-left: 0;
+      margin-right: 0;
+      flex-wrap: wrap;
+    }
+  // }
 }
 
 // Extra Code

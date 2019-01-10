@@ -43,19 +43,31 @@
               "text": "Discover More"
             }
           },
-          "1546054929406": {
-            "type": "hero",
+          "1547147122226": {
+            "type": "hero_columns",
             "settings": {
-              "image": "shopify:\/\/shop_images\/cookingoils-homepage.png",
-              "text_image": "shopify:\/\/shop_images\/cookingoils-text.png",
-              "text": "Shop Now",
-              "link": "shopify:\/\/collections\/avocado-oil-products"
+              "image_one": "shopify:\/\/shop_images\/cookingoils-homepage.png",
+              "text_image_one": "shopify:\/\/shop_images\/cookingoils-text.png",
+              "text_one": "Shop Now",
+              "btn_link_one": "shopify:\/\/collections\/avocado-oil-products",
+              "image_two": "shopify:\/\/shop_images\/cookingsprays-homepage.png",
+              "text_image_two": "shopify:\/\/shop_images\/cookingsprays-text.png",
+              "text_two": "Shop Now",
+              "btn_link_two": "shopify:\/\/collections\/pure-oil-sprays",
+              "image_three": "shopify:\/\/shop_images\/mayos-homepage.png",
+              "text_image_three": "shopify:\/\/shop_images\/mayos-text.png",
+              "text_three": "Shop Now",
+              "btn_link_three": "shopify:\/\/collections\/healthy-mayo",
+              "image_four": "shopify:\/\/shop_images\/dressings-homepage.png",
+              "text_image_four": "shopify:\/\/shop_images\/dressings-text.png",
+              "text_four": "Shop Now",
+              "btn_link_four": "shopify:\/\/collections\/dressings-marinades-made-with-avocado-oil"
             }
           }
         },
         "block_order": [
           "1546044314497",
-          "1546054929406"
+          "1547147122226"
         ],
         "settings": {
         }

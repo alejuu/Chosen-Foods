@@ -4,6 +4,8 @@
       {% include 'top-hero', type: 'block' %}
     {% elsif block.type == "hero" %}
       {% include 'hero', type: 'block' %}
+    {% elsif block.type == "hero_columns" %}
+      {% include 'hero-columns', type: 'block' %}
     {% endif %}
   {% endfor %}
 {% endif %}
@@ -57,7 +59,97 @@
           "default": "Shop Now"
         },
         {
-          "id": "link",
+          "id": "btn_link",
+          "type": "url",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "hero_columns",
+      "name": "Hero Columns",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_one",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image_one",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text_one",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link_one",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_two",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image_two",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text_two",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link_two",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_three",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image_three",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text_three",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link_three",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_four",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image_four",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text_four",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link_four",
           "type": "url",
           "label": "Button link"
         }
