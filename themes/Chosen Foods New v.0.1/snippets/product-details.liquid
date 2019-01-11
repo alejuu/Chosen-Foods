@@ -7,7 +7,7 @@
           <img class="is-margin-center" src="{{ product.featured_image.src | img_url: '1920x' }}">
         </figure>
         <p class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless">{{ product.price | money }}</p>
-        <!-- <form class="product-form is-margin-center" method="post" action="/cart/add">
+        <form class="product-form is-margin-center" method="post" action="/cart/add">
           {% unless product.variants.size == 1 %}
             {% for product_option in product.options_with_values %}
               <div class="field product-option">
@@ -33,7 +33,7 @@
               <input class="button is-small is-rounded is-primary is-uppercase is-fullwidth has-text-centered" type="submit" value="Add to Cart">
             </div>
           </div>
-        </form> -->
+        </form>
       </div>
       <div class="column">
         <div class="content">

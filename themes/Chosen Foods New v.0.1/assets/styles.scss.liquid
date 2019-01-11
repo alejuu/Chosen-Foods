@@ -2080,7 +2080,7 @@ a.box:active {
 .input,
 .textarea {
   background-color: #FFFFFF;
-  border-color: transparent;
+  border-color: #F4F5F5;
   color: #363636;
   box-shadow: none;
   max-width: 100%;
@@ -2300,7 +2300,7 @@ a.box:active {
     padding-left: 1em; }
   .select select {
     background-color: #FFFFFF;
-    border-color: transparent;
+    border-color: #F4F5F5;
     color: #363636;
     cursor: pointer;
     display: block;
@@ -8280,6 +8280,36 @@ main {
     right: 0;
     top: 0;
     bottom: 0; }
+
+.cart-page .product {
+  align-items: center; }
+  .cart-page .product .product-details form .control .input {
+    max-width: 70px; }
+  .cart-page .product .product-details .price {
+    margin-top: 10px; }
+
+.cart-page .notifications p:nth-child(1) {
+  margin-bottom: 0; }
+
+.cart-page .checkout-buttons .button, .cart-page .continue-shopping .button {
+  height: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto; }
+
+.cart-page .checkout-buttons .button:not(:first-child) {
+  margin-top: 10px; }
+
+.cart-page .checkout-buttons .paypal {
+  padding-bottom: .6em;
+  padding-top: .6em; }
+  .cart-page .checkout-buttons .paypal img {
+    width: 83px;
+    height: 21.64px; }
 
 #shopify-section-header + main {
   margin-top: 4.8rem; }

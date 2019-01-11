@@ -47,7 +47,7 @@ $fullhd-enabled: true;
 // Update some of Bulma's component variables
 $body-background-color: $white;
 $control-border-width: 2px;
-$input-border-color: transparent;
+// $input-border-color: transparent;
 $input-shadow: none;
 $radius-small: 1px !default;
 $radius: 2px !default;
@@ -967,6 +967,60 @@ main {
         right: 0;
         top: 0;
         bottom: 0;
+      }
+    }
+  }
+}
+
+// Extra Code
+// Cart
+.cart-page {
+  .product {
+    align-items: center;
+    .product-details {
+      form {
+        .control {
+          .input {
+            max-width: 70px;
+          }
+        }
+      }
+      .price {
+        margin-top: 10px;
+      }
+    }
+  }
+  .notifications {
+    p {
+      &:nth-child(1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .checkout-buttons, .continue-shopping {
+    .button {
+      height: auto;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      line-height: 1;
+      letter-spacing: 1.5px;
+      width: 100%;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
+  .checkout-buttons {
+    .button {
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+    .paypal {
+      padding-bottom: .6em;
+      padding-top: .6em;
+      img {
+        width: 83px;
+        height: 21.64px;
       }
     }
   }
