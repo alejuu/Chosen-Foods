@@ -10,7 +10,7 @@
         <form class="product-form is-margin-center" method="post" action="/cart/add">
           {% unless product.variants.size == 1 %}
             {% for product_option in product.options_with_values %}
-              <div class="field product-option-details">
+              <div class="field product-option product-option-details">
                 <label class="label">{{ product_option.name }}</label>
                 <div class="control">
                   <div class="select is-small is-outlined is-uppercase is-fullwidth">
@@ -25,7 +25,7 @@
             {% endfor %}
           {% endunless %}
           <div class="field is-grouped qty-add">
-            <div class="control is-flex">
+            <div class="control qty is-flex">
               <input class="input" type="number" id="quantity" name="quantity" value="1">
             </div>
             <div class="control">

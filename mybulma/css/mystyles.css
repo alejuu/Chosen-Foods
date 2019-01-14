@@ -8223,7 +8223,6 @@ main {
   .product-form .qty-add .control:nth-child(1) {
     width: 20%;
     align-items: center;
-    justify-content: center;
     margin: 0 !important; }
     .product-form .qty-add .control:nth-child(1) .input {
       width: 50px;

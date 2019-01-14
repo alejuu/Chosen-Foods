@@ -43,10 +43,9 @@ function getVariantFromOptions() {
   });
   return variantArr;
 }
-//Product Hero Get Variant
-function getVariantFromOptions() {
+function getVariantHeroFromOptions() {
   let variantArr = []
-  $(".product-option-hero select").map(function(i, el) {
+  $(".product-option select").map(function(i, el) {
     variant = {value: $(el).val(), index: $(el).data('index')};
     variantArr.push(variant)
   });
@@ -69,7 +68,7 @@ function updateHistoryState(variant) {
   window.history.replaceState({ path: newurl }, '', newurl);
 }
 //Product Details Update Variant
-$('.product-option-details select').on('change', function() {
+$('.product-option select').on('change', function() {
   var selectedValues = getVariantFromOptions();
   var variants = window.product.variants;
 
@@ -82,31 +81,9 @@ $('.product-option-details select').on('change', function() {
   updateHistoryState(found)
   $('#variant-id-details').val(found.id)
   $('#variant-id-hero').val(found.id)
+  $('.product-option select').val( $(this).val() ) // they all change
 });
-//Product Hero Update Variant
-$('.product-option-hero select').on('change', function() {
-  var selectedValues = getVariantFromOptions();
-  var variants = window.product.variants;
-
-  // Search for product variants based on what was selected in the dropdowns
-  var found = _.find(variants, function(variant) {
-    return selectedValues.every(function(values) {
-      return _.isEqual(variant[values.index], values.value);
-    });
-  });
-  updateHistoryState(found)
-  $('#variant-id-hero').val(found.id)
-  $('#variant-id-details').val(found.id)
-});
-// Sync Product Details Selection
-$(function(){
-	$('.product-option-hero select').change(function(){ // when one changes
-		$('.product-option-details select').val( $(this).val() ) // they all change
-	})
-});
-// Sync Product Hero Selection
-$(function(){
-	$('.product-option-details select').change(function(){ // when one changes
-		$('.product-option-hero select').val( $(this).val() ) // they all change
-	})
+//Qty Sync
+$('.qty .input').on('change', function() {
+  $('.qty .input').val( $(this).val() )
 });
