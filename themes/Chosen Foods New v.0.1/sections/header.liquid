@@ -19,7 +19,7 @@
             <i class="cf-icon-account-32"></i>
           </span>
         </a>
-        <a class="navbar-item is-flex">
+        <a href="/cart" class="navbar-item is-flex">
           <span class="icon">
             <i class="cf-icon-cart-32"></i>
           </span>
@@ -35,18 +35,7 @@
       <div class="navbar-start">
         {% include 'menu-one' %}
         <div class="navbar-item search-item">
-          <div class="field has-addons has-addons-centered">
-            <div class="control is-expanded">
-              <input class="input" type="text" placeholder="Search">
-            </div>
-            <div class="control">
-              <button type="submit" class="button is-primary">
-                <span class="icon">
-                  <i class="cf-icon-search-16"></i>
-                </span>
-              </button>
-            </div>
-          </div>
+          {% include 'search-bar' %}
         </div>
         <div class="navbar-item is-hidden-desktop">
           <div class="container">
@@ -137,7 +126,7 @@
             <i class="cf-icon-account-32"></i>
           </span>
         </a>
-        <a class="navbar-item is-flex">
+        <a href="/cart" class="navbar-item is-flex">
           <span class="icon">
             <i class="cf-icon-cart-32"></i>
           </span>

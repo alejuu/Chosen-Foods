@@ -1,72 +1,90 @@
 <main class="cart-page">
   <section class="hero is-full-custom is-top-custom">
     <div class="hero-body">
-      <div class="content">
-        <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">Your Shopping Cart</h1>
+      <div class="content has-text-centered">
+        {% if cart.item_count > 0 %}
+          <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">Your Shopping Cart</h1>
+        {% else %}
+          <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">Your Cart is Empty</h1>
+          <hr>
+          <a href="/" class="button is-small is-rounded is-primary is-outlined is-uppercase has-text-centered">Contine Shopping</a>
+        {% endif %}
       </div>
     </div>
   </section>
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-two-thirds">
-          {% for item in cart.items%}
-            <div class="columns is-mobile product">
-              <div class="column product-image">
-                <figure class="image">
-                  <img src="{{ item.image | product_img_url: '1920x' }}">
-                </figure>
-              </div>
-              <div class="column">
-                <div class="columns is-mobile">
-                  <div class="column is-four-fifths product-details">
-                    <a href="{{ item.url }}">
-                      <h2 class="title is-3 is-size-6-mobile has-text-primary">{{ item.title }}</h2>
-                    </a>
-                    <form>
-                      <div class="field">
-                        <div class="control">
-                          <input type="number" id="updates_{{ item.id }}" name="updates[]" value="{{ item.quantity }}" class="input" />
-                        </div>
-                      </div>
-                    </form>
-                    <p class="title is-3 is-size-6 is-size-7-mobile has-text-primary price">{{ item.price | money }}</p>
+  {% if cart.item_count > 0 %}
+    <section class="section">
+      <div class="container">
+        <form action="/cart" method="post">
+          <div class="columns">
+            <div class="column is-two-thirds">
+              {% for item in cart.items%}
+                <div class="columns is-mobile product">
+                  <div class="column product-image">
+                    <figure class="image">
+                      <img src="{{ item.image | product_img_url: '1920x' }}">
+                    </figure>
                   </div>
-                  <div class="column remove-product">
-                    <a href="/cart/change?line={{ forloop.index }}&quantity=0" rel="{{ item.id }}" class="has-text-primary is-size-3">
-                      x
+                  <div class="column">
+                    <div class="columns is-mobile">
+                      <div class="column is-four-fifths product-details">
+                        <a href="{{ item.url }}">
+                          <h2 class="title is-3 is-size-6-mobile has-text-primary">{{ item.title }}</h2>
+                        </a>
+                        <div class="field">
+                          <div class="control">
+                            <input type="number" name="updates[]" id="updates_{{ item.key }}" data-id="{{ item.key }}" min="0" value="{{ item.quantity }}" class="input" />
+                          </div>
+                        </div>
+                        <p class="title is-3 is-size-6 is-size-7-mobile has-text-primary price">{{ item.price | money }}</p>
+                      </div>
+                      <div class="column remove-product">
+                        <a href="/cart/change?line={{ forloop.index }}&quantity=0" rel="{{ item.id }}" class="has-text-primary is-size-3">
+                          x
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="column">
+              <div class="content has-text-centered notifications">
+                <p>
+                  <span class="is-size-6"><b class="is-uppercase">Free</b> shipping on orders over $35.*</span>
+                </p>
+                <p>
+                  <span class="is-size-7">Offer excludes Bulk Chia(5lbs+).</span>
+                </p>
+                <h2 class="title is-3 is-size-6-mobile has-text-primary">Subtotal:<span> {{ cart.total_price | money }}</span></h2>
+              </div>
+              <div class="content has-text-centered checkout-buttons">
+                <div class="field">
+                  <div class="control has-text-centered">
+                    <input type="submit" name="checkout" value="checkout" class="button is-small is-rounded is-primary is-uppercase has-text-centered" />
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control has-text-centered">
+                    <input type="submit" name="update" value="update" class="button is-small is-rounded is-primary is-outlined is-uppercase has-text-centered" />
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control has-text-centered">
+                    <a href="" class="paypal button is-small is-rounded is-uppercase is-warning has-text-centered">
+                      <img src="{{ 'paypal.png' | asset_url }}" alt="Chosen Foods">
                     </a>
                   </div>
                 </div>
               </div>
+              <div class="content has-text-centered continue-shopping">
+                <p class="title is-3 is-size-6-mobile has-text-primary">Not done shopping?</p>
+                <a href="/" class="button is-small is-rounded is-primary is-outlined is-uppercase has-text-centered">Contine Shopping</a>
+              </div>
             </div>
-          {% endfor %}
-        </div>
-        <div class="column">
-          <div class="content has-text-centered notifications">
-            <p>
-              <span class="is-size-6"><b class="is-uppercase">Free</b> shipping on orders over $35.*</span>
-            </p>
-            <p>
-              <span class="is-size-7">Offer excludes Bulk Chia(5lbs+).</span>
-            </p>
-            <h2 class="title is-3 is-size-6-mobile has-text-primary">Subtotal:<span> {{ cart.total_price | money }}</span></h2>
           </div>
-          <div class="content has-text-centered checkout-buttons">
-            <form action="/cart" method="post">
-              <input type="submit" name="checkout" value="checkout" class="button is-small is-rounded is-primary is-uppercase has-text-centered" />
-              <input type="submit" name="update" value="update" class="button is-small is-rounded is-primary is-outlined is-uppercase has-text-centered" />
-              <a href="" class="paypal button is-small is-rounded is-uppercase is-warning has-text-centered">
-                <img src="{{ 'paypal.png' | asset_url }}" alt="Chosen Foods">
-              </a>
-            </form>
-          </div>
-          <div class="content has-text-centered continue-shopping">
-            <p class="title is-3 is-size-6-mobile has-text-primary">Not done shopping?</p>
-            <a href="/" class="button is-small is-rounded is-primary is-outlined is-uppercase has-text-centered">Contine Shopping</a>
-          </div>
-        </div>
+        </form>
       </div>
-    </div>
-  </section>
+    </section>
+  {% endif %}
 </main>

@@ -36,7 +36,7 @@ AOS.init();
 //Product Selction
 function getVariantFromOptions() {
   let variantArr = []
-  $(".product-option select").map(function(i, el) {
+  $(".product-option-details select").map(function(i, el) {
     variant = {value: $(el).val(), index: $(el).data('index')};
     variantArr.push(variant)
   });
@@ -55,11 +55,11 @@ function updateHistoryState(variant) {
     window.location.pathname +
     '?variant=' +
     variant.id;
-  
+
   window.history.replaceState({ path: newurl }, '', newurl);
 }
 
-$('.product-option select').on('change', function() {
+$('.product-option-details select').on('change', function() {
   var selectedValues = getVariantFromOptions();
   var variants = window.product.variants;
 
@@ -70,5 +70,5 @@ $('.product-option select').on('change', function() {
     });
   });
   updateHistoryState(found)
-  $('#variant-id').val(found.id)
+  $('#variant-id-details').val(found.id)
 });

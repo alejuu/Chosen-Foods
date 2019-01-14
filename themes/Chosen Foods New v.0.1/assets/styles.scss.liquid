@@ -7736,6 +7736,12 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .button.is-rounded {
   padding-left: 2em;
   padding-right: 2em; }
+  .button.is-rounded.is-small {
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    line-height: 1;
+    letter-spacing: 1.5px; }
 
 .cf-icon-account-16 {
   width: 16px;
@@ -7891,12 +7897,6 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 
 .navbar-end {
   flex: 1; }
-  .navbar-end .navbar-item .button {
-    height: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    line-height: 1;
-    letter-spacing: 1.5px; }
 
 .navbar-is-mobile {
   flex-grow: 1;
@@ -7958,12 +7958,6 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     width: calc(100% - 52px);
     text-align: right;
     background-color: #00857D; }
-    #navMenu.is-active .navbar-item.navbar-item-float .button {
-      height: auto;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      line-height: 1;
-      letter-spacing: 1.5px; }
   #navMenu.is-active .navbar-start > a.navbar-item {
     padding: 0.5rem 3rem;
     font-weight: bold; }
@@ -7988,11 +7982,9 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     font-weight: bold;
     padding: 0.5rem 3rem; }
     #navMenu.is-active a.navbar-link + .navbar-dropdown {
-      display: none; }
+      display: block; }
     #navMenu.is-active a.navbar-link:hover, #navMenu.is-active a.navbar-link.is-active, #navMenu.is-active a.navbar-link:active {
       background-color: #86C8BC; }
-      #navMenu.is-active a.navbar-link:hover + .navbar-dropdown, #navMenu.is-active a.navbar-link.is-active + .navbar-dropdown, #navMenu.is-active a.navbar-link:active + .navbar-dropdown {
-        display: block !important; }
     #navMenu.is-active a.navbar-link:not(.is-arrowless)::after {
       right: 3em;
       border-color: #FFFFFF; }
@@ -8099,13 +8091,6 @@ main {
 
 .hero.is-main:not(.is-top-custom) .container > div:nth-child(2) .image img {
   padding: 2rem 0; }
-
-.hero.is-main:not(.is-top-custom) .container .button {
-  height: auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  line-height: 1;
-  letter-spacing: 1.5px; }
 
 .hero.is-collection .breadcrumb {
   padding-top: .75rem;
@@ -8229,11 +8214,6 @@ main {
         .filters .dropdown-menu .dropdown-content .dropdown-item:last-child {
           border-bottom: solid 0.1px #F0F7F6; }
   .filters .button {
-    height: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    line-height: 1;
-    letter-spacing: 1.5px;
     width: 130px; }
 
 .product-form {
@@ -8253,11 +8233,6 @@ main {
   .product-form .qty-add .control:nth-child(2) {
     width: 80%; }
   .product-form .qty-add .button {
-    height: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    line-height: 1;
-    letter-spacing: 1.5px;
     width: 100%; }
 
 .product-page .recipes .post {
@@ -8283,7 +8258,7 @@ main {
 
 .cart-page .product {
   align-items: center; }
-  .cart-page .product .product-details form .control .input {
+  .cart-page .product .product-details .control .input {
     max-width: 70px; }
   .cart-page .product .product-details .price {
     margin-top: 10px; }
@@ -8292,17 +8267,9 @@ main {
   margin-bottom: 0; }
 
 .cart-page .checkout-buttons .button, .cart-page .continue-shopping .button {
-  height: auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  line-height: 1;
-  letter-spacing: 1.5px;
   width: 100%;
   max-width: 250px;
   margin: 0 auto; }
-
-.cart-page .checkout-buttons .button:not(:first-child) {
-  margin-top: 10px; }
 
 .cart-page .checkout-buttons .paypal {
   padding-bottom: .6em;

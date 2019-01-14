@@ -155,6 +155,13 @@ $accordion-content-border: hidden !default
   &.is-rounded {
     padding-left: 2em;
     padding-right: 2em;
+    &.is-small {
+      height: auto;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      line-height: 1;
+      letter-spacing: 1.5px;
+    }
   }
 }
 
@@ -343,11 +350,11 @@ $accordion-content-border: hidden !default
   flex: 1;
   .navbar-item {
     .button {
-      height: auto;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      line-height: 1;
-      letter-spacing: 1.5px;
+      // height: auto;
+      // padding-top: 1em;
+      // padding-bottom: 1em;
+      // line-height: 1;
+      // letter-spacing: 1.5px;
     }
   }
 }
@@ -436,11 +443,11 @@ $accordion-content-border: hidden !default
         text-align: right;
         background-color: $green;
         .button {
-          height: auto;
-          padding-top: 1em;
-          padding-bottom: 1em;
-          line-height: 1;
-          letter-spacing: 1.5px;
+          // height: auto;
+          // padding-top: 1em;
+          // padding-bottom: 1em;
+          // line-height: 1;
+          // letter-spacing: 1.5px;
         }
       }
     }
@@ -495,13 +502,13 @@ $accordion-content-border: hidden !default
         font-weight: bold;
         padding: 0.5rem 3rem;
         + .navbar-dropdown {
-          display: none;
+          display: block;
         }
         &:hover, &.is-active, &:active {
           background-color: $light-green;
-          + .navbar-dropdown {
-            display: block!important;
-          }
+          // + .navbar-dropdown {
+          //   display: block!important;
+          // }
         }
         &:not(.is-arrowless)::after {
           right: 3em;
@@ -694,11 +701,11 @@ main {
           }
         }
         .button {
-          height: auto;
-          padding-top: 1em;
-          padding-bottom: 1em;
-          line-height: 1;
-          letter-spacing: 1.5px;
+          // height: auto;
+          // padding-top: 1em;
+          // padding-bottom: 1em;
+          // line-height: 1;
+          // letter-spacing: 1.5px;
         }
       }
     }
@@ -899,11 +906,11 @@ main {
     }
   }
   .button {
-    height: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    line-height: 1;
-    letter-spacing: 1.5px;
+    // height: auto;
+    // padding-top: 1em;
+    // padding-bottom: 1em;
+    // line-height: 1;
+    // letter-spacing: 1.5px;
     width: 130px;
   }
 }
@@ -934,11 +941,11 @@ main {
       }
     }
     .button {
-      height: auto;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      line-height: 1;
-      letter-spacing: 1.5px;
+      // height: auto;
+      // padding-top: 1em;
+      // padding-bottom: 1em;
+      // line-height: 1;
+      // letter-spacing: 1.5px;
       width: 100%;
     }
   }
@@ -978,11 +985,9 @@ main {
   .product {
     align-items: center;
     .product-details {
-      form {
-        .control {
-          .input {
-            max-width: 70px;
-          }
+      .control {
+        .input {
+          max-width: 70px;
         }
       }
       .price {
@@ -999,22 +1004,17 @@ main {
   }
   .checkout-buttons, .continue-shopping {
     .button {
-      height: auto;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      line-height: 1;
-      letter-spacing: 1.5px;
+      // height: auto;
+      // padding-top: 1em;
+      // padding-bottom: 1em;
+      // line-height: 1;
+      // letter-spacing: 1.5px;
       width: 100%;
       max-width: 250px;
       margin: 0 auto;
     }
   }
   .checkout-buttons {
-    .button {
-      &:not(:first-child) {
-        margin-top: 10px;
-      }
-    }
     .paypal {
       padding-bottom: .6em;
       padding-top: .6em;
