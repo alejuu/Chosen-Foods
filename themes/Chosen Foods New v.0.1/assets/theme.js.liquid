@@ -33,17 +33,7 @@ var accordions = bulmaAccordion.attach(); // accordions now contains an array of
 //AOS Animations
 AOS.init();
 
-//Product Selection
-//Product Details Get Variant
 function getVariantFromOptions() {
-  let variantArr = []
-  $(".product-option-details select").map(function(i, el) {
-    variant = {value: $(el).val(), index: $(el).data('index')};
-    variantArr.push(variant)
-  });
-  return variantArr;
-}
-function getVariantHeroFromOptions() {
   let variantArr = []
   $(".product-option select").map(function(i, el) {
     variant = {value: $(el).val(), index: $(el).data('index')};
@@ -51,7 +41,7 @@ function getVariantHeroFromOptions() {
   });
   return variantArr;
 }
-//Update Url
+
 function updateHistoryState(variant) {
   if (!history.replaceState || !variant) {
     return;
@@ -67,7 +57,7 @@ function updateHistoryState(variant) {
 
   window.history.replaceState({ path: newurl }, '', newurl);
 }
-//Product Details Update Variant
+
 $('.product-option select').on('change', function() {
   var selectedValues = getVariantFromOptions();
   var variants = window.product.variants;
@@ -79,11 +69,5 @@ $('.product-option select').on('change', function() {
     });
   });
   updateHistoryState(found)
-  $('#variant-id-details').val(found.id)
-  $('#variant-id-hero').val(found.id)
-  $('.product-option select').val( $(this).val() ) // they all change
-});
-//Qty Sync
-$('.qty .input').on('change', function() {
-  $('.qty .input').val( $(this).val() )
+  $('#variant-id').val(found.id)
 });
