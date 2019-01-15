@@ -32,11 +32,11 @@
             {% endfor %}
           {% endunless %}
           <div class="field is-grouped qty-add">
-            <div class="control qty is-flex">
+            <div class="control is-flex qty">
               <input class="input" type="number" id="quantity" name="quantity" value="1">
             </div>
             <div class="control">
-              <input type="hidden" id="variant-id" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <input type="hidden" id="variant-id-hero" name="id" value="{{ product.selected_or_first_available_variant.id }}">
               <input class="button is-small is-rounded is-primary is-outlined is-uppercase is-fullwidth has-text-centered" type="submit" value="Add to Cart">
             </div>
           </div>

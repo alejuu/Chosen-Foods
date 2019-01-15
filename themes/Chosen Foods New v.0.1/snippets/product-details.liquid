@@ -7,6 +7,37 @@
           <img class="is-margin-center" src="{{ product.featured_image.src | img_url: '1920x' }}">
         </figure>
         <p class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless">{{ product.price | money }}</p>
+        <form class="product-form" method="post" action="/cart/add">
+          {% comment %}
+            {% unless product.has_only_one_default_variant %}
+            {% endunless %}
+          {% endcomment %}
+          {% unless product.variants.size == 1 %}
+            {% for product_option in product.options_with_values %}
+              <div class="field product-option product-option-details">
+                <label class="label">{{ product_option.name }}</label>
+                <div class="control">
+                  <div class="select is-small is-outlined is-uppercase is-fullwidth">
+                    <select data-index="option{{ forloop.index }}">
+                      {% for value in product_option.values %}
+                        <option value="{{ value | escape }}" {% if product_option.selected_value == value %} selected="selected" {% endif %}>{{ value }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          {% endunless %}
+          <div class="field is-grouped qty-add">
+            <div class="control is-flex qty">
+              <input class="input" type="number" id="quantity" name="quantity" value="1">
+            </div>
+            <div class="control">
+              <input type="hidden" id="variant-id-details" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <input class="button is-small is-rounded is-primary is-uppercase is-fullwidth has-text-centered" type="submit" value="Add to Cart">
+            </div>
+          </div>
+        </form>
       </div>
       <div class="column">
         <div class="content">
