@@ -61,7 +61,7 @@ $accordion-content-pre-background-color: transparent !default;
 $accordion-content-pre-code-background-color: transparent !default;
 $accordion-background-color: transparent !default;
 $accordion-header-background-color: transparent !default;
-$accordion-content-border: hidden !default
+$accordion-content-border: hidden !default;
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
@@ -72,8 +72,10 @@ $accordion-content-border: hidden !default
 @import "../node_modules/bulma/sass/grid/_all.sass";
 
 //Import Extras
-@import "../node_modules/aos/src/sass/aos.scss";
 @import "../node_modules/bulma-extensions/bulma-accordion/dist/css/bulma-accordion.sass";
+@import "../node_modules/aos/src/sass/aos.scss";
+@import "../node_modules/slick-carousel/slick/slick.scss";
+@import "../node_modules/slick-carousel/slick/slick-theme.scss";
 
 // Extra Code
 // Helpers
@@ -751,7 +753,7 @@ main {
   //Hero Product
   &.is-product {
     &.is-top-custom {
-      height: calc(100vh - 4.5rem);
+      // height: calc(100vh - 4.5rem);
       .breadcrumb {
         padding-top: .75rem;
         padding-left: .75rem;
@@ -807,7 +809,7 @@ main {
         .hero-body {
           position: relative;
           top: -74px;
-          height: calc(100vh - 4.5rem);
+          // height: calc(100vh - 4.5rem);
           .columns {
             height: 100%;
             .column {
@@ -917,9 +919,22 @@ main {
 
 // Extra Code
 // Product
+.single-product-images {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  .slick-dots {
+    position: relative;
+    li {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
 .product-form {
   width: 100%;
   max-width: 350px;
+  margin: 0 auto;
   margin-top: 1em;
   .qty-add {
     .control {

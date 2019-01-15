@@ -121,3 +121,39 @@ $('.product-option-details select').on('change', function() {
 $('.qty .input').on('change', function() {
   $('.qty .input').val( $(this).val() )
 });
+
+//Product carousel
+$('.single-product-images').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  customPaging : function(slider, i) {
+    var thumb = $(slider.$slides[i]).data('thumb');
+    return `<a><img class="img-fluid" src=${thumb} /></a>`;
+  },
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});

@@ -3,9 +3,13 @@
     <div class="columns">
       <div class="column">
         <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
-        <figure class="image feature is-margin-center">
-          <img class="is-margin-center" src="{{ product.featured_image.src | img_url: '1920x' }}">
-        </figure>
+        <div class="single-product-images">
+          {% for image in product.images %}
+            <div data-thumb="{{ image.src | img_url: '1920x' }}" class="image feature is-margin-center">
+              <img class="is-margin-center img-fluid" src="{{ image.src | img_url: '1920x' }}">
+            </div>
+          {% endfor %}
+        </div>
         <p class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless">{{ product.price | money }}</p>
         <form class="product-form" method="post" action="/cart/add">
           {% comment %}

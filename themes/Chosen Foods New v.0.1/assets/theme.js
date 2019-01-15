@@ -33,10 +33,10 @@ var accordions = bulmaAccordion.attach(); // accordions now contains an array of
 //AOS Animations
 AOS.init();
 
-//Product Selction
+//Update Form
 function getVariantFromOptions() {
   let variantArr = []
-  $(".product-option select").map(function(i, el) {
+  $(".product-option-hero select").map(function(i, el) {
     variant = {value: $(el).val(), index: $(el).data('index')};
     variantArr.push(variant)
   });
@@ -55,11 +55,11 @@ function updateHistoryState(variant) {
     window.location.pathname +
     '?variant=' +
     variant.id;
-  
+
   window.history.replaceState({ path: newurl }, '', newurl);
 }
 
-$('.product-option select').on('change', function() {
+$('.product-option-hero select').on('change', function() {
   var selectedValues = getVariantFromOptions();
   var variants = window.product.variants;
 
@@ -70,5 +70,90 @@ $('.product-option select').on('change', function() {
     });
   });
   updateHistoryState(found)
-  $('#variant-id').val(found.id)
+  $('#variant-id-hero').val(found.id)
+  $('#variant-id-details').val(found.id)
+  $('.product-option-details select').val( $(this).val() ) // they all change
+});
+
+//Update Form
+function getVariantFromOptionsTwo() {
+  let variantArrTwo = []
+  $(".product-option-details select").map(function(i, el) {
+    variant = {value: $(el).val(), index: $(el).data('index')};
+    variantArrTwo.push(variant)
+  });
+  return variantArrTwo;
+}
+
+function updateHistoryStateTwo(variant) {
+  if (!history.replaceState || !variant) {
+    return;
+  }
+
+  var newurlTwo =
+    window.location.protocol +
+    '//' +
+    window.location.host +
+    window.location.pathname +
+    '?variant=' +
+    variant.id;
+
+  window.history.replaceState({ path: newurlTwo }, '', newurlTwo);
+}
+
+$('.product-option-details select').on('change', function() {
+  var selectedValuesTwo = getVariantFromOptionsTwo();
+  var variants = window.product.variants;
+
+  // Search for product variants based on what was selected in the dropdowns
+  var found = _.find(variants, function(variant) {
+    return selectedValuesTwo.every(function(values) {
+      return _.isEqual(variant[values.index], values.value);
+    });
+  });
+  updateHistoryStateTwo(found)
+  $('#variant-id-hero').val(found.id)
+  $('#variant-id-details').val(found.id)
+  $('.product-option-hero select').val( $(this).val() ) // they all change
+});
+
+//Qty Sync
+$('.qty .input').on('change', function() {
+  $('.qty .input').val( $(this).val() )
+});
+
+//Product carousel
+$('.single-product-images').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  customPaging : function(slider, i) {
+    var thumb = $(slider.$slides[i]).data('thumb');
+    return `<a><img class="img-fluid" src=${thumb} /></a>`;
+  },
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
