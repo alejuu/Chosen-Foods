@@ -1,6 +1,7 @@
 <script type="text/javascript">
   window.product = {{ product | json }} || {};
 </script>
+{% assign variant = product.selected_or_first_available_variant %}
 {% if section.blocks.size > 0 %}
   {% for block in section.blocks %}
     {% if block.type == "hero" %}

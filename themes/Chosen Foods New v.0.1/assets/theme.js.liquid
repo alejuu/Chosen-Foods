@@ -72,7 +72,9 @@ $('.product-option-hero select').on('change', function() {
   updateHistoryState(found)
   $('#variant-id-hero').val(found.id)
   $('#variant-id-details').val(found.id)
-  $('.product-option-details select').val( $(this).val() ) // they all change
+  $('.product-option-details select').val( $(this).val() ); // they all change
+  var price = $('option:selected', this).attr('data-price');
+  $('.product-price').html(price);
 });
 
 //Update Form
@@ -114,7 +116,9 @@ $('.product-option-details select').on('change', function() {
   updateHistoryStateTwo(found)
   $('#variant-id-hero').val(found.id)
   $('#variant-id-details').val(found.id)
-  $('.product-option-hero select').val( $(this).val() ) // they all change
+  $('.product-option-hero select').val( $(this).val() ); // they all change
+  var price = $('option:selected', this).attr('data-price');
+  $('.product-price').html(price);
 });
 
 //Qty Sync

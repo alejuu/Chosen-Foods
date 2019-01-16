@@ -9,7 +9,7 @@
       </div>
       <div class="column is-flex has-background-white">
         <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
-        <p class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless">{{ product.price | money }}</p>
+        <h2 class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless product-price">{{ variant.price | money }}</h2>
         <form class="product-form" method="post" action="/cart/add">
           {% comment %}
             {% unless product.has_only_one_default_variant %}
@@ -22,8 +22,8 @@
                 <div class="control">
                   <div class="select is-small is-outlined is-uppercase is-fullwidth">
                     <select data-index="option{{ forloop.index }}">
-                      {% for value in product_option.values %}
-                        <option value="{{ value | escape }}" {% if product_option.selected_value == value %} selected="selected" {% endif %}>{{ value }}</option>
+                      {% for variant in product.variants %}
+                        <option data-price="{{ variant.price | money }}" value="{{ variant.title | escape }}" {% if variant.selected %} selected="selected" {% endif %}>{{ variant.title }}</option>
                       {% endfor %}
                     </select>
                   </div>
