@@ -1,0 +1,47 @@
+<main class="blog-page">
+  <section class="hero is-page">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+        <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">{{ blog.title }}</h1>
+      </div>
+    </div>
+  </section>
+  <section class="section is-paddingless">
+    <div class="columns is-multiline is-paddingless">
+      {% for article in blog.articles %}
+        <div class="column is-half is-paddingless">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <a href="{{ article.handle }}">
+                  <img src="{{ article.image.src | img_url: '500x' }}" alt="{{ article.image.alt }}">
+                </a>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content has-text-centered">
+                  <p class="title is-4">{{ article.title }}</p>
+                  <p>
+                    <span class="subtitle is-6">{{ article.author }}</span><span> | </span><time class="subtitle is-6" datetime="{{ article.created_at | date: "%a, %b %d, %y" }}">{{ article.created_at | date: "%a, %b %d, %y" }}</time>
+                  </p>
+                </div>
+              </div>
+              <div class="content has-text-centered">
+                <p>
+                  {{ article.excerpt_or_content | strip_html | truncate: 140 }}
+                </p>
+                {% for tag in article.tags %}
+                  <span class="is-size-7 is-italic">| {{ tag }} |</span>
+                {% endfor %}
+              </div>
+              <div class="content has-text-centered">
+                <a href="{{ article.handle }}" class="button is-small is-rounded is-link is-outlined is-uppercase has-text-centered">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</main>
