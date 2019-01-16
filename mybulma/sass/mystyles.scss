@@ -712,6 +712,35 @@ main {
       }
     }
   }
+  //Hero Page
+  &.is-page {
+    .breadcrumb {
+      padding-top: .75rem;
+      padding-left: .75rem;
+      ul {
+        font-size: .8rem;
+      }
+      // a {
+      //   color: $green;
+      //   &:hover {
+      //     color: $white;
+      //   }
+      // }
+      li {
+        &.is-active {
+          a {
+            color: $green;
+            font-weight: 700;
+          }
+        }
+        // & + li {
+        //   &::before {
+        //     color: $green;
+        //   }
+        // }
+      }
+    }
+  }
   //Hero Collection
   &.is-collection {
     .breadcrumb {
