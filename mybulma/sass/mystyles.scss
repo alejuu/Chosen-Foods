@@ -82,6 +82,9 @@ $accordion-content-border: hidden !default;
 .is-margin-center {
   margin: 0 auto;
 }
+.is-marginless-bottom {
+  margin-bottom: 0!important;
+}
 .is-divider {
   border: 1px solid $green;
 }

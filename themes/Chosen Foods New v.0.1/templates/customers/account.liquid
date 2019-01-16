@@ -1,0 +1,124 @@
+<main class="account-page">
+  <section class="hero is-page">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+        <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">My Account</h1>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    {% if shop.customer_accounts_enabled %}
+      {% if customer %}
+        <div class="content has-text-centered">
+          {% if customer.name != nil %}
+            <p class="title is-3 is-size-6-mobile is-marginless">Hello {{ customer.name }}</p>
+            <p>Not {{ customer.name }}? <a href="/account/logout">Sign out</a>.</p>
+          {% else %}
+            <p class="title is-3 is-size-6-mobile is-marginless">Hello</p>
+            <p>Not your account? <a href="/account/logout">Sign out</a>.</p>
+          {% endif %}
+          <p class="title is-6 is-size-7-mobile is-marginless">From your account dashboard you can view your recent orders and add new address.</p>
+          <hr>
+          <div class="columns">
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <div class="content has-text-centered">
+                    <h2 class="title is-3 is-size-6-mobile has-text-primary is-marginless">Orders</h2>
+                    <hr>
+                    {% comment %}
+                    If we have past orders, loop through each one
+                    {% endcomment %}
+                    {% paginate customer.orders by 10 %}
+                      {% if customer.orders.size != 0 %}
+                        <div class="content has-text-left">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Order</th>
+                                <th>Date</th>
+                                <th>Payment Status</th>
+                                <th>Fulfillment Status</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {% for order in customer.orders %}
+                                <tr>
+                                  <td>{{ order.name | link_to: order.customer_url }}</td>
+                                  <td>{{ order.created_at | date: format: 'month_day_year' }}</td>
+                                  <td>{{ order.financial_status_label }}</td>
+                                  <td>{{ order.fulfillment_status_label }}</td>
+                                  <td>{{ order.total_price | money }}</td>
+                                </tr>
+                              {% endfor %}
+                            </tbody>
+                          </table>
+                        </div>
+                      {% else %}
+                        <div class="content">
+                          <p>You haven't placed any orders yet.</p>
+                        </div>
+                      {% endif %}
+                      {% if paginate.pages > 1 %}
+                        <hr>
+                        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                          {% if paginate.next.is_link %}
+                            <a href="{{ paginate.previous.url }}" class="pagination-previous">{{ paginate.previous.title }}</a>
+                          {% endif %}
+                          {% if paginate.next.is_link %}
+                            <a href="{{ paginate.next.url }}" class="pagination-next">{{ paginate.next.title }}</a>
+                          {% endif %}
+                        </nav>
+                      {% endif %}
+                    {% endpaginate %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <div class="content has-text-centered">
+                    <h2 class="title is-3 is-size-6-mobile has-text-primary">Account Details</h2>
+                    <hr>
+                    <div class="content has-text-left">
+                      <h3 class="subtitle is-5 is-size-6-mobile">{{ customer.name }}</h3>
+                      <h3 class="subtitle is-6 is-size-7-mobile is-marginless-bottom">Email</h3>
+                      <p class="is-6">{{ customer.email }}</p>
+                      {% if customer.default_address != nil %}
+                        <h3 class="subtitle is-6 is-size-7-mobile is-marginless-bottom">Default Address</h3>
+                        <p class="is-6">
+                          {{ customer.default_address.address1 }}<br>
+                          {% if customer.default_address.address2 != "" %}
+                            {{ customer.default_address.address2 }}<br>
+                          {% endif %}
+                          {% if customer.default_address.city != "" %}
+                            {{ customer.default_address.city }}<br>
+                          {% endif %}
+                          {% if customer.default_address.province_code != "" %}
+                            {{ customer.default_address.province_code | upcase }}<br>
+                          {% endif %}
+                          {% if customer.default_address.zip != "" %}
+                            {{ customer.default_address.zip | upcase }}<br>
+                          {% endif %}
+                          {% if customer.default_address.country != "" %}
+                            {{ customer.default_address.country }}<br>
+                          {% endif %}
+                          {% if customer.default_address.phone != "" %}
+                            {{ customer.default_address.phone }}
+                          {% endif %}
+                        </p>
+                      {% endif %}
+                      <a href="/account/addresses">View Addresses({{ customer.addresses_count }})</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+  </section>
+</main>

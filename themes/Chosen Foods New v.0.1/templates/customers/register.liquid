@@ -87,12 +87,25 @@
           {% endif %}
         </div>
         <div class="column">
-          <h2 class="title is-2 is-size-6-mobile has-text-primary is-marginless">Register</h2>
-          <hr />
-          {% form 'create_customer' %}
-            {{ form.errors | default_errors }}
+          <div id="CustomerRegisterForm">
+            <h2 class="title is-2 is-size-6-mobile has-text-primary is-marginless">Register</h2>
+            <hr />
+            {% form 'create_customer' %}
+              {{ form.errors | default_errors }}
               <div class="field">
-                <label for="Email" class="label">Email<span class="required">*</span></label>
+                <label for="first_name" class="label">First Name</label>
+                <div class="control">
+                  <input class="input" type="text" name="customer[first_name]">
+                </div>
+              </div>
+              <div class="field">
+                <label for="last_name" class="label">Last Name</label>
+                <div class="control">
+                  <input class="input" type="text" name="customer[last_name]">
+                </div>
+              </div>
+              <div class="field">
+                <label for="email" class="label">Email<span class="required">*</span></label>
                 <div class="control">
                   <input class="input {% if form.errors contains "email" %} is-danger{% endif %}" type="email" name="customer[email]" id="Email" {% if form.errors contains "email" %}{% elsif form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
                 </div>
@@ -114,7 +127,8 @@
                   <input type="submit" class="button is-link" value="Register">
                 </div>
               </div>
-          {% endform %}
+            {% endform %}
+          </div>
         </div>
       </div>
     </div>
