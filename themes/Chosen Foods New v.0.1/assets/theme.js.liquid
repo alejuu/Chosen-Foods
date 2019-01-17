@@ -33,7 +33,7 @@ var accordions = bulmaAccordion.attach(); // accordions now contains an array of
 //AOS Animations
 AOS.init();
 
-//Update Form
+//Update Product Form
 function getVariantFromOptions() {
   let variantArr = []
   $(".product-option-hero select").map(function(i, el) {
@@ -121,12 +121,12 @@ $('.product-option-details select').on('change', function() {
   $('.product-price').html(price);
 });
 
-//Qty Sync
+//Product Qty Sync
 $('.qty .input').on('change', function() {
   $('.qty .input').val( $(this).val() )
 });
 
-//Product carousel
+//Product Carousel
 $('.single-product-images').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -160,4 +160,14 @@ $('.single-product-images').slick({
       }
     }
   ]
+});
+
+//Pagination
+$(document).ready(function() {
+  var currentPage = $('a[pagination-current="page"]').parent();
+  var prevPage = $(currentPage).prev();
+  var nextPage = $(currentPage).next();
+  var ellipsis = '<li class="page-ellipsis"><span class="pagination-ellipsis">&hellip;</span></li>';
+  $(prevPage).removeClass('is-hidden').before(ellipsis);
+  $(nextPage).removeClass('is-hidden').after(ellipsis);
 });

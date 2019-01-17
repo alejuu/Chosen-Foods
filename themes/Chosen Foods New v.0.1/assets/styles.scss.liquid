@@ -4919,7 +4919,7 @@ a.navbar-item,
   color: #fff; }
 
 .pagination-ellipsis {
-  color: #F0F7F6;
+  color: #081F1E;
   pointer-events: none; }
 
 .pagination-list {
@@ -7882,6 +7882,9 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .is-marginless-bottom {
   margin-bottom: 0 !important; }
 
+.is-full-width {
+  width: 100% !important; }
+
 .is-divider {
   border: 1px solid #00857D; }
 
@@ -7952,6 +7955,12 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     line-height: 1;
     letter-spacing: 1.5px; }
 
+.pagination .pagination-list li:first-child, .pagination .pagination-list li:last-child {
+  display: block !important; }
+
+.pagination .pagination-list li.page-ellipsis:last-child, .pagination .pagination-list li.page-ellipsis:first-child {
+  display: none !important; }
+
 .cf-icon-account-16 {
   width: 16px;
   height: 16px;
@@ -7971,6 +7980,17 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   width: 16px;
   height: 16px;
   background: url("../assets/sprites16.png") -62px -46px; }
+
+.cf-icon-left-arrow-16 {
+  width: 16px;
+  height: 16px;
+  background: url("../assets/sprites16.png") -98px -10px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH"; }
 
 .cf-icon-right-arrow-16 {
   width: 16px;
@@ -8026,6 +8046,17 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   width: 32px;
   height: 32px;
   background: url("../assets/sprites32.png") -93px -62px; }
+
+.cf-icon-left-arrow-32 {
+  width: 32px;
+  height: 32px;
+  background: url("../assets/sprites32.png") -145px -10px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH"; }
 
 .cf-icon-right-arrow-32 {
   width: 32px;
@@ -8482,6 +8513,19 @@ main {
     right: 0;
     top: 0;
     bottom: 0; }
+
+.blog-page .post:nth-child(odd) {
+  direction: rtl; }
+
+.blog-page .post .card {
+  height: 100%; }
+  .blog-page .post .card .card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .blog-page .post .card .card-image .image img {
+    object-fit: cover; }
 
 .cart-page .product {
   align-items: center; }

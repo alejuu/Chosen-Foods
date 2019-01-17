@@ -56,6 +56,9 @@ $radius-large: 3px !default;
 // Update navbar
 $navbar-dropdown-radius: 1px;
 
+// Updat pagination
+$pagination-ellipsis-color: $black;
+
 // Update Bulma extensions
 $accordion-content-pre-background-color: transparent !default;
 $accordion-content-pre-code-background-color: transparent !default;
@@ -84,6 +87,9 @@ $accordion-content-border: hidden !default;
 }
 .is-marginless-bottom {
   margin-bottom: 0!important;
+}
+.is-full-width {
+  width: 100%!important;
 }
 .is-divider {
   border: 1px solid $green;
@@ -171,6 +177,23 @@ $accordion-content-border: hidden !default;
 }
 
 // Extra Code
+// Pagination
+.pagination {
+  .pagination-list {
+    li {
+      &:first-child, &:last-child {
+        display: block!important;
+      }
+      &.page-ellipsis {
+        &:last-child, &:first-child {
+          display: none!important;
+        }
+      }
+    }
+  }
+}
+
+// Extra Code
 // Icons Sprite
 .cf-icon-account-16 {
   width: 16px;
@@ -190,6 +213,17 @@ $accordion-content-border: hidden !default;
 .cf-icon-search-16 {
   width: 16px; height: 16px;
   background: url('../assets/sprites16.png') -62px -46px;
+}
+.cf-icon-left-arrow-16 {
+  width: 16px;
+  height: 16px;
+  background: url('../assets/sprites16.png') -98px -10px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }
 .cf-icon-right-arrow-16 {
   width: 16px;
@@ -245,6 +279,17 @@ $accordion-content-border: hidden !default;
   width: 32px;
   height: 32px;
   background: url('../assets/sprites32.png') -93px -62px;
+}
+.cf-icon-left-arrow-32 {
+  width: 32px;
+  height: 32px;
+  background: url('../assets/sprites32.png') -145px -10px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }
 .cf-icon-right-arrow-32 {
   width: 32px;
@@ -559,7 +604,6 @@ $accordion-content-border: hidden !default;
     }
   }
 }
-
 
 //Extra Code
 // Main
@@ -1021,6 +1065,32 @@ main {
         right: 0;
         top: 0;
         bottom: 0;
+      }
+    }
+  }
+}
+
+// Extra Code
+// Blog Page
+.blog-page {
+  .post {
+    &:nth-child(odd) {
+      direction: rtl;
+    }
+    .card {
+      height: 100%;
+      .card-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .card-image {
+        .image {
+          img {
+            object-fit: cover;
+          }
+        }
       }
     }
   }
