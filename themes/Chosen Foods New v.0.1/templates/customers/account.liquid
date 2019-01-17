@@ -63,7 +63,7 @@
                       {% if paginate.pages > 1 %}
                         <hr>
                         <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                          {% if paginate.next.is_link %}
+                          {% if paginate.previous.is_link %}
                             <a href="{{ paginate.previous.url }}" class="pagination-previous">{{ paginate.previous.title }}</a>
                           {% endif %}
                           {% if paginate.next.is_link %}
