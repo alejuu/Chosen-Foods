@@ -32,7 +32,7 @@
           <button class="button is-small is-rounded is-uppercase is-warning has-text-centered has-text-white">
             <span>Find a Store</span>
           </button>
-        </a>    
+        </a>
       </div>
       <div class="navbar-start">
         {% include 'menu-one' %}
@@ -44,20 +44,11 @@
             <div>
               <h6 class="title is-3 has-text-white has-text-centered">Catch our drift</h6>
               <p class="has-text-white has-text-centered">
-                sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
+                Sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
               </p>
             </div>
-            <div class="newsletter field has-addons has-addons-centered">
-              <div class="control is-expanded">
-                <input class="input is-rounded" type="email" placeholder="Email Address">
-              </div>
-              <div class="control">
-                <button type="submit" class="button is-rounded">
-                  <span class="icon">
-                    <i class="cf-icon-right-arrow-16"></i>
-                  </span>
-                </button>
-              </div>
+            <div class="newsletter-form">
+              {% include 'newsletter-form' %}
             </div>
           </div>
         </div>
@@ -123,7 +114,7 @@
             <span>Find a Store</span>
           </button>
         </a>
-        <a class="navbar-item is-flex">
+        <a href="/account" class="navbar-item is-flex">
           <span class="icon">
             <i class="cf-icon-account-32"></i>
           </span>
@@ -137,7 +128,6 @@
     </div>
   </nav>
 </header>
-
 {% schema %}
   {
     "name": "Menus",

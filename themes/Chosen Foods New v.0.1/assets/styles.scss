@@ -8261,9 +8261,8 @@ main {
   padding: 0; }
   .footer .content {
     padding: 1.25rem; }
-    .footer .content .newsletter.field {
-      padding-top: 1.25rem;
-      max-width: 350px; }
+    .footer .content .newsletter-form {
+      padding-top: 1.25rem; }
     .footer .content .social {
       max-width: 300px; }
     .footer .content .menu-list {
@@ -8280,10 +8279,13 @@ main {
       .footer .content:nth-child(4) .is-divider {
         margin: 0 0 .75rem; }
 
-.newsletter.field .control input::placeholder {
-  font-weight: 700;
-  color: #00857D;
-  font-size: .8rem; }
+.newsletter-form .field {
+  max-width: 350px;
+  margin: 0 auto; }
+  .newsletter-form .field .control .input::placeholder {
+    font-weight: 700;
+    color: #00857D;
+    font-size: .8rem; }
 
 .hero.is-main.is-full-custom .hero-body {
   height: 100%; }
@@ -8414,7 +8416,8 @@ main {
 .hero-columns .columns {
   margin-left: 0;
   margin-right: 0;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 0; }
 
 .collection-grid .product {
   padding: 0.75rem;
@@ -8464,33 +8467,43 @@ main {
   .filters .button {
     width: 130px; }
 
-.single-product-images {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto; }
-  .single-product-images .slick-dots {
-    position: relative; }
-    .single-product-images .slick-dots li {
-      width: 100px;
-      height: 100px; }
+.product-page .product-image {
+  position: relative; }
+  .product-page .product-image .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1; }
+    .product-page .product-image .badge .icon {
+      height: initial;
+      width: initial; }
+  .product-page .product-image .single-product-images {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto; }
+    .product-page .product-image .single-product-images .slick-dots {
+      position: relative; }
+      .product-page .product-image .single-product-images .slick-dots li {
+        width: 100px;
+        height: 100px; }
 
-.product-form {
+.product-page .product-form {
   width: 100%;
   max-width: 350px;
   margin: 0 auto;
   margin-top: 1em; }
-  .product-form .qty-add .control:nth-child(1) {
+  .product-page .product-form .qty-add .control:nth-child(1) {
     width: 20%;
     align-items: center;
     margin: 0 !important; }
-    .product-form .qty-add .control:nth-child(1) .input {
+    .product-page .product-form .qty-add .control:nth-child(1) .input {
       width: 50px;
       border-bottom: 2px solid #00857D; }
-      .product-form .qty-add .control:nth-child(1) .input:hover, .product-form .qty-add .control:nth-child(1) .input:active, .product-form .qty-add .control:nth-child(1) .input:focus {
+      .product-page .product-form .qty-add .control:nth-child(1) .input:hover, .product-page .product-form .qty-add .control:nth-child(1) .input:active, .product-page .product-form .qty-add .control:nth-child(1) .input:focus {
         border: hidden; }
-  .product-form .qty-add .control:nth-child(2) {
+  .product-page .product-form .qty-add .control:nth-child(2) {
     width: 80%; }
-  .product-form .qty-add .button {
+  .product-page .product-form .qty-add .button {
     width: 100%; }
 
 .product-page .recipes .post {

@@ -617,11 +617,11 @@ main {
   padding: 0;
   .content {
     padding: 1.25rem;
-    .newsletter {
-      &.field {
+    .newsletter-form {
+      // &.field {
         padding-top: 1.25rem;
-        max-width: 350px;
-      }
+        // max-width: 350px;
+      // }
     }
     .social {
       max-width: 300px;
@@ -656,10 +656,12 @@ main {
 
 // Extra Code
 // Newsletter
-.newsletter {
-  &.field {
+.newsletter-form {
+  .field {
+    max-width: 350px;
+    margin: 0 auto;
     .control {
-      input {
+      .input {
         &::placeholder {
           font-weight: 700;
           color: $green;
@@ -920,6 +922,7 @@ main {
       margin-left: 0;
       margin-right: 0;
       flex-wrap: wrap;
+      margin-bottom: 0;
     }
   // }
 }
@@ -995,53 +998,66 @@ main {
 
 // Extra Code
 // Product
-.single-product-images {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  .slick-dots {
+.product-page {
+  .product-image {
     position: relative;
-    li {
-      width: 100px;
-      height: 100px;
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      .icon {
+        height: initial;
+        width: initial;
+      }
     }
-  }
-}
-.product-form {
-  width: 100%;
-  max-width: 350px;
-  margin: 0 auto;
-  margin-top: 1em;
-  .qty-add {
-    .control {
-      &:nth-child(1) {
-        width: 20%;
-        align-items: center;
-        // justify-content: center;
-        margin: 0!important;
-        .input {
-          width: 50px;
-          border-bottom: 2px solid $green;
-          &:hover, &:active, &:focus {
-            border: hidden;
-          }
+    .single-product-images {
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      .slick-dots {
+        position: relative;
+        li {
+          width: 100px;
+          height: 100px;
         }
       }
-      &:nth-child(2) {
-        width: 80%;
-      }
-    }
-    .button {
-      // height: auto;
-      // padding-top: 1em;
-      // padding-bottom: 1em;
-      // line-height: 1;
-      // letter-spacing: 1.5px;
-      width: 100%;
     }
   }
-}
-.product-page {
+  .product-form {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 1em;
+    .qty-add {
+      .control {
+        &:nth-child(1) {
+          width: 20%;
+          align-items: center;
+          // justify-content: center;
+          margin: 0!important;
+          .input {
+            width: 50px;
+            border-bottom: 2px solid $green;
+            &:hover, &:active, &:focus {
+              border: hidden;
+            }
+          }
+        }
+        &:nth-child(2) {
+          width: 80%;
+        }
+      }
+      .button {
+        // height: auto;
+        // padding-top: 1em;
+        // padding-bottom: 1em;
+        // line-height: 1;
+        // letter-spacing: 1.5px;
+        width: 100%;
+      }
+    }
+  }
   .recipes {
     .post {
       height: 164px;

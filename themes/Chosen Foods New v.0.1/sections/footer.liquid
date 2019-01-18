@@ -4,20 +4,11 @@
       <div data-aos="fade-up">
         <h3 class="title is-2 has-text-primary">Catch our drift</h3>
         <p class="is-size-6 has-text-primary">
-          sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
+          Sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
         </p>
       </div>
-      <div data-aos="fade-right" class="newsletter field has-addons has-addons-centered is-margin-center">
-        <div class="control is-expanded">
-          <input class="input is-rounded" type="email" placeholder="Email Address">
-        </div>
-        <div class="control">
-          <button type="submit" class="button is-rounded">
-            <span class="icon">
-              <i class="cf-icon-right-arrow-16"></i>
-            </span>
-          </button>
-        </div>
+      <div data-aos="fade-right" class="newsletter-form">
+        {% include 'newsletter-form' %}
       </div>
     </div>
   </div>
@@ -59,17 +50,14 @@
         <div class="column">
           <aside class="menu">
             <ul class="menu-list">
-              <li><a class="is-size-7 has-text-primary">Privacy Policy</a></li>
-              <li><a class="is-size-7 has-text-primary">Shipping Terms</a></li>
-              <li><a class="is-size-7 has-text-primary">Contact Us</a></li>
+              {% include 'menu-footer-one' %}
             </ul>
           </aside>
         </div>
         <div class="column">
           <aside class="menu">
             <ul class="menu-list">
-              <li><a class="is-size-7 has-text-primary">Terms and Conditions</a></li>
-              <li><a class="is-size-7 has-text-primary">Sitemap</a></li>
+              {% include 'menu-footer-two' %}
             </ul>
           </aside>
         </div>
@@ -90,3 +78,22 @@
     </div>
   </div>
 </footer>
+{% schema %}
+  {
+    "name": "Footer Menus",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "footer_one_linklist",
+        "label": "Footer Menu One",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_two_linklist",
+        "label": "Footer Menu Two",
+        "default": "main-menu"
+      }
+    ]
+  }
+{% endschema %}

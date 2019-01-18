@@ -13,7 +13,7 @@
         <div data-aos="fade-up">
           <h1 class="is-hidden">{{ collection.title }}</h1>
           <figure class="image">
-            <img class="is-margin-center" alt="{{ collection.image.alt | escape }}" src="{{ collection.image | img_url: 'medium' }}">
+            <img class="is-margin-center" alt="{{ collection.image.alt | escape }}" src="{{ collection.image | img_url: '500x' }}">
           </figure>
         </div>
       {% else %}

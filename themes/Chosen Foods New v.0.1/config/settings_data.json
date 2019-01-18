@@ -30,6 +30,8 @@
       "footer": {
         "type": "footer",
         "settings": {
+          "footer_one_linklist": "footer-menu-one",
+          "footer_two_linklist": "footer-menu-two"
         }
       },
       "homepage-template": {
