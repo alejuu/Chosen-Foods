@@ -24,14 +24,20 @@
         "settings": {
           "one_linklist": "main-menu",
           "two_linklist": "company",
-          "three_linklist": "footer-service"
+          "three_linklist": "footer-service",
+          "instagram_url": "https:\/\/instagram.com\/chosenfoods",
+          "twitter_url": "https:\/\/twitter.com\/chosenfoods",
+          "facebook_url": "https:\/\/www.facebook.com\/chosenfoods"
         }
       },
       "footer": {
         "type": "footer",
         "settings": {
           "footer_one_linklist": "footer-menu-one",
-          "footer_two_linklist": "footer-menu-two"
+          "footer_two_linklist": "footer-menu-two",
+          "instagram_url": "https:\/\/www.instagram.com\/chosenfoods\/",
+          "twitter_url": "https:\/\/twitter.com\/chosenfoods",
+          "facebook_url": "https:\/\/www.facebook.com\/ChosenFoods\/"
         }
       },
       "homepage-template": {

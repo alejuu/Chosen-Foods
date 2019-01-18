@@ -52,31 +52,7 @@
           </div>
         {% endfor %}
       </div>
-      {% if paginate.pages > 1 %}
-        <hr>
-        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-          {% if paginate.previous.is_link %}
-            <a href="{{ paginate.previous.url }}" class="pagination-previous">
-              <span class="icon">
-                <i class="cf-icon-left-arrow-16"></i>
-              </span>
-            </a>
-          {% endif %}
-          {% if paginate.next.is_link %}
-            <a href="{{ paginate.next.url }}" class="pagination-next">
-              <span class="icon">
-                <i class="cf-icon-right-arrow-16"></i>
-              </span>
-            </a>
-          {% endif %}
-          <ul class="pagination-list">
-            {% assign count = paginate.pages %}
-            {% for part in (1..count) %}
-              <li class="{% if paginate.current_page != part %}is-hidden{% endif %}"><a href="{{ blog.url }}?page={{ forloop.index }}" class="pagination-link {% if paginate.current_page == part %}is-current{% endif %}" aria-label="Goto page {{ forloop.index }}" {% if paginate.current_page == part %}aria-current="page" pagination-current="page"{% endif %}>{{ forloop.index }}</a></li>
-            {% endfor %}
-          </ul>
-        </nav>
-      {% endif %}
+      {% include 'pagination' %}
     {% endpaginate %}
   </section>
 </main>

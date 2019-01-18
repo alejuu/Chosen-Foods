@@ -61,13 +61,25 @@
             <div class="social is-margin-center">
               <div class="columns is-mobile has-text-centered">
                 <div class="column">
-                  <span class="icon is-medium"><i class="cf-icon-instagram-32"></i></span>
+                  <a href="{{ section.settings.instagram_url }}">
+                    <span class="icon is-medium">
+                      <i class="cf-icon-instagram-32"></i>
+                    </span>
+                  </a>
                 </div>
                 <div class="column">
-                  <span class="icon is-medium"><i class="cf-icon-twitter-32"></i></span>
+                  <a href="{{ section.settings.twitter_url }}">
+                    <span class="icon is-medium">
+                      <i class="cf-icon-twitter-32"></i>
+                    </span>
+                  </a>
                 </div>
                 <div class="column">
-                  <span class="icon is-medium"><i class="cf-icon-facebook-32"></i></span>
+                  <a href="{{ section.settings.facebook_url }}">
+                    <span class="icon is-medium">
+                      <i class="cf-icon-facebook-32"></i>
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -130,7 +142,7 @@
 </header>
 {% schema %}
   {
-    "name": "Menus",
+    "name": "Header",
     "settings": [
       {
         "type": "link_list",
@@ -149,6 +161,21 @@
         "id": "three_linklist",
         "label": "Menu Three",
         "default": "main-menu"
+      },
+      {
+        "type": "url",
+        "id": "instagram_url",
+        "label": "Instagram Link"
+      },
+      {
+        "type": "url",
+        "id": "twitter_url",
+        "label": "Twitter Link"
+      },
+      {
+        "type": "url",
+        "id": "facebook_url",
+        "label": "Facebook Link"
       }
     ]
   }
