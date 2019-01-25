@@ -7004,6 +7004,12 @@ label.panel-block {
       border-color: #E55508;
       color: #82340a; }
 
+.navbar-item.is-mega {
+  position: static; }
+  .navbar-item.is-mega .is-mega-menu-title {
+    margin-bottom: 0;
+    padding: .375rem 1rem; }
+
 body[data-aos-duration='50'] [data-aos], [data-aos][data-aos][data-aos-duration='50'] {
   transition-duration: 50ms; }
 
@@ -8178,6 +8184,60 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   align-items: center;
   display: flex;
   flex: 1; }
+
+.navbar-item.is-mega .navbar-link .button {
+  padding-left: 3em;
+  padding-right: 3em; }
+
+.navbar-item.is-mega .navbar-dropdown {
+  margin: 0;
+  padding: 0;
+  height: 500px;
+  border: hidden; }
+
+.navbar-item.is-mega img {
+  max-height: initial; }
+
+.navbar-item.is-mega .container.is-fluid {
+  margin-left: 0;
+  margin-right: 0; }
+  .navbar-item.is-mega .container.is-fluid .hero {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .navbar-item.is-mega .container.is-fluid .hero .hero-body {
+      padding: 0 1.5rem; }
+      .navbar-item.is-mega .container.is-fluid .hero .hero-body .columns .column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }
+    .navbar-item.is-mega .container.is-fluid .hero .buttons {
+      width: 70%;
+      margin-top: 1em;
+      display: flex;
+      justify-content: space-around; }
+  .navbar-item.is-mega .container.is-fluid .columns {
+    margin: 0;
+    height: 500px; }
+    .navbar-item.is-mega .container.is-fluid .columns .column .navbar-content {
+      height: 100%; }
+      .navbar-item.is-mega .container.is-fluid .columns .column .navbar-content > div:nth-child(1) {
+        height: 65%;
+        display: flex;
+        align-items: center; }
+      .navbar-item.is-mega .container.is-fluid .columns .column .navbar-content > div:nth-child(2) {
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+      .navbar-item.is-mega .container.is-fluid .columns .column .navbar-content .image {
+        max-width: 250px;
+        margin: 0 auto; }
+    .navbar-item.is-mega .container.is-fluid .columns .column .image:nth-child(2) {
+      margin-top: 3em;
+      margin-bottom: 3em; }
 
 #navMenu .search-item .control:first-child input {
   background-color: #EFF7F6; }

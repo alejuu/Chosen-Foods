@@ -76,6 +76,7 @@ $accordion-content-border: hidden !default;
 
 //Import Extras
 @import "../node_modules/bulma-extensions/bulma-accordion/dist/css/bulma-accordion.sass";
+@import "../node_modules/bulma-extensions/bulma-megamenu/dist/css/bulma-megamenu.sass";
 @import "../node_modules/aos/src/sass/aos.scss";
 @import "../node_modules/slick-carousel/slick/slick.scss";
 @import "../node_modules/slick-carousel/slick/slick-theme.scss";
@@ -457,6 +458,86 @@ $accordion-content-border: hidden !default;
   align-items: center;
   display: flex;
   flex: 1;
+}
+.navbar-item {
+  &.is-mega {
+    .navbar-link {
+      .button {
+        padding-left: 3em;
+        padding-right: 3em;
+      }
+    }
+    .navbar-dropdown {
+      margin: 0;
+      padding: 0;
+      height: 500px;
+      border: hidden;
+    }
+    img {
+      max-height: initial;
+    }
+    .container {
+      &.is-fluid {
+        margin-left: 0;
+        margin-right: 0;
+        .hero {
+          height: 500px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          .hero-body {
+            padding: 0 1.5rem;
+            .columns {
+              .column {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+              }
+            }
+          }
+          .buttons {
+            width: 70%;
+            margin-top: 1em;
+            display: flex;
+            justify-content: space-around;
+          }
+        }
+        .columns {
+          margin: 0;
+          height: 500px;
+          .column {
+            .navbar-content {
+              height: 100%;
+              > div {
+                &:nth-child(1) {
+                  height: 65%;
+                  display: flex;
+                  align-items: center;
+                }
+                &:nth-child(2) {
+                  height: 35%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                }
+              }
+              .image {
+                max-width: 250px;
+                margin: 0 auto;
+              }
+            }
+            .image {
+              &:nth-child(2) {
+                margin-top: 3em;
+                margin-bottom: 3em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 #navMenu {
   .search-item {

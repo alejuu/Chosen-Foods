@@ -7004,6 +7004,12 @@ label.panel-block {
       border-color: #E55508;
       color: #82340a; }
 
+.navbar-item.is-mega {
+  position: static; }
+  .navbar-item.is-mega .is-mega-menu-title {
+    margin-bottom: 0;
+    padding: .375rem 1rem; }
+
 body[data-aos-duration='50'] [data-aos], [data-aos][data-aos][data-aos-duration='50'] {
   transition-duration: 50ms; }
 
@@ -8178,6 +8184,20 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   align-items: center;
   display: flex;
   flex: 1; }
+
+.navbar-item.is-mega .navbar-link .button {
+  padding-left: 3em;
+  padding-right: 3em; }
+
+.navbar-item.is-mega img {
+  max-height: initial; }
+
+.navbar-item.is-mega .container.is-fluid {
+  margin-left: 0;
+  margin-right: 0; }
+  .navbar-item.is-mega .container.is-fluid .columns {
+    margin-left: 0;
+    margin-right: 0; }
 
 #navMenu .search-item .control:first-child input {
   background-color: #EFF7F6; }

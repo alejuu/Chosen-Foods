@@ -34,12 +34,10 @@
           </button>
         </a>
       </div>
-      <div class="navbar-start">
+      <div class="navbar-start is-hidden-desktop">
         {% include 'menu-one' %}
-        <div class="navbar-item search-item">
-          {% include 'search-bar' %}
-        </div>
-        <div class="navbar-item is-hidden-desktop">
+        {% include 'search-bar' %}
+        <div class="navbar-item">
           <div class="container">
             <div>
               <h6 class="title is-3 has-text-white has-text-centered">Catch our drift</h6>
@@ -52,7 +50,7 @@
             </div>
           </div>
         </div>
-        <div class="navbar-item is-hidden-desktop has-background-light-green">
+        <div class="navbar-item has-background-light-green">
           <div class="container">
             <h6 class="title is-3 has-text-white has-text-centered">Relationships need nourishment</h6>
             <p class="has-text-white has-text-centered">
@@ -85,7 +83,7 @@
             </div>
           </div>
         </div>
-        <div class="navbar-item is-hidden-desktop">
+        <div class="navbar-item ">
           <div class="container">
             <div class="columns is-mobile">
               <div class="column">
@@ -120,12 +118,22 @@
           <img src="{{ 'chosen-logo.png' | asset_url }}" alt="Chosen Foods" width="112" height="28">
         </a>
       </div>
+      <div class="navbar-menu is-hidden-touch">
+        {% if section.blocks.size > 0 %}
+          {% for block in section.blocks %}
+            {% if block.type == "megamenu_columns" %}
+              {% include 'megamenu-columns', type: 'block' %}
+            {% elsif block.type == "megamenu_hero" %}
+              {% include 'megamenu-hero', type: 'block' %}
+            {% elsif block.type == "menu_bar" %}
+              {% include 'menu-bar', type: 'block' %}
+            {% elsif block.type == "search_bar" %}
+              {% include 'search-bar', type: 'block' %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
       <div class="navbar-end is-hidden-touch">
-        <a href="/pages/where-to-buy" class="navbar-item">
-          <button class="button is-small is-rounded is-uppercase is-warning has-text-centered has-text-white">
-            <span>Find a Store</span>
-          </button>
-        </a>
         <a href="/account" class="navbar-item is-flex">
           <span class="icon">
             <i class="cf-icon-account-32"></i>
@@ -143,6 +151,181 @@
 {% schema %}
   {
     "name": "Header",
+    "class": "homepage",
+    "max_blocks": 20,
+    "blocks": [
+      {
+        "type": "megamenu_columns",
+        "name": "Megamenu Columns",
+        "settings": [
+          {
+            "type": "text",
+            "id": "menu_title",
+            "label": "Menu Title"
+          },
+          {
+            "type":      "header",
+            "content":   "Column One"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_one",
+            "label": "Image Top"
+          },
+          {
+            "type": "image_picker",
+            "id": "text_image_one",
+            "label": "Image Bottom"
+          },
+          {
+            "type": "text",
+            "id": "text_one",
+            "label": "Button Text",
+            "default": "Shop Now"
+          },
+          {
+            "id": "btn_link_one",
+            "type": "url",
+            "label": "Button link"
+          },
+          {
+            "type":      "header",
+            "content":   "Column Two"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_two",
+            "label": "Image Top"
+          },
+          {
+            "type": "image_picker",
+            "id": "text_image_two",
+            "label": "Image Bottom"
+          },
+          {
+            "type": "text",
+            "id": "text_two",
+            "label": "Button Text",
+            "default": "Shop Now"
+          },
+          {
+            "id": "btn_link_two",
+            "type": "url",
+            "label": "Button link"
+          },
+          {
+            "type":      "header",
+            "content":   "Column Three"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_three",
+            "label": "Image Top"
+          },
+          {
+            "type": "image_picker",
+            "id": "text_image_three",
+            "label": "Image Bottom"
+          },
+          {
+            "type": "text",
+            "id": "text_three",
+            "label": "Button Text",
+            "default": "Shop Now"
+          },
+          {
+            "id": "btn_link_three",
+            "type": "url",
+            "label": "Button link"
+          },
+          {
+            "type":      "header",
+            "content":   "Column Four"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_four",
+            "label": "Image Top"
+          },
+          {
+            "type": "image_picker",
+            "id": "text_image_four",
+            "label": "Image Bottom"
+          },
+          {
+            "type": "text",
+            "id": "text_four",
+            "label": "Button Text",
+            "default": "Shop Now"
+          },
+          {
+            "id": "btn_link_four",
+            "type": "url",
+            "label": "Button link"
+          }
+        ]
+      },
+      {
+        "type": "megamenu_hero",
+        "name": "Megamenu Hero",
+        "settings": [
+          {
+            "type": "text",
+            "id": "menu_title",
+            "label": "Menu Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "text_image",
+            "label": "Text Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "text_one",
+            "label": "Button Text",
+            "default": "Button One"
+          },
+          {
+            "id": "btn_link_one",
+            "type": "url",
+            "label": "Button link"
+          },
+          {
+            "type": "text",
+            "id": "text_two",
+            "label": "Button Text",
+            "default": "Button Two"
+          },
+          {
+            "id": "btn_link_two",
+            "type": "url",
+            "label": "Button link"
+          }
+        ]
+      },
+      {
+        "type": "menu_bar",
+        "name": "Menu Bar",
+        "settings": [
+          {
+            "type": "link_list",
+            "id": "bar_linklist",
+            "label": "Menu Bar",
+            "default": "main-menu"
+          }
+        ]
+      },
+      {
+        "type": "search_bar",
+        "name": "Search Bar",
+        "settings": []
+      }
+    ],
     "settings": [
       {
         "type": "link_list",

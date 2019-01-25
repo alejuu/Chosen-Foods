@@ -1,0 +1,53 @@
+{% if type == 'block' %}
+  {% assign menu_title = block.settings.menu_title %}
+  {% assign text_image = block.settings.text_image %}
+  {% assign background_image = block.settings.background_image %}
+  {% assign text_one = block.settings.text_one %}
+  {% assign btn_link_one = block.settings.btn_link_one %}
+  {% assign text_two = block.settings.text_two %}
+  {% assign btn_link_two = block.settings.btn_link_two %}
+{% else %}
+  {% assign menu_title = section.settings.menu_title %}
+  {% assign text_image = section.settings.text_image %}
+  {% assign background_image = section.settings.background_image %}
+  {% assign text_one = section.settings.text_one %}
+  {% assign btn_link_one = section.settings.btn_link_one %}
+  {% assign text_two = section.settings.text_two %}
+  {% assign btn_link_two = section.settings.btn_link_two %}
+{% endif %}
+<div class="navbar-item has-dropdown is-hoverable is-mega">
+  <a class="navbar-link is-arrowless has-text-primary has-text-weight-bold">
+    {{ menu_title }}
+  </a>
+  <div class="navbar-dropdown">
+    <div class="container is-fluid">
+      <div class="hero" style="background-image:url({{ background_image | img_url: '1366x' }});">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+              </div>
+              <div class="column">
+                <figure class="image">
+                  <img class="is-margin-center" alt="{{ text_image.alt | escape }}" src="{{ text_image | img_url: '600x' }}">
+                </figure>
+                <div class="buttons">
+                  {% if text_one != blank %}
+                    <a href="{{ btn_link_one }}" class="button is-small is-rounded is-warning is-uppercase has-text-centered has-text-white">
+                      <span>{{ text_one }}</span>
+                    </a>
+                  {% endif %}
+                  {% if text_two != blank %}
+                    <a href="{{ btn_link_two }}" class="button is-small is-rounded is-warning is-uppercase has-text-centered has-text-white">
+                      <span>{{ text_two }}</span>
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

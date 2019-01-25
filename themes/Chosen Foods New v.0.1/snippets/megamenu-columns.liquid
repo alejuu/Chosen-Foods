@@ -1,0 +1,142 @@
+{% if type == 'block' %}
+  {% assign menu_title = block.settings.menu_title %}
+  {% assign image_one = block.settings.image_one %}
+  {% assign text_image_one = block.settings.text_image_one %}
+  {% assign text_one = block.settings.text_one %}
+  {% assign btn_link_one = block.settings.btn_link_one %}
+  {% assign image_two = block.settings.image_two %}
+  {% assign text_image_two = block.settings.text_image_two %}
+  {% assign text_two = block.settings.text_two %}
+  {% assign btn_link_two = block.settings.btn_link_two %}
+  {% assign image_three = block.settings.image_three %}
+  {% assign text_image_three = block.settings.text_image_three %}
+  {% assign text_three = block.settings.text_three %}
+  {% assign btn_link_three = block.settings.btn_link_three %}
+  {% assign image_four = block.settings.image_four %}
+  {% assign text_image_four = block.settings.text_image_four %}
+  {% assign text_four = block.settings.text_four %}
+  {% assign btn_link_four = block.settings.btn_link_four %}
+{% else %}
+  {% assign menu_title = section.settings.menu_title %}
+  {% assign image_one = section.settings.image_one %}
+  {% assign text_image_one = section.settings.text_image_one %}
+  {% assign text_one = section.settings.text_one %}
+  {% assign btn_link_one = section.settings.btn_link_one %}
+  {% assign image_two = section.settings.image_two %}
+  {% assign text_image_two = section.settings.text_image_two %}
+  {% assign text_two = section.settings.text_two %}
+  {% assign btn_link_two = section.settings.btn_link_two %}
+  {% assign image_three = section.settings.image_three %}
+  {% assign text_image_three = section.settings.text_image_three %}
+  {% assign text_three = section.settings.text_three %}
+  {% assign btn_link_three = section.settings.btn_link_three %}
+  {% assign image_four = section.settings.image_four %}
+  {% assign text_image_four = section.settings.text_image_four %}
+  {% assign text_four = section.settings.text_four %}
+  {% assign btn_link_four = section.settings.btn_link_four %}
+{% endif %}
+<div class="navbar-item has-dropdown is-hoverable is-mega">
+  <a class="navbar-link is-arrowless">
+    <button class="button is-small is-rounded is-uppercase is-warning has-text-centered has-text-white">
+      <span>{{ menu_title }}</span>
+    </button>
+  </a>
+  <div class="navbar-dropdown">
+    <div class="container is-fluid">
+      <div class="columns">
+        <div class="column has-background-light-peach">
+          <div class="navbar-content has-text-centered">
+            <div>
+              <figure class="image">
+                <a href="{{ btn_link_one }}">
+                  <img class="is-margin-center" alt="{{ image_one.alt | escape }}" src="{{ image_one | img_url: '400x' }}">
+                </a>
+              </figure>
+            </div>
+            <div>
+              <figure class="image">
+                <a href="{{ btn_link_one }}">
+                  <img class="is-margin-center" alt="{{ text_image_one.alt | escape }}" src="{{ text_image_one | img_url: '350x' }}">
+                </a>
+              </figure>
+              <div>
+                <a href="{{ btn_link_one }}" class="button is-small is-rounded is-link is-uppercase has-text-centered">
+                  <span>{{ text_one }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column has-background-light-yellow">
+          <div class="navbar-content has-text-centered">
+            <div>
+              <figure class="image">
+                <a href="{{ btn_link_two }}">
+                  <img class="is-margin-center" alt="{{ image_two.alt | escape }}" src="{{ image_two | img_url: '400x' }}">
+                </a>
+              </figure>
+            </div>
+            <div>
+              <figure class="image">
+                <a href="{{ btn_link_two }}">
+                  <img class="is-margin-center" alt="{{ text_image_two.alt | escape }}" src="{{ text_image_two | img_url: '350x' }}">
+                </a>
+              </figure>
+              <div>
+                <a href="{{ btn_link_two }}" class="button is-small is-rounded is-link is-uppercase has-text-centered">
+                  <span>{{ text_two }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column has-background-lighter-peach">
+          <div class="navbar-content has-text-centered">
+            <div>
+              <figure class="image">
+                <a href="{{ btn_link_three }}">
+                  <img class="is-margin-center" alt="{{ image_three.alt | escape }}" src="{{ image_three | img_url: '400x' }}">
+                </a>
+              </figure>
+            </div>
+            <div>
+              <figure class="image">
+                <a href="{{ btn_link_three }}">
+                  <img class="is-margin-center" alt="{{ text_image_three.alt | escape }}" src="{{ text_image_three | img_url: '350x' }}">
+                </a>
+              </figure>
+              <div>
+                <a href="{{ btn_link_three }}" class="button is-small is-rounded is-link is-uppercase has-text-centered">
+                  <span>{{ text_three }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column has-background-lighter-green">
+          <div class="navbar-content has-text-centered">
+            <div>
+              <figure class="image">
+                <a href="{{ btn_link_four }}">
+                  <img class="is-margin-center" alt="{{ image_four.alt | escape }}" src="{{ image_four | img_url: '400x' }}">
+                </a>
+              </figure>
+            </div>
+            <div>
+              <figure class="image">
+                <a href="{{ btn_link_four }}">
+                  <img class="is-margin-center" alt="{{ text_image_four.alt | escape }}" src="{{ text_image_four | img_url: '350x' }}">
+                </a>
+              </figure>
+              <div>
+                <a href="{{ btn_link_four }}" class="button is-small is-rounded is-link is-uppercase has-text-centered">
+                  <span>{{ text_four }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
