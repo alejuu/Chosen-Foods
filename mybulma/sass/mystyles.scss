@@ -697,10 +697,10 @@ main {
 .footer {
   padding: 0;
   .content {
-    padding: 1.25rem;
+    padding: 2rem;
     .newsletter-form {
       // &.field {
-        padding-top: 1.25rem;
+        // padding-top: 1.25rem;
         // max-width: 350px;
       // }
     }
@@ -714,8 +714,22 @@ main {
         padding: 0;
       }
     }
+    &:nth-child(1) {
+      .container {
+        .columns {
+          .column {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+              max-width: 400px;
+            }
+          }
+        }
+      }
+    }
     &:nth-child(4) {
-      padding-top: 0;
+      // padding-top: 0;
       .columns {
         &.is-mobile {
           margin-bottom: 0;
@@ -723,13 +737,81 @@ main {
         &:nth-child(3) {
           .column {
             &:nth-child(1) {
-              padding-bottom: 0;
+              // padding-bottom: 0;
             }
           }
         }
       }
       .is-divider {
         margin: 0 0 .75rem;
+      }
+    }
+  }
+  @include from($tablet) {
+    .content {
+      .newsletter-form {
+        .input, .button {
+          border-color: $primary;
+        }
+        .button {
+          &:hover {
+            background-color: $primary;
+            .icon {
+              > i {
+                filter: brightness(0) invert(1);
+              }
+            }
+          }
+        }
+      }
+      &:last-child {
+        .columns {
+          &:first-child {
+            .column {
+              .menu-list {
+                display: flex;
+                align-items: center;
+                li {
+                  display: inline-block;
+                  & + li {
+                    margin-top: 0;
+                    margin-left: 10%;
+                  }
+                }
+              }
+              &:last-child {
+                .menu-list {
+                  justify-content: flex-end;
+                }
+              }
+            }
+          }
+          &:last-child {
+            .column {
+              display: flex;
+              align-items: center;
+              &:nth-child(2) {
+                justify-content: center;
+                .icon {
+                  i {
+                    filter: invert(65%) sepia(94%) saturate(6724%) hue-rotate(168deg) brightness(100%) contrast(101%);
+                  }
+                }
+              }
+              &:last-child {
+                justify-content: flex-end;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include until($tablet) {
+    .content {
+      padding: 1.25rem;
+      &:nth-child(1) {
+        background-color: $peach;
       }
     }
   }
