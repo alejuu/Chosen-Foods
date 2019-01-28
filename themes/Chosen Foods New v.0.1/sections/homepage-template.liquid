@@ -17,28 +17,6 @@
   "max_blocks": 20,
   "blocks": [
     {
-      "type": "top_hero",
-      "name": "Top Hero",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image Top"
-        },
-        {
-          "type": "image_picker",
-          "id": "text_image",
-          "label": "Image Bottom"
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Action Text",
-          "default": "Discover More"
-        }
-      ]
-    },
-    {
       "type": "hero",
       "name": "Hero",
       "settings": [
@@ -55,6 +33,12 @@
         {
           "type": "text",
           "id": "text",
+          "label": "Text",
+          "default": "Discover More"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
           "label": "Button Text",
           "default": "Shop Now"
         },
@@ -62,6 +46,20 @@
           "id": "btn_link",
           "type": "url",
           "label": "Button link"
+        },
+        {
+          "type":      "checkbox",
+          "id":        "hero_full",
+          "label":     "Full height Hero",
+          "default":   false,
+          "info":      "Check the box if hero is full height."
+        },
+        {
+          "type":      "checkbox",
+          "id":        "hero_top",
+          "label":     "Top Hero",
+          "default":   false,
+          "info":      "Check the box if hero is at the top of the page."
         }
       ]
     },

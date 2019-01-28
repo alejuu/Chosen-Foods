@@ -8383,33 +8383,33 @@ main {
 
 .hero.is-main.is-full-custom .container {
   height: calc(100vh - 6rem); }
-  .hero.is-main.is-full-custom .container > div:nth-child(1) {
+  .hero.is-main.is-full-custom .container .content-top {
     height: 65%; }
-    .hero.is-main.is-full-custom .container > div:nth-child(1) .image {
+    .hero.is-main.is-full-custom .container .content-top .image {
       height: 100%; }
-      .hero.is-main.is-full-custom .container > div:nth-child(1) .image img {
+      .hero.is-main.is-full-custom .container .content-top .image img {
         max-height: 100%;
         width: auto; }
-  .hero.is-main.is-full-custom .container > div:nth-child(2) {
+  .hero.is-main.is-full-custom .container .content-bottom {
     height: 35%;
     display: flex;
     flex-direction: column; }
-    .hero.is-main.is-full-custom .container > div:nth-child(2) .image {
+    .hero.is-main.is-full-custom .container .content-bottom .image {
       flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       height: 100%; }
-      .hero.is-main.is-full-custom .container > div:nth-child(2) .image img {
+      .hero.is-main.is-full-custom .container .content-bottom .image img {
         max-height: 100%;
         width: auto;
         margin: 0 auto; }
-    .hero.is-main.is-full-custom .container > div:nth-child(2) .title {
+    .hero.is-main.is-full-custom .container .content-bottom .title {
       flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: center; }
-    .hero.is-main.is-full-custom .container > div:nth-child(2) .icon {
+    .hero.is-main.is-full-custom .container .content-bottom .icon {
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -8419,10 +8419,8 @@ main {
   height: calc(100vh - 4.5rem); }
   .hero.is-main.is-top-custom .container {
     height: calc(100vh - 10rem); }
-    .hero.is-main.is-top-custom .container > div:nth-child(2) .image img {
-      padding: 1rem 0; }
 
-.hero.is-main:not(.is-top-custom) .container > div:nth-child(2) .image img {
+.hero.is-main:not(.is-top-custom) .container .content-bottom .image img {
   padding: 2rem 0; }
 
 .hero.is-page .breadcrumb {
