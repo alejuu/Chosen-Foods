@@ -8383,6 +8383,19 @@ main {
 
 .hero.is-main.is-full-custom .container {
   height: calc(100vh - 6rem); }
+  .hero.is-main.is-full-custom .container .columns {
+    height: 100%; }
+    .hero.is-main.is-full-custom .container .columns .column {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    @media screen and (max-width: 768px) {
+      .hero.is-main.is-full-custom .container .columns .column:first-child {
+        height: 65%; }
+      .hero.is-main.is-full-custom .container .columns .column:last-child {
+        height: 35%; }
+      .hero.is-main.is-full-custom .container .columns .column .content-top, .hero.is-main.is-full-custom .container .columns .column .content-bottom {
+        height: 100%; } }
   .hero.is-main.is-full-custom .container .content-top {
     height: 65%; }
     .hero.is-main.is-full-custom .container .content-top .image {

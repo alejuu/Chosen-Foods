@@ -846,6 +846,27 @@ main {
       .container {
         height: calc(100vh - 6rem);
         // > div {
+          .columns {
+            height: 100%;
+            .column {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            @include until($tablet) {
+              .column {
+                &:first-child {
+                  height: 65%;
+                }
+                &:last-child {
+                  height: 35%;
+                }
+                .content-top, .content-bottom {
+                  height: 100%;
+                }
+              }
+            }
+          }
           .content-top {
             height: 65%;
             .image {

@@ -1,8 +1,6 @@
 {% if section.blocks.size > 0 %}
   {% for block in section.blocks %}
-    {% if block.type == "top_hero" %}
-      {% include 'top-hero', type: 'block' %}
-    {% elsif block.type == "hero" %}
+    {% if block.type == "hero" %}
       {% include 'hero', type: 'block' %}
     {% elsif block.type == "hero_columns" %}
       {% include 'hero-columns', type: 'block' %}
@@ -60,6 +58,22 @@
           "label":     "Top Hero",
           "default":   false,
           "info":      "Check the box if hero is at the top of the page."
+        },
+        {
+          "type": "select",
+          "id": "background_color",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
         }
       ]
     },
