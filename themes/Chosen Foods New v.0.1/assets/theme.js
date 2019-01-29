@@ -130,33 +130,38 @@ $('.qty .input').on('change', function() {
 $('.single-product-images').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  dots: true,
-  customPaging : function(slider, i) {
-    var thumb = $(slider.$slides[i]).data('thumb');
-    return `<a><img class="img-fluid" src=${thumb} /></a>`;
-  },
+  dots: false,
+  arrows: false,
+  asNavFor: '.single-product-images-nav'
+});
+$('.single-product-images-nav').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: '.single-product-images',
+  dots: false,
+  arrows: false,
+  centerMode: false,
+  focusOnSelect: true,
+  infinite: false,
+  vertical: true,
+  verticalSwiping: true,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1279,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        vertical: false,
+        verticalSwiping: false
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 768,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        vertical: false,
+        verticalSwiping: false
       }
     }
   ]

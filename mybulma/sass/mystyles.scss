@@ -1185,6 +1185,14 @@ main {
 .product-page {
   .product-image {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.75rem;
     .badge {
       position: absolute;
       top: 0;
@@ -1196,15 +1204,35 @@ main {
       }
     }
     .single-product-images {
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      .slick-dots {
-        position: relative;
-        li {
-          width: 100px;
-          height: 100px;
+      // max-width: 400px;
+      // margin-left: auto;
+      // margin-right: auto;
+      width: 75%;
+      order: 2;
+      // .slick-dots {
+      //   position: relative;
+      //   li {
+      //     width: 100px;
+      //     height: 100px;
+      //   }
+      // }
+    }
+    .single-product-images-nav {
+      // max-width: 400px;
+      // margin-left: auto;
+      // margin-right: auto;
+      width: 20%;
+      order: 1;
+      &.slick-vertical {
+        .slick-slide {
+          padding: .5em 0;
+          &:focus {
+            outline: 0;
+          }
         }
+      }
+      .slick-slide {
+        padding: 0 .5em;
       }
     }
   }
@@ -1267,6 +1295,44 @@ main {
         bottom: 0;
       }
     }
+  }
+  @include until($widescreen) {
+    .product {
+      .section {
+        &:not(.collection-grid) {
+          > .container {
+            .columns {
+              flex-wrap: wrap;
+              .column {
+                min-width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .product-image {
+      .single-product-images, .single-product-images-nav {
+        max-width: 600px;
+        width: 100%;
+        order: initial;
+      }
+      .single-product-images-nav {
+        margin-top: .5em;
+      }
+    }
+  }
+  @include until($tablet) {
+    // .product-image {
+    //   .single-product-images, .single-product-images-nav {
+    //     max-width: 600px;
+    //     width: 100%;
+    //     order: initial;
+    //   }
+    //   .single-product-images-nav {
+    //     margin-top: .5em;
+    //   }
+    // }
   }
 }
 

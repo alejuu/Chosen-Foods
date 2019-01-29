@@ -2,10 +2,6 @@
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
-        <div class="reviews has-text-centered">
-          <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
-        </div>
         <div class="product-image">
           <div class="badge">
             {% for tag in product.tags %}
@@ -23,48 +19,62 @@
               </div>
             {% endfor %}
           </div>
-        </div>
-        <h2 class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless product-price">{{ variant.price | money }}</h2>
-        {% if product.available == false %}
-          <hr>
-          <p class="title is-6 has-text-centered">Soldout</p>
-        {% else %}
-          <form class="product-form" method="post" action="/cart/add">
-            {% comment %}
-              {% unless product.has_only_one_default_variant %}
-              {% endunless %}
-            {% endcomment %}
-            {% unless product.variants.size == 1 %}
-              {% for product_option in product.options_with_values %}
-                <div class="field product-option product-option-details">
-                  <label class="label">{{ product_option.name }}</label>
-                  <div class="control">
-                    <div class="select is-small is-outlined is-uppercase is-fullwidth">
-                      <select data-index="option{{ forloop.index }}">
-                        {% for variant in product.variants %}
-                          <option data-price="{{ variant.price | money }}" value="{{ variant.title | escape }}" {% if variant.selected %} selected="selected" {% endif %}>{{ variant.title }}</option>
-                        {% endfor %}
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              {% endfor %}
-            {% endunless %}
-            {% if variant.available == true %}
-              <div class="field is-grouped qty-add">
-                <div class="control is-flex qty">
-                  <input class="input" type="number" id="quantity" name="quantity" value="1">
-                </div>
-                <div class="control">
-                  <input type="hidden" id="variant-id-details" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                  <input class="button is-small is-rounded is-primary is-uppercase is-fullwidth has-text-centered" type="submit" value="Add to Cart">
-                </div>
+          <div class="single-product-images-nav">
+            {% for image in product.images %}
+              <div data-thumb="{{ image.src | img_url: '1920x' }}" class="">
+                <img class="" src="{{ image.src | img_url: '1920x' }}">
               </div>
-            {% endif %}
-          </form>
-        {% endif %}
+            {% endfor %}
+          </div>
+        </div>
       </div>
       <div class="column">
+        <div class="content">
+          <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
+          <div class="reviews has-text-centered">
+            <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+          </div>
+          <br>
+          <h2 class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless product-price">{{ variant.price | money }}</h2>
+          {% if product.available == false %}
+            <hr>
+            <p class="title is-6 has-text-centered">Soldout</p>
+          {% else %}
+            <form class="product-form" method="post" action="/cart/add">
+              {% comment %}
+                {% unless product.has_only_one_default_variant %}
+                {% endunless %}
+              {% endcomment %}
+              {% unless product.variants.size == 1 %}
+                {% for product_option in product.options_with_values %}
+                  <div class="field product-option product-option-details">
+                    <label class="label">{{ product_option.name }}</label>
+                    <div class="control">
+                      <div class="select is-small is-outlined is-uppercase is-fullwidth">
+                        <select data-index="option{{ forloop.index }}">
+                          {% for variant in product.variants %}
+                            <option data-price="{{ variant.price | money }}" value="{{ variant.title | escape }}" {% if variant.selected %} selected="selected" {% endif %}>{{ variant.title }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              {% endunless %}
+              {% if variant.available == true %}
+                <div class="field is-grouped qty-add">
+                  <div class="control is-flex qty">
+                    <input class="input" type="number" id="quantity" name="quantity" value="1">
+                  </div>
+                  <div class="control">
+                    <input type="hidden" id="variant-id-details" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                    <input class="button is-small is-rounded is-primary is-uppercase is-fullwidth has-text-centered" type="submit" value="Add to Cart">
+                  </div>
+                </div>
+              {% endif %}
+            </form>
+          {% endif %}
+        </div>
         <div class="content">
           <h2 class="title is-6">Description</h2>
           <p>{{ product.description }}</p>
@@ -117,7 +127,6 @@
             </article>
           </div>
         </div>
-        {% include 'related-posts' %}
       </div>
     </div>
   </div>

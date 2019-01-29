@@ -21,6 +21,59 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "1548288680885": {
+            "type": "megamenu_columns",
+            "settings": {
+              "menu_title": "Shop",
+              "image_one": "shopify:\/\/shop_images\/cookingoils-homepage.png",
+              "text_image_one": "shopify:\/\/shop_images\/cookingoils-text.png",
+              "text_one": "Shop Now",
+              "btn_link_one": "shopify:\/\/collections\/avocado-oil-products",
+              "image_two": "shopify:\/\/shop_images\/cookingsprays-homepage.png",
+              "text_image_two": "shopify:\/\/shop_images\/cookingsprays-text.png",
+              "text_two": "Shop Now",
+              "btn_link_two": "shopify:\/\/collections\/pure-oil-sprays",
+              "image_three": "shopify:\/\/shop_images\/mayos-homepage.png",
+              "text_image_three": "shopify:\/\/shop_images\/mayos-text.png",
+              "text_three": "Shop Now",
+              "btn_link_three": "shopify:\/\/collections\/healthy-mayo",
+              "image_four": "shopify:\/\/shop_images\/dressings-homepage.png",
+              "text_image_four": "shopify:\/\/shop_images\/dressings-text.png",
+              "text_four": "Shop Now",
+              "btn_link_four": "shopify:\/\/collections\/dressings-marinades-made-with-avocado-oil"
+            }
+          },
+          "1548365036224": {
+            "type": "megamenu_hero",
+            "settings": {
+              "menu_title": "About",
+              "text_image": "shopify:\/\/shop_images\/madetonourish.png",
+              "background_image": "shopify:\/\/shop_images\/aboutus_menu_desktop_illustration.gif",
+              "text_one": "Chosen Foods",
+              "btn_link_one": "shopify:\/\/pages\/our-story",
+              "text_two": "",
+              "btn_link_two": ""
+            }
+          },
+          "1548398317196": {
+            "type": "menu_bar",
+            "settings": {
+              "bar_linklist": "top-bar"
+            }
+          },
+          "1548399097761": {
+            "type": "search_bar",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "1548288680885",
+          "1548365036224",
+          "1548398317196",
+          "1548399097761"
+        ],
         "settings": {
           "one_linklist": "main-menu",
           "two_linklist": "company",
@@ -43,12 +96,17 @@
       "homepage-template": {
         "type": "homepage-template",
         "blocks": {
-          "1546044314497": {
-            "type": "top_hero",
+          "1548684822890": {
+            "type": "hero",
             "settings": {
               "image": "shopify:\/\/shop_images\/hero-homepage.png",
               "text_image": "shopify:\/\/shop_images\/meetthehero-text.png",
-              "text": "Discover More"
+              "text": "Discover More",
+              "btn_text": "",
+              "btn_link": "",
+              "hero_full": true,
+              "hero_top": true,
+              "background_color": "peach"
             }
           },
           "1547147122226": {
@@ -74,7 +132,7 @@
           }
         },
         "block_order": [
-          "1546044314497",
+          "1548684822890",
           "1547147122226"
         ],
         "settings": {
@@ -110,7 +168,12 @@
             "settings": {
             }
           },
-          "1546066594946": {
+          "1548782867456": {
+            "type": "recipes",
+            "settings": {
+            }
+          },
+          "1548782879389": {
             "type": "related",
             "settings": {
             }
@@ -119,7 +182,8 @@
         "block_order": [
           "1546066584338",
           "1546066591863",
-          "1546066594946"
+          "1548782867456",
+          "1548782879389"
         ],
         "settings": {
         }
