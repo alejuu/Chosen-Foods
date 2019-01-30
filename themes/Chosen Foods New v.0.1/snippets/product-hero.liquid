@@ -1,47 +1,66 @@
-{% if product.metafields.custom_fields.featured_illustration %}
-  <section class="hero is-full-custom is-top-custom is-product">
+{% assign layer_one = product.metafields.custom_fields.parallax_illustration_one %}
+{% assign layer_two = product.metafields.custom_fields.parallax_illustration_two %}
+{% assign layer_three = product.metafields.custom_fields.parallax_illustration_three %}
+
+{% if layer_one %}
+  <section class="hero is-fullheight is-fullheight-with-navbar is-full-custom is-top-custom is-product">
     {% include 'breadcrumbs' %}
     <div class="hero-body is-flex">
+      <div class="parallax layer-three">
+        <figure class="image">
+          <img class="rellax" data-rellax-speed="-10" src="{{ layer_three | file_url }}">
+        </figure>
+      </div>
+      <div class="parallax layer-two">
+        <figure class="image">
+          <img class="rellax" data-rellax-speed="-6" src="{{ layer_two | file_url }}">
+        </figure>
+      </div>
+      <div class="parallax layer-one">
+        <figure class="image">
+          <img class="rellax" data-rellax-speed="-2" src="{{ layer_one | file_url }}">
+        </figure>
+      </div>
       <div data-aos="fade-up" class="columns">
-        <div class="column">
-          <figure class="image feature is-margin-center">
-            <img class="is-margin-center" src="{{ product.metafields.custom_fields.featured_illustration | asset_url }}">
-          </figure>
-        </div>
-        <div class="column is-flex has-background-white">
-          <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
-          <h2 class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless product-price">{{ variant.price | money }}</h2>
-          <form class="product-form" method="post" action="/cart/add">
-            {% comment %}
-              {% unless product.has_only_one_default_variant %}
-              {% endunless %}
-            {% endcomment %}
-            {% unless product.variants.size == 1 %}
-              {% for product_option in product.options_with_values %}
-                <div class="field product-option product-option-hero">
-                  <label class="label">{{ product_option.name }}</label>
-                  <div class="control">
-                    <div class="select is-small is-outlined is-uppercase is-fullwidth">
-                      <select data-index="option{{ forloop.index }}">
-                        {% for variant in product.variants %}
-                          <option data-price="{{ variant.price | money }}" value="{{ variant.title | escape }}" {% if variant.selected %} selected="selected" {% endif %}>{{ variant.title }}</option>
-                        {% endfor %}
-                      </select>
+        <div class="column"></div>
+        <div class="column is-flex">
+          <div class="box">
+            <br>
+            <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
+            <h2 class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless product-price">{{ variant.price | money }}</h2>
+            <form class="product-form" method="post" action="/cart/add">
+              {% comment %}
+                {% unless product.has_only_one_default_variant %}
+                {% endunless %}
+              {% endcomment %}
+              {% unless product.variants.size == 1 %}
+                {% for product_option in product.options_with_values %}
+                  <div class="field product-option product-option-hero">
+                    <label class="label">{{ product_option.name }}</label>
+                    <div class="control">
+                      <div class="select is-small is-outlined is-uppercase is-fullwidth">
+                        <select data-index="option{{ forloop.index }}">
+                          {% for variant in product.variants %}
+                            <option data-price="{{ variant.price | money }}" value="{{ variant.title | escape }}" {% if variant.selected %} selected="selected" {% endif %}>{{ variant.title }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
                     </div>
                   </div>
+                {% endfor %}
+              {% endunless %}
+              <div class="field is-grouped qty-add">
+                <div class="control is-flex qty">
+                  <input class="input" type="number" id="quantity" name="quantity" min="1" value="1">
                 </div>
-              {% endfor %}
-            {% endunless %}
-            <div class="field is-grouped qty-add">
-              <div class="control is-flex qty">
-                <input class="input" type="number" id="quantity" name="quantity" value="1">
+                <div class="control">
+                  <input type="hidden" id="variant-id-hero" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                  <input class="button is-small is-rounded is-primary is-outlined is-uppercase is-fullwidth has-text-centered" type="submit" value="Add to Cart">
+                </div>
               </div>
-              <div class="control">
-                <input type="hidden" id="variant-id-hero" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                <input class="button is-small is-rounded is-primary is-outlined is-uppercase is-fullwidth has-text-centered" type="submit" value="Add to Cart">
-              </div>
-            </div>
-          </form>
+            </form>
+            <br>
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column">
@@ -14,15 +14,15 @@
           </div>
           <div class="single-product-images">
             {% for image in product.images %}
-              <div data-thumb="{{ image.src | img_url: '1920x' }}" class="image feature is-margin-center">
-                <img class="is-margin-center img-fluid" src="{{ image.src | img_url: '1920x' }}">
+              <div data-thumb="{{ image.src | img_url: '500x' }}" class="image feature is-margin-center">
+                <img class="is-margin-center img-fluid" src="{{ image.src | img_url: '500x' }}">
               </div>
             {% endfor %}
           </div>
           <div class="single-product-images-nav">
             {% for image in product.images %}
-              <div data-thumb="{{ image.src | img_url: '1920x' }}" class="">
-                <img class="" src="{{ image.src | img_url: '1920x' }}">
+              <div data-thumb="{{ image.src | img_url: '500x' }}" class="">
+                <img class="" src="{{ image.src | img_url: '500x' }}">
               </div>
             {% endfor %}
           </div>
@@ -64,7 +64,7 @@
               {% if variant.available == true %}
                 <div class="field is-grouped qty-add">
                   <div class="control is-flex qty">
-                    <input class="input" type="number" id="quantity" name="quantity" value="1">
+                    <input class="input" type="number" id="quantity" name="quantity" min="1" value="1">
                   </div>
                   <div class="control">
                     <input type="hidden" id="variant-id-details" name="id" value="{{ product.selected_or_first_available_variant.id }}">
