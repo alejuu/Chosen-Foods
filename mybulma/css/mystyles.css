@@ -8708,6 +8708,15 @@ main {
     width: 83px;
     height: 21.64px; }
 
+.addresses-page > .section > .columns .column:last-child > div {
+  display: flex;
+  justify-content: flex-end; }
+
+@media screen and (max-width: 768px) {
+  .addresses-page > .section > .columns .column > div {
+    display: flex;
+    justify-content: center !important; } }
+
 #shopify-section-header + main {
   margin-top: 4.7rem; }
   @media screen and (max-width: 768px) {

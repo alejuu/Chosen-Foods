@@ -1453,6 +1453,32 @@ main {
   }
 }
 
+//Extra Code
+// Addresses
+.addresses-page {
+  > .section {
+    > .columns {
+      .column {
+        &:last-child {
+          > div {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+      }
+      @include until($tablet) {
+        .column {
+          > div {
+            display: flex;
+            justify-content: center!important;
+          }
+        }
+      }
+    }
+
+  }
+}
+
 // Extra Code
 // Shopify
 // Base
