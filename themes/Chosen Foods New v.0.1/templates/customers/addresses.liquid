@@ -1,4 +1,4 @@
-<main class="addresses-page">
+<main class="addresses-page has-background-lighter-green">
   <section class="hero is-page">
     <div class="hero-body">
       <div class="content has-text-centered">
@@ -7,8 +7,8 @@
     </div>
   </section>
   <section class="section">
-    <div class="content">
-      <a href="#" class="button is-small is-rounded is-outlined is-uppercase is-warning has-text-centered" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">Add a New Address</a>
+    <div class="content buttons">
+      <a href="#" class="button is-small is-rounded is-uppercase is-primary has-text-centered" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">Add a New Address</a>
     </div>
     <div class="content has-text-left">
       <div id="AddAddress" class="form-vertical address-view-edit" style="display: none;">
@@ -238,8 +238,8 @@
         {% endif %}
       {% endpaginate %}
     </div>
-    <div class="content">
-      <a href="../account" class="button is-small is-rounded is-outlined is-uppercase is-warning has-text-centered">My Account</a>
+    <div class="content buttons">
+      <a href="../account" class="button is-small is-rounded is-uppercase is-primary has-text-centered">My Account</a>
     </div>
   </section>
 </main>

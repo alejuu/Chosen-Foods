@@ -332,6 +332,60 @@ $accordion-content-border: hidden !default;
 }
 
 // Extra Code
+// Table
+.table {
+  &.is-responsive {
+    @include until($tablet) {
+      thead {
+        display: none;
+      }
+      tbody {
+        tr {
+          &.space {
+            height: 10px;
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+        td {
+          display: block;
+          border: 1px solid $grey-lighter;
+          text-align: right;
+          &:before {
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+          }
+          &:last-child {
+            // border-bottom: 0;
+          }
+        }
+      }
+      tfoot {
+        tr {
+          td {
+            &:not(:last-child) {
+              display: none;
+            }
+            &:last-child {
+              display: block;
+              border: 1px solid $grey-lighter;
+              text-align: right;
+              &:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra Code
 // Accordion
 .accordions {
   .accordion {
@@ -594,7 +648,7 @@ $accordion-content-border: hidden !default;
       }
       > div {
         &.navbar-item {
-          &.is-hidden-desktop {
+          // &.is-hidden-desktop {
             &:not(:last-child) {
               .container {
                 padding: 1rem 0;
@@ -624,7 +678,7 @@ $accordion-content-border: hidden !default;
                 }
               }
             }
-          }
+          // }
         }
       }
     }
@@ -1453,29 +1507,17 @@ main {
   }
 }
 
-//Extra Code
-// Addresses
-.addresses-page {
-  > .section {
-    > .columns {
-      .column {
-        &:last-child {
-          > div {
-            display: flex;
-            justify-content: flex-end;
-          }
-        }
-      }
-      @include until($tablet) {
-        .column {
-          > div {
-            display: flex;
-            justify-content: center!important;
-          }
-        }
+// Extra Code
+// Account
+.addresses-page, .order-page {
+  @include until($tablet) {
+    .buttons {
+      text-align: center!important;
+      .button {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
-
   }
 }
 

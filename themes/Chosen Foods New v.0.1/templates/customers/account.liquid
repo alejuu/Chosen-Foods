@@ -1,4 +1,4 @@
-<main class="account-page">
+<main class="account-page has-background-lighter-green">
   <section class="hero is-page">
     <div class="hero-body">
       <div class="content has-text-centered">
@@ -17,7 +17,7 @@
             <p class="title is-3 is-size-6-mobile is-marginless">Hello</p>
             <p>Not your account? <a href="/account/logout">Sign out</a>.</p>
           {% endif %}
-          <p class="title is-6 is-size-7-mobile is-marginless">From your account dashboard you can view your recent orders and add new address.</p>
+          <p class="title is-6 is-size-7-mobile is-marginless">From your account dashboard you can view your recent orders and add new addresses</p>
           <hr>
           <div class="columns">
             <div class="column">
@@ -32,7 +32,7 @@
                     {% paginate customer.orders by 10 %}
                       {% if customer.orders.size != 0 %}
                         <div class="content has-text-left">
-                          <table class="table">
+                          <table class="table is-bordered is-striped is-hoverable is-fullwidth is-responsive">
                             <thead>
                               <tr>
                                 <th>Order</th>
@@ -45,12 +45,13 @@
                             <tbody>
                               {% for order in customer.orders %}
                                 <tr>
-                                  <td>{{ order.name | link_to: order.customer_url }}</td>
-                                  <td>{{ order.created_at | date: '%B %d, %Y' }}</td>
-                                  <td>{{ order.financial_status_label }}</td>
-                                  <td>{{ order.fulfillment_status_label }}</td>
-                                  <td>{{ order.total_price | money }}</td>
+                                  <td data-label="Order">{{ order.name | link_to: order.customer_url }}</td>
+                                  <td data-label="Date">{{ order.created_at | date: '%B %d, %Y' }}</td>
+                                  <td data-label="Payment Status">{{ order.financial_status_label }}</td>
+                                  <td data-label="Fulfillment Status">{{ order.fulfillment_status_label }}</td>
+                                  <td data-label="Total">{{ order.total_price | money }}</td>
                                 </tr>
+                                <tr class="space is-hidden-desktop"></tr>
                               {% endfor %}
                             </tbody>
                           </table>
@@ -120,5 +121,12 @@
         </div>
       {% endif %}
     {% endif %}
+  </section>
+  <section>
+    <div>
+      <figure class="image">
+        <img class="is-margin-center" src="{{ 'pre-footer-illustration.png' | asset_url }}">
+      </figure>
+    </div>
   </section>
 </main>
