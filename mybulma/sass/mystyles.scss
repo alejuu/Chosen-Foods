@@ -902,6 +902,8 @@ main {
       }
       .container {
         height: calc(100vh - 6rem);
+        // width: 100%;
+        // max-width: 100%;
         // > div {
           .columns {
             height: 100%;
@@ -920,6 +922,63 @@ main {
                 }
                 .content-top, .content-bottom {
                   height: 100%;
+                }
+              }
+            }
+          }
+          .content-left, .content-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            .image {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              height: 100%;
+
+              width: 100%;
+            }
+          }
+          .content-left {
+            // width: 100%;
+            img {
+              // max-height: 100%;
+              // width: inherit;
+              max-height: 100%;
+              width: initial;
+              height: 100%;
+              max-width: initial;
+            }
+          }
+          .content-right {
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            .image {
+              // flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              height: auto;
+              img {
+                max-height: 100%;
+                // width: auto;
+                max-width: 1024px;
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+              }
+            }
+            @include until($tablet) {
+              .image {
+                flex-grow: 1;
+                height: 100%;
+                img {
+                  width: auto;
                 }
               }
             }

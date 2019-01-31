@@ -19,19 +19,19 @@
 {% endif %}
 <section class="hero is-main{% if hero_full == true %} is-fullheight is-full-custom{% endif %}{% if hero_top == true %} is-fullheight-with-navbar is-top-custom{% endif %}{% if background_color == "green" %} has-background-primary{% endif %}{% if background_color == "peach" %} has-background-peach{% endif %}{% if background_color == "orange" %} has-background-orange{% endif %}{% if background_color == "light_green" %} has-background-light-green{% endif %}{% if background_color == "light_peach" %} has-background-light-peach{% endif %}{% if background_color == "light_turquoise" %} has-background-light-turquoise{% endif %}{% if background_color == "light_yellow" %} has-background-light-yellow{% endif %}{% if background_color == "lighter_peach" %} has-background-lighter-peach{% endif %}{% if background_color == "lighter_green" %} has-background-lighter-green{% endif %}">
   <div class="hero-body">
-    <div class="container has-text-centered">
+    <div class="container is-fluid has-text-centered">
       <div class="columns">
         <div class="column">
           {% if image %}
-            <div class="content-top" data-aos="fade-up">
+            <div class="content-left" data-aos="fade-up">
               <figure class="image">
-                <img class="is-margin-center" alt="{{ image.alt | escape }}" src="{{ image | img_url: '1400x' }}">
+                <img class="is-margin-center" alt="{{ image.alt | escape }}" src="{{ image | img_url: '700x' }}">
               </figure>
             </div>
           {% endif %}
         </div>
         <div class="column">
-          <div class="content-bottom" data-aos="fade-up">
+          <div class="content-right" data-aos="fade-up">
             {% if text_image %}
               <figure class="image">
                 <img class="is-margin-center" alt="{{ text_image.alt | escape }}" src="{{ text_image | img_url: '700x' }}">
