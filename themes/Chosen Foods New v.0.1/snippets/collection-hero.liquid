@@ -31,42 +31,27 @@
       {% endif %}
       <div data-aos="fade-up" class="filters columns is-mobile">
         <div class="column">
-          <!-- <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <button class="button is-small is-rounded is-link is-uppercase has-text-centered" aria-haspopup="true" aria-controls="dropdown-filter">
-                <span>Filter</span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-filter" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item">
-                  Overview
-                </a>
-                <a href="#" class="dropdown-item">
-                  Modifiers
-                </a>
-                <a href="#" class="dropdown-item">
-                  Grid
-                </a>
-                <a href="#" class="dropdown-item">
-                  Form
-                </a>
-                <a href="#" class="dropdown-item">
-                  Elements
-                </a>
-                <a href="#" class="dropdown-item">
-                  Components
-                </a>
-                <a href="#" class="dropdown-item">
-                  Layout
-                </a>
-                <hr class="dropdown-divider">
-                <a href="#" class="dropdown-item">
-                  More
-                </a>
+          {% if collection.metafields.linklist.handle != blank %}
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <button class="button is-small is-rounded is-link is-uppercase has-text-centered" aria-haspopup="true" aria-controls="dropdown-filter">
+                  <span>Filter</span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-filter" role="menu">
+                <div class="dropdown-content">
+                  {% for link in linklists[collection.metafields.linklist.handle].links %}
+                    {% assign collection_link = link.url | remove: '/collections/' %}
+                    {% if collections[collection_link].products_count > 0 %}
+                      <a href="{{ link.url }}" class="dropdown-item">
+                        {{ link.title }}
+                      </a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
               </div>
             </div>
-          </div> -->
+          {% endif %}
         </div>
         <div class="column">
           {% include 'sort-by' %}
