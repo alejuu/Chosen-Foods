@@ -44,5 +44,8 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     {{ 'product.js' | asset_url | script_tag }}
   {% endif %}
+  {% if page.handle contains 'our-avocado-oil' %}
+    {{ 'parallax.js' | asset_url | script_tag }}
+  {% endif %}
   {{ 'theme.js' | asset_url | script_tag }}
 </html>

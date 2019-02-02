@@ -8175,6 +8175,21 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .accordions .accordion:last-child .accordion-header {
   border-bottom: 1px solid #00857D; }
 
+.parallax {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+  .parallax .image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  @media screen and (max-width: 768px) {
+    .parallax .image img {
+      height: 100%;
+      object-fit: cover; } }
+
 #mainMenu {
   border-top: solid 20px #00857D; }
 
@@ -8586,16 +8601,6 @@ main {
     align-items: center;
     justify-content: center;
     padding: 0; }
-    .hero.is-product.is-top-custom .hero-body .parallax {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -1; }
-      .hero.is-product.is-top-custom .hero-body .parallax .image {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center; }
     .hero.is-product.is-top-custom .hero-body .columns {
       width: 100%; }
       .hero.is-product.is-top-custom .hero-body .columns .column:nth-child(2) {
@@ -8625,9 +8630,6 @@ main {
         .hero.is-product.is-top-custom .hero-body .parallax {
           top: 0;
           height: 70%; }
-          .hero.is-product.is-top-custom .hero-body .parallax .image img {
-            height: 100%;
-            object-fit: cover; }
         .hero.is-product.is-top-custom .hero-body .columns {
           height: -webkit-fill-available; }
           .hero.is-product.is-top-custom .hero-body .columns .column:nth-child(2) {
@@ -8777,6 +8779,70 @@ main {
     order: initial; }
   .product-page .product-image .single-product-images-nav {
     margin-top: .5em; } }
+
+.page-page .hero .hero-body {
+  padding: 1.5rem 1.5rem; }
+
+.page-page.about-chosen-foods .images.lines {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  margin: 0 auto; }
+  .page-page.about-chosen-foods .images.lines .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 50%;
+    padding: .25em; }
+    .page-page.about-chosen-foods .images.lines .image.signature {
+      flex: 0 0 100%; }
+      .page-page.about-chosen-foods .images.lines .image.signature img {
+        width: 25%;
+        margin-left: auto; }
+  .page-page.about-chosen-foods .images.lines .half {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; }
+    .page-page.about-chosen-foods .images.lines .half .image {
+      width: 100%; }
+  @media screen and (max-width: 768px) {
+    .page-page.about-chosen-foods .images.lines .image {
+      width: 100%; }
+      .page-page.about-chosen-foods .images.lines .image.signature img {
+        width: 50%; }
+    .page-page.about-chosen-foods .images.lines .half {
+      width: 50%; } }
+
+.page-page.our-avocado-oil .hero {
+  position: relative; }
+  .page-page.our-avocado-oil .hero .breadcrumb {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .page-page.our-avocado-oil .hero .content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .page-page.our-avocado-oil .hero .parallax {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .page-page.our-avocado-oil .hero .parallax .image {
+      margin: 0; }
+    .page-page.our-avocado-oil .hero .parallax.layer-one .image img {
+      max-height: 100%;
+      width: initial;
+      margin: 0px auto; }
+
+@media screen and (min-width: 769px) {
+  .page-page.our-avocado-oil .hero {
+    min-height: calc(100vh - 50vh); } }
 
 .blog-page .post:nth-child(odd) {
   direction: rtl; }
