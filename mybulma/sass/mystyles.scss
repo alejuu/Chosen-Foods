@@ -1657,12 +1657,22 @@ main {
         .image {
           margin: 0;
         }
-        &.layer-one {
+        &.layer-two {
           .image {
             img {
               max-height: 100%;
               width: initial;
-              margin: 0px auto;
+              margin: 0 auto;
+            }
+          }
+        }
+        &.layer-one {
+          .image {
+            img {
+              max-width: 400px;
+              width: 90%;
+              margin: 0 auto;
+              object-fit: contain;
             }
           }
         }

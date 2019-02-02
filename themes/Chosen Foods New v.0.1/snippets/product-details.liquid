@@ -6,9 +6,12 @@
           <div class="badge">
             {% for tag in product.tags %}
               {% if tag contains 'Staff Picks' %}
-              <span class="icon">
-                <i class="cf-icon-staff-pick-32"></i>
-              </span>
+                <span class="icon is-hidden-desktop">
+                  <i class="cf-icon-staff-pick-32"></i>
+                </span>
+                <figure class="image is-128x128 is-hidden-touch">
+                  <img src="{{ 'staff-pick-icon.png' | asset_url }}">
+                </figure>
               {% endif %}
             {% endfor %}
           </div>
@@ -81,8 +84,8 @@
         </div>
         <div class="content">
           <div class="accordions">
-            <article class="accordion">
-              {% if product.metafields.custom_fields.product_details %}
+            {% if product.metafields.custom_fields.product_details %}
+              <article class="accordion">
                 <div class="accordion-header toggle">
                   <h2 class="title is-6">Details</h2>
                   <button class="toggle" aria-label="toggle"></button>
@@ -94,8 +97,8 @@
                     </p>
                   </div>
                 </div>
-              {% endif %}
-            </article>
+              </article>
+            {% endif %}
             <article class="accordion">
               <div class="accordion-header toggle">
                 <h2 class="title is-6">Shopping Policy</h2>
@@ -125,6 +128,38 @@
                 </div>
               </div>
             </article>
+            {% if product.metafields.custom_fields.product_staff_picks_text %}
+              <article class="accordion">
+                <div class="accordion-header toggle">
+                  <h2 class="title is-6">Staff Picks</h2>
+                  <button class="toggle" aria-label="toggle"></button>
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-content content">
+                    {% assign staff_avatar = product.metafields.custom_fields.product_staff_picks_avatar %}
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-left">
+                            <figure class="image is-marginless is-48x48">
+                              <img class="is-rounded" src="{{ staff_avatar | file_url }}">
+                            </figure>
+                          </div>
+                          <div class="media-content">
+                            <p class="title is-4">{{ product.metafields.custom_fields.product_staff_picks_author }}</p>
+                          </div>
+                        </div>
+                        <p class="subtitle">
+                          "{{ product.metafields.custom_fields.product_staff_picks_text }}"
+                        </p>
+                      </div>
+                    </div>
+                    <p>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            {% endif %}
           </div>
         </div>
       </div>

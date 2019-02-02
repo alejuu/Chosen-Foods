@@ -8835,10 +8835,15 @@ main {
     bottom: 0; }
     .page-page.our-avocado-oil .hero .parallax .image {
       margin: 0; }
-    .page-page.our-avocado-oil .hero .parallax.layer-one .image img {
+    .page-page.our-avocado-oil .hero .parallax.layer-two .image img {
       max-height: 100%;
       width: initial;
-      margin: 0px auto; }
+      margin: 0 auto; }
+    .page-page.our-avocado-oil .hero .parallax.layer-one .image img {
+      max-width: 400px;
+      width: 90%;
+      margin: 0 auto;
+      object-fit: contain; }
 
 @media screen and (min-width: 769px) {
   .page-page.our-avocado-oil .hero {
