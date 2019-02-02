@@ -178,6 +178,40 @@ $accordion-content-border: hidden !default;
       letter-spacing: 1.5px;
     }
   }
+  // Extra Colors
+  &.is-dark-yellow {
+    background-color: $dark-yellow;
+    border-color: transparent;
+    color: $white;
+    &:hover, &.is-hovered {
+      background-color: darken($dark-yellow, 2.5%);
+    }
+    &:active, &.is-active {
+      background-color: darken($dark-yellow, 5%);
+    }
+  }
+  &.is-light-orange {
+    background-color: $light-orange;
+    border-color: transparent;
+    color: $white;
+    &:hover, &.is-hovered {
+      background-color: darken($light-orange, 2.5%);
+    }
+    &:active, &.is-active {
+      background-color: darken($light-orange, 5%);
+    }
+  }
+  &.is-light-blue {
+    background-color: $light-blue;
+    border-color: transparent;
+    color: $white;
+    &:hover, &.is-hovered {
+      background-color: darken($light-blue, 2.5%);
+    }
+    &:active, &.is-active {
+      background-color: darken($light-blue, 5%);
+    }
+  }
 }
 
 // Extra Code
@@ -949,8 +983,16 @@ main {
               // width: inherit;
               max-height: 100%;
               width: initial;
-              height: 100%;
-              max-width: initial;
+              // height: 100%;
+              // max-width: initial;
+              height: initial;
+              max-width: 100%;
+              @include from($fullhd) {
+                height: auto;
+                max-width: 100%;
+                width: 80%;
+                max-height: inherit;
+              }
             }
           }
           .content-right {
@@ -1058,6 +1100,20 @@ main {
           // line-height: 1;
           // letter-spacing: 1.5px;
         }
+      }
+    }
+  }
+  //Hero Banner
+  &.is-banner {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    .hero-body {
+      align-items: normal;
+      .content {
+        padding: 3rem 0;
+        max-width: 740px;
+        margin: 0 auto;
       }
     }
   }

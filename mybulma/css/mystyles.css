@@ -7961,6 +7961,33 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     line-height: 1;
     letter-spacing: 1.5px; }
 
+.button.is-dark-yellow {
+  background-color: #EAD354;
+  border-color: transparent;
+  color: #FFFFFF; }
+  .button.is-dark-yellow:hover, .button.is-dark-yellow.is-hovered {
+    background-color: #e9d049; }
+  .button.is-dark-yellow:active, .button.is-dark-yellow.is-active {
+    background-color: #e7cd3d; }
+
+.button.is-light-orange {
+  background-color: #F4A062;
+  border-color: transparent;
+  color: #FFFFFF; }
+  .button.is-light-orange:hover, .button.is-light-orange.is-hovered {
+    background-color: #f39956; }
+  .button.is-light-orange:active, .button.is-light-orange.is-active {
+    background-color: #f2924a; }
+
+.button.is-light-blue {
+  background-color: #71A6B3;
+  border-color: transparent;
+  color: #FFFFFF; }
+  .button.is-light-blue:hover, .button.is-light-blue.is-hovered {
+    background-color: #69a1af; }
+  .button.is-light-blue:active, .button.is-light-blue.is-active {
+    background-color: #609caa; }
+
 .pagination .pagination-list li:first-child, .pagination .pagination-list li:last-child {
   display: block !important; }
 
@@ -8438,8 +8465,14 @@ main {
   .hero.is-main.is-full-custom .container .content-left img {
     max-height: 100%;
     width: initial;
-    height: 100%;
-    max-width: initial; }
+    height: initial;
+    max-width: 100%; }
+    @media screen and (min-width: 1472px) {
+      .hero.is-main.is-full-custom .container .content-left img {
+        height: auto;
+        max-width: 100%;
+        width: 80%;
+        max-height: inherit; } }
   .hero.is-main.is-full-custom .container .content-right .image {
     display: flex;
     flex-direction: column;
@@ -8496,6 +8529,17 @@ main {
 
 .hero.is-main:not(.is-top-custom) .container .content-bottom .image img {
   padding: 2rem 0; }
+
+.hero.is-banner {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat; }
+  .hero.is-banner .hero-body {
+    align-items: normal; }
+    .hero.is-banner .hero-body .content {
+      padding: 3rem 0;
+      max-width: 740px;
+      margin: 0 auto; }
 
 .hero.is-page .breadcrumb {
   padding-top: .75rem;

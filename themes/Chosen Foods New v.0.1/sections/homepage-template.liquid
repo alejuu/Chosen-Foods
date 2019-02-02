@@ -4,6 +4,8 @@
       {% include 'hero', type: 'block' %}
     {% elsif block.type == "hero_columns" %}
       {% include 'hero-columns', type: 'block' %}
+    {% elsif block.type == "hero_banner" %}
+      {% include 'hero-banner', type: 'block' %}
     {% endif %}
   {% endfor %}
 {% endif %}
@@ -82,6 +84,10 @@
       "name": "Hero Columns",
       "settings": [
         {
+          "type": "header",
+          "content": "Column One"
+        },
+        {
           "type": "image_picker",
           "id": "image_one",
           "label": "Image Top"
@@ -101,6 +107,26 @@
           "id": "btn_link_one",
           "type": "url",
           "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "background_color_one",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
+        },
+        {
+          "type": "header",
+          "content": "Column Two"
         },
         {
           "type": "image_picker",
@@ -124,6 +150,26 @@
           "label": "Button link"
         },
         {
+          "type": "select",
+          "id": "background_color_two",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
+        },
+        {
+          "type": "header",
+          "content": "Column Three"
+        },
+        {
           "type": "image_picker",
           "id": "image_three",
           "label": "Image Top"
@@ -145,6 +191,26 @@
           "label": "Button link"
         },
         {
+          "type": "select",
+          "id": "background_color_three",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
+        },
+        {
+          "type": "header",
+          "content": "Column Four"
+        },
+        {
           "type": "image_picker",
           "id": "image_four",
           "label": "Image Top"
@@ -162,6 +228,56 @@
         },
         {
           "id": "btn_link_four",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "background_color_four",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
+        }
+      ]
+    },
+    {
+      "type": "hero_banner",
+      "name": "Hero Banner",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "hero_full",
+          "label": "Full height Hero",
+          "default": false,
+          "info": "Check the box if hero is full height."
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "text_btn",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link",
           "type": "url",
           "label": "Button link"
         }
