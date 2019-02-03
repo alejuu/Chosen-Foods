@@ -7961,6 +7961,57 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     line-height: 1;
     letter-spacing: 1.5px; }
 
+.button.is-dark-yellow {
+  background-color: #EAD354;
+  border-color: transparent;
+  color: #FFFFFF; }
+  .button.is-dark-yellow:hover, .button.is-dark-yellow.is-hovered {
+    background-color: #e9d049; }
+  .button.is-dark-yellow:active, .button.is-dark-yellow.is-active {
+    background-color: #e7cd3d; }
+  .button.is-dark-yellow.is-outlined {
+    background-color: transparent;
+    border-color: #EAD354;
+    color: #EAD354; }
+    .button.is-dark-yellow.is-outlined:hover, .button.is-dark-yellow.is-outlined:focus {
+      background-color: #EAD354;
+      border-color: #EAD354;
+      color: #FFFFFF; }
+
+.button.is-light-orange {
+  background-color: #F4A062;
+  border-color: transparent;
+  color: #FFFFFF; }
+  .button.is-light-orange:hover, .button.is-light-orange.is-hovered {
+    background-color: #f39956; }
+  .button.is-light-orange:active, .button.is-light-orange.is-active {
+    background-color: #f2924a; }
+  .button.is-light-orange.is-outlined {
+    background-color: transparent;
+    border-color: #F4A062;
+    color: #F4A062; }
+    .button.is-light-orange.is-outlined:hover, .button.is-light-orange.is-outlined:focus {
+      background-color: #F4A062;
+      border-color: #F4A062;
+      color: #FFFFFF; }
+
+.button.is-light-blue {
+  background-color: #71A6B3;
+  border-color: transparent;
+  color: #FFFFFF; }
+  .button.is-light-blue:hover, .button.is-light-blue.is-hovered {
+    background-color: #69a1af; }
+  .button.is-light-blue:active, .button.is-light-blue.is-active {
+    background-color: #609caa; }
+  .button.is-light-blue.is-outlined {
+    background-color: transparent;
+    border-color: #71A6B3;
+    color: #71A6B3; }
+    .button.is-light-blue.is-outlined:hover, .button.is-light-blue.is-outlined:focus {
+      background-color: #71A6B3;
+      border-color: #71A6B3;
+      color: #FFFFFF; }
+
 .pagination .pagination-list li:first-child, .pagination .pagination-list li:last-child {
   display: block !important; }
 
@@ -8147,6 +8198,21 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 
 .accordions .accordion:last-child .accordion-header {
   border-bottom: 1px solid #00857D; }
+
+.parallax {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+  .parallax .image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  @media screen and (max-width: 768px) {
+    .parallax .image img {
+      height: 100%;
+      object-fit: cover; } }
 
 #mainMenu {
   border-top: solid 20px #00857D; }
@@ -8422,10 +8488,46 @@ main {
         height: 35%; }
       .hero.is-main.is-full-custom .container .columns .column .content-top, .hero.is-main.is-full-custom .container .columns .column .content-bottom {
         height: 100%; } }
+  .hero.is-main.is-full-custom .container .content-left, .hero.is-main.is-full-custom .container .content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; }
+    .hero.is-main.is-full-custom .container .content-left .image, .hero.is-main.is-full-custom .container .content-right .image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: 100%; }
+  .hero.is-main.is-full-custom .container .content-right .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; }
+    .hero.is-main.is-full-custom .container .content-right .image img {
+      max-height: 100%;
+      max-width: 1024px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto; }
+  @media screen and (max-width: 768px) {
+    .hero.is-main.is-full-custom .container .content-right .image {
+      flex-grow: 1;
+      height: 100%; }
+      .hero.is-main.is-full-custom .container .content-right .image img {
+        width: auto; } }
   .hero.is-main.is-full-custom .container .content-top {
     height: 65%; }
     .hero.is-main.is-full-custom .container .content-top .image {
       height: 100%; }
+      .hero.is-main.is-full-custom .container .content-top .image a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%; }
       .hero.is-main.is-full-custom .container .content-top .image img {
         max-height: 100%;
         width: auto; }
@@ -8461,6 +8563,17 @@ main {
 
 .hero.is-main:not(.is-top-custom) .container .content-bottom .image img {
   padding: 2rem 0; }
+
+.hero.is-banner {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat; }
+  .hero.is-banner .hero-body {
+    align-items: normal; }
+    .hero.is-banner .hero-body .content {
+      padding: 3rem 0;
+      max-width: 740px;
+      margin: 0 auto; }
 
 .hero.is-page .breadcrumb {
   padding-top: .75rem;
@@ -8507,16 +8620,6 @@ main {
     align-items: center;
     justify-content: center;
     padding: 0; }
-    .hero.is-product.is-top-custom .hero-body .parallax {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -1; }
-      .hero.is-product.is-top-custom .hero-body .parallax .image {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center; }
     .hero.is-product.is-top-custom .hero-body .columns {
       width: 100%; }
       .hero.is-product.is-top-custom .hero-body .columns .column:nth-child(2) {
@@ -8546,9 +8649,6 @@ main {
         .hero.is-product.is-top-custom .hero-body .parallax {
           top: 0;
           height: 70%; }
-          .hero.is-product.is-top-custom .hero-body .parallax .image img {
-            height: 100%;
-            object-fit: cover; }
         .hero.is-product.is-top-custom .hero-body .columns {
           height: -webkit-fill-available; }
           .hero.is-product.is-top-custom .hero-body .columns .column:nth-child(2) {
@@ -8556,6 +8656,14 @@ main {
             bottom: 0;
             width: 100%;
             padding: 0; } }
+
+.hero.logos .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; }
+  .hero.logos .image img {
+    opacity: .5; }
 
 .hero-columns .hero .hero-body .container .image {
   display: flex;
@@ -8670,7 +8778,6 @@ main {
   height: 164px;
   padding: 0 1rem;
   position: relative;
-  background: url("../assets/recipes-placeholder.jpg") center;
   background-size: cover; }
   .product-page .recipes .post .tag {
     border-radius: 0;
@@ -8698,6 +8805,75 @@ main {
     order: initial; }
   .product-page .product-image .single-product-images-nav {
     margin-top: .5em; } }
+
+.page-page .hero .hero-body {
+  padding: 1.5rem 1.5rem; }
+
+.page-page.about-chosen-foods .images.lines {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  margin: 0 auto; }
+  .page-page.about-chosen-foods .images.lines .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 50%;
+    padding: .25em; }
+    .page-page.about-chosen-foods .images.lines .image.signature {
+      flex: 0 0 100%; }
+      .page-page.about-chosen-foods .images.lines .image.signature img {
+        width: 25%;
+        margin-left: auto; }
+  .page-page.about-chosen-foods .images.lines .half {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; }
+    .page-page.about-chosen-foods .images.lines .half .image {
+      width: 100%; }
+  @media screen and (max-width: 768px) {
+    .page-page.about-chosen-foods .images.lines .image {
+      width: 100%; }
+      .page-page.about-chosen-foods .images.lines .image.signature img {
+        width: 50%; }
+    .page-page.about-chosen-foods .images.lines .half {
+      width: 50%; } }
+
+.page-page.our-avocado-oil .hero {
+  position: relative; }
+  .page-page.our-avocado-oil .hero .breadcrumb {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .page-page.our-avocado-oil .hero .content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .page-page.our-avocado-oil .hero .parallax {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .page-page.our-avocado-oil .hero .parallax .image {
+      margin: 0; }
+    .page-page.our-avocado-oil .hero .parallax.layer-two .image img {
+      max-height: 100%;
+      width: initial;
+      margin: 0 auto; }
+    .page-page.our-avocado-oil .hero .parallax.layer-one .image img {
+      max-width: 400px;
+      width: 90%;
+      margin: 0 auto;
+      object-fit: contain; }
+
+@media screen and (min-width: 769px) {
+  .page-page.our-avocado-oil .hero {
+    min-height: calc(100vh - 50vh); } }
 
 .blog-page .post:nth-child(odd) {
   direction: rtl; }

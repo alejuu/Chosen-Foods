@@ -30,18 +30,22 @@
               "text_image_one": "shopify:\/\/shop_images\/cookingoils-text.png",
               "text_one": "Shop Now",
               "btn_link_one": "shopify:\/\/collections\/avocado-oil-products",
+              "background_color_one": "light_peach",
               "image_two": "shopify:\/\/shop_images\/cookingsprays-homepage.png",
               "text_image_two": "shopify:\/\/shop_images\/cookingsprays-text.png",
               "text_two": "Shop Now",
               "btn_link_two": "shopify:\/\/collections\/pure-oil-sprays",
+              "background_color_two": "light_yellow",
               "image_three": "shopify:\/\/shop_images\/mayos-homepage.png",
               "text_image_three": "shopify:\/\/shop_images\/mayos-text.png",
               "text_three": "Shop Now",
               "btn_link_three": "shopify:\/\/collections\/healthy-mayo",
+              "background_color_three": "lighter_peach",
               "image_four": "shopify:\/\/shop_images\/dressings-homepage.png",
               "text_image_four": "shopify:\/\/shop_images\/dressings-text.png",
               "text_four": "Shop Now",
-              "btn_link_four": "shopify:\/\/collections\/dressings-marinades-made-with-avocado-oil"
+              "btn_link_four": "shopify:\/\/collections\/dressings-marinades-made-with-avocado-oil",
+              "background_color_four": "lighter_green"
             }
           },
           "1548365036224": {
@@ -51,9 +55,9 @@
               "text_image": "shopify:\/\/shop_images\/madetonourish.png",
               "background_image": "shopify:\/\/shop_images\/aboutus_menu_desktop_illustration.gif",
               "text_one": "Chosen Foods",
-              "btn_link_one": "shopify:\/\/pages\/our-story",
-              "text_two": "",
-              "btn_link_two": ""
+              "btn_link_one": "shopify:\/\/pages\/about-chosen-foods",
+              "text_two": "Our Avocados",
+              "btn_link_two": "shopify:\/\/pages\/our-avocado-oil"
             }
           },
           "1548398317196": {
@@ -109,6 +113,16 @@
               "background_color": "peach"
             }
           },
+          "1549035718105": {
+            "type": "hero_banner",
+            "settings": {
+              "background_image": "shopify:\/\/shop_images\/infused-sprays.jpg",
+              "hero_full": true,
+              "text": "Flavorful herbs and spices collide with our 100% Pure Avocado Oil! Try our NEW Infused Sprays - available in 9 insanely tasty flavor combinations.",
+              "text_btn": "Shop Now",
+              "btn_link": "shopify:\/\/collections\/pure-oil-sprays"
+            }
+          },
           "1547147122226": {
             "type": "hero_columns",
             "settings": {
@@ -116,24 +130,44 @@
               "text_image_one": "shopify:\/\/shop_images\/cookingoils-text.png",
               "text_one": "Shop Now",
               "btn_link_one": "shopify:\/\/collections\/avocado-oil-products",
+              "background_color_one": "light_peach",
               "image_two": "shopify:\/\/shop_images\/cookingsprays-homepage.png",
               "text_image_two": "shopify:\/\/shop_images\/cookingsprays-text.png",
               "text_two": "Shop Now",
               "btn_link_two": "shopify:\/\/collections\/pure-oil-sprays",
+              "background_color_two": "light_yellow",
               "image_three": "shopify:\/\/shop_images\/mayos-homepage.png",
               "text_image_three": "shopify:\/\/shop_images\/mayos-text.png",
               "text_three": "Shop Now",
               "btn_link_three": "shopify:\/\/collections\/healthy-mayo",
+              "background_color_three": "lighter_peach",
               "image_four": "shopify:\/\/shop_images\/dressings-homepage.png",
               "text_image_four": "shopify:\/\/shop_images\/dressings-text.png",
               "text_four": "Shop Now",
-              "btn_link_four": "shopify:\/\/collections\/dressings-marinades-made-with-avocado-oil"
+              "btn_link_four": "shopify:\/\/collections\/dressings-marinades-made-with-avocado-oil",
+              "background_color_four": "lighter_green"
+            }
+          },
+          "1549211451555": {
+            "type": "logos",
+            "settings": {
+              "title": "Find us in a store near you",
+              "logo_1": "shopify:\/\/shop_images\/Vons-Safeway-black.png",
+              "logo_2": "shopify:\/\/shop_images\/sprouts-black.png",
+              "logo_3": "shopify:\/\/shop_images\/costco-black.png",
+              "logo_4": "shopify:\/\/shop_images\/Jimbo-black.png",
+              "logo_5": "shopify:\/\/shop_images\/wholefoods-black.png",
+              "logo_6": "shopify:\/\/shop_images\/kroger-black.png",
+              "text_btn": "View Map",
+              "btn_link": "shopify:\/\/pages\/where-to-buy"
             }
           }
         },
         "block_order": [
           "1548684822890",
-          "1547147122226"
+          "1549035718105",
+          "1547147122226",
+          "1549211451555"
         ],
         "settings": {
         }
@@ -145,7 +179,7 @@
             "type": "hero",
             "settings": {
               "image": "shopify:\/\/shop_images\/cookingoils-category.png",
-              "text_image": "shopify:\/\/shop_images\/cookingoils-text.png"
+              "text_image": ""
             }
           }
         },
