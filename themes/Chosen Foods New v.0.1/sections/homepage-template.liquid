@@ -6,6 +6,8 @@
       {% include 'hero-columns', type: 'block' %}
     {% elsif block.type == "hero_banner" %}
       {% include 'hero-banner', type: 'block' %}
+    {% elsif block.type == "logos" %}
+      {% include 'logos', type: 'block' %}
     {% endif %}
   {% endfor %}
 {% endif %}
@@ -269,6 +271,58 @@
           "type": "textarea",
           "id": "text",
           "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "text_btn",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link",
+          "type": "url",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "logos",
+      "name": "Logos",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_1",
+          "label": "Logo One"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_2",
+          "label": "Logo Two"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_3",
+          "label": "Logo Three"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_4",
+          "label": "Logo Four"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_5",
+          "label": "Logo Five"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_6",
+          "label": "Logo Six"
         },
         {
           "type": "text",

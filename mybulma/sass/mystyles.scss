@@ -189,6 +189,16 @@ $accordion-content-border: hidden !default;
     &:active, &.is-active {
       background-color: darken($dark-yellow, 5%);
     }
+    &.is-outlined {
+      background-color: transparent;
+      border-color: $dark-yellow;
+      color: $dark-yellow;
+      &:hover, &:focus {
+        background-color: $dark-yellow;
+        border-color: $dark-yellow;
+        color: $white;
+      }
+    }
   }
   &.is-light-orange {
     background-color: $light-orange;
@@ -200,6 +210,16 @@ $accordion-content-border: hidden !default;
     &:active, &.is-active {
       background-color: darken($light-orange, 5%);
     }
+    &.is-outlined {
+      background-color: transparent;
+      border-color: $light-orange;
+      color: $light-orange;
+      &:hover, &:focus {
+        background-color: $light-orange;
+        border-color: $light-orange;
+        color: $white;
+      }
+    }
   }
   &.is-light-blue {
     background-color: $light-blue;
@@ -210,6 +230,16 @@ $accordion-content-border: hidden !default;
     }
     &:active, &.is-active {
       background-color: darken($light-blue, 5%);
+    }
+    &.is-outlined {
+      background-color: transparent;
+      border-color: $light-blue;
+      color: $light-blue;
+      &:hover, &:focus {
+        background-color: $light-blue;
+        border-color: $light-blue;
+        color: $white;
+      }
     }
   }
 }
@@ -999,28 +1029,22 @@ main {
               flex-direction: column;
               justify-content: center;
               height: 100%;
-
               width: 100%;
             }
           }
           .content-left {
-            // width: 100%;
-            img {
-              // max-height: 100%;
-              // width: inherit;
-              max-height: 100%;
-              width: initial;
-              // height: 100%;
-              // max-width: initial;
-              height: initial;
-              max-width: 100%;
-              @include from($fullhd) {
-                height: auto;
-                max-width: 100%;
-                width: 80%;
-                max-height: inherit;
-              }
-            }
+            // img {
+            //   max-height: 100%;
+            //   width: initial;
+            //   height: initial;
+            //   max-width: 100%;
+            //   @include from($fullhd) {
+            //     height: auto;
+            //     max-width: 100%;
+            //     width: 80%;
+            //     max-height: inherit;
+            //   }
+            // }
           }
           .content-right {
             // display: flex;
@@ -1056,6 +1080,13 @@ main {
             height: 65%;
             .image {
               height: 100%;
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+              }
               img {
                 max-height: 100%;
                 width: auto;
@@ -1325,7 +1356,18 @@ main {
           }
         }
       }
-
+    }
+  }
+  // Logos
+  &.logos {
+    .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      img {
+        opacity: .5;
+      }
     }
   }
 }
@@ -1515,7 +1557,7 @@ main {
       height: 164px;
       padding: 0 1rem;
       position: relative;
-      background: url('../assets/recipes-placeholder.jpg') center;
+      // background: url('../assets/recipes-placeholder.jpg') center;
       background-size: cover;
       .tag {
         border-radius: 0;
@@ -1776,6 +1818,10 @@ main {
 // Extra Code
 // Shopify
 // Base
+// body {
+//   height: 100%;
+//   position: relative;
+// }
 #shopify-section-header {
   & + main {
     margin-top: 4.7rem;
@@ -1784,3 +1830,12 @@ main {
     }
   }
 }
+// #shopify-section-footer {
+//   footer {
+//     &.footer {
+//       position: static;
+//       bottom: 0;
+//       width: 100%;
+//     }
+//   }
+// }

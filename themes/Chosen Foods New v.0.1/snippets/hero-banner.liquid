@@ -14,11 +14,11 @@
 <section class="hero is-banner {% if hero_full == true %} is-fullheight is-full-custom{% endif %}" style="background-image:url({{ background_image | img_url: '1920x' }});">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <div class="content">
-        <h3 class="title is-3 has-text-primary">
+      <div data-aos="fade-up" class="content">
+        <h3 class="title is-2 has-text-primary">
           {{ text }}
         </h3>
-        <a href="{{ btn_link_two }}" class="button is-small is-rounded is-warning is-uppercase has-text-centered has-text-white">
+        <a href="{{ btn_link }}" class="button is-small is-rounded is-warning is-uppercase has-text-centered has-text-white">
           <span>{{ text_btn }}</span>
         </a>
       </div>

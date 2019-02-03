@@ -7969,6 +7969,14 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     background-color: #e9d049; }
   .button.is-dark-yellow:active, .button.is-dark-yellow.is-active {
     background-color: #e7cd3d; }
+  .button.is-dark-yellow.is-outlined {
+    background-color: transparent;
+    border-color: #EAD354;
+    color: #EAD354; }
+    .button.is-dark-yellow.is-outlined:hover, .button.is-dark-yellow.is-outlined:focus {
+      background-color: #EAD354;
+      border-color: #EAD354;
+      color: #FFFFFF; }
 
 .button.is-light-orange {
   background-color: #F4A062;
@@ -7978,6 +7986,14 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     background-color: #f39956; }
   .button.is-light-orange:active, .button.is-light-orange.is-active {
     background-color: #f2924a; }
+  .button.is-light-orange.is-outlined {
+    background-color: transparent;
+    border-color: #F4A062;
+    color: #F4A062; }
+    .button.is-light-orange.is-outlined:hover, .button.is-light-orange.is-outlined:focus {
+      background-color: #F4A062;
+      border-color: #F4A062;
+      color: #FFFFFF; }
 
 .button.is-light-blue {
   background-color: #71A6B3;
@@ -7987,6 +8003,14 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     background-color: #69a1af; }
   .button.is-light-blue:active, .button.is-light-blue.is-active {
     background-color: #609caa; }
+  .button.is-light-blue.is-outlined {
+    background-color: transparent;
+    border-color: #71A6B3;
+    color: #71A6B3; }
+    .button.is-light-blue.is-outlined:hover, .button.is-light-blue.is-outlined:focus {
+      background-color: #71A6B3;
+      border-color: #71A6B3;
+      color: #FFFFFF; }
 
 .pagination .pagination-list li:first-child, .pagination .pagination-list li:last-child {
   display: block !important; }
@@ -8477,17 +8501,6 @@ main {
       justify-content: center;
       height: 100%;
       width: 100%; }
-  .hero.is-main.is-full-custom .container .content-left img {
-    max-height: 100%;
-    width: initial;
-    height: initial;
-    max-width: 100%; }
-    @media screen and (min-width: 1472px) {
-      .hero.is-main.is-full-custom .container .content-left img {
-        height: auto;
-        max-width: 100%;
-        width: 80%;
-        max-height: inherit; } }
   .hero.is-main.is-full-custom .container .content-right .image {
     display: flex;
     flex-direction: column;
@@ -8509,6 +8522,12 @@ main {
     height: 65%; }
     .hero.is-main.is-full-custom .container .content-top .image {
       height: 100%; }
+      .hero.is-main.is-full-custom .container .content-top .image a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%; }
       .hero.is-main.is-full-custom .container .content-top .image img {
         max-height: 100%;
         width: auto; }
@@ -8638,6 +8657,14 @@ main {
             width: 100%;
             padding: 0; } }
 
+.hero.logos .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; }
+  .hero.logos .image img {
+    opacity: .5; }
+
 .hero-columns .hero .hero-body .container .image {
   display: flex;
   align-items: center;
@@ -8751,7 +8778,6 @@ main {
   height: 164px;
   padding: 0 1rem;
   position: relative;
-  background: url("../assets/recipes-placeholder.jpg") center;
   background-size: cover; }
   .product-page .recipes .post .tag {
     border-radius: 0;

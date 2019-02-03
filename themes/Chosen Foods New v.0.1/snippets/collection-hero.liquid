@@ -5,7 +5,7 @@
   {% assign image = section.settings.image %}
   {% assign text_image = section.settings.text_image %}
 {% endif %}
-<section class="hero is-collection has-background-light-peach">
+<section class="hero is-collection{% if collection.id == 328543425 %} has-background-light-peach{% elsif collection.id == 240573569 %} has-background-light-yellow{% elsif collection.id == 215260481 %} has-background-lighter-peach{% elsif collection.id == 31928975396 %} has-background-lighter-green{% else %} has-background-light-peach{% endif %}">
   {% include 'breadcrumbs' %}
   <div class="hero-body">
     <div class="container has-text-centered">
@@ -24,17 +24,23 @@
         </div>
         <div data-aos="fade-up">
           <h1 class="is-hidden">{{ collection.title }}</h1>
-          <figure class="image">
-            <img class="is-margin-center" alt="{{ text_image.alt | escape }}" src="{{ text_image | img_url: '700x' }}">
-          </figure>
+          {% if text_image %}
+            <figure class="image">
+              <img class="is-margin-center" alt="{{ text_image.alt | escape }}" src="{{ text_image | img_url: '700x' }}">
+            </figure>
+          {% endif %}
         </div>
       {% endif %}
+      <div class="content">
+        <br>
+        <h2 class="title is-3 is-size-7-mobile has-text-centered has-text-warning">{{ collection.description }}</h2>
+      </div>
       <div data-aos="fade-up" class="filters columns is-mobile">
         <div class="column">
           {% if collection.metafields.linklist.handle != blank %}
             <div class="dropdown is-hoverable">
               <div class="dropdown-trigger">
-                <button class="button is-small is-rounded is-link is-uppercase has-text-centered" aria-haspopup="true" aria-controls="dropdown-filter">
+                <button class="button is-small is-rounded{% if collection.id == 328543425 %} is-link{% elsif collection.id == 240573569 %} is-dark-yellow{% elsif collection.id == 215260481 %} is-light-orange{% elsif collection.id == 31928975396 %} is-light-blue{% else %} is-link{% endif %} is-uppercase has-text-centered" aria-haspopup="true" aria-controls="dropdown-filter">
                   <span>Filter</span>
                 </button>
               </div>

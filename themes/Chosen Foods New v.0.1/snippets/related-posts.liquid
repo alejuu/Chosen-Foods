@@ -11,7 +11,7 @@
           {% for article in blogs.central.articles %}
             {% if article.tags contains product_tag %}
               <div class="column is-one-third">
-                <div class="post" style="background-image: url('{{ article.image.src | img_url: '500x' }}')">
+                <div class="post" style="background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('{{ article.image.src | img_url: '500x' }}')">
                   <span class="tag is-success">Recipes</span>
                   <h3 class="title is-3 has-text-white">{{ article.title }}</h3>
                   <a href="../blogs/{{ article.handle }}"></a>
