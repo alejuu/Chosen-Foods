@@ -106,6 +106,7 @@
               "image": "shopify:\/\/shop_images\/hero-homepage.png",
               "text_image": "shopify:\/\/shop_images\/meetthehero-text.png",
               "text": "Discover More",
+              "text_link": "shopify:\/\/pages\/our-avocado-oil",
               "btn_text": "",
               "btn_link": "",
               "hero_full": true,
@@ -120,7 +121,7 @@
               "hero_full": true,
               "text": "Flavorful herbs and spices collide with our 100% Pure Avocado Oil! Try our NEW Infused Sprays - available in 9 insanely tasty flavor combinations.",
               "text_btn": "Shop Now",
-              "btn_link": "shopify:\/\/collections\/pure-oil-sprays"
+              "btn_link": "shopify:\/\/collections\/infused-avocado-oil-sprays"
             }
           },
           "1547147122226": {
