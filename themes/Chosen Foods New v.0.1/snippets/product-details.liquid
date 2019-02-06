@@ -5,7 +5,7 @@
         <div class="product-image">
           <div class="badge">
             {% for tag in product.tags %}
-              {% if tag contains 'Staff Picks' %}
+              {% if tag contains 'Staff Pick' %}
                 <span class="icon is-hidden-desktop">
                   <i class="cf-icon-staff-pick-32"></i>
                 </span>
@@ -131,7 +131,7 @@
             {% if product.metafields.custom_fields.product_staff_picks_text %}
               <article class="accordion">
                 <div class="accordion-header toggle">
-                  <h2 class="title is-6">Staff Picks</h2>
+                  <h2 class="title is-6">Staff Pick</h2>
                   <button class="toggle" aria-label="toggle"></button>
                 </div>
                 <div class="accordion-body">

@@ -8572,6 +8572,10 @@ main {
       flex-direction: column;
       justify-content: center;
       height: 100%; }
+      .hero.is-main.is-full-custom .container .content-bottom .image a {
+        display: block;
+        width: 100%;
+        height: auto; }
       .hero.is-main.is-full-custom .container .content-bottom .image img {
         max-height: 100%;
         max-width: 100%;

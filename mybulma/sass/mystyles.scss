@@ -1148,6 +1148,11 @@ main {
               flex-direction: column;
               justify-content: center;
               height: 100%;
+              a {
+                display: block;
+                width: 100%;
+                height: auto;
+              }
               img {
                 // max-height: 100%;
                 // width: auto;
