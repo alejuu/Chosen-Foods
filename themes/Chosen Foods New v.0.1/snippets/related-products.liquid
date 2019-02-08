@@ -14,13 +14,13 @@
 <section class="section collection-grid has-background-grey-lighter">
   <h3 class="title is-2 has-text-primary has-text-centered">Similar Products</h3>
   <div class="container">
-    <div class="columns is-flex is-multiline">
+    <div class="columns is-flex is-multiline is-centered">
       {% for product in related_collection.products limit: 9 %}
         {% if product.handle <> thisproduct %}
           <div class="column is-half-mobile is-one-quarter">
             <div class="product has-background-white">
               <figure class="image is-margin-center">
-                <img src="{{ product.featured_image.src | img_url: '300x' }}">
+                <img src="{{ product.featured_image.src | img_url: '400x' }}">
               </figure>
               <div class="has-text-centered product-info">
                 <h3 class="title is-3">{{ product.title }}</h3>

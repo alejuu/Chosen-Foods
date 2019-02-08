@@ -3,7 +3,7 @@
     <div class="columns is-flex is-multiline">
       {% for item in search.results %}
         <div class="column is-half-mobile is-one-quarter">
-          <div class="product">
+          <div class="{% if item.object_type == 'article' %}article{% else %}product{% endif %}">
             <div class="badge">
               {% if product.compare_at_price and product.compare_at_price != product.price %}
                 <span class="icon">
@@ -20,7 +20,11 @@
             </div>
             {% if item.featured_image %}
               <figure class="image is-margin-center">
-                <img src="{{ item.featured_image.src | img_url: '1920x' }}">
+                <img src="{{ item.featured_image.src | img_url: '400x' }}">
+              </figure>
+            {% else %}
+              <figure class="image is-margin-center">
+                <img src="{{ item.image.src | img_url: '400x' }}">
               </figure>
             {% endif %}
             <div class="has-text-centered product-info">
@@ -36,13 +40,5 @@
         </div>
       {% endfor %}
     </div>
-    <!-- <div class="container has-text-centered">
-      <a href="">
-        <h5 class="title is-5 has-text-centered has-text-primary is-marginless">Discover More</h5>
-        <span class="icon is-medium">
-          <i class="cf-icon-arrow-down-32"></i>
-        </span>
-      </a>
-    </div> -->
   </div>
 </section>

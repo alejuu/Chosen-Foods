@@ -559,10 +559,12 @@ $accordion-content-border: hidden !default;
       width: 32px;
       height: 32px;
       .cf-icon-account-32 {
-        zoom: .6;
+        // zoom: .6;
+        transform: scale(.6);
       }
       .cf-icon-cart-32 {
-        zoom: .8;
+        // zoom: .8;
+        transform: scale(.8);
       }
     }
   }
@@ -1812,6 +1814,23 @@ main {
         }
       }
     }
+  }
+}
+
+// Extra Code
+// Search Page
+.article {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    margin-bottom: 2em;
   }
 }
 
