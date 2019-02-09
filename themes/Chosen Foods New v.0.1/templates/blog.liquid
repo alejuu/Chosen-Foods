@@ -17,9 +17,15 @@
                   <div class="card">
                     <div class="card-image">
                       <figure class="image is-4by3">
-                        <a href="{{ article.handle }}">
-                          <img src="{{ article.image.src | img_url: '700x' }}" alt="{{ article.image.alt }}">
-                        </a>
+                        {% if current_tags %}
+                          <a href="../../{{ article.handle }}">
+                            <img src="{{ article.image.src | img_url: '700x' }}" alt="{{ article.image.alt }}">
+                          </a>
+                        {% else %}
+                          <a href="{{ article.handle }}">
+                            <img src="{{ article.image.src | img_url: '700x' }}" alt="{{ article.image.alt }}">
+                          </a>
+                        {% endif %}
                       </figure>
                     </div>
                   </div>
@@ -41,7 +47,11 @@
                         </p>
                       </div>
                       <div class="content has-text-centered">
-                        <a href="{{ article.handle }}" class="button is-small is-rounded is-link is-outlined is-uppercase has-text-centered">Read More</a>
+                        {% if current_tags %}
+                          <a href="../../{{ article.handle }}" class="button is-small is-rounded is-link is-outlined is-uppercase has-text-centered">Read More</a>
+                        {% else %}
+                          <a href="{{ article.handle }}" class="button is-small is-rounded is-link is-outlined is-uppercase has-text-centered">Read More</a>
+                        {% endif %}
                       </div>
                     </div>
                   </div>
