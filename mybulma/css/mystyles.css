@@ -8378,7 +8378,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     left: 52px;
     width: calc(100% - 52px);
     text-align: right;
-    background-color: #00857D; }
+    background-color: #00857D;
+    z-index: 10; }
   #navMenu.is-active .navbar-start > a.navbar-item {
     padding: 0.5rem 3rem;
     font-weight: bold; }

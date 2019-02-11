@@ -760,6 +760,7 @@ $accordion-content-border: hidden !default;
         width: calc(100% - 52px);
         text-align: right;
         background-color: $green;
+        z-index: 10;
         .button {
           // height: auto;
           // padding-top: 1em;
