@@ -24,7 +24,7 @@
     {{ content_for_header }}
 
     <link rel="canonical" href="{{ canonical_url }}" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link rel="shortcut icon" href="{{ 'chosen-favicon.png' | asset_img_url: '32x32' }}" type="image/png">
     {{ 'styles.scss' | asset_url | stylesheet_tag }}
     <!-- {{ 'styles.scss.css' | asset_url | stylesheet_tag }} -->
