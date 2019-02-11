@@ -537,6 +537,10 @@ $accordion-content-border: hidden !default;
     //   height: 100%;
     //   object-fit: contain;
     // }
+    .parallax-image {
+      transform: translateY(var(--translateY));
+	    will-change: transform;
+    }
   }
   @include until($tablet) {
     .image {

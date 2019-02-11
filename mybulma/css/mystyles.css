@@ -8235,6 +8235,9 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     height: 100%;
     display: flex;
     align-items: center; }
+    .parallax .image .parallax-image {
+      transform: translateY(var(--translateY));
+      will-change: transform; }
   @media screen and (max-width: 768px) {
     .parallax .image img {
       height: 100%;
