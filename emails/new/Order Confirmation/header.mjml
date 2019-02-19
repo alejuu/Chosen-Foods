@@ -1,0 +1,36 @@
+<mj-section background-color="#fff" css-class="hide_on_mobile">
+  
+  <mj-column css-class="hidden-m" vertical-align="middle" width="50%">
+    
+    <mj-image align="left" width="100px" 
+              src="https://cdn.shopify.com/s/files/1/0254/6261/t/40/assets/chosen-logo.png?17591158240612342366" />
+    
+  </mj-column>
+
+  <mj-column css-class="hidden-m" vertical-align="middle" width="50%">
+    
+    <mj-button align="right" text-transform="uppercase" background-color="#EEBC2A" border-radius="360px" width="120px" height="20px" color="white" css-class="button">
+      Shop 
+    </mj-button>
+    
+  </mj-column>
+  
+</mj-section>
+<mj-section background-color="#fff" css-class="hide_on_desktop">
+  
+  <mj-column css-class="hidden-m" vertical-align="middle" width="100%">
+    
+    <mj-image align="center" width="100px" 
+              src="https://cdn.shopify.com/s/files/1/0254/6261/t/40/assets/chosen-logo.png?17591158240612342366" />
+    
+  </mj-column>
+
+  <mj-column css-class="hidden-m" vertical-align="middle" width="100%">
+    
+    <mj-button align="center" text-transform="uppercase" background-color="#EEBC2A" border-radius="360px" width="120px" height="20px" color="white" css-class="button">
+      Shop 
+    </mj-button>
+    
+  </mj-column>
+  
+</mj-section>

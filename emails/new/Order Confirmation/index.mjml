@@ -1,0 +1,137 @@
+<mjml>
+
+  <mj-head>
+
+    <mj-attributes>
+      <mj-text align="center" color="#555" />
+    </mj-attributes>
+    
+    <mj-style inline="inline">
+      .button {
+        letter-spacing: 1.5px;
+      }
+    </mj-style>
+    <mj-style>
+      .hide_on_mobile { display: none !important;}
+      .hide_on_desktop { display: none !important;}
+      @media only screen and (min-width: 480px) { .hide_on_mobile { display: block !important;} }
+      @media only screen and (max-width: 480px) { .hide_on_desktop { display: block !important;} }
+    </mj-style>
+
+  </mj-head>
+ 
+  <mj-body background-color="#eee" width="600px">
+
+    <mj-include path="./header.mjml" />
+    
+    <mj-hero mode="fluid-height" background-width="600px" background-height="400px" background-url="https://cdn.shopify.com/s/files/1/0254/6261/files/aboutus_menu_desktop_illustration_1366x.gif?v=1548365076" background-color="#2a3448" padding="100px 0px">
+      
+      <mj-text padding="20px" color="#ffffff" align="center" font-size="32px" line-height="32px" font-weight="900">
+        Thank you!
+      </mj-text>
+      
+      <mj-text container-background-color="#F9E1B7" padding="20px" color="#ffffff" align="center" font-size="18px" line-height="15px" font-weight="400">
+        We received you order.<br></br>
+        We'll email you a shopping confirmation soon.
+      </mj-text>
+      
+    </mj-hero>
+
+    <mj-section background-color="#fff">
+      
+      <mj-column width="100%">
+      
+        <mj-text padding="20px" color="#000" align="center" font-size="32px" line-height="32px" font-weight="900">
+          Order Number #{{ order_number }}
+        </mj-text>
+      
+        <mj-text padding="20px" color="#000" align="center" font-size="18px" line-height="15px" font-weight="400">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </mj-text>
+        
+      </mj-column>
+      
+      <mj-column width="100%">
+        
+        <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" />
+        
+      </mj-column>
+      
+      <mj-column width="100%">
+      
+        <mj-text padding="20px" color="#000" align="center" font-size="32px" line-height="32px" font-weight="900">
+          Order Summary
+        </mj-text>
+        
+      </mj-column>
+
+      <mj-column width="50%">   
+        
+        <mj-image width="200" src="http://placehold.it/200x200"></mj-image>
+        
+      </mj-column>
+
+      <mj-column width="50%">
+        
+        <mj-text color="#00857D" align="left">
+          <h2>MJML Rocks!</h2>
+        </mj-text>
+        
+        <mj-text color="#000" align="left" font-size="18px">
+          <p>Qty: 1</p>
+          <p>$15.95</p>
+        </mj-text>
+        
+      </mj-column>
+      
+      <mj-column width="100%">
+        
+        <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" />
+        
+      </mj-column>
+      
+      <mj-column width="100%">
+        
+        <mj-table>
+          
+          <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+            <td width="50%" style="padding: 0 15px 0 0;font-weight: 900;font-size: 18px;text-transform: uppercase">Subtotal</td>
+            <td width="50%" style="padding: 0 15px;font-size: 18px;">$39.90</td>
+          </tr>
+          
+          <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+            <td width="50%" style="padding: 0 15px 0 0;font-weight: 900;font-size: 18px;text-transform: uppercase">Tax</td>
+            <td width="50%" style="padding: 0 15px;font-size: 18px;">$0.00</td>
+          </tr>
+          
+          <tr>
+            <td width="50%" style="padding: 0 15px 0 0;font-weight: 900;font-size: 18px;text-transform: uppercase">Total</td>
+            <td width="50%" style="padding: 0 15px;font-size: 18px;">$39.90</td>
+          </tr>
+          
+        </mj-table>
+        
+      </mj-column>
+      
+      <mj-column width="100%">
+      
+        <mj-text color="#000" align="center" font-size="18px">
+          <p style="text-transform:uppercase;font-weight:bold;color:#00857D;">Date Ordered</p>
+          <p>January 25, 2019</p>
+        </mj-text>
+        
+        <mj-text color="#000" align="center" font-size="18px">
+          <p style="text-transform:uppercase;font-weight:bold;color:#00857D;">Shipping To</p>
+          <p>Customer Name</p>
+          <p>Address</p>
+        </mj-text>
+        
+      </mj-column>
+
+    </mj-section>
+
+    <mj-include path="./footer.mjml" />
+
+  </mj-body>
+
+</mjml>
