@@ -29,7 +29,7 @@
                     {% comment %}
                     If we have past orders, loop through each one
                     {% endcomment %}
-                    {% paginate customer.orders by 10 %}
+                    {% paginate customer.orders by 6 %}
                       {% if customer.orders.size != 0 %}
                         <div class="content has-text-left">
                           <table class="table is-bordered is-striped is-hoverable is-fullwidth is-responsive">
@@ -61,17 +61,7 @@
                           <p>You haven't placed any orders yet.</p>
                         </div>
                       {% endif %}
-                      {% if paginate.pages > 1 %}
-                        <hr>
-                        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                          {% if paginate.previous.is_link %}
-                            <a href="{{ paginate.previous.url }}" class="pagination-previous">{{ paginate.previous.title }}</a>
-                          {% endif %}
-                          {% if paginate.next.is_link %}
-                            <a href="{{ paginate.next.url }}" class="pagination-next">{{ paginate.next.title }}</a>
-                          {% endif %}
-                        </nav>
-                      {% endif %}
+                      {% include 'pagination' %}
                     {% endpaginate %}
                   </div>
                 </div>

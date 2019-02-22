@@ -8,7 +8,9 @@
   </section>
   <section class="section">
     <div class="content buttons">
+      {% if customer.addresses.size < 3 %}
       <a href="#" class="button is-small is-rounded is-uppercase is-primary has-text-centered" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">Add a New Address</a>
+      {% endif %}
     </div>
     <div class="content has-text-left">
       <div id="AddAddress" class="form-vertical address-view-edit" style="display: none;">
@@ -159,9 +161,9 @@
                             </div>
                           </div>
                           <div class="field">
-                            <label for="AddressAddress2_{{form.id}}" class="label">Address 2<span class="required">*</span></label>
+                            <label for="AddressAddress2_{{form.id}}" class="label">Address 2</label>
                             <div class="control">
-                              <input type="text" id="AddressAddress2_{{ form.id }}" class="input" name="address[address2]" value="{{ form.address2 }}" autocapitalize="words" required>
+                              <input type="text" id="AddressAddress2_{{ form.id }}" class="input" name="address[address2]" value="{{ form.address2 }}" autocapitalize="words">
                             </div>
                           </div>
                           <div class="field" style="clear:both;">
@@ -225,17 +227,7 @@
             </div>
           {% endfor %}
         </div>
-        {% if paginate.pages > 1 %}
-          <hr>
-          <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-            {% if paginate.previous.is_link %}
-              <a href="{{ paginate.previous.url }}" class="pagination-previous">{{ paginate.previous.title }}</a>
-            {% endif %}
-            {% if paginate.next.is_link %}
-              <a href="{{ paginate.next.url }}" class="pagination-next">{{ paginate.next.title }}</a>
-            {% endif %}
-          </nav>
-        {% endif %}
+        {% include 'pagination' %}
       {% endpaginate %}
     </div>
     <div class="content buttons">
