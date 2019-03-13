@@ -36,7 +36,8 @@
     {% section 'header' %}
     {{ content_for_layout }}
     {% section 'footer' %}
-  </body>
+  <!-- This line added automatically by JSON-LD for SEO. -->{% include 'jsonld-for-seo' %}
+</body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   {% if template == "product" %}
     {{ 'product.js' | asset_url | script_tag }}
