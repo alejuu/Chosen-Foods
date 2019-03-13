@@ -10,7 +10,7 @@
         {% for link in linklists[collection.metafields.linklist.handle].links %}
           {% assign collection_link = link.url | remove: '/collections/' %}
           {% if collections[collection_link].products_count > 0 %}
-            <a href="{{ link.url }}" class="dropdown-item">
+            <a href="{{ link.url }}" class="dropdown-item{% if link.active %} is-active{% endif %}">
               {{ link.title }}
             </a>
           {% endif %}
