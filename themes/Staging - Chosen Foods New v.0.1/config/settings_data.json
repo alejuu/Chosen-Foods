@@ -1,0 +1,231 @@
+{
+  "current": {
+    "bg_color": "#ffffff",
+    "text_color": "#cccccc",
+    "use_logo": false,
+    "checkout_header_image": "",
+    "checkout_use_storefront_logo": false,
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "1548288680885": {
+            "type": "megamenu_columns",
+            "settings": {
+              "menu_title": "Shop",
+              "image_one": "shopify:\/\/shop_images\/cookingoils-homepage.png",
+              "text_image_one": "shopify:\/\/shop_images\/cookingoils-text.png",
+              "text_one": "Shop Now",
+              "btn_link_one": "shopify:\/\/collections\/avocado-oil-products",
+              "background_color_one": "light_peach",
+              "image_two": "shopify:\/\/shop_images\/cookingsprays-homepage.png",
+              "text_image_two": "shopify:\/\/shop_images\/cookingsprays-text.png",
+              "text_two": "Shop Now",
+              "btn_link_two": "shopify:\/\/collections\/pure-oil-sprays",
+              "background_color_two": "light_yellow",
+              "image_three": "shopify:\/\/shop_images\/mayos-homepage.png",
+              "text_image_three": "shopify:\/\/shop_images\/mayos-text.png",
+              "text_three": "Shop Now",
+              "btn_link_three": "shopify:\/\/collections\/healthy-mayo",
+              "background_color_three": "lighter_peach",
+              "image_four": "shopify:\/\/shop_images\/dressings-homepage.png",
+              "text_image_four": "shopify:\/\/shop_images\/dressings-text.png",
+              "text_four": "Shop Now",
+              "btn_link_four": "shopify:\/\/collections\/dressings-marinades-made-with-avocado-oil",
+              "background_color_four": "lighter_green"
+            }
+          },
+          "1548365036224": {
+            "type": "megamenu_hero",
+            "settings": {
+              "menu_title": "About",
+              "text_image": "shopify:\/\/shop_images\/madetonourish.png",
+              "background_image": "shopify:\/\/shop_images\/aboutus_menu_desktop_illustration.gif",
+              "text_one": "Chosen Foods",
+              "btn_link_one": "shopify:\/\/pages\/about-chosen-foods",
+              "text_two": "Our Avocados",
+              "btn_link_two": "shopify:\/\/pages\/our-avocado-oil"
+            }
+          },
+          "1548398317196": {
+            "type": "menu_bar",
+            "settings": {
+              "bar_linklist": "top-bar"
+            }
+          },
+          "1548399097761": {
+            "type": "search_bar",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "1548288680885",
+          "1548365036224",
+          "1548398317196",
+          "1548399097761"
+        ],
+        "settings": {
+          "one_linklist": "main-menu",
+          "two_linklist": "company",
+          "three_linklist": "footer-service",
+          "instagram_url": "https:\/\/instagram.com\/chosenfoods",
+          "twitter_url": "https:\/\/twitter.com\/chosenfoods",
+          "facebook_url": "https:\/\/www.facebook.com\/chosenfoods"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_one_linklist": "footer-menu-one",
+          "footer_two_linklist": "footer-menu-two",
+          "instagram_url": "https:\/\/www.instagram.com\/chosenfoods\/",
+          "twitter_url": "https:\/\/twitter.com\/chosenfoods",
+          "facebook_url": "https:\/\/www.facebook.com\/ChosenFoods\/"
+        }
+      },
+      "homepage-template": {
+        "type": "homepage-template",
+        "blocks": {
+          "1548684822890": {
+            "type": "hero",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero-homepage.png",
+              "text_image": "shopify:\/\/shop_images\/meetthehero-text.png",
+              "text": "Discover More",
+              "text_link": "shopify:\/\/pages\/our-avocado-oil",
+              "btn_text": "",
+              "btn_link": "",
+              "hero_full": true,
+              "hero_top": true,
+              "background_color": "peach"
+            }
+          },
+          "1549035718105": {
+            "type": "hero_banner",
+            "settings": {
+              "background_image": "shopify:\/\/shop_images\/infused-sprays.jpg",
+              "hero_full": true,
+              "text": "Flavorful herbs and spices collide with our 100% Pure Avocado Oil! Try our NEW Infused Sprays - available in 9 insanely tasty flavor combinations.",
+              "text_btn": "Shop Now",
+              "btn_link": "shopify:\/\/collections\/infused-avocado-oil-sprays"
+            }
+          },
+          "1547147122226": {
+            "type": "hero_columns",
+            "settings": {
+              "image_one": "shopify:\/\/shop_images\/cookingoils-homepage.png",
+              "text_image_one": "shopify:\/\/shop_images\/cookingoils-text.png",
+              "text_one": "Shop Now",
+              "btn_link_one": "shopify:\/\/collections\/avocado-oil-products",
+              "background_color_one": "light_peach",
+              "image_two": "shopify:\/\/shop_images\/cookingsprays-homepage.png",
+              "text_image_two": "shopify:\/\/shop_images\/cookingsprays-text.png",
+              "text_two": "Shop Now",
+              "btn_link_two": "shopify:\/\/collections\/pure-oil-sprays",
+              "background_color_two": "light_yellow",
+              "image_three": "shopify:\/\/shop_images\/mayos-homepage.png",
+              "text_image_three": "shopify:\/\/shop_images\/mayos-text.png",
+              "text_three": "Shop Now",
+              "btn_link_three": "shopify:\/\/collections\/healthy-mayo",
+              "background_color_three": "lighter_peach",
+              "image_four": "shopify:\/\/shop_images\/dressings-homepage.png",
+              "text_image_four": "shopify:\/\/shop_images\/dressings-text.png",
+              "text_four": "Shop Now",
+              "btn_link_four": "shopify:\/\/collections\/dressings-marinades-made-with-avocado-oil",
+              "background_color_four": "lighter_green"
+            }
+          },
+          "1549211451555": {
+            "type": "logos",
+            "settings": {
+              "title": "Find us in a store near you",
+              "logo_1": "shopify:\/\/shop_images\/Vons-Safeway-black.png",
+              "logo_2": "shopify:\/\/shop_images\/sprouts-black.png",
+              "logo_3": "shopify:\/\/shop_images\/costco-black.png",
+              "logo_4": "shopify:\/\/shop_images\/Jimbo-black.png",
+              "logo_5": "shopify:\/\/shop_images\/wholefoods-black.png",
+              "logo_6": "shopify:\/\/shop_images\/kroger-black.png",
+              "text_btn": "View Map",
+              "btn_link": "shopify:\/\/pages\/where-to-buy"
+            }
+          }
+        },
+        "block_order": [
+          "1548684822890",
+          "1549035718105",
+          "1547147122226",
+          "1549211451555"
+        ],
+        "settings": {
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "blocks": {
+          "1546056439337": {
+            "type": "hero",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cookingoils-category.png",
+              "text_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1546056439337"
+        ],
+        "settings": {
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "blocks": {
+          "1546066584338": {
+            "type": "hero",
+            "settings": {
+            }
+          },
+          "1546066591863": {
+            "type": "product_details",
+            "settings": {
+            }
+          },
+          "1548782867456": {
+            "type": "recipes",
+            "settings": {
+            }
+          },
+          "1548782879389": {
+            "type": "related",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "1546066584338",
+          "1546066591863",
+          "1548782867456",
+          "1548782879389"
+        ],
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

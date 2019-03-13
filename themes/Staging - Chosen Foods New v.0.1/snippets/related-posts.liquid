@@ -1,0 +1,36 @@
+{% capture product_tag %}{{ product.id }}{% endcapture %}
+{% assign counter = 0 %}
+
+{% for article in blogs.central.articles %}
+  {% if article.tags contains product_tag and counter < 1 %}
+    {% assign counter = counter | plus: 1 %}
+    <section class="section has-background-grey-lighter">
+      <h3 class="title is-2 has-text-primary has-text-centered">Our Favorite Recipes</h3>
+      <div class="container">
+        {% assign counter = 0 %}
+        <div class="columns is-multiline is-centered recipes">
+          {% for article in blogs.central.articles %}
+            {% if article.tags contains product_tag and counter < 6 %}
+              {% assign counter = counter | plus: 1 %}
+              <div class="column is-one-third">
+                <div class="post" style="background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('{{ article.image.src | img_url: '500x' }}')">
+                  <span class="tag is-success">Recipes</span>
+                  <h3 class="title is-3 has-text-white">{{ article.title }}</h3>
+                  <a href="../blogs/{{ article.handle }}"></a>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% for article in blogs.central.articles %}
+          {% if article.tags contains product_tag and counter >= 6 %}
+            {% assign counter = counter | minus: 1 %}
+            <div class="content has-text-centered">
+              <a href="../blogs/central/tagged/{{ product.id }}" class="button is-small is-rounded is-primary is-outlined is-uppercase has-text-centered">More Recipes</a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endfor %}

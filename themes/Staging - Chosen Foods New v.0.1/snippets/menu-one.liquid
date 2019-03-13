@@ -1,0 +1,20 @@
+{% if type == 'block' %}
+  {% assign one_linklist = block.settings.one_linklist %}
+{% else %}
+  {% assign one_linklist = section.settings.one_linklist %}
+{% endif %}
+{% for link in linklists[one_linklist].links %}
+  {% if link.links == blank %}
+    <a href="{{ link.url }}" class="navbar-item">{{ link.title }}</a>
+  {% endif %}
+  {% if link.links != blank %}
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a href="{{ link.url }}" class="navbar-link">{{ link.title }}</a>
+      <div class="navbar-dropdown">
+        {% for childlink in link.links %}
+          <a href="{{ childlink.url }}" class="navbar-item">{{ childlink.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}

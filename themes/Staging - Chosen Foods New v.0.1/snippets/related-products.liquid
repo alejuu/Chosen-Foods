@@ -1,0 +1,38 @@
+{% if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' %}
+  {% for c in product.collections %}
+    {% if c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1 %}
+      {% assign related_collection = c %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign related_collection = collection %}
+{% endif %}
+
+{% assign thisproduct = product.handle %}
+
+<section class="section collection-grid has-background-grey-lighter">
+  <h3 class="title is-2 has-text-primary has-text-centered">Similar Products</h3>
+  <div class="container">
+    <div class="columns is-flex is-multiline is-centered">
+      {% for product in related_collection.products limit: 9 %}
+        {% if product.handle <> thisproduct %}
+          <div class="column is-half-mobile is-one-quarter">
+            <div class="product has-background-white">
+              <figure class="image is-margin-center">
+                <img src="{{ product.featured_image.src | img_url: '400x' }}">
+              </figure>
+              <div class="has-text-centered product-info">
+                <h3 class="title is-3">{{ product.title }}</h3>
+                <p class="title is-6">
+                  {{ product.price | money }}
+                </p>
+              </div>
+              <a href="{{ product.url }}"></a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,158 @@
+<main class="login-page">
+  <section class="hero is-page">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+        <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">My Account</h1>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div id="CustomerLoginForm">
+            <h2 class="title is-2 is-size-6-mobile has-text-primary is-marginless">Login</h2>
+            <hr />
+            {% form 'customer_login' %}
+              {{ form.errors | default_errors }}
+              <div class="field">
+                <label for="CustomerEmail" class="label">Email Address<span class="required">*</span></label>
+                <div class="control">
+                  <input class="input {% if form.errors contains "email" %} is-danger{% endif %}" type="email" name="customer[email]" id="CustomerEmail" autocorrect="off" autocapitalize="off" autofocus>
+                </div>
+                {% if form.errors contains "email" %}
+                  <p class="help is-danger">This email is invalid</p>
+                {% endif %}
+              </div>
+              {% if form.password_needed %}
+                <div class="field">
+                  <label for="CustomerPassword" class="label">Password<span class="required">*</span></label>
+                  <div class="control">
+                    <input class="input {% if form.errors contains "password" %} is-danger{% endif %}" type="password" value="" name="customer[password]" id="CustomerPassword">
+                  </div>
+                </div>
+                {% if form.errors contains "password" %}
+                  <p class="help is-danger">This password is invalid</p>
+                {% endif %}
+              {% endif %}
+              <div class="field">
+                <div class="control">
+                  <input type="submit" class="button is-link" value="Login">
+                </div>
+                <div class="control">
+                  <label for="rememberme" class="checkbox">
+                    <input name="rememberme" type="checkbox" id="rememberme" value="forever">
+                    Remember Me
+                  </label>
+                </div>
+              </div>
+              <p>
+                <a class="label_login_register" href="#" onclick="showRecoverPasswordForm();return false;">Forgot your Password?</a>
+              </p>
+            {% endform %}
+          </div>
+          <div id="RecoverPasswordForm" style="display: none;">
+            <h2 class="title is-2 is-size-6-mobile has-text-primary is-marginless">Lost Password?</h2>
+            <hr />
+            <p class="is-size-7">Please enter your username or email address. You will receive a link to create a new password via email.</p>
+            {% form 'recover_customer_password' %}
+              {{ form.errors | default_errors }}
+              {% if form.posted_successfully? %}
+                {% assign reset_success = true %}
+              {% endif %}
+              <div class="field">
+                <label for="RecoverEmail" class="label">Email<span class="required">*</span></label>
+                <div class="control">
+                  <input class="input" type="email" value="" name="email" id="RecoverEmail" autocorrect="off" autocapitalize="off">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input type="submit" class="button is-link" value="Reset Password">
+                </div>
+              </div>
+              <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancel</a>
+            {% endform %}
+          </div>
+          {% if shop.checkout.guest_login %}
+            <h2 class="title is-2 is-size-6-mobile has-text-primary is-marginless">Continue as a guest</h2>
+            <hr />
+            {% form 'guest_login' %}
+            <div class="field">
+              <div class="control">
+                <input type="submit" class="button is-link" value="Continue">
+              </div>
+            </div>
+            {% endform %}
+          {% endif %}
+        </div>
+        <div class="column">
+          <div id="CustomerRegisterForm">
+            <h2 class="title is-2 is-size-6-mobile has-text-primary is-marginless">Register</h2>
+            <hr />
+            {% form 'create_customer' %}
+              {{ form.errors | default_errors }}
+              <div class="field">
+                <label for="first_name" class="label">First Name</label>
+                <div class="control">
+                  <input class="input" type="text" name="customer[first_name]">
+                </div>
+              </div>
+              <div class="field">
+                <label for="last_name" class="label">Last Name</label>
+                <div class="control">
+                  <input class="input" type="text" name="customer[last_name]">
+                </div>
+              </div>
+              <div class="field">
+                <label for="email" class="label">Email<span class="required">*</span></label>
+                <div class="control">
+                  <input class="input {% if form.errors contains "email" %} is-danger{% endif %}" type="email" name="customer[email]" id="Email" {% if form.errors contains "email" %}{% elsif form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
+                </div>
+                {% if form.errors contains "email" %}
+                  <p class="help is-danger">This email is invalid</p>
+                {% endif %}
+              </div>
+              <div class="field">
+                <label for="CreatePassword" class="label">Password<span class="required">*</span></label>
+                <div class="control">
+                  <input class="input {% if form.errors contains "password" %} error{% endif %}" type="password" name="customer[password]" id="CreatePassword">
+                </div>
+                {% if form.errors contains "password" %}
+                  <p class="help is-danger">This password is invalid</p>
+                {% endif %}
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input type="submit" class="button is-link" value="Register">
+                </div>
+              </div>
+            {% endform %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  /*
+    Show/hide the recover password form when requested.
+  */
+  function showRecoverPasswordForm() {
+    document.getElementById('RecoverPasswordForm').style.display = 'block';
+    document.getElementById('CustomerLoginForm').style.display='none';
+  }
+
+  function hideRecoverPasswordForm() {
+    document.getElementById('RecoverPasswordForm').style.display = 'none';
+    document.getElementById('CustomerLoginForm').style.display = 'block';
+  }
+
+  // Allow deep linking to the recover password form
+  if (window.location.hash == '#recover') { showRecoverPasswordForm() }
+
+  // reset_success is only true when the reset form is
+  {% if reset_success %}
+    document.getElementById('ResetSuccess').style.display = 'block';
+  {% endif %}
+</script>

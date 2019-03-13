@@ -1,0 +1,21 @@
+<main class="page-page">
+  <section class="hero is-page">
+    <div class="hero-body">
+      {% include 'breadcrumbs' %}
+      <div class="container">
+        <div class="content">
+          <h1 class="title is-1 is-size-5-mobile has-text-primary is-marginless">{{ article.title }}</h1>
+          <h2 class="subtitle is-4 is-size-6-mobile is-marginless product-price">{{ article.author }}</h2>
+          <time class="subtitle is-6" datetime="{{ article.created_at | date: "%a, %b %d, %y" }}">{{ article.created_at | date: "%a, %b %d, %y" }}</time>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        {{ article.content }}
+      </div>
+    </div>
+  </section>
+</main>

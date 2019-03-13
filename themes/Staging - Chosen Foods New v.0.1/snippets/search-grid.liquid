@@ -1,0 +1,44 @@
+<section class="section collection-grid">
+  <div class="container">
+    <div class="columns is-flex is-multiline">
+      {% for item in search.results %}
+        <div class="column is-half-mobile is-one-quarter">
+          <div class="{% if item.object_type == 'article' %}article{% else %}product{% endif %}">
+            <div class="badge">
+              {% if product.compare_at_price and product.compare_at_price != product.price %}
+                <span class="icon">
+                  <i class="cf-icon-avocado-32"></i>
+                </span>
+              {% endif %}
+              {% for tag in product.tags %}
+                {% if tag contains 'Staff Picks' %}
+                <span class="icon">
+                  <i class="cf-icon-staff-pick-32"></i>
+                </span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            {% if item.featured_image %}
+              <figure class="image is-margin-center">
+                <img src="{{ item.featured_image.src | img_url: '400x' }}">
+              </figure>
+            {% else %}
+              <figure class="image is-margin-center">
+                <img src="{{ item.image.src | img_url: '400x' }}">
+              </figure>
+            {% endif %}
+            <div class="has-text-centered product-info">
+              <h3 class="title is-3">{{ item.title }}</h3>
+              {% if item.price %}
+                <p class="title is-6">
+                  {{ item.price | money }}
+                </p>
+              {% endif %}
+            </div>
+            <a href="{{ item.url | within: collection }}"></a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

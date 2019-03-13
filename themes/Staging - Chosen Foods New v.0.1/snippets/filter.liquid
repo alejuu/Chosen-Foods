@@ -1,0 +1,21 @@
+{% if collection.metafields.linklist.handle != blank %}
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button is-small is-rounded{% if collection.id == 328543425 %} is-link{% elsif collection.id == 240573569 %} is-dark-yellow{% elsif collection.id == 215260481 %} is-light-orange{% elsif collection.id == 31928975396 %} is-light-blue{% else %} is-link{% endif %} is-uppercase has-text-centered" aria-haspopup="true" aria-controls="dropdown-filter">
+        <span>Filter</span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-filter" role="menu">
+      <div class="dropdown-content">
+        {% for link in linklists[collection.metafields.linklist.handle].links %}
+          {% assign collection_link = link.url | remove: '/collections/' %}
+          {% if collections[collection_link].products_count > 0 %}
+            <a href="{{ link.url }}" class="dropdown-item{% if link.active %} is-active{% endif %}">
+              {{ link.title }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}

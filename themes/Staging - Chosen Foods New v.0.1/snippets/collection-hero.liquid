@@ -1,0 +1,48 @@
+{% if type == 'block' %}
+  {% assign image = block.settings.image %}
+  {% assign text_image = block.settings.text_image %}
+{% else %}
+  {% assign image = section.settings.image %}
+  {% assign text_image = section.settings.text_image %}
+{% endif %}
+<section class="hero is-collection{% if collection.id == 328543425 %} has-background-light-peach{% elsif collection.id == 240573569 %} has-background-light-yellow{% elsif collection.id == 215260481 %} has-background-lighter-peach{% elsif collection.id == 31928975396 %} has-background-lighter-green{% else %} has-background-light-peach{% endif %}">
+  {% include 'breadcrumbs' %}
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      {% if collection.image %}
+        <div data-aos="fade-up">
+          <h1 class="is-hidden">{{ collection.title }}</h1>
+          <figure class="image">
+            <img class="is-margin-center" alt="{{ collection.image.alt | escape }}" src="{{ collection.image | img_url: '500x' }}">
+          </figure>
+        </div>
+      {% else %}
+        <div data-aos="fade-up">
+          <figure class="image">
+            <img class="is-margin-center" alt="{{ image.alt | escape }}" src="{{ image | img_url: '1400x' }}">
+          </figure>
+        </div>
+        <div data-aos="fade-up">
+          <h1 class="is-hidden">{{ collection.title }}</h1>
+          {% if text_image %}
+            <figure class="image">
+              <img class="is-margin-center" alt="{{ text_image.alt | escape }}" src="{{ text_image | img_url: '700x' }}">
+            </figure>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="content">
+        <br>
+        <h2 class="title is-3 is-size-7-mobile has-text-centered has-text-warning">{{ collection.description }}</h2>
+      </div>
+      <div data-aos="fade-up" class="filters columns is-mobile">
+        <div class="column">
+          {% include 'filter' %}
+        </div>
+        <div class="column">
+          {% include 'sort-by' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
