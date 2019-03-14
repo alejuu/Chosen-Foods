@@ -8012,11 +8012,13 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
       border-color: #71A6B3;
       color: #FFFFFF; }
 
-.pagination .pagination-list li:first-child, .pagination .pagination-list li:last-child {
-  display: block !important; }
-
-.pagination .pagination-list li.page-ellipsis:last-child, .pagination .pagination-list li.page-ellipsis:first-child {
-  display: none !important; }
+.pagination .pagination-list {
+  list-style: none;
+  margin: 0; }
+  .pagination .pagination-list li:first-child, .pagination .pagination-list li:last-child {
+    display: block !important; }
+  .pagination .pagination-list li.page-ellipsis:last-child, .pagination .pagination-list li.page-ellipsis:first-child {
+    display: none !important; }
 
 .cf-icon-account-16 {
   width: 16px;
@@ -8943,6 +8945,12 @@ main {
     align-items: center; }
   .article .title {
     margin-bottom: 2em; }
+  .article > a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
 
 .cart-page .product {
   align-items: center; }
@@ -8959,12 +8967,12 @@ main {
   max-width: 250px;
   margin: 0 auto; }
 
-.cart-page .checkout-buttons .paypal {
-  padding-bottom: .6em;
-  padding-top: .6em; }
-  .cart-page .checkout-buttons .paypal img {
-    width: 83px;
-    height: 21.64px; }
+.cart-page .checkout-buttons .additional-checkout-button {
+  width: 100%;
+  max-width: 250px; }
+  .cart-page .checkout-buttons .additional-checkout-button > div {
+    height: 40px;
+    border-radius: 290486px; }
 
 @media screen and (max-width: 768px) {
   .addresses-page .buttons, .order-page .buttons {

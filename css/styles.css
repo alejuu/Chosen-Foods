@@ -9299,13 +9299,13 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url({{ 'ajax-loader.gif' | asset_url }}) center center no-repeat; }
+  background: #fff url("../assets/ajax-loader.gif") center center no-repeat; }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url({{ 'slick.eot' | asset_url }});
-  src: url({{ 'slick.eot?#iefix' | asset_url }}) format("embedded-opentype"), url({{ 'slick.woff' | asset_url }}) format("woff"), url({{ 'slick.ttf' | asset_url }}) format("truetype"), url({{ 'slick.svg#slick' | asset_url }}) format("svg");
+  src: url("../aseets/slick.eot");
+  src: url("../aseets/slick.eot?#iefix") format("embedded-opentype"), url("../aseets/slick.woff") format("woff"), url("../aseets/slick.ttf") format("truetype"), url("../aseets/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -9561,34 +9561,34 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   list-style: none;
   margin: 0; }
   .pagination .pagination-list li:first-child, .pagination .pagination-list li:last-child {
-  display: block !important; }
+    display: block !important; }
   .pagination .pagination-list li.page-ellipsis:last-child, .pagination .pagination-list li.page-ellipsis:first-child {
-  display: none !important; }
+    display: none !important; }
 
-.cf-ion-account-16 {
+.cf-icon-account-16 {
   width: 16px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -134px -10px; }
+  background: url("../assets/sprites16.png") -134px -10px; }
 
 .cf-icon-cart-16 {
   width: 16px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -98px -46px; }
+  background: url("../assets/sprites16.png") -98px -46px; }
 
 .cf-icon-arrow-down-16 {
   width: 16px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -62px -10px; }
+  background: url("../assets/sprites16.png") -62px -10px; }
 
 .cf-icon-search-16 {
   width: 16px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -62px -46px; }
+  background: url("../assets/sprites16.png") -62px -46px; }
 
 .cf-icon-left-arrow-16 {
   width: 16px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -98px -10px;
+  background: url("../assets/sprites16.png") -98px -10px;
   -webkit-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
       transform: scaleX(-1);
@@ -9599,62 +9599,62 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .cf-icon-right-arrow-16 {
   width: 16px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -98px -10px; }
+  background: url("../assets/sprites16.png") -98px -10px; }
 
 .cf-icon-facebook-16 {
   width: 16px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -134px -46px; }
+  background: url("../assets/sprites16.png") -134px -46px; }
 
 .cf-icon-instagram-16 {
   width: 16px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -10px -93px; }
+  background: url("../assets/sprites16.png") -10px -93px; }
 
 .cf-icon-twitter-16 {
   width: 16px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -46px -93px; }
+  background: url("../assets/sprites16.png") -46px -93px; }
 
 .cf-icon-arrow-up-16 {
   width: 16px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -82px -93px; }
+  background: url("../assets/sprites16.png") -82px -93px; }
 
 .cf-icon-avocado-16 {
   width: 16px;
   height: 27px;
-  background: url({{ 'sprites16.png' | asset_url }}) -10px -46px; }
+  background: url("../assets/sprites16.png") -10px -46px; }
 
 .cf-icon-staff-pick-16 {
   width: 32px;
   height: 16px;
-  background: url({{ 'sprites16.png' | asset_url }}) -10px -10px; }
+  background: url("../assets/sprites16.png") -10px -10px; }
 
 .cf-icon-account-32 {
   width: 32px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -197px -10px; }
+  background: url("../assets/sprites32.png") -197px -10px; }
 
 .cf-icon-cart-32 {
   width: 32px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -145px -62px; }
+  background: url("../assets/sprites32.png") -145px -62px; }
 
 .cf-icon-arrow-down-32 {
   width: 32px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -93px -10px; }
+  background: url("../assets/sprites32.png") -93px -10px; }
 
 .cf-icon-search-32 {
   width: 32px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -93px -62px; }
+  background: url("../assets/sprites32.png") -93px -62px; }
 
 .cf-icon-left-arrow-32 {
   width: 32px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -145px -10px;
+  background: url("../assets/sprites32.png") -145px -10px;
   -webkit-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
       transform: scaleX(-1);
@@ -9665,37 +9665,37 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .cf-icon-right-arrow-32 {
   width: 32px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -145px -10px; }
+  background: url("../assets/sprites32.png") -145px -10px; }
 
 .cf-icon-facebook-32 {
   width: 32px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -197px -62px; }
+  background: url("../assets/sprites32.png") -197px -62px; }
 
 .cf-icon-instagram-32 {
   width: 32px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -10px -135px; }
+  background: url("../assets/sprites32.png") -10px -135px; }
 
 .cf-icon-twitter-32 {
   width: 32px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -62px -135px; }
+  background: url("../assets/sprites32.png") -62px -135px; }
 
 .cf-icon-arrow-up-32 {
   width: 32px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -114px -135px; }
+  background: url("../assets/sprites32.png") -114px -135px; }
 
 .cf-icon-avocado-32 {
   width: 32px;
   height: 53px;
-  background: url({{ 'sprites32.png' | asset_url }}) -10px -62px; }
+  background: url("../assets/sprites32.png") -10px -62px; }
 
 .cf-icon-staff-pick-32 {
   width: 63px;
   height: 32px;
-  background: url({{ 'sprites32.png' | asset_url }}) -10px -10px; }
+  background: url("../assets/sprites32.png") -10px -10px; }
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -9792,8 +9792,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
       -webkit-transform: translateY(var(--translateY));
           -ms-transform: translateY(var(--translateY));
               transform: translateY(var(--translateY));
-      will-change: transform;
-    }
+      will-change: transform; }
   @media screen and (max-width: 768px) {
     .parallax .image img {
       height: 100%;
@@ -10002,7 +10001,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     width: calc(100% - 52px);
     text-align: right;
     background-color: #00857D;
-        z-index: 10; }
+    z-index: 10; }
   #navMenu.is-active .navbar-start > a.navbar-item {
     padding: 0.5rem 3rem;
     font-weight: bold; }

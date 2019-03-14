@@ -248,6 +248,8 @@ $accordion-content-border: hidden !default;
 // Pagination
 .pagination {
   .pagination-list {
+    list-style: none;
+    margin: 0;
     li {
       &:first-child, &:last-child {
         display: block!important;
@@ -1837,6 +1839,13 @@ main {
   .title {
     margin-bottom: 2em;
   }
+  > a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
 }
 
 // Extra Code
@@ -1875,12 +1884,20 @@ main {
     }
   }
   .checkout-buttons {
-    .paypal {
-      padding-bottom: .6em;
-      padding-top: .6em;
-      img {
-        width: 83px;
-        height: 21.64px;
+    // .paypal {
+    //   padding-bottom: .6em;
+    //   padding-top: .6em;
+    //   img {
+    //     width: 83px;
+    //     height: 21.64px;
+    //   }
+    // }
+    .additional-checkout-button {
+      width: 100%;
+      max-width: 250px;
+      > div {
+        height: 40px;
+        border-radius: 290486px;
       }
     }
   }
