@@ -41,7 +41,7 @@
                       <div class="select is-small is-outlined is-uppercase is-fullwidth">
                         <select data-index="option{{ forloop.index }}">
                           {% for variant in product.variants %}
-                            <option data-price="{{ variant.price | money }}" value="{{ variant.title | escape }}" {% if variant.selected %} selected="selected" {% endif %}>{{ variant.title }}</option>
+                            <option data-price="{{ variant.price | money }}" value="{{ variant.title | escape }}" {% if variant.selected %} selected="selected" {% endif %}{% if variant.inventory_quantity == 0 %}disabled{% endif %}>{% if variant.inventory_quantity == 0 %}{{ variant.title }} SOLD OUT{% else %}{{ variant.title }}{% endif %}</option>
                           {% endfor %}
                         </select>
                       </div>
