@@ -8941,6 +8941,8 @@ main {
 
 .blog-page .post:nth-child(odd) {
   direction: rtl; }
+  .blog-page .post:nth-child(odd) .card-content {
+    direction: ltr; }
 
 .blog-page .post .card {
   height: 100%; }

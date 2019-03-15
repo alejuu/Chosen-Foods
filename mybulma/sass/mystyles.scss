@@ -1828,6 +1828,9 @@ main {
   .post {
     &:nth-child(odd) {
       direction: rtl;
+      .card-content {
+        direction: ltr;
+      }
     }
     .card {
       height: 100%;
