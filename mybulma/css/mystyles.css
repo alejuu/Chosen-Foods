@@ -8227,6 +8227,13 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .accordions .accordion:last-child .accordion-header {
   border-bottom: 1px solid #00857D; }
 
+.lazyload, .lazyloading {
+  opacity: 0;
+  transition: opacity 400ms; }
+
+.lazyloaded {
+  opacity: 1; }
+
 .parallax {
   position: absolute;
   width: 100%;
@@ -8969,7 +8976,9 @@ main {
 
 .cart-page .checkout-buttons .additional-checkout-button {
   width: 100%;
-  max-width: 250px; }
+  max-width: 250px;
+  margin-left: auto !important;
+  margin-right: auto; }
   .cart-page .checkout-buttons .additional-checkout-button > div {
     height: 40px;
     border-radius: 290486px; }

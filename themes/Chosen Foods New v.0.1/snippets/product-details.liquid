@@ -10,7 +10,7 @@
                   <i class="cf-icon-staff-pick-32"></i>
                 </span>
                 <figure class="image is-128x128 is-hidden-touch">
-                  <img src="{{ 'staff-pick-icon.png' | asset_url }}">
+                  <img class="lazyload" data-src="{{ 'staff-pick-icon.png' | asset_url }}">
                 </figure>
               {% endif %}
             {% endfor %}
@@ -18,14 +18,14 @@
           <div class="single-product-images">
             {% for image in product.images %}
               <div data-thumb="{{ image.src | img_url: '500x' }}" class="image feature is-margin-center">
-                <img class="is-margin-center img-fluid" src="{{ image.src | img_url: '500x' }}">
+                <img class="is-margin-center img-fluid lazyload" data-src="{{ image.src | img_url: '500x' }}">
               </div>
             {% endfor %}
           </div>
           <div class="single-product-images-nav">
             {% for image in product.images %}
               <div data-thumb="{{ image.src | img_url: '500x' }}" class="">
-                <img class="" src="{{ image.src | img_url: '500x' }}">
+                <img class="lazyload" data-src="{{ image.src | img_url: '500x' }}">
               </div>
             {% endfor %}
           </div>
@@ -142,7 +142,7 @@
                         <div class="media">
                           <div class="media-left">
                             <figure class="image is-marginless is-48x48">
-                              <img class="is-rounded" src="{{ staff_avatar | file_url }}">
+                              <img class="is-rounded lazyload" data-src="{{ staff_avatar | file_url }}">
                             </figure>
                           </div>
                           <div class="media-content">

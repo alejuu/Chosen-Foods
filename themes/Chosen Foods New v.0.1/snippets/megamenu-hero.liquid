@@ -29,7 +29,7 @@
               </div>
               <div class="column">
                 <figure class="image">
-                  <img class="is-margin-center" alt="{{ text_image.alt | escape }}" src="{{ text_image | img_url: '600x' }}">
+                  <img class="is-margin-center lazyload" alt="{{ text_image.alt | escape }}" data-src="{{ text_image | img_url: '600x' }}">
                 </figure>
                 <div class="buttons">
                   {% if text_one != blank %}

@@ -19,7 +19,7 @@
               {% endfor %}
             </div>
             <figure class="image is-margin-center">
-              <img src="{{ product.featured_image.src | img_url: '1920x' }}">
+              <img data-src="{{ product.featured_image.src | img_url: '1920x' }}" class="lazyload">
             </figure>
             <div class="has-text-centered product-info">
               <h3 class="title is-3">{{ product.title }}</h3>

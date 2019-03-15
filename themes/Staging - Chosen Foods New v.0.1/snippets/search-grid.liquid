@@ -20,11 +20,11 @@
             </div>
             {% if item.featured_image %}
               <figure class="image is-margin-center">
-                <img src="{{ item.featured_image.src | img_url: '400x' }}">
+                <img class="lazyload" data-src="{{ item.featured_image.src | img_url: '400x' }}">
               </figure>
             {% else %}
               <figure class="image is-margin-center">
-                <img src="{{ item.image.src | img_url: '400x' }}">
+                <img class="lazyload" data-src="{{ item.image.src | img_url: '400x' }}">
               </figure>
             {% endif %}
             <div class="has-text-centered product-info">

@@ -12,12 +12,12 @@
     <div class="container has-text-centered">
       <div data-aos="fade-up">
         <figure class="image">
-          <img class="is-margin-center" alt="{{ image.alt | escape }}" src="{{ image | img_url: '1400x' }}">
+          <img class="is-margin-center lazyload" alt="{{ image.alt | escape }}" data-src="{{ image | img_url: '1400x' }}">
         </figure>
       </div>
       <div data-aos="fade-up">
         <figure class="image">
-          <img class="is-margin-center" alt="{{ text_image.alt | escape }}" src="{{ text_image | img_url: '700x' }}">
+          <img class="is-margin-center lazyload" alt="{{ text_image.alt | escape }}" data-src="{{ text_image | img_url: '700x' }}">
         </figure>
         <h5 class="title is-5 has-text-centered has-text-primary is-marginless">{{ block.settings.text }}</h5>
         <span class="icon is-medium is-margin-center">

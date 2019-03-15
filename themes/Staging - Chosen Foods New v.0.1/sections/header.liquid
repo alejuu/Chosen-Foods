@@ -10,7 +10,7 @@
       </div>
       <div class="navbar-brand-mobile">
         <a class="navbar-item is-flex" href="{{ shop.url }}">
-          <img src="{{ 'chosen-logo.png' | asset_url }}" alt="Chosen Foods" width="112" height="28">
+          <img data-src="{{ 'chosen-logo.png' | asset_url }}" class="lazyload" alt="Chosen Foods" width="112" height="28">
         </a>
       </div>
       <div class="navbar-end-mobile">
@@ -95,7 +95,7 @@
             </div>
             <div class="container">
               <figure data-aos="fade-up" class="image">
-                <img class="is-margin-center illustration" src="{{ 'illustration-menu.png' | asset_url }}">
+                <img class="is-margin-center illustration lazyload" data-src="{{ 'illustration-menu.png' | asset_url }}">
               </figure>
             </div>
             <div class="columns">
@@ -115,7 +115,7 @@
       </div>
       <div class="navbar-brand is-hidden-touch">
         <a class="navbar-item is-flex" href="{{ shop.url }}">
-          <img src="{{ 'chosen-logo.png' | asset_url }}" alt="Chosen Foods" width="112" height="28">
+          <img data-src="{{ 'chosen-logo.png' | asset_url }}" class="lazyload" alt="Chosen Foods" width="112" height="28">
         </a>
       </div>
       <div class="navbar-menu is-hidden-touch">

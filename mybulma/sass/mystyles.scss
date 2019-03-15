@@ -524,6 +524,16 @@ $accordion-content-border: hidden !default;
 }
 
 // Extra Code
+// Lazyload
+.lazyload, .lazyloading {
+  opacity: 0;
+	transition: opacity 400ms;
+}
+.lazyloaded {
+  opacity: 1;
+}
+
+// Extra Code
 // Parallax
 .parallax {
   position: absolute;
@@ -1895,6 +1905,8 @@ main {
     .additional-checkout-button {
       width: 100%;
       max-width: 250px;
+      margin-left: auto!important;
+      margin-right: auto;
       > div {
         height: 40px;
         border-radius: 290486px;

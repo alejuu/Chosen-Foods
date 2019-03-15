@@ -9565,7 +9565,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   .pagination .pagination-list li.page-ellipsis:last-child, .pagination .pagination-list li.page-ellipsis:first-child {
   display: none !important; }
 
-.cf-ion-account-16 {
+.cf-icon-account-16 {
   width: 16px;
   height: 16px;
   background: url({{ 'sprites16.png' | asset_url }}) -134px -10px; }
@@ -9774,6 +9774,15 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .accordions .accordion:last-child .accordion-header {
   border-bottom: 1px solid #00857D; }
 
+.lazyload, .lazyloading {
+  opacity: 0;
+  -webkit-transition: opacity 400ms;
+  -o-transition: opacity 400ms;
+  transition: opacity 400ms; }
+
+.lazyloaded {
+  opacity: 1; }
+
 .parallax {
   position: absolute;
   width: 100%;
@@ -9792,8 +9801,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
       -webkit-transform: translateY(var(--translateY));
           -ms-transform: translateY(var(--translateY));
               transform: translateY(var(--translateY));
-      will-change: transform;
-    }
+      will-change: transform; }
   @media screen and (max-width: 768px) {
     .parallax .image img {
       height: 100%;
@@ -10785,7 +10793,9 @@ main {
 
 .cart-page .checkout-buttons .additional-checkout-button {
   width: 100%;
-  max-width: 250px; }
+  max-width: 250px; 
+  margin-left: auto!important;
+  margin-right: auto; }
   .cart-page .checkout-buttons .additional-checkout-button > div {
     height: 40px;
     border-radius: 290486px; }
