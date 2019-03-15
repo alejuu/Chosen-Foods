@@ -8636,6 +8636,9 @@ main {
   .hero.is-page .breadcrumb li.is-active a {
     color: #00857D;
     font-weight: 700; }
+  .hero.is-page .breadcrumb a {
+    white-space: pre-wrap;
+    word-wrap: break-word; }
 
 .hero.is-collection .breadcrumb {
   padding-top: .75rem;
@@ -8643,7 +8646,9 @@ main {
   .hero.is-collection .breadcrumb ul {
     font-size: .8rem; }
   .hero.is-collection .breadcrumb a {
-    color: #00857D; }
+    color: #00857D;
+    white-space: pre-wrap;
+    word-wrap: break-word; }
     .hero.is-collection .breadcrumb a:hover {
       color: #FFFFFF; }
   .hero.is-collection .breadcrumb li.is-active a {
@@ -8668,6 +8673,9 @@ main {
     padding-left: .75rem; }
     .hero.is-product.is-top-custom .breadcrumb ul {
       font-size: .8rem; }
+    .hero.is-product.is-top-custom .breadcrumb a {
+      white-space: pre-wrap;
+      word-wrap: break-word; }
   .hero.is-product.is-top-custom .hero-body {
     position: relative;
     align-items: center;
@@ -8901,6 +8909,9 @@ main {
     position: absolute;
     top: 0;
     left: 0; }
+    .page-page.our-avocado-oil .hero .breadcrumb a {
+      white-space: pre-wrap;
+      word-wrap: break-word; }
   .page-page.our-avocado-oil .hero .content {
     height: 100%;
     width: 100%;
@@ -8940,6 +8951,12 @@ main {
     justify-content: center; }
   .blog-page .post .card .card-image .image img {
     object-fit: cover; }
+
+.article-page .article-content img {
+  width: 100%; }
+
+.article-page .article-sidebar {
+  height: fit-content; }
 
 .article {
   height: 100%;

@@ -1,0 +1,10 @@
+<aside class="menu">
+  <p class="menu-label has-text-primary">
+    Latest & Greatest
+  </p>
+  <ul class="menu-list">
+    {% for article in blogs.central.articles limit: 5 %}
+      <li><a href="{{ article.handle }}">{{ article.title }}</a></li>
+    {% endfor %}
+  </ul>
+</aside>

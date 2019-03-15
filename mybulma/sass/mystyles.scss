@@ -1282,6 +1282,10 @@ main {
         //   }
         // }
       }
+      a {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
     }
   }
   //Hero Collection
@@ -1294,6 +1298,8 @@ main {
       }
       a {
         color: $green;
+        white-space: pre-wrap;
+        word-wrap: break-word;
         &:hover {
           color: $white;
         }
@@ -1335,6 +1341,10 @@ main {
         padding-left: .75rem;
         ul {
           font-size: .8rem;
+        }
+        a {
+          white-space: pre-wrap;
+          word-wrap: break-word;
         }
       }
       .hero-body {
@@ -1763,6 +1773,10 @@ main {
         position: absolute;
         top: 0;
         left: 0;
+        a {
+          white-space: pre-wrap;
+          word-wrap: break-word;
+        }
       }
       .content {
         height: 100%;
@@ -1831,6 +1845,19 @@ main {
         }
       }
     }
+  }
+}
+
+// Extra Code
+// Article
+.article-page {
+  .article-content {
+    img {
+      width: 100%;
+    }
+  }
+  .article-sidebar {
+    height: fit-content;
   }
 }
 
