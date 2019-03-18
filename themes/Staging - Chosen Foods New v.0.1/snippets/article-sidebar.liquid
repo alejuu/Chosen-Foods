@@ -4,7 +4,7 @@
   </p>
   <ul class="menu-list">
     {% for article in blogs.central.articles limit: 5 %}
-      <li><a href="{{ article.handle }}">{{ article.title }}</a></li>
+      <li><a href="../{{ article.handle }}">{{ article.title }}</a></li>
     {% endfor %}
   </ul>
 </aside>
