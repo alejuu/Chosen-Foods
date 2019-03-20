@@ -9833,7 +9833,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
       -ms-flex-pack: center;
           justify-content: center; }
   .navbar-brand .navbar-item img {
-    width: initial; }
+    width: initial; 
+    max-height: 2.5rem; }
 
 .navbar-end {
   -webkit-box-flex: 1;
@@ -9892,7 +9893,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
       -ms-flex-pack: center;
           justify-content: center; }
   .navbar-brand-mobile .navbar-item img {
-    width: initial; }
+    width: initial;
+    max-height: 2.2rem; }
 
 .navbar-end-mobile {
   -webkit-box-pack: end;
@@ -10230,8 +10232,11 @@ main {
       width: 100%; }
   .hero.is-main.is-full-custom .container .content-left img {
     max-height: 100%;
-    max-width: 100%;
-    width: auto; }
+    max-width: 750px;
+    width: initial; }
+    @media screen and (max-width: 768px) {
+      .hero.is-main.is-full-custom .container .content-left img {
+        width: auto; } }
   .hero.is-main.is-full-custom .container .content-right .image {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10246,15 +10251,16 @@ main {
     height: auto; }
     .hero.is-main.is-full-custom .container .content-right .image img {
       max-height: 100%;
-      max-width: 100%;
-      width: auto;
+      max-width: 500px;
       margin: 0 auto; }
   @media screen and (max-width: 768px) {
     .hero.is-main.is-full-custom .container .content-right .image {
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;
               flex-grow: 1;
-      height: 100%; } }
+      height: 100%; }
+      .hero.is-main.is-full-custom .container .content-right .image img {
+        width: auto; } }
   .hero.is-main.is-full-custom .container .content-top {
     height: 65%; }
     .hero.is-main.is-full-custom .container .content-top .image {
@@ -10272,9 +10278,7 @@ main {
         height: 100%;
         width: 100%; }
       .hero.is-main.is-full-custom .container .content-top .image img {
-        max-height: 100%;
-        max-width: 100%;
-        width: auto; }
+        max-width: 500px; }
   .hero.is-main.is-full-custom .container .content-bottom {
     height: 35%;
     display: -webkit-box;
@@ -10815,7 +10819,7 @@ main {
 .cart-page .checkout-buttons .additional-checkout-button {
   width: 100%;
   max-width: 250px; 
-  margin-left: auto!important;
+  margin-left: auto !important;
   margin-right: auto; }
   .cart-page .checkout-buttons .additional-checkout-button > div {
     height: 40px;

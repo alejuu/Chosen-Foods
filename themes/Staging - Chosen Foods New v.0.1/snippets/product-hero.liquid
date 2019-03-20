@@ -8,17 +8,17 @@
     <div class="hero-body is-flex">
       <div class="parallax layer-three">
         <figure class="image">
-          <img class="parallax-image lazyload" data-modifier="30" data-src="{{ layer_three | file_url }}">
+          <img class="parallax-image lazyload" data-modifier="30" data-sizes="auto" data-src="{{ layer_three | file_img_url: '768x' }}" data-srcset="{{ layer_three | file_img_url: '250x' }} 250w, {{ layer_three | file_img_url: '350x' }} 350w, {{ layer_three | file_img_url: '500x' }} 500w, {{ layer_three | file_img_url: '750x' }} 750w, {{ layer_three | file_img_url: '1024x' }} 1024w, {{ layer_three | file_img_url: '1920x' }} 1920w">
         </figure>
       </div>
       <div class="parallax layer-two">
         <figure class="image">
-          <img class="parallax-image lazyload" data-modifier="18" data-src="{{ layer_two | file_url }}">
+          <img class="parallax-image lazyload" data-modifier="18" data-sizes="auto" data-src="{{ layer_two | file_img_url: '768x' }}" data-srcset="{{ layer_two | file_img_url: '250x' }} 250w, {{ layer_two | file_img_url: '350x' }} 350w, {{ layer_two | file_img_url: '500x' }} 500w, {{ layer_two | file_img_url: '750x' }} 750w, {{ layer_two | file_img_url: '1024x' }} 1024w, {{ layer_two | file_img_url: '1920x' }} 1920w">
         </figure>
       </div>
       <div class="parallax layer-one">
         <figure class="image">
-          <img class="parallax-image lazyload" data-modifier="12" data-src="{{ layer_one | file_url }}">
+          <img class="parallax-image lazyload" data-modifier="12" data-sizes="auto" data-src="{{ layer_one | file_img_url: '768x' }}" data-srcset="{{ layer_one | file_img_url: '250x' }} 250w, {{ layer_one | file_img_url: '350x' }} 350w, {{ layer_one | file_img_url: '500x' }} 500w, {{ layer_one | file_img_url: '750x' }} 750w, {{ layer_one | file_img_url: '1024x' }} 1024w, {{ layer_one | file_img_url: '1920x' }} 1920w">
         </figure>
       </div>
       <div data-aos="fade-up" class="columns">

@@ -593,6 +593,7 @@ $accordion-content-border: hidden !default;
   .navbar-item {
     img {
       width: initial;
+      max-height: 2.5rem;
     }
   }
 }
@@ -648,6 +649,7 @@ $accordion-content-border: hidden !default;
   .navbar-item {
     img {
       width: initial;
+      max-height: 2.2rem;
     }
   }
 }
@@ -1090,18 +1092,17 @@ main {
           }
           .content-left {
             img {
-              // max-height: 100%;
-              // width: initial;
-              // height: initial;
-              // max-width: 100%;
               max-height: 100%;
-              max-width: 100%;
-              width: auto;
-              @include from($fullhd) {
+              // max-width: 100%;
+              max-width: 750px;
+              // width: auto;
+              width: initial;
+              @include until($tablet) {
                 // height: auto;
                 // max-width: 100%;
                 // width: 80%;
                 // max-height: inherit;
+                width: auto;
               }
             }
           }
@@ -1122,8 +1123,10 @@ main {
                 // width: 100%;
                 // height: auto;
                 max-height: 100%;
-                max-width: 100%;
-                width: auto;
+                // max-width: 100%;
+                max-width: 500px;
+                // width: auto;
+                // width: initial;
                 margin: 0 auto;
               }
             }
@@ -1132,7 +1135,7 @@ main {
                 flex-grow: 1;
                 height: 100%;
                 img {
-                  // width: auto;
+                  width: auto;
                 }
               }
             }
@@ -1151,9 +1154,10 @@ main {
               img {
                 // max-height: 100%;
                 // width: auto;
-                max-height: 100%;
-                max-width: 100%;
-                width: auto;
+                // max-height: 100%;
+                // max-width: 100%;
+                // width: inherit;
+                max-height: 500px;
               }
             }
           }

@@ -20,11 +20,11 @@
             </div>
             {% if item.featured_image %}
               <figure class="image is-margin-center">
-                <img class="lazyload" data-src="{{ item.featured_image.src | img_url: '400x' }}">
+                <img class="lazyload" data-sizes="auto" data-src="{{ item.featured_image.src | img_url: '300x' }}" data-srcset="{{ item.featured_image.src | img_url: '150x' }} 150w, {{ item.featured_image.src | img_url: '300x' }} 300w">
               </figure>
             {% else %}
               <figure class="image is-margin-center">
-                <img class="lazyload" data-src="{{ item.image.src | img_url: '400x' }}">
+                <img class="lazyload" data-sizes="auto" data-src="{{ item.image.src | img_url: '300x' }}" data-srcset="{{ item.image.src | img_url: '150x' }} 150w, {{ item.image.src | img_url: '300x' }} 300w">
               </figure>
             {% endif %}
             <div class="has-text-centered product-info">

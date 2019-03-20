@@ -53,7 +53,7 @@
   </div>
   <div class="has-background-light-green is-hidden-tablet">
     <figure class="image">
-      <img class="is-margin-center lazyload" data-src="{{ 'footer-illustration.png' | asset_url }}">
+      <img class="is-margin-center lazyload" data-sizes="auto" data-src="{{ 'footer-illustration.png' | asset_img_url: '768x' }}" data-srcset="{{ 'footer-illustration.png' | asset_img_url: '400x' }} 400w, {{ 'footer-illustration.png' | asset_img_url: '600x' }} 600w, {{ 'footer-illustration.png' | asset_img_url: '768x' }} 900w">
     </figure>
   </div>
   <div class="content is-marginless has-background-light-turquoise">

@@ -27,7 +27,7 @@
           {% if image %}
             <div class="content-left" data-aos="fade-up">
               <figure class="image">
-                <img class="is-margin-center lazyload" alt="{{ image.alt | escape }}" data-src="{{ image | img_url: '1000x' }}">
+                <img class="is-margin-center lazyload" alt="{{ image.alt | escape }}" data-sizes="auto" data-src="{{ image | img_url: '750x' }}" data-srcset="{{ image | img_url: '250x' }} 250w, {{ image | img_url: '350x' }} 350w, {{ image | img_url: '500x' }} 500w, {{ image | img_url: '750x' }} 750w">
               </figure>
             </div>
           {% endif %}
@@ -36,7 +36,7 @@
           <div class="content-right" data-aos="fade-up">
             {% if text_image %}
               <figure class="image">
-                <img class="is-margin-center lazyload" alt="{{ text_image.alt | escape }}" data-src="{{ text_image | img_url: '600x' }}">
+                <img class="is-margin-center lazyload" alt="{{ text_image.alt | escape }}" data-sizes="auto" data-src="{{ text_image | img_url: '500x' }}" data-srcset="{{ text_image | img_url: '250x' }} 250w, {{ text_image | img_url: '350x' }} 350w, {{ text_image | img_url: '500x' }} 500w">
               </figure>
             {% endif %}
             {% if text != blank %}

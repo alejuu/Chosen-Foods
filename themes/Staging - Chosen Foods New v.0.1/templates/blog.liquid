@@ -19,11 +19,11 @@
                       <figure class="image is-4by3">
                         {% if current_tags %}
                           <a href="../../{{ article.handle }}">
-                            <img class="lazyload" data-src="{{ article.image.src | img_url: '700x' }}" alt="{{ article.image.alt }}">
+                            <img class="lazyload" data-sizes="auto" data-src="{{ article.image.src | img_url: '700x' }}" data-srcset="{{ article.image.src | img_url: '350x' }} 350w, {{ article.image.src | img_url: '700x' }} 700w" alt="{{ article.image.alt }}">
                           </a>
                         {% else %}
                           <a href="{{ article.handle }}">
-                            <img class="lazyload" data-src="{{ article.image.src | img_url: '700x' }}" alt="{{ article.image.alt }}">
+                            <img class="lazyload" data-sizes="auto" data-src="{{ article.image.src | img_url: '700x' }}" data-srcset="{{ article.image.src | img_url: '350x' }} 350w, {{ article.image.src | img_url: '700x' }} 700w" alt="{{ article.image.alt }}">
                           </a>
                         {% endif %}
                       </figure>
