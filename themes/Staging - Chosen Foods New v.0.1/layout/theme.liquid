@@ -27,8 +27,9 @@
     <link rel="canonical" href="{{ canonical_url }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link rel="shortcut icon" href="{{ 'chosen-favicon.png' | asset_img_url: '32x32' }}" type="image/png">
-    {{ 'styles.scss' | asset_url | stylesheet_tag }}
-    <!-- {{ 'styles.scss.css' | asset_url | stylesheet_tag }} -->
+    {% comment %} {{ 'styles.scss' | asset_url | stylesheet_tag }} {% endcomment %}
+    {% comment %} {{ 'styles.scss.css' | asset_url | stylesheet_tag }} {% endcomment %}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
     {% if template contains 'addresses' %}
       {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
     {% endif %}
@@ -40,11 +41,18 @@
   <!-- This line added automatically by JSON-LD for SEO. -->{% include 'jsonld-for-seo' %}
 </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  {% if template == "product" %}
+  {% comment %} {% if template == "product" %}
     {{ 'product.js' | asset_url | script_tag }}
   {% endif %}
   {% if page.handle contains 'our-avocado-oil' %}
     {{ 'parallax.js' | asset_url | script_tag }}
   {% endif %}
-  {{ 'theme.js' | asset_url | script_tag }}
+  {{ 'theme.js' | asset_url | script_tag }} {% endcomment %}
+  {% if template == "product" %}
+    <script src="{{ 'product.min.js' | asset_url }}" async></script>
+  {% endif %}
+  {% if page.handle contains 'our-avocado-oil' %}
+    <script src="{{ 'parallax.min.js' | asset_url }}" async></script>
+  {% endif %}
+    <script src="{{ 'theme.min.js' | asset_url }}" async></script>
 </html>
