@@ -1,0 +1,429 @@
+<header>
+  <nav class="navbar is-fixed-top" id="mainMenu" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu navbar-is-mobile is-flex-touch is-hidden-desktop is-paddingless is-shadowless">
+      <div class="navbar-start-mobile">
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-brand-mobile">
+        <a class="navbar-item is-flex" href="{{ shop.url }}">
+          <img src="{{ 'chosen-logo.svg' | asset_url }}" class="lazyload" alt="Chosen Foods">
+        </a>
+      </div>
+      <div class="navbar-end-mobile">
+        <a href="/account" class="navbar-item is-flex">
+          <span class="icon">
+            <i class="cf-icon-account-32"></i>
+          </span>
+        </a>
+        <a href="/cart" class="navbar-item is-flex">
+          <span class="icon">
+            <i class="cf-icon-cart-32"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="navbar-menu is-shadowless" id="navMenu">
+      <div class="navbar-item navbar-item-float is-hidden-desktop">
+        <a href="/pages/where-to-buy">
+          <button class="button is-small is-rounded is-uppercase is-warning has-text-centered has-text-white">
+            <span>Find a Store</span>
+          </button>
+        </a>
+      </div>
+      <div class="navbar-start is-hidden-desktop">
+        {% include 'menu-one' %}
+        {% include 'search-bar' %}
+        <div class="navbar-item">
+          <div class="container">
+            <div>
+              <h6 class="title is-3 has-text-white has-text-centered">Catch our drift</h6>
+              <p class="has-text-white has-text-centered">
+                Sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
+              </p>
+            </div>
+            <div class="newsletter-form">
+              {% include 'newsletter-form' %}
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item has-background-light-green">
+          <div class="container">
+            <h6 class="title is-3 has-text-white has-text-centered">Relationships need nourishment</h6>
+            <p class="has-text-white has-text-centered">
+              stay in the loop
+            </p>
+            <div class="social is-margin-center">
+              <div class="columns is-mobile has-text-centered">
+                <div class="column">
+                  <a href="{{ section.settings.instagram_url }}">
+                    <span class="icon is-medium">
+                      <i class="cf-icon-instagram-32"></i>
+                    </span>
+                  </a>
+                </div>
+                <div class="column">
+                  <a href="{{ section.settings.twitter_url }}">
+                    <span class="icon is-medium">
+                      <i class="cf-icon-twitter-32"></i>
+                    </span>
+                  </a>
+                </div>
+                <div class="column">
+                  <a href="{{ section.settings.facebook_url }}">
+                    <span class="icon is-medium">
+                      <i class="cf-icon-facebook-32"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item ">
+          <div class="container">
+            <div class="columns is-mobile">
+              <div class="column">
+                {% include 'menu-two' %}
+              </div>
+              <div class="column">
+                {% include 'menu-three' %}
+              </div>
+            </div>
+            <div class="container">
+              <figure data-aos="fade-up" class="image">
+                <img class="is-margin-center illustration lazyload" data-src="{{ 'illustration-menu.png' | asset_img_url: '250x' }}">
+              </figure>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <p class="is-size-7 has-text-white">
+                  1747 Hancock St, Ste A, San Diego, CA 92101 877.674.2244
+                </p>
+              </div>
+              <div class="column">
+                <p class="is-size-7 has-text-white">
+                  © 2018 Chosen Foods LLC. All Rights Reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-brand is-hidden-touch">
+        <a class="navbar-item is-flex" href="{{ shop.url }}">
+          <img data-src="{{ 'chosen-logo.svg' | asset_url }}" class="logo lazyload" alt="Chosen Foods">
+        </a>
+      </div>
+      <div class="navbar-menu is-hidden-touch">
+        {% if section.blocks.size > 0 %}
+          {% for block in section.blocks %}
+            {% if block.type == "megamenu_columns" %}
+              {% include 'megamenu-columns', type: 'block' %}
+            {% elsif block.type == "megamenu_hero" %}
+              {% include 'megamenu-hero', type: 'block' %}
+            {% elsif block.type == "menu_bar" %}
+              {% include 'menu-bar', type: 'block' %}
+            {% elsif block.type == "search_bar" %}
+              {% include 'search-bar', type: 'block' %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div class="navbar-end is-hidden-touch">
+        <a href="/account" class="navbar-item is-flex">
+          <span class="icon">
+            <i class="cf-icon-account-32"></i>
+          </span>
+        </a>
+        <a href="/cart" class="navbar-item is-flex">
+          <span class="icon">
+            <i class="cf-icon-cart-32"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+{% schema %}
+  {
+    "name": "Header",
+    "class": "homepage",
+    "max_blocks": 20,
+    "blocks": [
+      {
+        "type": "megamenu_columns",
+        "name": "Megamenu Columns",
+        "settings": [
+          {
+            "type": "text",
+            "id": "menu_title",
+            "label": "Menu Title"
+          },
+          {
+            "type": "header",
+            "content": "Column One"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_one",
+            "label": "Image Top"
+          },
+          {
+            "type": "image_picker",
+            "id": "text_image_one",
+            "label": "Image Bottom"
+          },
+          {
+            "type": "text",
+            "id": "text_one",
+            "label": "Button Text",
+            "default": "Shop Now"
+          },
+          {
+            "id": "btn_link_one",
+            "type": "url",
+            "label": "Button link"
+          },
+          {
+            "type": "select",
+            "id": "background_color_one",
+            "options": [
+              { "value": "green", "label": "Green"},
+              { "value": "peach", "label": "Peach"},
+              { "value": "orange", "label": "Orange"},
+              { "value": "light_green", "label": "Light Green"},
+              { "value": "light_peach", "label": "Light Peach"},
+              { "value": "light_turquoise", "label": "Light Turquoise"},
+              { "value": "light_yellow", "label": "Light Yellow"},
+              { "value": "lighter_peach", "label": "Lighter Peach"},
+              { "value": "lighter_green", "label": "Lighter Green"}
+            ],
+            "label": "Background Color"
+          },
+          {
+            "type": "header",
+            "content": "Column Two"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_two",
+            "label": "Image Top"
+          },
+          {
+            "type": "image_picker",
+            "id": "text_image_two",
+            "label": "Image Bottom"
+          },
+          {
+            "type": "text",
+            "id": "text_two",
+            "label": "Button Text",
+            "default": "Shop Now"
+          },
+          {
+            "id": "btn_link_two",
+            "type": "url",
+            "label": "Button link"
+          },
+          {
+            "type": "select",
+            "id": "background_color_two",
+            "options": [
+              { "value": "green", "label": "Green"},
+              { "value": "peach", "label": "Peach"},
+              { "value": "orange", "label": "Orange"},
+              { "value": "light_green", "label": "Light Green"},
+              { "value": "light_peach", "label": "Light Peach"},
+              { "value": "light_turquoise", "label": "Light Turquoise"},
+              { "value": "light_yellow", "label": "Light Yellow"},
+              { "value": "lighter_peach", "label": "Lighter Peach"},
+              { "value": "lighter_green", "label": "Lighter Green"}
+            ],
+            "label": "Background Color"
+          },
+          {
+            "type": "header",
+            "content": "Column Three"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_three",
+            "label": "Image Top"
+          },
+          {
+            "type": "image_picker",
+            "id": "text_image_three",
+            "label": "Image Bottom"
+          },
+          {
+            "type": "text",
+            "id": "text_three",
+            "label": "Button Text",
+            "default": "Shop Now"
+          },
+          {
+            "id": "btn_link_three",
+            "type": "url",
+            "label": "Button link"
+          },
+          {
+            "type": "select",
+            "id": "background_color_three",
+            "options": [
+              { "value": "green", "label": "Green"},
+              { "value": "peach", "label": "Peach"},
+              { "value": "orange", "label": "Orange"},
+              { "value": "light_green", "label": "Light Green"},
+              { "value": "light_peach", "label": "Light Peach"},
+              { "value": "light_turquoise", "label": "Light Turquoise"},
+              { "value": "light_yellow", "label": "Light Yellow"},
+              { "value": "lighter_peach", "label": "Lighter Peach"},
+              { "value": "lighter_green", "label": "Lighter Green"}
+            ],
+            "label": "Background Color"
+          },
+          {
+            "type": "header",
+            "content": "Column Four"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_four",
+            "label": "Image Top"
+          },
+          {
+            "type": "image_picker",
+            "id": "text_image_four",
+            "label": "Image Bottom"
+          },
+          {
+            "type": "text",
+            "id": "text_four",
+            "label": "Button Text",
+            "default": "Shop Now"
+          },
+          {
+            "id": "btn_link_four",
+            "type": "url",
+            "label": "Button link"
+          },
+          {
+            "type": "select",
+            "id": "background_color_four",
+            "options": [
+              { "value": "green", "label": "Green"},
+              { "value": "peach", "label": "Peach"},
+              { "value": "orange", "label": "Orange"},
+              { "value": "light_green", "label": "Light Green"},
+              { "value": "light_peach", "label": "Light Peach"},
+              { "value": "light_turquoise", "label": "Light Turquoise"},
+              { "value": "light_yellow", "label": "Light Yellow"},
+              { "value": "lighter_peach", "label": "Lighter Peach"},
+              { "value": "lighter_green", "label": "Lighter Green"}
+            ],
+            "label": "Background Color"
+          }
+        ]
+      },
+      {
+        "type": "megamenu_hero",
+        "name": "Megamenu Hero",
+        "settings": [
+          {
+            "type": "text",
+            "id": "menu_title",
+            "label": "Menu Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "text_image",
+            "label": "Text Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "text_one",
+            "label": "Button Text",
+            "default": "Button One"
+          },
+          {
+            "id": "btn_link_one",
+            "type": "url",
+            "label": "Button link"
+          },
+          {
+            "type": "text",
+            "id": "text_two",
+            "label": "Button Text",
+            "default": "Button Two"
+          },
+          {
+            "id": "btn_link_two",
+            "type": "url",
+            "label": "Button link"
+          }
+        ]
+      },
+      {
+        "type": "menu_bar",
+        "name": "Menu Bar",
+        "settings": [
+          {
+            "type": "link_list",
+            "id": "bar_linklist",
+            "label": "Menu Bar",
+            "default": "main-menu"
+          }
+        ]
+      },
+      {
+        "type": "search_bar",
+        "name": "Search Bar",
+        "settings": []
+      }
+    ],
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "one_linklist",
+        "label": "Menu One",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "two_linklist",
+        "label": "Menu Two",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "three_linklist",
+        "label": "Menu Three",
+        "default": "main-menu"
+      },
+      {
+        "type": "url",
+        "id": "instagram_url",
+        "label": "Instagram Link"
+      },
+      {
+        "type": "url",
+        "id": "twitter_url",
+        "label": "Twitter Link"
+      },
+      {
+        "type": "url",
+        "id": "facebook_url",
+        "label": "Facebook Link"
+      }
+    ]
+  }
+{% endschema %}

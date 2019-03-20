@@ -1,0 +1,168 @@
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="product-image">
+          <div class="badge">
+            {% for tag in product.tags %}
+              {% if tag contains 'Staff Pick' %}
+                <span class="icon is-hidden-desktop">
+                  <i class="cf-icon-staff-pick-32"></i>
+                </span>
+                <figure class="image is-128x128 is-hidden-touch">
+                  <img class="lazyload" data-src="{{ 'staff-pick-icon.png' | asset_img_url: '128x' }}">
+                </figure>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="single-product-images">
+            {% for image in product.images %}
+              <div data-thumb="{{ image.src | img_url: '500x' }}" class="image feature is-margin-center">
+                <img class="is-margin-center img-fluid lazyload" data-sizes="auto" data-src="{{ image.src | img_url: '500x' }}" data-srcset="{{ image.src | img_url: '350x' }} 350w, {{ image.src | img_url: '500x' }} 500w">
+              </div>
+            {% endfor %}
+          </div>
+          <div class="single-product-images-nav">
+            {% for image in product.images %}
+              <div data-thumb="{{ image.src | img_url: '200x' }}" class="">
+                <img class="lazyload" data-sizes="auto" data-src="{{ image.src | img_url: '200x' }}" data-srcset="{{ image.src | img_url: '100x' }} 100w, {{ image.src | img_url: '200x' }} 200w">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h1 class="title is-1 is-size-5-mobile has-text-centered has-text-primary is-marginless">{{ product.title }}</h1>
+          <div class="reviews has-text-centered">
+            <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+          </div>
+          <br>
+          <h2 class="title is-2 is-size-6-mobile has-text-centered has-text-primary is-marginless product-price">{{ variant.price | money }}</h2>
+          {% if product.available == false %}
+            <hr>
+            <p class="title is-6 has-text-centered">Soldout</p>
+          {% else %}
+            <form class="product-form" method="post" action="/cart/add">
+              {% comment %}
+                {% unless product.has_only_one_default_variant %}
+                {% endunless %}
+              {% endcomment %}
+              {% unless product.variants.size == 1 %}
+                {% for product_option in product.options_with_values %}
+                  <div class="field product-option product-option-details">
+                    <label class="label">{{ product_option.name }}</label>
+                    <div class="control">
+                      <div class="select is-small is-outlined is-uppercase is-fullwidth">
+                        <select data-index="option{{ forloop.index }}">
+                          {% for variant in product.variants %}
+                            <option data-price="{{ variant.price | money }}" value="{{ variant.title | escape }}" {% if variant.selected %} selected="selected" {% endif %}{% if variant.inventory_quantity == 0 %}disabled{% endif %}>{% if variant.inventory_quantity == 0 %}{{ variant.title }} SOLD OUT{% else %}{{ variant.title }}{% endif %}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              {% endunless %}
+              {% if variant.available == true %}
+                <div class="field is-grouped qty-add">
+                  <div class="control is-flex qty">
+                    <input class="input" type="number" id="quantity" name="quantity" min="1" value="1">
+                  </div>
+                  <div class="control">
+                    <input type="hidden" id="variant-id-details" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                    <input class="button is-small is-rounded is-primary is-uppercase is-fullwidth has-text-centered" type="submit" value="Add to Cart">
+                  </div>
+                </div>
+              {% endif %}
+            </form>
+          {% endif %}
+        </div>
+        <div class="content">
+          <h2 class="title is-6">Description</h2>
+          <p>{{ product.description }}</p>
+        </div>
+        <div class="content">
+          <div class="accordions">
+            {% if product.metafields.custom_fields.product_details %}
+              <article class="accordion">
+                <div class="accordion-header toggle">
+                  <h2 class="title is-6">Details</h2>
+                  <button class="toggle" aria-label="toggle"></button>
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-content content">
+                    <p>
+                      {{ product.metafields.custom_fields.product_details }}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            {% endif %}
+            <article class="accordion">
+              <div class="accordion-header toggle">
+                <h2 class="title is-6">Shipping Policy</h2>
+                <button class="toggle" aria-label="toggle"></button>
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-content content">
+                  <p>
+                    {{ pages.shipping-policy.content }}
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="accordion">
+              <div class="accordion-header toggle">
+                <h2 class="title is-6">Reviews</h2>
+                <button class="toggle" aria-label="toggle"></button>
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-content content">
+                  <div id="tab-4" class="tab-panel">
+                    {{ product.metafields.meta.reviews }}
+                    <div id="shopify-product-reviews" data-id="{{product.id}}">
+                      {{ product.metafields.spr.reviews }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            {% if product.metafields.custom_fields.product_staff_picks_text %}
+              <article class="accordion">
+                <div class="accordion-header toggle">
+                  <h2 class="title is-6">Staff Pick</h2>
+                  <button class="toggle" aria-label="toggle"></button>
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-content content">
+                    {% assign staff_avatar = product.metafields.custom_fields.product_staff_picks_avatar %}
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-left">
+                            <figure class="image is-marginless is-48x48">
+                              <img class="is-rounded lazyload" data-src="{{ staff_avatar | file_img_url: '48x' }}">
+                            </figure>
+                          </div>
+                          <div class="media-content">
+                            <p class="title is-4">{{ product.metafields.custom_fields.product_staff_picks_author }}</p>
+                          </div>
+                        </div>
+                        <p class="subtitle">
+                          "{{ product.metafields.custom_fields.product_staff_picks_text }}"
+                        </p>
+                      </div>
+                    </div>
+                    <p>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
