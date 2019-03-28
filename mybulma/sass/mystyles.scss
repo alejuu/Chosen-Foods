@@ -1893,6 +1893,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
   .image {
     height: 100%;
     display: flex;

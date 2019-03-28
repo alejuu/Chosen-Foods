@@ -52,6 +52,7 @@
             "type": "megamenu_hero",
             "settings": {
               "menu_title": "About",
+              "btn_link_menu": "shopify:\/\/pages\/about-chosen-foods",
               "text_image": "shopify:\/\/shop_images\/madetonourish.png",
               "background_image": "shopify:\/\/shop_images\/aboutus_menu_desktop_illustration.gif",
               "text_one": "Chosen Foods",
@@ -121,7 +122,7 @@
               "hero_full": true,
               "text": "Flavorful herbs and spices collide with our 100% Pure Avocado Oil! Try our NEW Infused Sprays - available in 9 insanely tasty flavor combinations.",
               "text_btn": "Shop Now",
-              "btn_link": "shopify:\/\/collections\/infused-avocado-oil-sprays"
+              "btn_link": "shopify:\/\/collections\/pure-oil-sprays"
             }
           },
           "1547147122226": {
