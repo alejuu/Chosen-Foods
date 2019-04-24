@@ -1,0 +1,44 @@
+<section class="section collection-grid">
+  <div class="container">
+    <div class="columns is-flex is-multiline">
+      {% for product in collection.products %}
+        <div class="column is-half-mobile is-one-quarter">
+          <div class="product">
+            <div class="badge">
+              {% if product.compare_at_price and product.compare_at_price != product.price %}
+                <span class="icon">
+                  <i class="cf-icon-avocado-32"></i>
+                </span>
+              {% endif %}
+              {% for tag in product.tags %}
+                {% if tag contains 'Staff Picks' %}
+                <span class="icon">
+                  <i class="cf-icon-staff-pick-32"></i>
+                </span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <figure class="image is-margin-center">
+              <img data-sizes="auto" data-src="{{ product.featured_image.src | img_url: '300x' }}" data-srcset="{{ product.featured_image.src | img_url: '150x' }} 150w, {{ product.featured_image.src | img_url: '300x' }} 300w" class="lazyload">
+            </figure>
+            <div class="has-text-centered product-info">
+              <h3 class="title is-3">{{ product.title }}</h3>
+              <p class="title is-6">
+                {{ product.price | money }}
+              </p>
+            </div>
+            <a href="{{ product.url }}"></a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- <div class="container has-text-centered">
+      <a href="">
+        <h5 class="title is-5 has-text-centered has-text-primary is-marginless">Discover More</h5>
+        <span class="icon is-medium">
+          <i class="cf-icon-arrow-down-32"></i>
+        </span>
+      </a>
+    </div> -->
+  </div>
+</section>

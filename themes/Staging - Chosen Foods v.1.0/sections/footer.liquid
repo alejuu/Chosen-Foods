@@ -1,0 +1,143 @@
+<footer class="footer">
+  <div class="content is-marginless has-text-centered">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div data-aos="fade-up">
+            <h3 class="title is-2 has-text-primary">Catch our drift</h3>
+            <p class="is-size-6 has-text-primary">
+              Sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div data-aos="fade-right" class="newsletter-form">
+            {% include 'newsletter-form' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content is-marginless has-text-centered has-background-light-green is-hidden-tablet">
+    <div class="container">
+      <h3 class="title is-2 has-text-white">Relationships need nourishment</h3>
+      <p class="is-size-6 has-text-white">
+        stay in the loop
+      </p>
+      <div class="social is-margin-center">
+        <div class="columns is-mobile">
+          <div class="column">
+            <a href="{{ section.settings.instagram_url }}">
+              <span class="icon is-medium">
+                <i class="cf-icon-instagram-32"></i>
+              </span>
+            </a>
+          </div>
+          <div class="column">
+            <a href="{{ section.settings.twitter_url }}">
+              <span class="icon is-medium">
+                <i class="cf-icon-twitter-32"></i>
+              </span>
+            </a>
+          </div>
+          <div class="column">
+            <a href="{{ section.settings.facebook_url }}">
+              <span class="icon is-medium">
+                <i class="cf-icon-facebook-32"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="has-background-light-green is-hidden-tablet">
+    <figure class="image">
+      <img class="is-margin-center lazyload" data-sizes="auto" data-src="{{ 'footer-illustration.png' | asset_img_url: '768x' }}" data-srcset="{{ 'footer-illustration.png' | asset_img_url: '400x' }} 400w, {{ 'footer-illustration.png' | asset_img_url: '600x' }} 600w, {{ 'footer-illustration.png' | asset_img_url: '768x' }} 900w">
+    </figure>
+  </div>
+  <div class="content is-marginless has-background-light-turquoise">
+    <div class="container">
+      <div class="columns is-mobile">
+        <div class="column">
+          <aside class="menu">
+            <ul class="menu-list">
+              {% include 'menu-footer-one' %}
+            </ul>
+          </aside>
+        </div>
+        <div class="column">
+          <aside class="menu">
+            <ul class="menu-list">
+              {% include 'menu-footer-two' %}
+            </ul>
+          </aside>
+        </div>
+      </div>
+      <div class="is-divider"></div>
+      <div class="columns">
+        <div class="column">
+          <p class="is-size-7 has-text-primary">
+            1747 Hancock St, Ste A, San Diego, CA 92101 877.674.2244
+          </p>
+        </div>
+        <div class="column is-hidden-mobile">
+          <a href="{{ section.settings.instagram_url }}">
+            <span class="icon is-medium">
+              <i class="cf-icon-instagram-16"></i>
+            </span>
+          </a>
+          <a href="{{ section.settings.twitter_url }}">
+            <span class="icon is-medium">
+              <i class="cf-icon-twitter-16"></i>
+            </span>
+          </a>
+          <a href="{{ section.settings.facebook_url }}">
+            <span class="icon is-medium">
+              <i class="cf-icon-facebook-16"></i>
+            </span>
+          </a>
+        </div>
+        <div class="column">
+          <p class="is-size-7 has-text-primary">
+            © 2018 Chosen Foods LLC. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "footer_one_linklist",
+        "label": "Footer Menu One",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_two_linklist",
+        "label": "Footer Menu Two",
+        "default": "main-menu"
+      },
+      {
+        "type": "url",
+        "id": "instagram_url",
+        "label": "Instagram Link"
+      },
+      {
+        "type": "url",
+        "id": "twitter_url",
+        "label": "Twitter Link"
+      },
+      {
+        "type": "url",
+        "id": "facebook_url",
+        "label": "Facebook Link"
+      }
+    ]
+  }
+{% endschema %}
