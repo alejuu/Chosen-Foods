@@ -115,6 +115,19 @@
               "background_color": "peach"
             }
           },
+          "1556076692911": {
+            "type": "hero_banner_two",
+            "settings": {
+              "background_color": "lighter_peach",
+              "hero_full": false,
+              "text_image": "shopify:\/\/shop_images\/Goddess_Type_Lockup.png",
+              "image_one": "shopify:\/\/shop_images\/US_Dressing_Goddess_Family_PLANT_BASED_Small_10cb535f-3530-461c-8686-2906f2a5155a.png",
+              "image_two": "shopify:\/\/shop_images\/Certification_Icons.png",
+              "text": "Savory, tangy and irresistibly indescribable, these new Chosen Foods Goddess Dressings are poised to become your favorite go-to dressings.",
+              "text_btn": "Eat like a Godess",
+              "btn_link": "shopify:\/\/collections\/goddess-dressings"
+            }
+          },
           "1549035718105": {
             "type": "hero_banner",
             "settings": {
@@ -167,6 +180,7 @@
         },
         "block_order": [
           "1548684822890",
+          "1556076692911",
           "1549035718105",
           "1547147122226",
           "1549211451555"
