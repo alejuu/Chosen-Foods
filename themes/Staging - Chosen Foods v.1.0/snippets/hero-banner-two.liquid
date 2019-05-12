@@ -1,0 +1,62 @@
+{% if type == 'block' %}
+  {% assign background_color = block.settings.background_color %}
+  {% assign hero_full = block.settings.hero_full %}
+  {% assign text_image = block.settings.text_image %}
+  {% assign image_one = block.settings.image_one %}
+  {% assign image_two = block.settings.image_two %}
+  {% assign text = block.settings.text %}
+  {% assign text_btn = block.settings.text_btn %}
+  {% assign btn_link = block.settings.btn_link %}
+{% else %}
+  {% assign background_color = section.settings.background_color %}
+  {% assign hero_full = section.settings.hero_full %}
+  {% assign text_image = section.settings.text_image %}
+  {% assign image_one = section.settings.image_one %}
+  {% assign image_two = section.settings.image_two %}
+  {% assign text = section.settings.text %}
+  {% assign text_btn = section.settings.text_btn %}
+  {% assign btn_link = section.settings.btn_link %}
+{% endif %}
+<section class="hero is-main{% if hero_full == true %} is-fullheight is-full-custom{% endif %}{% if background_color == "green" %} has-background-primary{% endif %}{% if background_color == "peach" %} has-background-peach{% endif %}{% if background_color == "orange" %} has-background-orange{% endif %}{% if background_color == "light_green" %} has-background-light-green{% endif %}{% if background_color == "light_peach" %} has-background-light-peach{% endif %}{% if background_color == "light_turquoise" %} has-background-light-turquoise{% endif %}{% if background_color == "light_yellow" %} has-background-light-yellow{% endif %}{% if background_color == "lighter_peach" %} has-background-lighter-peach{% endif %}{% if background_color == "lighter_green" %} has-background-lighter-green{% endif %}">
+  <div class="hero-body">
+    <div class="container is-fluid has-text-centered">
+      <div class="columns">
+        <div class="column is-half">
+          <div data-aos="fade-up">
+            {% if text_image %}
+              <figure class="image">
+                <img style="max-width:400px" class="is-margin-center lazyload" alt="{{ text_image.alt | escape }}" data-sizes="auto" data-src="{{ text_image | img_url: '500x' }}" data-srcset="{{ text_image | img_url: '250x' }} 250w, {{ text_image | img_url: '350x' }} 350w, {{ text_image | img_url: '500x' }} 500w" >
+              </figure>
+            {% endif %}
+            {% if text != blank %}
+              <br>
+              <h5 class="title is-3 is-size-5 has-text-centered has-text-link is-marginless">{{ text }}</h5>
+              <br>
+              {% endif %}
+            {% if text_btn!= blank %}
+              <div>
+                <a href="{{ btn_link }}" class="button is-small is-rounded is-warning is-uppercase has-text-white has-text-centered">
+                  <span>{{ text_btn}}</span>
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="content-right" data-aos="fade-up">
+            {% if image_one %}
+              <figure class="image">
+                <img class="is-margin-center lazyload" alt="{{ image_one.alt | escape }}" data-sizes="auto" data-src="{{ image_one | img_url: '750x' }}" data-srcset="{{ image_one | img_url: '250x' }} 250w, {{ image_one | img_url: '350x' }} 350w, {{ image_one | img_url: '500x' }} 500w, {{ image_one | img_url: '750x' }} 750w">
+              </figure>
+            {% endif %}
+            {% if image_two %}
+              <figure class="image">
+                <img class="is-margin-center lazyload" alt="{{ image_two.alt | escape }}" data-sizes="auto" data-src="{{ image_two | img_url: '750x' }}" data-srcset="{{ image_two | img_url: '250x' }} 250w, {{ image_two | img_url: '350x' }} 350w, {{ image_two | img_url: '500x' }} 500w, {{ image_two | img_url: '750x' }} 750w">
+              </figure>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
