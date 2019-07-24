@@ -1,5 +1,11 @@
 <header>
-  <nav class="navbar is-fixed-top" id="mainMenu" role="navigation" aria-label="main navigation">
+  {% if section.settings.show_header_banner %}
+    <div class="header-tape navbar is-fixed-top has-background-lighter-green has-text-centered">
+      <hr class="is-marginless has-background-lighter-green">
+      <a{% if section.settings.new_tab %} target="_blank"{% endif %} href="{{ section.settings.banner_url }}">{{ section.settings.banner_text }}</a>
+    </div>
+  {% endif %}
+  <nav class="navbar is-fixed-top" id="mainMenu" role="navigation" aria-label="main navigation"{% if section.settings.show_header_banner %} style="top:30px"{% endif %}>
     <div class="navbar-menu navbar-is-mobile is-flex-touch is-hidden-desktop is-paddingless is-shadowless">
       <div class="navbar-start-mobile">
         <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -396,6 +402,28 @@
       }
     ],
     "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_header_banner",
+        "label": "Enable Header Banner",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "new_tab",
+        "label": "Open in new tab",
+        "default": false
+      },
+      {
+        "id": "banner_url",
+        "type": "url",
+        "label": "Banner link"
+      },
+      {
+        "type": "text",
+        "id": "banner_text",
+        "label": "Banner Text"
+      },
       {
         "type": "link_list",
         "id": "one_linklist",
