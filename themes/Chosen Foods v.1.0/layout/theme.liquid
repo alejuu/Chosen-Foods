@@ -26,6 +26,10 @@
 
     <link rel="canonical" href="{{ canonical_url }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    {% if page.handle == 'avocadoempire' %}
+      <meta property="og:image" content="{{ 'avocado-empire.png' | file_url }}">
+      <meta property="twitter:image" content="{{ 'avocado-empire.png' | file_url }}">
+    {% endif %}
     <link rel="shortcut icon" href="{{ 'chosen-favicon.png' | asset_img_url: '32x32' }}" type="image/png">
     {% comment %} {{ 'styles.scss' | asset_url | stylesheet_tag }} {% endcomment %}
     {% comment %} {{ 'styles.scss.css' | asset_url | stylesheet_tag }} {% endcomment %}
@@ -46,7 +50,9 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-557TQ4L"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    {% section 'header' %}
+    {% unless page.handle == 'avocadoempire' %}
+      {% section 'header' %}
+    {% endunless %}   
     {{ content_for_layout }}
     {% section 'footer' %}
   <!-- This line added automatically by JSON-LD for SEO. -->{% include 'jsonld-for-seo' %}

@@ -1,0 +1,455 @@
+{% if section.blocks.size > 0 %}
+  {% for block in section.blocks %}
+    {% if block.type == "hero" %}
+      {% include 'hero', type: 'block' %}
+    {% elsif block.type == "hero_columns" %}
+      {% include 'hero-columns', type: 'block' %}
+    {% elsif block.type == "hero_banner" %}
+      {% include 'hero-banner', type: 'block' %}
+    {% elsif block.type == "hero_banner_two" %}
+      {% include 'hero-banner-two', type: 'block' %}
+    {% elsif block.type == "hero_banner_content" %}
+      {% include 'hero-banner-content', type: 'block' %}
+    {% elsif block.type == "logos" %}
+      {% include 'logos', type: 'block' %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Avocado Empire",
+  "class": "avocadoempire",
+  "max_blocks": 20,
+  "blocks": [
+    {
+      "type": "hero",
+      "name": "Hero",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Discover More"
+        },
+        {
+          "id": "text_link",
+          "type": "url",
+          "label": "Text link"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "type":      "checkbox",
+          "id":        "hero_full",
+          "label":     "Full height Hero",
+          "default":   false,
+          "info":      "Check the box if hero is full height."
+        },
+        {
+          "type":      "checkbox",
+          "id":        "hero_top",
+          "label":     "Top Hero",
+          "default":   false,
+          "info":      "Check the box if hero is at the top of the page."
+        },
+        {
+          "type": "select",
+          "id": "background_color",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
+        }
+      ]
+    },
+    {
+      "type": "hero_columns",
+      "name": "Hero Columns",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Column One"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_one",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image_one",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text_one",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link_one",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "background_color_one",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
+        },
+        {
+          "type": "header",
+          "content": "Column Two"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_two",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image_two",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text_two",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link_two",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "background_color_two",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
+        },
+        {
+          "type": "header",
+          "content": "Column Three"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_three",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image_three",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text_three",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link_three",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "background_color_three",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
+        },
+        {
+          "type": "header",
+          "content": "Column Four"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_four",
+          "label": "Image Top"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image_four",
+          "label": "Image Bottom"
+        },
+        {
+          "type": "text",
+          "id": "text_four",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link_four",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "background_color_four",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
+        }
+      ]
+    },
+    {
+      "type": "hero_banner",
+      "name": "Hero Banner",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "hero_full",
+          "label": "Full height Hero",
+          "default": false,
+          "info": "Check the box if hero is full height."
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "text_btn",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link",
+          "type": "url",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "hero_banner_two",
+      "name": "Hero Banner Two Columns",
+      "settings": [
+        {
+          "type": "select",
+          "id": "background_color",
+          "options": [
+            { "value": "green", "label": "Green"},
+            { "value": "peach", "label": "Peach"},
+            { "value": "orange", "label": "Orange"},
+            { "value": "light_green", "label": "Light Green"},
+            { "value": "light_peach", "label": "Light Peach"},
+            { "value": "light_turquoise", "label": "Light Turquoise"},
+            { "value": "light_yellow", "label": "Light Yellow"},
+            { "value": "lighter_peach", "label": "Lighter Peach"},
+            { "value": "lighter_green", "label": "Lighter Green"}
+          ],
+          "label": "Background Color"
+        },
+        {
+          "type": "checkbox",
+          "id": "hero_full",
+          "label": "Full height Hero",
+          "default": false,
+          "info": "Check the box if hero is full height."
+        },
+        {
+          "type": "image_picker",
+          "id": "text_image",
+          "label": "Image for Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_one",
+          "label": "Image One"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_two",
+          "label": "Image Two"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "text_btn",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link",
+          "type": "url",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "hero_banner_content",
+      "name": "Hero Banner Content",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "hero_full",
+          "label": "Full height Hero",
+          "default": false,
+          "info": "Check the box if hero is full height."
+        },
+        {
+          "type": "image_picker",
+          "id": "image_one",
+          "label": "Image One"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "html",
+          "id": "html_area",
+          "label": "Custom HTML"
+        },
+        {
+          "type": "text",
+          "id": "text_btn",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link",
+          "type": "url",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "logos",
+      "name": "Logos",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_1",
+          "label": "Logo One"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_2",
+          "label": "Logo Two"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_3",
+          "label": "Logo Three"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_4",
+          "label": "Logo Four"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_5",
+          "label": "Logo Five"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_6",
+          "label": "Logo Six"
+        },
+        {
+          "type": "text",
+          "id": "text_btn",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "id": "btn_link",
+          "type": "url",
+          "label": "Button link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

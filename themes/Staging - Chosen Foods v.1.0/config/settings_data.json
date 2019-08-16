@@ -3,11 +3,15 @@
     "bg_color": "#ffffff",
     "text_color": "#cccccc",
     "use_logo": false,
+    "checkout_header_image": "",
     "checkout_use_storefront_logo": false,
+    "checkout_logo_image": "",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
     "checkout_body_background_color": "#ffffff",
     "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
     "checkout_sidebar_background_color": "#fafafa",
     "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
     "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
@@ -76,6 +80,10 @@
           "1548399097761"
         ],
         "settings": {
+          "show_header_banner": false,
+          "new_tab": false,
+          "banner_url": "",
+          "banner_text": "",
           "one_linklist": "main-menu",
           "two_linklist": "company",
           "three_linklist": "footer-service",
@@ -105,6 +113,7 @@
               "text": "Discover More",
               "text_link": "shopify:\/\/pages\/our-avocado-oil",
               "btn_text": "",
+              "btn_link": "",
               "hero_full": true,
               "hero_top": true,
               "background_color": "peach"
@@ -117,6 +126,7 @@
               "hero_full": false,
               "text_image": "shopify:\/\/shop_images\/Goddess_Type_Lockup_1.png",
               "image_one": "shopify:\/\/shop_images\/US_Dressing_Goddess_Family_PLANT_BASED_Small_10cb535f-3530-461c-8686-2906f2a5155a.png",
+              "image_two": "",
               "text": "Our limited run of Goddess Dressings SOLD OUT! But don’t worry, we’re whipping up another batch. You’ll be eating like a goddess in no time. Sign up to be alerted as soon as they’re back in stock.",
               "text_btn": "Sign Up",
               "btn_link": "http:\/\/eepurl.com\/b_rXCL"
@@ -188,7 +198,8 @@
           "1546056439337": {
             "type": "hero",
             "settings": {
-              "image": "shopify:\/\/shop_images\/cookingoils-category.png"
+              "image": "shopify:\/\/shop_images\/cookingoils-category.png",
+              "text_image": ""
             }
           }
         },
@@ -227,6 +238,28 @@
           "1546066591863",
           "1548782867456",
           "1548782879389"
+        ],
+        "settings": {
+        }
+      },
+      "avocadoempire-template": {
+        "type": "avocadoempire-template",
+        "blocks": {
+          "1563980215338": {
+            "type": "hero_banner_content",
+            "settings": {
+              "background_image": "shopify:\/\/shop_images\/NationalAvocadoDay_LandingPage_BG.jpg",
+              "hero_full": false,
+              "image_one": "shopify:\/\/shop_images\/NationalAvocadoDay_LandingPage_Type.png",
+              "text": "",
+              "html_area": "<a class=\"rcptr\" href=\"http:\/\/www.rafflecopter.com\/rafl\/display\/29770b3e8\/\" rel=\"nofollow\" data-raflid=\"29770b3e8\" data-theme=\"classic\" data-template=\"\" id=\"rcwidget_u3euobd4\">a Rafflecopter giveaway<\/a>\n\n<script src=\"https:\/\/widget-prime.rafflecopter.com\/launch.js\"><\/script>",
+              "text_btn": "Terms and Conditions",
+              "btn_link": "shopify:\/\/pages\/avocado-empire-terms"
+            }
+          }
+        },
+        "block_order": [
+          "1563980215338"
         ],
         "settings": {
         }

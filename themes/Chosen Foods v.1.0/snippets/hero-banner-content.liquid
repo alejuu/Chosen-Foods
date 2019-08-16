@@ -1,0 +1,45 @@
+{% if type == 'block' %}
+  {% assign hero_full = block.settings.hero_full %}
+  {% assign background_image = block.settings.background_image %}
+  {% assign text = block.settings.text %}
+  {% assign code = block.settings.html_area %}
+  {% assign image_one = block.settings.image_one %}
+  {% assign text_btn = block.settings.text_btn %}
+  {% assign btn_link = block.settings.btn_link %}
+{% else %}
+  {% assign hero_full = section.settings.hero_full %}
+  {% assign background_image = section.settings.background_image %}
+  {% assign text = section.settings.text %}
+  {% assign code = section.settings.html_area %}
+  {% assign image_one = section.settings.image_one %}
+  {% assign text_btn = section.settings.text_btn %}
+  {% assign btn_link = section.settings.btn_link %}
+{% endif %}
+<section class="hero is-banner {% if hero_full == true %} is-fullheight is-full-custom{% endif %}" style="background-image:url({{ background_image | img_url: '1920x' }});">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div data-aos="fade-up" class="content">      
+        {% if image_one %}
+          <figure class="image">
+            <img class="is-margin-center lazyload" alt="{{ image_one.alt | escape }}" data-sizes="auto" data-src="{{ image_one | img_url: '750x' }}" data-srcset="{{ image_one | img_url: '250x' }} 250w, {{ image_one | img_url: '350x' }} 350w, {{ image_one | img_url: '500x' }} 500w, {{ image_one | img_url: '750x' }} 750w">
+          </figure>
+        {% endif %}
+        {% if text %}
+          <h3 class="title is-2 has-text-primary">
+            {{ text }}
+          </h3>
+        {% endif %}
+        {% if code %}
+          <div>
+            {{ code }}
+          </div>
+        {% endif %}
+        {% if text_btn != empty %}
+          <a href="{{ btn_link }}" class="button is-small is-rounded is-warning is-uppercase has-text-centered has-text-white">
+            <span>{{ text_btn }}</span>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
