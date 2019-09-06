@@ -1,23 +1,25 @@
 <footer class="footer">
-  <div class="content is-marginless has-text-centered">
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <div data-aos="fade-up">
-            <h3 class="title is-2 has-text-primary">Catch our drift</h3>
-            <p class="is-size-6 has-text-primary">
-              Sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
-            </p>
+  {% unless  page.handle == 'sam-the-cooking-guy' %}
+    <div class="content is-marginless has-text-centered">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div data-aos="fade-up">
+              <h3 class="title is-2 has-text-primary">Catch our drift</h3>
+              <p class="is-size-6 has-text-primary">
+                Sign up to receive our exclusive deals, unique recipes, healthy living inspirations, and industry news.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="column">
-          <div data-aos="fade-right" class="newsletter-form">
-            {% include 'newsletter-form' %}
+          <div class="column">
+            <div data-aos="fade-right" class="newsletter-form">
+              {% include 'newsletter-form' %}
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  {% endunless %} 
   <div class="content is-marginless has-text-centered has-background-light-green is-hidden-tablet">
     <div class="container">
       <h3 class="title is-2 has-text-white">Relationships need nourishment</h3>

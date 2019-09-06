@@ -1,0 +1,36 @@
+<section class="section collection-grid">
+  <div class="container">
+    <div class="columns is-flex is-multiline">
+      {% for block in section.blocks %}
+        {% if block.type == "column_item" %}
+          {% include 'column-item', type: 'block'  %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Grid",
+  "class": "grid",
+  "max_blocks": 20,
+  "blocks": [
+    {
+      "type": "column_item",
+      "name": "Column Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

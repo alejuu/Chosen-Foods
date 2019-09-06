@@ -1,0 +1,17 @@
+{% if type == 'block' %}
+  {% assign image = block.settings.image %}
+  {% assign title = block.settings.title %}
+{% else %}
+  {% assign image = section.settings.image %}
+  {% assign title = section.settings.title %}
+{% endif %}
+<div class="column is-half-mobile is-one-quarter">
+  <div class="product">
+    <figure class="image is-margin-center">
+      <img data-sizes="auto" data-src="{{ image | img_url: '300x' }}" data-srcset="{{ image | img_url: '150x' }} 150w, {{ image | img_url: '300x' }} 300w" class="lazyload">
+    </figure>
+    <div class="has-text-centered product-info">
+      <h3 class="title is-3">{{ title }}</h3>
+    </div>
+  </div>
+</div>

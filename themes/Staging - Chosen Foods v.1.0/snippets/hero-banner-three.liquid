@@ -1,0 +1,33 @@
+{% if type == 'block' %}
+  {% assign background_color = block.settings.background_color %}
+  {% assign image = block.settings.image %}
+  {% assign text_image = block.settings.text_image %}
+{% else %}
+  {% assign background_color = section.settings.background_color %}
+  {% assign image = section.settings.image %}
+  {% assign text_image = section.settings.text_image %}
+{% endif %}
+<section class="hero is-collection is-page{% if background_color == "green" %} has-background-primary{% endif %}{% if background_color == "peach" %} has-background-peach{% endif %}{% if background_color == "orange" %} has-background-orange{% endif %}{% if background_color == "light_green" %} has-background-light-green{% endif %}{% if background_color == "light_peach" %} has-background-light-peach{% endif %}{% if background_color == "light_turquoise" %} has-background-light-turquoise{% endif %}{% if background_color == "light_yellow" %} has-background-light-yellow{% endif %}{% if background_color == "lighter_peach" %} has-background-lighter-peach{% endif %}{% if background_color == "lighter_green" %} has-background-lighter-green{% endif %}">
+  {% include 'breadcrumbs' %}
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div data-aos="fade-up">
+        <figure class="image">
+          <img class="is-margin-center lazyload" width="350px" alt="{{ image.alt | escape }}" data-src="{{ image | img_url: '350x' }}">
+        </figure>
+      </div>
+      <div data-aos="fade-up">
+        <h1 class="is-hidden">{{ page.title }}</h1>
+        {% if text_image %}
+          <figure class="image">
+            <img class="is-margin-center lazyload" width="350px" alt="{{ text_image.alt | escape }}" data-src="{{ text_image | img_url: '350x' }}">
+          </figure>
+        {% endif %}
+      </div>
+      <div class="content">
+        <br>
+        <h2 class="title is-3 is-size-7-mobile has-text-centered has-text-warning">{{ page.content }}</h2>
+      </div>
+    </div>
+  </div>
+</section>

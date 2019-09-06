@@ -105,10 +105,11 @@
 {%- if jsonld_heritage == 'vintage' -%}{%- assign jsonld_condition_from_heritage = 'UsedCondition' -%}{%- endif -%}
 {%- assign item_condition = jsonld_for_seo_product.metafields.jsonld.itemCondition | default: jsonld_condition_from_tag | default: shop.metafields.jsonld.itemCondition | default: jsonld_condition_from_heritage | default: "NewCondition" -%}
 {%- assign jsonld_availability = jsonld_for_seo_product.metafields.jsonld.availability | default: jsonld_availability_from_tag -%}
+{%- assign jsonld_product_id = canonical_url | append: '#product' -%}
 <script type="application/ld+json">
 {
   "@context": "{{ jsonld_for_seo_protocol }}schema.org",
-  "@id": {{ canonical_url | append: '#product' | json }},
+  "@id": {{ jsonld_product_id | json }},
   "@type": "Product",{% unless shop.metafields.jsonld.hide_vendor == "true" %}
   "brand": {
     "@type": "Brand",
@@ -211,8 +212,12 @@
     {%- assign jsonld_review_value = jsonld_for_seo_product.metafields.reevio.reviews_average %}
     {%- assign jsonld_review_count = jsonld_for_seo_product.metafields.reevio.reviews_count %}
   {% when 'ryviu' %}
-    {% assign jsonld_review_count = jsonld_for_seo_product.metafields.ryviu.reviews | split: 'reviewCount" content="' | last | split: '"' |first | plus: 0 %}
-    {% assign jsonld_review_value = jsonld_for_seo_product.metafields.ryviu.reviews | split: 'ratingValue" content="' | last | split: '"' |first | plus: 0  %}
+    {% assign jsonld_review_count = jsonld_for_seo_product.metafields.ryviu.r_count | plus: 0 %}
+    {% assign jsonld_review_value = jsonld_for_seo_product.metafields.ryviu.r_value | plus: 0  %}
+    {% if jsonld_review_count == blank or jsonld_review_count == 0 %}
+      {% assign jsonld_review_count = jsonld_for_seo_product.metafields.ryviu.reviews | split: 'reviewCount" content="' | last | split: '"' |first | plus: 0 %}
+      {% assign jsonld_review_value = jsonld_for_seo_product.metafields.ryviu.reviews | split: 'ratingValue" content="' | last | split: '"' |first | plus: 0  %}
+    {% endif %}
   {% when 'spr' %}
     {% assign jsonld_review_count = jsonld_for_seo_product.metafields.spr.reviews | split: 'reviewCount" content="' | last | split: '"' |first | plus: 0 %}
     {% assign jsonld_review_value = jsonld_for_seo_product.metafields.spr.reviews | split: 'ratingValue" content="' | last | split: '"' |first | plus: 0  %}
@@ -225,7 +230,10 @@
     {% assign jsonld_review_value = jsonld_for_seo_product.metafields.reviewapp.reviews | split: '"average" itemprop="ratingValue">' | last | split: '</span>' |first | plus: 0  %}
   {% when 'rating-widget' %}
     {% if rate and votes %}{% else %}
-      {% include 'rw-ratings-data' %}
+      {%- capture jsonld_rating_widget_data_include -%}{% include 'rw-ratings-data' %}{%- endcapture -%}
+      {%- unless jsonld_rating_widget_data_include contains 'Liquid error' -%}
+        {{ jsonld_rating_widget_data_include }}
+      {%- endunless -%}
     {% endif %}
     {%- assign jsonld_review_value = rate %}
     {%- assign jsonld_review_count = votes %}
@@ -299,7 +307,7 @@
     "description": "Trust Reviews",
     "ratingValue": {{ jsonld_for_seo_product.metafields.vnreviews.ratingValue }},
     "ratingCount": {{ jsonld_for_seo_product.metafields.vnreviews.reviewCount }}
-  }{% elsif jsonld_for_seo_product.metafields.stamped.reviews_count and jsonld_for_seo_product.metafields.stamped.reviews_count != "0" %},
+  }{% elsif jsonld_for_seo_product.metafields.stamped.reviews_count and jsonld_for_seo_product.metafields.stamped.reviews_count != "0" and jsonld_for_seo_product.metafields.stamped.reviews_average and jsonld_for_seo_product.metafields.stamped.reviews_average != "0" %},
   "aggregateRating": {
     "@type": "AggregateRating",
     "description": "Stamped.io",
@@ -311,9 +319,13 @@
     "description": "Rivio",
     "ratingValue": {{ jsonld_for_seo_product.metafields.reevio.reviews_average }},
     "ratingCount": {{ jsonld_for_seo_product.metafields.reevio.reviews_count }}
-  }{% elsif jsonld_for_seo_product.metafields.ryviu.reviews and jsonld_for_seo_product.metafields.ryviu.reviews != blank %}
-    {% assign jsonld_review_count = jsonld_for_seo_product.metafields.ryviu.reviews | split: 'reviewCount" content="' | last | split: '"' |first | plus: 0 %}
-    {% assign jsonld_review_value = jsonld_for_seo_product.metafields.ryviu.reviews | split: 'ratingValue" content="' | last | split: '"' |first | plus: 0  %}
+  }{% elsif jsonld_for_seo_product.metafields.ryviu.r_count != blank or jsonld_for_seo_product.metafields.ryviu.reviews != blank %}
+    {% assign jsonld_review_count = jsonld_for_seo_product.metafields.ryviu.r_count | plus: 0 %}
+    {% assign jsonld_review_value = jsonld_for_seo_product.metafields.ryviu.r_value | plus: 0 %}
+    {% if jsonld_review_count == blank or jsonld_review_count == 0 %}
+      {% assign jsonld_review_count = jsonld_for_seo_product.metafields.ryviu.reviews | split: 'reviewCount" content="' | last | split: '"' |first | plus: 0 %}
+      {% assign jsonld_review_value = jsonld_for_seo_product.metafields.ryviu.reviews | split: 'ratingValue" content="' | last | split: '"' |first | plus: 0  %}
+    {% endif %}
     {% if jsonld_review_count > 0 and jsonld_review_value > 0 %},
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -425,7 +437,7 @@
   "url": {{ canonical_url | json }},
   "mainEntityOfPage": {{ canonical_url | json }},
   "name": {{ jsonld_for_seo_object.title | json }},
-  "author": {{ jsonld_for_seo_object.metafields.jsonld.author | default: jsonld_for_seo_object.author | json }},
+  "author": {{ jsonld_for_seo_object.metafields.jsonld.author | default: jsonld_for_seo_object.author | default: shop.name | json }},
   "publisher": {
     "@type": "Organization",
     "logo": {
@@ -460,7 +472,10 @@
   {% case jsonld_article_review_provider %}
   {% when 'rating-widget' %}
     {% if rate and votes %}{% else %}
-      {% include 'rw-ratings-data' %}
+      {%- capture jsonld_rating_widget_data_include -%}{% include 'rw-ratings-data' %}{%- endcapture -%}
+      {%- unless jsonld_rating_widget_data_include contains 'Liquid error' -%}
+        {{ jsonld_rating_widget_data_include }}
+      {%- endunless -%}
     {% endif %}
     {%- assign jsonld_review_value = rate %}
     {%- assign jsonld_review_count = votes %}
