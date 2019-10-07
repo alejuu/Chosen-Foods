@@ -45,7 +45,12 @@
               "text_image_four": "shopify:\/\/shop_images\/dressings-text.png",
               "text_four": "Shop Now",
               "btn_link_four": "shopify:\/\/collections\/dressings-marinades-made-with-avocado-oil",
-              "background_color_four": "lighter_green"
+              "background_color_four": "lighter_green",
+              "image_five": "shopify:\/\/shop_images\/Simmer_HP.png",
+              "text_image_five": "shopify:\/\/shop_images\/type-simmersauces.png",
+              "text_five": "Shop Now",
+              "btn_link_five": "shopify:\/\/collections\/simmer-sauces",
+              "background_color_five": "green"
             }
           },
           "1548365036224": {
@@ -161,7 +166,12 @@
               "text_image_four": "shopify:\/\/shop_images\/dressings-text.png",
               "text_four": "Shop Now",
               "btn_link_four": "shopify:\/\/collections\/dressings-marinades-made-with-avocado-oil",
-              "background_color_four": "lighter_green"
+              "background_color_four": "lighter_green",
+              "image_five": "shopify:\/\/shop_images\/Simmer_HP.png",
+              "text_image_five": "shopify:\/\/shop_images\/type-simmersauces.png",
+              "text_five": "Shop Now",
+              "btn_link_five": "shopify:\/\/collections\/simmer-sauces",
+              "background_color_five": "green"
             }
           },
           "1549211451555": {
