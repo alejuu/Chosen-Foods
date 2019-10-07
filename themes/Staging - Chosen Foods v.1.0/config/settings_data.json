@@ -119,17 +119,14 @@
               "background_color": "peach"
             }
           },
-          "1556076692911": {
-            "type": "hero_banner_two",
+          "1568313479559": {
+            "type": "hero_banner",
             "settings": {
-              "background_color": "lighter_peach",
-              "hero_full": false,
-              "text_image": "shopify:\/\/shop_images\/Goddess_Type_Lockup_1.png",
-              "image_one": "shopify:\/\/shop_images\/US_Dressing_Goddess_Family_PLANT_BASED_Small_10cb535f-3530-461c-8686-2906f2a5155a.png",
-              "image_two": "",
-              "text": "Our limited run of Goddess Dressings SOLD OUT! But don’t worry, we’re whipping up another batch. You’ll be eating like a goddess in no time. Sign up to be alerted as soon as they’re back in stock.",
-              "text_btn": "Sign Up",
-              "btn_link": "http:\/\/eepurl.com\/b_rXCL"
+              "background_image": "shopify:\/\/shop_images\/US_ImgL_Simmer_Sauce_Hero_Shot_Family_6840_Hale_Productions_201908_1.jpg",
+              "hero_full": true,
+              "text": "Globally Inspired and made with our 100% Pure Avocado Oil! Try our NEW Simmer Sauces.",
+              "text_btn": "Shop Now",
+              "btn_link": "shopify:\/\/collections\/simmer-sauces"
             }
           },
           "1549035718105": {
@@ -184,7 +181,7 @@
         },
         "block_order": [
           "1548684822890",
-          "1556076692911",
+          "1568313479559",
           "1549035718105",
           "1547147122226",
           "1549211451555"
@@ -305,12 +302,52 @@
               "image": "shopify:\/\/shop_images\/US_Pkg_Food_Service_1_Gallon_Traditional_Mayo_Concept_V01.jpg",
               "title": "1 Gallon Traditional Avocado Oil Mayo"
             }
+          },
+          "1567784524328": {
+            "type": "column_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/US_Pkg-Food-Service_1-Gallon_Vegan-Mayo-Concept-V01.jpg",
+              "title": "1 Gallon Vegan Avocado Oil Mayo"
+            }
+          },
+          "1567784555730": {
+            "type": "column_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/US_Pkg-Food-Service_1-Gallon_Keto-Mayo-Concept-V01.jpg",
+              "title": "1 Gallon Keto Mayo"
+            }
+          },
+          "1567784571083": {
+            "type": "column_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/US_ImgM_Mayo_Unsweetened_Traditional_Avocado_Oil_Sachet_14ml_Mv3_FAWV01_Front.jpg",
+              "title": "Traditional Avocado Oil Mayo Sachets"
+            }
+          },
+          "1567784593752": {
+            "type": "column_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/US_ImgM_Vegan_Mayo_Sachet_14ml_Mv3_FAWV02_Front.jpg",
+              "title": "Vegan Avocado Oil Mayo Sachets"
+            }
+          },
+          "1567784688928": {
+            "type": "column_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/US_ImgM_Keto_Mayo_Sachet_14ml_Mv3_CAW_01_FRONT.jpg",
+              "title": "Keto Mayo Sachets"
+            }
           }
         },
         "block_order": [
           "1565968308911",
           "1565968418793",
-          "1565968461814"
+          "1565968461814",
+          "1567784524328",
+          "1567784555730",
+          "1567784571083",
+          "1567784593752",
+          "1567784688928"
         ],
         "settings": {
         }

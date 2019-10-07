@@ -566,4 +566,27 @@
   "image": {{ jsonld_for_seo_object.metafields.jsonld.articleImage | default: jsonld_for_seo_object.metafields.jsonld.image | default: jsonld_for_seo_default_image | json }}
 }
 </script>{% endunless %}
+{%- unless jsonld_for_seo_object.metafields.jsonld.faq == blank -%}
+{%- assign jsonld_for_seo_faq = jsonld_for_seo_object.metafields.jsonld.faq | split: "||" -%}
+<script type="application/ld+json">
+{
+  "@context": "{{ jsonld_for_seo_protocol }}schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+  {%- for jsonld_for_seo_faqItem in jsonld_for_seo_faq -%}
+    {%- assign jsonld_for_seo_question = jsonld_for_seo_faqItem | split: "|" | first -%}
+    {%- assign jsonld_for_seo_answer = jsonld_for_seo_faqItem | split: "|" | last -%}
+    {
+      "@type": "Question",
+      "name": {{ jsonld_for_seo_question | strip | json }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ jsonld_for_seo_answer | strip | json }}
+      }
+    }
+    {%- if forloop.last != true -%},{%- endif -%}
+  {%- endfor -%}
+  ]
+}
+</script>{%- endunless -%}
 {% endunless %}{% assign jsonld_for_seo_applied = true %}
