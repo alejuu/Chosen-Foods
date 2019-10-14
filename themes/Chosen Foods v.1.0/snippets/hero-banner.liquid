@@ -2,12 +2,14 @@
   {% assign hero_full = block.settings.hero_full %}
   {% assign background_image = block.settings.background_image %}
   {% assign text = block.settings.text %}
+  {% assign image = block.settings.image %}
   {% assign text_btn = block.settings.text_btn %}
   {% assign btn_link = block.settings.btn_link %}
 {% else %}
   {% assign hero_full = section.settings.hero_full %}
   {% assign background_image = section.settings.background_image %}
   {% assign text = section.settings.text %}
+  {% assign image = section.settings.image %}
   {% assign text_btn = section.settings.text_btn %}
   {% assign btn_link = section.settings.btn_link %}
 {% endif %}
@@ -15,9 +17,16 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <div data-aos="fade-up" class="content">
-        <h3 class="title is-2 has-text-primary">
-          {{ text }}
-        </h3>
+        {% if text %}
+          <h3 class="title is-2 has-text-primary">
+            {{ text }}
+          </h3>
+        {% endif %}
+        {% if image %}
+          <figure class="image">
+            <img style="max-width:400px" class="is-margin-center lazyload" alt="{{ image.alt | escape }}" data-sizes="auto" data-src="{{ image | img_url: '500x' }}" data-srcset="{{ image | img_url: '250x' }} 250w, {{ image | img_url: '350x' }} 350w, {{ image | img_url: '500x' }} 500w" >
+          </figure>
+        {% endif %}
         <a href="{{ btn_link }}" class="button is-small is-rounded is-warning is-uppercase has-text-centered has-text-white">
           <span>{{ text_btn }}</span>
         </a>
