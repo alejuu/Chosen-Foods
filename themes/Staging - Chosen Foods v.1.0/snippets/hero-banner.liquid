@@ -1,6 +1,7 @@
 {% if type == 'block' %}
   {% assign hero_full = block.settings.hero_full %}
   {% assign background_image = block.settings.background_image %}
+  {% assign content_transparent = block.settings.content_transparent %}
   {% assign text = block.settings.text %}
   {% assign image = block.settings.image %}
   {% assign text_btn = block.settings.text_btn %}
@@ -8,6 +9,7 @@
 {% else %}
   {% assign hero_full = section.settings.hero_full %}
   {% assign background_image = section.settings.background_image %}
+  {% assign content_transparent = section.settings.content_transparent %}
   {% assign text = section.settings.text %}
   {% assign image = section.settings.image %}
   {% assign text_btn = section.settings.text_btn %}
@@ -16,7 +18,7 @@
 <section class="hero is-banner {% if hero_full == true %} is-fullheight is-full-custom{% endif %}" style="background-image:url({{ background_image | img_url: '1920x' }});">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <div data-aos="fade-up" class="content">
+      <div data-aos="fade-up" class="content"{% if content_transparent %} style="background-color: transparent;"{% endif %}>
         {% if text %}
           <h3 class="title is-2 has-text-primary">
             {{ text }}

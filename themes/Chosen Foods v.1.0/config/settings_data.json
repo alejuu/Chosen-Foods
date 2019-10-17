@@ -124,28 +124,6 @@
               "background_color": "peach"
             }
           },
-          "1568313479559": {
-            "type": "hero_banner",
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/US_ImgL_Simmer_Sauce_Hero_Shot_Family_6840_Hale_Productions_201908_1.jpg",
-              "hero_full": true,
-              "text": "Globally Inspired and made with our 100% Pure Avocado Oil! Try our NEW Simmer Sauces.",
-              "image": "",
-              "text_btn": "Shop Now",
-              "btn_link": "shopify:\/\/collections\/simmer-sauces"
-            }
-          },
-          "1549035718105": {
-            "type": "hero_banner",
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/infused-sprays.jpg",
-              "hero_full": true,
-              "text": "Flavorful herbs and spices collide with our 100% Pure Avocado Oil! Try our NEW Infused Sprays - available in 9 insanely tasty flavor combinations.",
-              "image": "",
-              "text_btn": "Shop Now",
-              "btn_link": "shopify:\/\/collections\/pure-oil-sprays"
-            }
-          },
           "1547147122226": {
             "type": "hero_columns",
             "settings": {
@@ -176,6 +154,32 @@
               "background_color_five": "green"
             }
           },
+          "1571327920890": {
+            "type": "hero",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pumpkin-image.png",
+              "text_image": "shopify:\/\/shop_images\/pumpkin-text.png",
+              "text": "",
+              "text_link": "",
+              "btn_text": "Shop Now",
+              "btn_link": "shopify:\/\/products\/pumpkin-spice-avocado-oil-spray",
+              "hero_full": true,
+              "hero_top": false,
+              "background_color": "peach"
+            }
+          },
+          "1570808740892": {
+            "type": "hero_banner",
+            "settings": {
+              "hero_full": false,
+              "background_image": "shopify:\/\/shop_images\/FoodService_Banner_BG.jpg",
+              "content_transparent": true,
+              "text": "",
+              "image": "shopify:\/\/shop_images\/FoodService_Banner_Type.png",
+              "text_btn": "Learn More",
+              "btn_link": "shopify:\/\/pages\/food-service"
+            }
+          },
           "1549211451555": {
             "type": "logos",
             "settings": {
@@ -189,26 +193,14 @@
               "text_btn": "View Map",
               "btn_link": "shopify:\/\/pages\/where-to-buy"
             }
-          },
-          "1570808740892": {
-            "type": "hero_banner",
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/FoodService_Banner_BG.jpg",
-              "hero_full": false,
-              "text": "",
-              "image": "shopify:\/\/shop_images\/FoodService_Banner_Type.png",
-              "text_btn": "Order Now",
-              "btn_link": "shopify:\/\/pages\/food-service"
-            }
           }
         },
         "block_order": [
           "1548684822890",
-          "1568313479559",
-          "1549035718105",
           "1547147122226",
-          "1549211451555",
-          "1570808740892"
+          "1571327920890",        
+          "1570808740892",
+          "1549211451555"
         ],
         "settings": {
         }
