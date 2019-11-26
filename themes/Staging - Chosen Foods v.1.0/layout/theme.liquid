@@ -22,7 +22,10 @@
       <meta name="description" content="{{ page_description }}" />
     {% endif %}
 
-    {{ content_for_header }}{% include 'Appify_aca' %}
+    {{ content_for_header }}
+
+  {% include 'bold-common' %}
+{% include 'Appify_aca' %}
 
     <link rel="canonical" href="{{ canonical_url }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -78,6 +81,9 @@
 <!-- **BEGIN** Hextom USB Integration // Main Include - DO NOT MODIFY -->
     {% include 'hextom_usb_main' %}
     <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
+
+{% include 'special-offers' %}
+
 </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   {% comment %} {% if template == "product" %}

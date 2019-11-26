@@ -198,7 +198,7 @@
         "block_order": [
           "1548684822890",
           "1547147122226",
-          "1571327920890",        
+          "1571327920890",
           "1570808740892",
           "1549211451555"
         ],
@@ -312,25 +312,32 @@
               "title": "35 lb Chosen Blend Cooking Oil"
             }
           },
-          "1565968461814": {
-            "type": "column_item",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/US_Pkg_Food_Service_1_Gallon_Traditional_Mayo_Concept_V01.jpg",
-              "title": "1 Gallon Traditional Avocado Oil Mayo"
-            }
-          },
           "1567784524328": {
             "type": "column_item",
             "settings": {
-              "image": "shopify:\/\/shop_images\/US_Pkg-Food-Service_1-Gallon_Vegan-Mayo-Concept-V01.jpg",
-              "title": "1 Gallon Vegan Avocado Oil Mayo"
+              "image": "shopify:\/\/shop_images\/US_ImgM_Mayo-Traditional-Avocado-Oil_24-oz_FAW-V02-201210_Front.jpg",
+              "title": "24 oz Avocado Oil Mayo - 6 units per case"
+            }
+          },
+          "1565968461814": {
+            "type": "column_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/US_ImgM_Mayo-Vegan-Traditional_24oz_CAW-V01-201561_Front.jpg",
+              "title": "24 oz Vegan Mayo - 6 units per case"
+            }
+          },
+          "1573826845321": {
+            "type": "column_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/US_ImgM_Dressing_Lemon_Garlic_Sachet_30ml_Mv2_FAWV01_Front.jpg",
+              "title": "1 oz Lemon Garlic Dressing Packets - 336 units per case"
             }
           },
           "1567784555730": {
             "type": "column_item",
             "settings": {
-              "image": "shopify:\/\/shop_images\/US_Pkg-Food-Service_1-Gallon_Keto-Mayo-Concept-V01.jpg",
-              "title": "1 Gallon Keto Mayo"
+              "image": "shopify:\/\/shop_images\/US_ImgM_Dressing_Chipotle_Ranch_Sachet_30ml_Mv2_FAWV01_Front.jpg",
+              "title": "1 oz Chipotle Ranch Dressing Packets - 336 units per case"
             }
           },
           "1567784571083": {
@@ -353,16 +360,25 @@
               "image": "shopify:\/\/shop_images\/US_ImgM_Keto_Mayo_Sachet_14ml_Mv3_CAW_01_FRONT.jpg",
               "title": "Keto Mayo Sachets"
             }
+          },
+          "1574210100110": {
+            "type": "column_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/US_FS_Avocado_Pulp_6LB_Concept_V01_D01.jpg",
+              "title": "Avocado Pulp - <br>1 lb = 12 units per case<br> 3 lbs  = 4 units per case<br> 6 lbs = 4 units per case"
+            }
           }
         },
         "block_order": [
           "1565968308911",
           "1565968418793",
-          "1565968461814",
           "1567784524328",
+          "1565968461814",
+          "1573826845321",
           "1567784555730",
           "1567784571083",
           "1567784593752",
+          "1574210100110",
           "1567784688928"
         ],
         "settings": {
