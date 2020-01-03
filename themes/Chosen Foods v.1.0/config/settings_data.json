@@ -104,7 +104,9 @@
           "footer_two_linklist": "footer-menu-two",
           "instagram_url": "https:\/\/www.instagram.com\/chosenfoods\/",
           "twitter_url": "https:\/\/twitter.com\/chosenfoods",
-          "facebook_url": "https:\/\/www.facebook.com\/ChosenFoods\/"
+          "facebook_url": "https:\/\/www.facebook.com\/ChosenFoods\/",
+          "privacy_notice": "Privacy Notice: Information we collect",
+          "page": "privacy-at-a-glance"
         }
       },
       "homepage-template": {
@@ -354,18 +356,18 @@
               "title": "Vegan Avocado Oil Mayo Sachets"
             }
           },
-          "1567784688928": {
-            "type": "column_item",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/US_ImgM_Keto_Mayo_Sachet_14ml_Mv3_CAW_01_FRONT.jpg",
-              "title": "Keto Mayo Sachets"
-            }
-          },
           "1574210100110": {
             "type": "column_item",
             "settings": {
               "image": "shopify:\/\/shop_images\/US_FS_Avocado_Pulp_6LB_Concept_V01_D01.jpg",
               "title": "Avocado Pulp - <br>1 lb = 12 units per case<br> 3 lbs  = 4 units per case<br> 6 lbs = 4 units per case"
+            }
+          },
+          "1567784688928": {
+            "type": "column_item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/US_ImgM_Keto_Mayo_Sachet_14ml_Mv3_CAW_01_FRONT.jpg",
+              "title": "Keto Mayo Sachets"
             }
           }
         },
@@ -402,6 +404,22 @@
         },
         "block_order": [
           "1567559981867"
+        ],
+        "settings": {
+        }
+      },
+      "popups": {
+        "type": "popups",
+        "blocks": {
+          "1577721864815": {
+            "type": "popup",
+            "settings": {
+              "page": "privacy-at-a-glance"
+            }
+          }
+        },
+        "block_order": [
+          "1577721864815"
         ],
         "settings": {
         }
