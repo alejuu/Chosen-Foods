@@ -7,6 +7,17 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="no-js"> <!--<![endif]-->
   <head>
+    {%- comment -%}
+    <!-- cookieoptimizer.com InjectCookieConsentScript START -->
+    <script src="//assets.cookieoptimizer.com/packs/js/cookieconsent-959b1673fbcd1c5b0e19.js" defer="defer"></script>
+    <script type="text/javascript">
+      window.handleCookieAccept = function() {};
+      window.deferTrekkie = function(params) { window.handleCookieAccept = function(){ window.trekkie && typeof(window.trekkie.load) == 'function' && window.trekkie.load(params); }; };
+      window.addEventListener('load', function() { initializeCookieConsent({"cookieconsent":{"content":{"message":"This website uses cookies to ensure you get the best experience on our website.","dismiss":"Dismiss","link":"Learn more","deny":"Deny","allow":"Allow cookies","href":"https://chosenfoods.com/pages/privacy-policy","policy":"Cookie consent"},"palette":{"popup":{"background":"rgb(248, 238, 216)","text":"#f4a062","link":"#ff8450"},"button":{"background":"#ff8450","border":"#ff8450","text":"#fff"}},"theme":"edgeless","position":"bottom","type":"opt-in"},"euVisitorsOnly":false,"additionalAcceptScript":"","additionalRejectScript":"","additionalCookies":"","cleanupCookies":false,"consentLoggingEnabled":true,"shopifyId":"2546261"}) });
+    </script>
+    <!-- cookieoptimizer.com InjectCookieConsentScript END -->
+    {%- endcomment -%}
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -22,7 +33,14 @@
       <meta name="description" content="{{ page_description }}" />
     {% endif %}
 
-    {{ content_for_header }}
+    {%- comment -%}
+        <!-- cookieoptimizer.com PatchContentForHeader START -->
+    {%- capture content_for_header -%}
+      {{ content_for_header }}
+    {%- endcapture -%}
+    {{ content_for_header | replace: "trekkie.load(", "(window.deferTrekkie || trekkie.load)(" | replace: '<script async="async" src="https://www.google-analytics.com/analytics.js"></script>' , '<script>window._coGaScriptReplaced=true</script>' }}
+    <!-- cookieoptimizer.com PatchContentForHeader END -->
+    {%- endcomment -%}
 
   {% include 'bold-common' %}
 {% include 'Appify_aca' %}
