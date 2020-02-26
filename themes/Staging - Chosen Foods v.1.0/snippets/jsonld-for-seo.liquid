@@ -255,6 +255,9 @@
   {% when 'opinew' %}
     {% assign jsonld_review_count = jsonld_for_seo_product.metafields.opinew_metafields.rich_snippets | split: 'ratingCount" content="' | last | split: '"' |first | plus: 0 %}
     {% assign jsonld_review_value = jsonld_for_seo_product.metafields.opinew_metafields.rich_snippets | split: 'ratingValue" content="' | last | split: '"' |first | plus: 0  %}
+    {%- if jsonld_review_count == 0 -%}
+      {% assign jsonld_review_count = jsonld_for_seo_product.metafields.opinew_metafields.rich_snippets | split: 'reviewCount" content="' | last | split: '"' |first | plus: 0 %}
+    {%- endif -%}
     {% if jsonld_review_count == 0 and jsonld_review_value == 0 %}
       {% assign jsonld_review_count = jsonld_for_seo_product.metafields.opinew.reviews_rich_snippet | split: 'ratingCount" content="' | last | split: '"' |first | plus: 0 %}
       {% assign jsonld_review_value = jsonld_for_seo_product.metafields.opinew.reviews_rich_snippet | split: 'ratingValue" content="' | last | split: '"' |first | plus: 0  %}
@@ -393,6 +396,9 @@
     "ratingCount": {{ jsonld_for_seo_product.metafields.kudobuzz.review_count }}
   }{% elsif jsonld_for_seo_product.metafields.opinew_metafields.rich_snippets and jsonld_for_seo_product.metafields.opinew_metafields.rich_snippets != blank %}
     {% assign jsonld_review_count = jsonld_for_seo_product.metafields.opinew_metafields.rich_snippets | split: 'ratingCount" content="' | last | split: '"' |first | plus: 0 %}
+    {%- if jsonld_review_count == 0 -%}
+      {% assign jsonld_review_count = jsonld_for_seo_product.metafields.opinew_metafields.rich_snippets | split: 'reviewCount" content="' | last | split: '"' |first | plus: 0 %}
+    {%- endif -%}
     {% assign jsonld_review_value = jsonld_for_seo_product.metafields.opinew_metafields.rich_snippets | split: 'ratingValue" content="' | last | split: '"' |first | plus: 0  %}
     {% if jsonld_review_count > 0 and jsonld_review_value > 0 %},
     "aggregateRating": {
@@ -496,7 +502,7 @@
    {%- endif -%}
   },
   "datePublished": "{{ jsonld_for_seo_object.created_at | default: jsonld_for_seo_object.published_at }}",
-  "dateModified": "{{ jsonld_for_seo_object.published_at }}",
+  "dateModified": "{{ jsonld_for_seo_object.updated_at | default: jsonld_for_seo_object.published_at }}",
   "description": {{ jsonld_for_seo_object.metafields.jsonld.content | default: jsonld_for_seo_object.excerpt | default: jsonld_for_seo_object.content | strip_html | json }},
   "articleBody": {{ jsonld_for_seo_object.metafields.jsonld.content | default: jsonld_for_seo_object.excerpt | default: jsonld_for_seo_object.content | strip_html | json }}
   {%- unless shop.metafields.jsonld.skip_reviews == "true" -%}

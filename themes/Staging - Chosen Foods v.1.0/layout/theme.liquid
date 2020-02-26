@@ -41,6 +41,24 @@
     {{ content_for_header | replace: "trekkie.load(", "(window.deferTrekkie || trekkie.load)(" | replace: '<script async="async" src="https://www.google-analytics.com/analytics.js"></script>' , '<script>window._coGaScriptReplaced=true</script>' }}
     <!-- cookieoptimizer.com PatchContentForHeader END -->
     {%- endcomment -%}
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28432025-1"></script>
+
+      <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag(){dataLayer.push(arguments);}
+
+        gtag('js', new Date());
+
+
+
+        gtag('config', 'UA-28432025-1');
+
+      </script>
 
   {% include 'bold-common' %}
 {% include 'Appify_aca' %}
